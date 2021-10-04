@@ -24,7 +24,7 @@ class AppCoordinator {
         
         var vc: UIViewController
         
-        if didShowUserOnboard {
+        if !didShowUserOnboard {
             let story = UIStoryboard(name: "Main", bundle:nil)
             vc = story.instantiateViewController(withIdentifier: "HomeViewController")
         } else {
