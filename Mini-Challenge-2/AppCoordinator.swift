@@ -9,30 +9,63 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class AppCoordinator {
+protocol Coordinator {
+    var rootViewController: UIViewController { get }
+    func start()
+}
+
+class AppCoordinator: Coordinator {
     
-    var rootViewController: UINavigationController
+    var rootViewController: UIViewController {
+        self.navigationController
+    }
+    
+    var navigationController: UINavigationController
     var didShowUserOnboard = UserDefaults.standard.bool(forKey: "alreadyEntry")
 
-    
     init(rootViewController: UINavigationController) {
-        
-        self.rootViewController =  rootViewController
+        self.navigationController = rootViewController
     }
     
-    func configureHomeScreen() {
-        
-        var vc: UIViewController
-        
+    func start() {
         if !didShowUserOnboard {
-            let story = UIStoryboard(name: "Main", bundle:nil)
-            vc = story.instantiateViewController(withIdentifier: "HomeViewController")
+            let coortinator = MainCoordinator(self.navigationController)
+            coortinator.start()
         } else {
-            vc = UIHostingController(rootView: ContentView())
-            //UserDefaults.standard.setValue(true, forKey: "alreadyEntry")
+            let coordinator = OnboardingCoordinator(self.navigationController)
+            coordinator.start()
         }
-        
-        rootViewController.setViewControllers([vc], animated: false)
     }
     
+}
+
+class MainCoordinator: Coordinator {
+    
+    var rootViewController: UIViewController = UIViewController()
+    var navigationController: UINavigationController
+    
+    init(_ navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        let story = UIStoryboard(name: "Main", bundle:nil)
+        let homeViewController = story.instantiateViewController(withIdentifier: "HomeViewController")
+        self.navigationController.setViewControllers([homeViewController], animated: false)
+    }
+}
+
+class OnboardingCoordinator: Coordinator {
+    
+    var rootViewController: UIViewController = UIViewController()
+    var navigationController: UINavigationController
+    
+    init(_ navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        let onBoarding = UIHostingController(rootView: ContentView())
+        self.navigationController.setViewControllers([onBoarding], animated: false)
+    }
 }
