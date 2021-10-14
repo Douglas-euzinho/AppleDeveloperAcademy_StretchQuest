@@ -25,8 +25,8 @@ class AppCoordinator {
         var vc: UIViewController
         
         if !didShowUserOnboard {
-            let story = UIStoryboard(name: "Main", bundle:nil)
-            vc = story.instantiateViewController(withIdentifier: "HomeViewController")
+            let story = UIStoryboard(name: "Categories", bundle: nil)
+            vc = story.instantiateViewController(withIdentifier: "CategoriesViewController")
         } else {
             vc = UIHostingController(rootView: ContentView())
             //UserDefaults.standard.setValue(true, forKey: "alreadyEntry")
