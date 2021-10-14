@@ -14,7 +14,8 @@
 		B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */; };
 		B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2185FE62707A0AC00A4ACAE /* Assets.xcassets */; };
 		B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */; };
-		B2B87F85270CCA9A004F0D47 /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Exercises.storyboard */; };
+		B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25402CD27179B7300C088C4 /* CategoriesViewController.swift */; };
+		B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Categories.storyboard */; };
 		CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9B763270B736300C20DA3 /* SwiftUIView.swift */; };
 		CBE9B766270B74AA00C20DA3 /* OnBoardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9B765270B74AA00C20DA3 /* OnBoardingData.swift */; };
 		CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9B767270B923400C20DA3 /* AppCoordinator.swift */; };
@@ -30,7 +31,8 @@
 		B2185FE62707A0AC00A4ACAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2185FE92707A0AC00A4ACAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2185FEB2707A0AC00A4ACAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B87F84270CCA9A004F0D47 /* Exercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
+		B25402CD27179B7300C088C4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		B2B87F84270CCA9A004F0D47 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CBE9B763270B736300C20DA3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		CBE9B765270B74AA00C20DA3 /* OnBoardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingData.swift; sourceTree = "<group>"; };
 		CBE9B767270B923400C20DA3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -66,19 +68,44 @@
 		B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */ = {
 			isa = PBXGroup;
 			children = (
+				B25402B927177C3000C088C4 /* View */,
+				B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */,
 				B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */,
 				CBE9B767270B923400C20DA3 /* AppCoordinator.swift */,
-				B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */,
 				B2185FDE2707A0AA00A4ACAE /* ViewController.swift */,
 				CBE9B762270B734A00C20DA3 /* OnBoarding */,
 				B2185FE02707A0AA00A4ACAE /* Main.storyboard */,
-				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
+				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 				B2185FEB2707A0AC00A4ACAE /* Info.plist */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
-				B2B87F84270CCA9A004F0D47 /* Exercises.storyboard */,
 			);
 			path = "Mini-Challenge-2";
+			sourceTree = "<group>";
+		};
+		B25402B927177C3000C088C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B25402CC27179B5200C088C4 /* View */,
+				B25402CB27179B4A00C088C4 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B25402CB27179B4A00C088C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B25402CD27179B7300C088C4 /* CategoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B25402CC27179B5200C088C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2B87F84270CCA9A004F0D47 /* Categories.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CBE9B762270B734A00C20DA3 /* OnBoarding */ = {
@@ -150,7 +177,7 @@
 			files = (
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
-				B2B87F85270CCA9A004F0D47 /* Exercises.storyboard in Resources */,
+				B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */,
 				B2185FE22707A0AA00A4ACAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +195,7 @@
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
+				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
