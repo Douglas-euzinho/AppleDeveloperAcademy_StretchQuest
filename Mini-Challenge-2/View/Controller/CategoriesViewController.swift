@@ -33,14 +33,6 @@ class CategoriesViewController: UIViewController {
         setupGestures()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     private func setupGestures() {
         strengthCategory.tag = TagCategory.strenght.rawValue
         postureCategory.tag = TagCategory.posture.rawValue
