@@ -100,6 +100,8 @@ class AppCoordinator: Coordinator {
            addChild(coordinator)
            coordinator.start()
         }
+        
+        self.navigationController.setNavigationBarHidden(true, animated: true)
     }
 
 }
@@ -114,7 +116,7 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
 
     override func start() {
         let story = UIStoryboard(name: "Categories", bundle:nil)
-        let homeViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
+        let homeViewController = story.instantiateViewController(withIdentifier: "CategoriesView") as! CategoriesViewController
         
         homeViewController.delegate = self
         self.navigationController.setViewControllers([homeViewController], animated: false)
@@ -143,7 +145,7 @@ class StretchesCoordinator: Coordinator {
         
         let story = UIStoryboard(name: "Stretch", bundle:nil)
         let stretchViewController =
-            story.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
+            story.instantiateViewController(withIdentifier: "StretchView") as! StretchViewController
         
         let viewModel = StretchesViewModel()
         
