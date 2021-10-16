@@ -27,14 +27,14 @@ struct OnboardingData: Hashable, Identifiable {
 
 struct MainHomeViewController: UIViewControllerRepresentable {
     
-    typealias UIViewControllerType = ViewController
+    typealias UIViewControllerType = UIViewController
 
-    func makeUIViewController(context: Context) -> ViewController {
+    func makeUIViewController(context: Context) -> UIViewController {
         let story = UIStoryboard(name: "Main", bundle:nil)
-        return story.instantiateViewController(withIdentifier: "HomeViewController") as! ViewController
+        return story.instantiateViewController(withIdentifier: "HomeViewController") as! UIViewController
     }
     
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
     
     }
 }

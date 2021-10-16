@@ -25,28 +25,40 @@ class StretchViewController: UIViewController, OnStretchListener{
     
     func onStretchChanged(stretch: Stretch) {
         descriptionStretch.text = stretch.title
-        self.stretchDuration = Int(stretch.durationInSeconds)
+        self.contador = Int(stretch.durationInSeconds)
+        self.timerLabel.text = "\(contador)"
         
-        if agendamentos < 5 {
-            agendamentos += 1
-            tick()
+        let story = UIStoryboard(name: "Pause", bundle: nil)
+        
+        let pausa = story.instantiateViewController(withIdentifier: "PauseViewController")
+        
+        self.present(pausa, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                pausa.dismiss(animated: true){
+                    if self.agendamentos < 5 {
+                        self.agendamentos += 1
+                        self.tick()
+                    }
+                }
+            }
         }
+        
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.listener = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.viewModel.startSession(with: .posture)
     }
     
     func tick(){
-        
-        contador += 1
-        contador = contador % (self.stretchDuration + 1)
-        
         self.timerLabel.text = "\(contador)"
+        contador -= 1
         
-        if contador < self.stretchDuration {
+        if contador > -2 {
             tock()
         }else{
             self.viewModel.nextStretch()
