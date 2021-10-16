@@ -8,8 +8,9 @@
 import UIKit
 import Core
 
-class StretchViewController: UIViewController, OnStretchListener{
- 
+class StretchViewController: UIViewController, OnStretchListener {
+   
+    
     // MARK: - Properties
     @IBOutlet weak var animation: UIImageView!
     @IBOutlet weak var descriptionStretch: UILabel!
@@ -17,6 +18,8 @@ class StretchViewController: UIViewController, OnStretchListener{
     @IBOutlet weak var timerLabel: UILabel!
     
     var viewModel: StretchesViewModel!
+    
+    var timer: Timer?
     
     var agendamentos = 0
     var contador = 0
@@ -27,21 +30,14 @@ class StretchViewController: UIViewController, OnStretchListener{
         descriptionStretch.text = stretch.title
         self.contador = Int(stretch.durationInSeconds)
         self.timerLabel.text = "\(contador)"
-        
-        let story = UIStoryboard(name: "Pause", bundle: nil)
-        
-        let pausa = story.instantiateViewController(withIdentifier: "PauseViewController")
-        
-        self.present(pausa, animated: true) {
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                pausa.dismiss(animated: true){
                     if self.agendamentos < 5 {
                         self.agendamentos += 1
-                        self.tick()
+                    } else {
+                        self.timer?.invalidate()
                     }
-                }
             }
-        }
         
     }
         
@@ -52,17 +48,37 @@ class StretchViewController: UIViewController, OnStretchListener{
     
     override func viewDidAppear(_ animated: Bool) {
         self.viewModel.startSession(with: .posture)
+        self.startTimer()
     }
     
-    func tick(){
+    @IBAction func presentPauseViewController() {
+        showPauseViewController()
+    }
+    
+    func startTimer() {
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
+    }
+    
+    @objc func tick(){
+        
         self.timerLabel.text = "\(contador)"
         contador -= 1
-        
+
         if contador > -2 {
-            tock()
+            
         }else{
             self.viewModel.nextStretch()
         }
+    }
+    
+    func showPauseViewController() {
+        let story = UIStoryboard(name: "Pause", bundle: nil)
+        let pauseViewController = story.instantiateViewController(withIdentifier: "PauseViewController") as! PauseViewController
+                
+        timer?.invalidate()
+        pauseViewController.delegate = self
+
+        self.present(pauseViewController, animated: true, completion: nil)
     }
     
     func tock(){
@@ -70,4 +86,13 @@ class StretchViewController: UIViewController, OnStretchListener{
             self.tick()
         }
     }
+}
+
+
+extension StretchViewController: PauseDelegate {
+    
+    func viewDidDisappear() {
+        self.startTimer()
+    }
+
 }
