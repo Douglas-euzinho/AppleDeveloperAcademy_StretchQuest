@@ -32,16 +32,13 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        print("entrou camera?")
-        
         picker.dismiss(animated: true, completion: nil)
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
             return
         }
         
-        imageView.image = image
+        imageProfile.image = image
     }
     
 }
