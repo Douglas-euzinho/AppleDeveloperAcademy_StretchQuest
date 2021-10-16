@@ -22,6 +22,8 @@
 		9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */; };
 		9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */; };
 		9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */; };
+		9C66DE48271A0C8400D5F6D2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE47271A0C8400D5F6D2 /* Camera.swift */; };
+		9C66DE4A271A0FBB00D5F6D2 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE49271A0FBB00D5F6D2 /* GameCenter.swift */; };
 		B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */; };
 		B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */; };
 		B2185FDF2707A0AA00A4ACAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDE2707A0AA00A4ACAE /* ViewController.swift */; };
@@ -94,6 +96,8 @@
 		9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9C66DE47271A0C8400D5F6D2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		9C66DE49271A0FBB00D5F6D2 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,13 +207,23 @@
 			path = EndStretchSession;
 			sourceTree = "<group>";
 		};
-		B2185FCE2707A0AA00A4ACAE = {
+		9C66DE46271A093300D5F6D2 /* CoreDataClass */ = {
 			isa = PBXGroup;
 			children = (
 				9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */,
 				9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */,
 				9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */,
 				9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataClass;
+			sourceTree = "<group>";
+		};
+		B2185FCE2707A0AA00A4ACAE = {
+			isa = PBXGroup;
+			children = (
+				9C66DE49271A0FBB00D5F6D2 /* GameCenter.swift */,
+				9C66DE47271A0C8400D5F6D2 /* Camera.swift */,
+				9C66DE46271A093300D5F6D2 /* CoreDataClass */,
 				B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */,
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
@@ -455,6 +469,7 @@
 			files = (
 				9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */,
 				CBE9B766270B74AA00C20DA3 /* OnBoardingData.swift in Sources */,
+				9C66DE48271A0C8400D5F6D2 /* Camera.swift in Sources */,
 				9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */,
 				B2185FDF2707A0AA00A4ACAE /* ViewController.swift in Sources */,
 				68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */,
@@ -466,6 +481,7 @@
 				B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
 				9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */,
+				9C66DE4A271A0FBB00D5F6D2 /* GameCenter.swift in Sources */,
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
 				9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */,
@@ -748,11 +764,13 @@
 				DEVELOPMENT_TEAM = 6D5984MR54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -777,11 +795,13 @@
 				DEVELOPMENT_TEAM = 6D5984MR54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
