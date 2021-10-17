@@ -64,25 +64,81 @@ public class HardcodedStretchesRepository: StretchesRepository {
 
         case .posture:
             list.append(Stretch(
-                title: "Torso Twist",
-                instructions: "Leia a Bula",
+                title: "aslkflask",
+                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
                 animation: [],
-                durationInSeconds: 7,
-                type: .flexibility,
-                externalLink: nil))
-
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: false))
+            
+            //Shoulder stretch left
             list.append(Stretch(
                 title: "Shoulder Stretch",
-                instructions: "Leia a Bula",
+                instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
                 animation: [],
-                durationInSeconds: 7,
-                type: .flexibility,
-                externalLink: nil))
-
-            list.append(Stretch.sideBend)
-            list.append(Stretch.sideBend)
-            list.append(Stretch.sideBend)
-
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: true))
+            //Shoulder stretch right
+            list.append(Stretch(
+                title: "Shoulder Stretch",
+                instructions: "Repeat the stretch on the other side",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: false))
+            
+            //Neck Stretch Left
+            list.append(Stretch(
+                title: "Side Neck Stretch",
+                instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: true))
+            //Neck Stretch Right
+            list.append(Stretch(
+                title: "Side Neck Stretch",
+                instructions: "Repeat the stretch on the other side",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: false))
+            
+            //Side Bend Left
+            list.append(Stretch(
+                title: "Side Bend",
+                instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: true))
+            //Side Bend Right
+            list.append(Stretch(
+                title: "Side Bend",
+                instructions: "Repeat the stretch on the other side",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: false))
+        
+            //Torso Twist Stretch
+            list.append(Stretch(
+                title: "Torso Twist",
+                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+                animation: [],
+                durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                hasContinuation: false))
+                        
         case .strength:
             list.append(Stretch.sideBend)
             list.append(Stretch.sideBend)
