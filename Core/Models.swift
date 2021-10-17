@@ -21,6 +21,7 @@ public struct Stretch {
     public let durationInSeconds: Float
     public let type: StretchType
     public let externalLink: URL?
+    public var hasContinuation: Bool
 
     public static let sideBend = Stretch(
         title: "Side Bend",
@@ -28,7 +29,8 @@ public struct Stretch {
         animation: [],
         durationInSeconds: 30.0,
         type: .posture,
-        externalLink: nil)
+        externalLink: nil,
+        hasContinuation: false)
 }
 
 public struct StretchPoints {

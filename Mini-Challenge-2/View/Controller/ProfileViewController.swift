@@ -54,5 +54,13 @@ class ProfileViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
 }
