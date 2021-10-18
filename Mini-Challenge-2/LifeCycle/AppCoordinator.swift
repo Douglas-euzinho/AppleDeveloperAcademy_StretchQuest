@@ -138,14 +138,14 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
     override func start() {
         
         let story = UIStoryboard(name: "Categories", bundle: nil)
-        let homeViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
-        homeViewController.delegate = self
+        let categoriesViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
+        categoriesViewController.delegate = self
         
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
         
         self.tabController.setViewControllers([
-            homeViewController,
+            categoriesViewController,
             profileViewController
         ], animated: false)
         

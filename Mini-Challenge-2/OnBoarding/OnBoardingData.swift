@@ -30,8 +30,8 @@ struct MainHomeViewController: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
 
     func makeUIViewController(context: Context) -> UIViewController {
-        let story = UIStoryboard(name: "Main", bundle:nil)
-        return story.instantiateViewController(withIdentifier: "HomeViewController") as! UIViewController
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        return story.instantiateViewController(withIdentifier: "HomeViewController")
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {

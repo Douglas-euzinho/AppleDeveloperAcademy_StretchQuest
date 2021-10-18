@@ -147,11 +147,7 @@ class StretchViewController: UIViewController, OnStretchListener {
 
         self.present(pauseViewController, animated: true, completion: nil)
     }
-    
-  
 }
-
-
 
 extension StretchViewController: PauseDelegate {
     
