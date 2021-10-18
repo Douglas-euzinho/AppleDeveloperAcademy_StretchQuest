@@ -254,8 +254,6 @@
 				68ABEF262718AAD8001E7B37 /* ViewModel */,
 				B25402B927177C3000C088C4 /* View */,
 				CBE9B762270B734A00C20DA3 /* OnBoarding */,
-				B2185FE02707A0AA00A4ACAE /* Main.storyboard */,
-				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
 				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 				B2185FEB2707A0AC00A4ACAE /* Info.plist */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
@@ -286,6 +284,8 @@
 		B25402CC27179B5200C088C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
+				B2185FE02707A0AA00A4ACAE /* Main.storyboard */,
 				B2B87F84270CCA9A004F0D47 /* Categories.storyboard */,
 				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
 				B22A71792718C55C002F33C6 /* Profile.storyboard */,
