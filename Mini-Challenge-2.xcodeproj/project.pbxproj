@@ -229,7 +229,6 @@
 		B2185FCE2707A0AA00A4ACAE = {
 			isa = PBXGroup;
 			children = (
-				9C66DE46271A093300D5F6D2 /* CoreDataClass */,
 				B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */,
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
@@ -251,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				684CFD8F271A057B009E2B70 /* LifeCycle */,
+				B25F864D271D1A7D000EA9EF /* Model */,
 				68ABEF262718AAD8001E7B37 /* ViewModel */,
 				B25402B927177C3000C088C4 /* View */,
 				CBE9B762270B734A00C20DA3 /* OnBoarding */,
@@ -293,6 +293,14 @@
 				B22A717D2718D884002F33C6 /* Bola.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B25F864D271D1A7D000EA9EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C66DE46271A093300D5F6D2 /* CoreDataClass */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CBE9B762270B734A00C20DA3 /* OnBoarding */ = {
