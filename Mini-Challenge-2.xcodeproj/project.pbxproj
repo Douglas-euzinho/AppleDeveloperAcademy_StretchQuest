@@ -19,6 +19,9 @@
 		68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */; };
 		68ABEF2F2718C95E001E7B37 /* StartNextStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */; };
 		68ABEF3527191C2A001E7B37 /* EndStretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */; };
+		9C5F6054271E0C500023DDC4 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter.swift */; };
+		9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6055271E0D4D0023DDC4 /* testeGC.swift */; };
+		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
 		9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */; };
 		9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */; };
 		9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */; };
@@ -92,6 +95,9 @@
 		68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesViewModel.swift; sourceTree = "<group>"; };
 		68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNextStretch.swift; sourceTree = "<group>"; };
 		68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStretchSession.swift; sourceTree = "<group>"; };
+		9C5F6053271E0C500023DDC4 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
+		9C5F6055271E0D4D0023DDC4 /* testeGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeGC.swift; sourceTree = "<group>"; };
+		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68ABEEEE271760B9001E7B37 /* Core.framework in Frameworks */,
+				9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +222,14 @@
 			path = EndStretchSession;
 			sourceTree = "<group>";
 		};
+		9C5F6057271E11DB0023DDC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C5F6058271E11DB0023DDC4 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C66DE46271A093300D5F6D2 /* CoreDataClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +248,7 @@
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
 				B2185FD82707A0AA00A4ACAE /* Products */,
+				9C5F6057271E11DB0023DDC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,6 +273,8 @@
 				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 				B2185FEB2707A0AC00A4ACAE /* Info.plist */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
+				9C5F6053271E0C500023DDC4 /* GameCenter.swift */,
+				9C5F6055271E0D4D0023DDC4 /* testeGC.swift */,
 			);
 			path = "Mini-Challenge-2";
 			sourceTree = "<group>";
@@ -490,6 +508,7 @@
 				B22A717E2718D884002F33C6 /* Ball.swift in Sources */,
 				B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */,
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
+				9C5F6054271E0C500023DDC4 /* GameCenter.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,
 				B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
@@ -497,6 +516,7 @@
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
 				9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */,
+				9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,13 +793,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6D5984MR54;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -804,13 +825,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6D5984MR54;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
