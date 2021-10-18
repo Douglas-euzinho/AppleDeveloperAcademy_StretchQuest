@@ -32,7 +32,7 @@
 		B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A71772718B29C002F33C6 /* StretchViewController.swift */; };
 		B22A717A2718C55C002F33C6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22A71792718C55C002F33C6 /* Profile.storyboard */; };
 		B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717B2718CC28002F33C6 /* ProfileViewController.swift */; };
-		B22A717E2718D884002F33C6 /* Bola.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717D2718D884002F33C6 /* Bola.swift */; };
+		B22A717E2718D884002F33C6 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717D2718D884002F33C6 /* Ball.swift */; };
 		B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25402CD27179B7300C088C4 /* CategoriesViewController.swift */; };
 		B25402D02717A72500C088C4 /* Stretch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25402CF2717A72500C088C4 /* Stretch.storyboard */; };
 		B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Categories.storyboard */; };
@@ -107,7 +107,7 @@
 		B22A71772718B29C002F33C6 /* StretchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
 		B22A71792718C55C002F33C6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B22A717B2718CC28002F33C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B22A717D2718D884002F33C6 /* Bola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bola.swift; sourceTree = "<group>"; };
+		B22A717D2718D884002F33C6 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		B25402CD27179B7300C088C4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		B25402CF2717A72500C088C4 /* Stretch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stretch.storyboard; sourceTree = "<group>"; };
 		B2B87F84270CCA9A004F0D47 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
 				B22A71792718C55C002F33C6 /* Profile.storyboard */,
 				684CFD92271B857D009E2B70 /* Pause.storyboard */,
-				B22A717D2718D884002F33C6 /* Bola.swift */,
+				B22A717D2718D884002F33C6 /* Ball.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,7 +487,7 @@
 				9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */,
 				68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */,
 				B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */,
-				B22A717E2718D884002F33C6 /* Bola.swift in Sources */,
+				B22A717E2718D884002F33C6 /* Ball.swift in Sources */,
 				B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */,
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,

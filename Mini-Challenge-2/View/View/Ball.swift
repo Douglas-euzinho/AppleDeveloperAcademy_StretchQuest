@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class Bola: UIView {
+class Ball: UIView {
     
     @IBInspectable var fillColor: UIColor = .black
     
