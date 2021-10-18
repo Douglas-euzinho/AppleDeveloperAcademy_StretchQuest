@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alongamentos-->
+        <!--Categories-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CategoriesViewController" title="Alongamentos" id="Y6W-OH-hqX" customClass="CategoriesViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesViewController" title="Categories" id="Y6W-OH-hqX" customClass="CategoriesViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +150,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pam-rD-xaq" secondAttribute="trailing" constant="31.670000000000002" id="ufF-H7-Fkr"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Exercises" id="xF4-rl-irh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="flexibilityCategory" destination="Pam-rD-xaq" id="U22-LT-LtX"/>
                         <outlet property="postureCategory" destination="5PP-A9-agW" id="acJ-Gd-8me"/>
@@ -162,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Exercises" width="35" height="35"/>
         <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
         <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>
         <image name="Strength" width="88.333335876464844" height="112"/>

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Perfil-->
+        <!--Profile-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" title="Perfil" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="width" secondItem="eL1-8K-IA8" secondAttribute="height" multiplier="1:1" id="hKx-cj-yTd"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="Bola" customModule="Mini_Challenge_2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="258" y="239" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-Vs-ggp">
@@ -55,7 +55,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="Bola" customModule="Mini_Challenge_2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="33" y="427" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-Lg-RE6">
@@ -159,7 +159,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="Bola" customModule="Mini_Challenge_2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="33" y="547.66666666666663" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Posture" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-6v-Nns">
@@ -263,7 +263,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="Bola" customModule="Mini_Challenge_2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="33" y="668.66666666666663" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Flexibility" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-w3-DNw">
@@ -403,6 +403,8 @@
                             <constraint firstItem="kl9-EM-lxD" firstAttribute="top" secondItem="6lM-bB-Bsr" secondAttribute="bottom" constant="40" id="zzF-Y0-lAe"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="9vk-Y6-OWa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="Fy9-tb-SOh" id="J9m-cx-YMQ"/>
                         <outlet property="imageProfile" destination="eL1-8K-IA8" id="YeU-N5-hIb"/>
@@ -416,6 +418,7 @@
     <resources>
         <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
         <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>
+        <image name="Profile" width="35.333332061767578" height="35"/>
         <image name="Strength" width="88.333335876464844" height="112"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
