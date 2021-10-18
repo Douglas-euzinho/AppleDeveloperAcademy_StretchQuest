@@ -31,8 +31,10 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     var stretchDuration = 30
     
-    let shape = CAShapeLayer()
+    let shape      = CAShapeLayer()
+    let trackShape = CAShapeLayer()
     var circlePath = UIBezierPath()
+    var pulsatingLayer = CAShapeLayer()
 
     
     func onStretchChanged(stretch: Stretch) {
@@ -72,6 +74,23 @@ class StretchViewController: UIViewController, OnStretchListener {
         self.timer?.tolerance = 0
     }
     
+    private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
+        
+        let label = self.view.subviews.first { view in
+            return type(of: view) == UILabel.self
+        }
+                
+        let layer = CAShapeLayer()
+        let circularPath = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        layer.path = circularPath.cgPath
+        layer.strokeColor = UIColor(red: 175/255, green: 238/255, blue: 250/255, alpha: 0.6).cgColor
+        layer.lineWidth = 10
+        layer.fillColor = fillColor.cgColor
+        layer.lineCap = .round
+        layer.position = label!.center
+        return layer
+    }
+    
     func startTimerAnimation() {
         
         let label = self.view.subviews.first { view in
@@ -80,30 +99,50 @@ class StretchViewController: UIViewController, OnStretchListener {
         
         guard label != nil else { return }
          
-        self.circlePath = UIBezierPath.init(arcCenter: label!.center, radius: 75, startAngle: 0, endAngle: .pi*2, clockwise: true)
+        self.circlePath = UIBezierPath.init(arcCenter: label!.center, radius: 75, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
         
-        let trackShape          = CAShapeLayer()
+        pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear)
+        view.layer.addSublayer(pulsatingLayer)
+        animatePulsatingLayer()
+        
         trackShape.path         = circlePath.cgPath
         trackShape.fillColor    = UIColor.clear.cgColor
         trackShape.lineWidth    = 15
-        trackShape.cornerRadius = 15
-        trackShape.strokeColor  = UIColor.lightGray.cgColor
+        trackShape.strokeColor  = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
         
         view.layer.addSublayer(trackShape)
+
+
+//        trackShape.strokeColor  = UIColor(red: 102/255, green: 255/255, blue: 0/255, alpha: 0.2).cgColor
+     
+        
         
         shape.path         = circlePath.cgPath
         shape.lineWidth    = 15
-        shape.strokeColor  = UIColor.green.cgColor
-        shape.cornerRadius = 15
+        shape.strokeColor  = UIColor(red: 0/255, green: 206/255, blue: 209/255, alpha: 1).cgColor
+        shape.lineCap      = .round
         shape.fillColor    = UIColor.clear.cgColor
         shape.strokeEnd    = 0
         
         view.layer.addSublayer(shape)
     }
     
+    private func animatePulsatingLayer() {
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        
+        animation.toValue = 1.15
+        animation.duration = 1.7
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animation.autoreverses = true
+        animation.repeatCount = Float.infinity
+        
+        pulsatingLayer.add(animation, forKey: "pulsing")
+    }
+    
     func ringTimerAnimation() {
-        let startAnimate = CABasicAnimation(keyPath: "strokeEnd")
-        startAnimate.toValue = 1
+        let startAnimate      = CABasicAnimation(keyPath: "strokeEnd")
+        
+        startAnimate.toValue  = 1
         startAnimate.duration = CFTimeInterval(self.contador)
         startAnimate.isRemovedOnCompletion = false
         startAnimate.fillMode = .forwards
@@ -125,14 +164,16 @@ class StretchViewController: UIViewController, OnStretchListener {
         shape.beginTime = 0
         
         let timeSincePause = shape.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
-        print(timeSincePause)
         shape.beginTime = timeSincePause
     }
     
     @objc func tick(){
         contador -= 1
-
+        
         if contador == -1 {
+            self.view.layer.removeAnimation(forKey: "transform.scale")
+            self.pulsatingLayer.removeFromSuperlayer()
+            self.trackShape.removeFromSuperlayer()
             self.viewModel.nextStretch()
         }
     }
@@ -155,5 +196,26 @@ extension StretchViewController: PauseDelegate {
         self.startTimer()
         self.resumeRingAnimation()
     }
-
 }
+//
+//extension UIView {
+//
+//  func addShadow() {
+//     self.backgroundColor = UIColor.clear
+//     let roundedShapeLayer = CAShapeLayer()
+//     let roundedMaskPath = UIBezierPath(roundedRect: self.bounds,
+//                                       byRoundingCorners: [.topLeft, .bottomLeft, .bottomRight],
+//                                       cornerRadii: CGSize(width: 8, height: 8))
+//
+//     roundedShapeLayer.frame = self.bounds
+//     roundedShapeLayer.fillColor = UIColor.white.cgColor
+//     roundedShapeLayer.path = roundedMaskPath.cgPath
+//
+//     self.layer.insertSublayer(roundedShapeLayer, at: 0)
+//
+//     self.layer.shadowOpacity = 0.4
+//     self.layer.shadowOffset = CGSize(width: -0.1, height: 4)
+//     self.layer.shadowRadius = 3
+//     self.layer.shadowColor = UIColor.lightGray.cgColor
+//   }
+//}
