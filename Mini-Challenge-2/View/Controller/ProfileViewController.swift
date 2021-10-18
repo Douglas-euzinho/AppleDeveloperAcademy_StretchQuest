@@ -11,7 +11,6 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
-    @IBOutlet weak var cameraButton: Bola!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +18,10 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupGestures()
         
+        configureImageProfile()
+    }
+    
+    private func configureImageProfile() {
         imageProfile.clipsToBounds = true
         imageProfile.layer.cornerRadius = imageProfile.frame.size.width / 2
         imageProfile.layer.borderWidth = 5.0
@@ -54,13 +57,37 @@ class ProfileViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        //navigationController?.setNavigationBarHidden(false, animated: true)
-    }
 
+}
+
+//EXTENSÃO DA CLASSE QUE VAI TER A CAMERA(A DE PERFIL)
+//PROVAVELMENTE VAI TER Q HERDAR O UINavigationControllerDelegate
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    /*
+     1-
+     TER UMA VARIÁVEL DO TIPO UIImageView
+     
+     2-
+     COLOCAR DENTRO DA FUNÇÃO DO BOTÃO DA CAMERA:
+     "
+     let picker = UIImagePickerController()
+     picker.sourceType = .camera
+     picker.delegate = self
+     present(picker, animated: true)
+     "
+     */
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        
+        imageProfile.image = image
+    }
+    
 }
