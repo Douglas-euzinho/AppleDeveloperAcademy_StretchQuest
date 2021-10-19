@@ -64,7 +64,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
 
         case .posture:
             list.append(Stretch(
-                title: "aslkflask",
+                title: "Arms Up",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
                 animation: [],
                 durationInSeconds: 20,

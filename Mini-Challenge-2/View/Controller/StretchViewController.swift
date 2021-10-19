@@ -19,6 +19,8 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     var viewModel: StretchesViewModel!
     
+    lazy var circleAttributed = UIColor.getColorBy(category: viewModel.category) //Retorna o attributed                                                                         de acordo com a categoria
+    
     var timer: Timer?
     
     var agendamentos = 0
@@ -31,10 +33,11 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     var stretchDuration = 30
     
-    let shape      = CAShapeLayer()
-    let trackShape = CAShapeLayer()
-    var circlePath = UIBezierPath()
+    //Ring properties
     var pulsatingLayer = CAShapeLayer()
+    let shape          = CAShapeLayer()
+    let trackShape     = CAShapeLayer()
+    var circlePath     = UIBezierPath()
 
     
     func onStretchChanged(stretch: Stretch) {
@@ -81,13 +84,14 @@ class StretchViewController: UIViewController, OnStretchListener {
         }
                 
         let layer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-        layer.path = circularPath.cgPath
-        layer.strokeColor = UIColor(red: 175/255, green: 238/255, blue: 250/255, alpha: 0.6).cgColor
-        layer.lineWidth = 10
-        layer.fillColor = fillColor.cgColor
-        layer.lineCap = .round
-        layer.position = label!.center
+        let circularPath  = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        layer.path        = circularPath.cgPath
+        layer.strokeColor = self.circleAttributed.pulse.cgColor
+        layer.lineWidth   = 16
+        layer.fillColor   = fillColor.cgColor
+        layer.lineCap     = .round
+        layer.position    = label!.center
         return layer
     }
     
@@ -103,68 +107,65 @@ class StretchViewController: UIViewController, OnStretchListener {
         
         pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear)
         view.layer.addSublayer(pulsatingLayer)
+        
         animatePulsatingLayer()
+                    
+        view.addShadow(layer: trackShape, path: self.circlePath, color: circleAttributed.shadowColor)
         
         trackShape.path         = circlePath.cgPath
         trackShape.fillColor    = UIColor.clear.cgColor
         trackShape.lineWidth    = 15
-        trackShape.strokeColor  = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
-        
+        trackShape.strokeColor  = circleAttributed.trackColor.cgColor
         view.layer.addSublayer(trackShape)
 
-
-//        trackShape.strokeColor  = UIColor(red: 102/255, green: 255/255, blue: 0/255, alpha: 0.2).cgColor
-     
-        
-        
         shape.path         = circlePath.cgPath
         shape.lineWidth    = 15
-        shape.strokeColor  = UIColor(red: 0/255, green: 206/255, blue: 209/255, alpha: 1).cgColor
+        shape.strokeColor  = circleAttributed.shapeColor.cgColor
         shape.lineCap      = .round
         shape.fillColor    = UIColor.clear.cgColor
         shape.strokeEnd    = 0
-        
         view.layer.addSublayer(shape)
     }
     
     private func animatePulsatingLayer() {
         let animation = CABasicAnimation(keyPath: "transform.scale")
         
-        animation.toValue = 1.15
-        animation.duration = 1.7
+        animation.toValue        = 1.2
+        animation.duration       = 2.2
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        animation.autoreverses = true
-        animation.repeatCount = Float.infinity
+        animation.autoreverses   = true
+        animation.repeatCount    = Float.infinity
         
         pulsatingLayer.add(animation, forKey: "pulsing")
     }
     
     func ringTimerAnimation() {
+        
         let startAnimate      = CABasicAnimation(keyPath: "strokeEnd")
         
         startAnimate.toValue  = 1
         startAnimate.duration = CFTimeInterval(self.contador)
-        startAnimate.isRemovedOnCompletion = false
         startAnimate.fillMode = .forwards
-        
+        startAnimate.isRemovedOnCompletion = false
+     
         shape.add(startAnimate, forKey: "animation")
     }
     
     func pauseRingAnimation() {
-        let pausedTime = shape.convertTime(CACurrentMediaTime(), from: nil)
-        shape.speed = 0
+        let pausedTime   = shape.convertTime(CACurrentMediaTime(), from: nil)
+        shape.speed      = 0
         shape.timeOffset = pausedTime
     }
     
     func resumeRingAnimation() {
         let pausedTime = shape.timeOffset
         
-        shape.speed = 1
+        shape.speed      = 1
         shape.timeOffset = 0
-        shape.beginTime = 0
+        shape.beginTime  = 0
         
         let timeSincePause = shape.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
-        shape.beginTime = timeSincePause
+        shape.beginTime    = timeSincePause
     }
     
     @objc func tick(){
@@ -197,25 +198,22 @@ extension StretchViewController: PauseDelegate {
         self.resumeRingAnimation()
     }
 }
-//
-//extension UIView {
-//
-//  func addShadow() {
-//     self.backgroundColor = UIColor.clear
-//     let roundedShapeLayer = CAShapeLayer()
-//     let roundedMaskPath = UIBezierPath(roundedRect: self.bounds,
-//                                       byRoundingCorners: [.topLeft, .bottomLeft, .bottomRight],
-//                                       cornerRadii: CGSize(width: 8, height: 8))
-//
-//     roundedShapeLayer.frame = self.bounds
-//     roundedShapeLayer.fillColor = UIColor.white.cgColor
-//     roundedShapeLayer.path = roundedMaskPath.cgPath
-//
-//     self.layer.insertSublayer(roundedShapeLayer, at: 0)
-//
-//     self.layer.shadowOpacity = 0.4
-//     self.layer.shadowOffset = CGSize(width: -0.1, height: 4)
-//     self.layer.shadowRadius = 3
-//     self.layer.shadowColor = UIColor.lightGray.cgColor
-//   }
-//}
+
+extension UIView {
+    func addShadow(layer: CALayer, path: UIBezierPath, color: UIColor) {
+      
+     layer.backgroundColor = UIColor.clear.cgColor
+     let roundedShapeLayer = CAShapeLayer()
+
+     roundedShapeLayer.frame = self.bounds
+     roundedShapeLayer.fillColor = UIColor.clear.cgColor
+     roundedShapeLayer.path = path.cgPath
+        
+     layer.insertSublayer(roundedShapeLayer, at: 0)
+     layer.shadowOpacity = 1
+     layer.shadowOffset  = CGSize(width: 0, height: 0)
+     layer.shadowRadius  = 5
+     layer.shadowColor   = color.cgColor
+
+   }
+}
