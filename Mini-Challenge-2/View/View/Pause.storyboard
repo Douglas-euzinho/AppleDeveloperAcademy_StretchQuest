@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="PauseViewController" title="Pause" id="Y6W-OH-hqX" customClass="PauseViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-5x-B5t">
-                                <rect key="frame" x="42" y="274" width="330" height="349"/>
+                                <rect key="frame" x="30" y="247.66666666666666" width="330" height="348.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,10 +29,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dzW-5x-B5t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="42" id="6rW-Rg-HZ3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzW-5x-B5t" secondAttribute="trailing" constant="42" id="91f-W0-f6O"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dzW-5x-B5t" secondAttribute="bottom" constant="239" id="Plo-Mk-f7e"/>
-                            <constraint firstItem="dzW-5x-B5t" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="230" id="nWc-Uw-usl"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.413112" id="Kqf-iC-3iH"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="e6c-NC-VxV"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hiV-ws-OqF"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="j7M-rn-lg7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzW-5x-B5t" secondAttribute="trailing" constant="30" id="t9t-c0-ONr"/>
                         </constraints>
                     </view>
                 </viewController>
