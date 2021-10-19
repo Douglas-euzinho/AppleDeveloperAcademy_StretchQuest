@@ -9,7 +9,7 @@ import Foundation
 import Core
 
 public protocol OnStretchListener: AnyObject {
-    func onStretchChanged(stretch: Stretch) -> Void
+    func onStretchChanged(stretch: Stretch, progress: SessionProgress) -> Void
 }
 
 public class StretchesViewModel {
@@ -24,32 +24,33 @@ public class StretchesViewModel {
     
     var listener: OnStretchListener?
     
-    init(category: StretchType){
+    public init(category: StretchType){
         self.category = category
         self.startStretchesSession = StartStretchesSession(stretchesSessionRepository)
         self.startNextStretch = StartNextStretch(stretchesSessionRepository)
     }
     
-    func startSession(with stretchType: StretchType) {
-        self.startStretchesSession.execute(with: stretchType, result: self)
+    public func startSession() {
+        self.startStretchesSession.execute(with: self.category, result: self)
     }
     
-    func nextStretch() {
+    public func nextStretch() {
         self.startNextStretch.execute(result: self)
     }
     
 }
 
 extension StretchesViewModel: StartStretchesSessionResult {
-    public func started(with firstStretch: Stretch) {
-        self.listener?.onStretchChanged(stretch: firstStretch)
-        //self.viewController.currentStretch = firstStretch
+    
+    public func started(with firstStretch: Stretch, totalOfStretches: Int) {
+        self.listener?.onStretchChanged(
+            stretch: firstStretch,
+            progress: SessionProgress(1, totalOfStretches))
     }
 }
 
 extension StretchesViewModel: StartNextStretchResult {
-    public func next(stretch: Stretch) {
-        self.listener?.onStretchChanged(stretch: stretch)
-        //self.viewController.currentStretch = stretch
+    public func next(stretch: Stretch, progress: SessionProgress) {
+        self.listener?.onStretchChanged(stretch: stretch, progress: progress)
     }
 }

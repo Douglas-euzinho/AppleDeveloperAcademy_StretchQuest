@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Core
+@testable import Mini_Challenge_2
 
 class CoreTests: XCTestCase {
 
@@ -39,7 +40,5 @@ class CoreTests: XCTestCase {
         service.execute(result)
         
     }
-
-   
 
 }

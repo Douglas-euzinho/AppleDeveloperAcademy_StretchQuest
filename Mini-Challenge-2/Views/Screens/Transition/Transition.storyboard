@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transition-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TransitionViewController" title="Transition" id="Y6W-OH-hqX" customClass="TransitionViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-pD-PJG">
+                                <rect key="frame" x="54" y="75" width="267" height="454"/>
+                                <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TimerElipse" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-0Z-EHK">
+                                <rect key="frame" x="79" y="561" width="217" height="217"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atP-tN-xPG">
+                                <rect key="frame" x="167" y="631" width="41" height="77"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HXz-0Z-EHK" firstAttribute="top" secondItem="cSs-pD-PJG" secondAttribute="bottom" constant="32" id="HHs-hz-1xb"/>
+                            <constraint firstItem="cSs-pD-PJG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="31" id="ItB-E1-fOT"/>
+                            <constraint firstItem="HXz-0Z-EHK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="79" id="K9g-13-OQz"/>
+                            <constraint firstItem="atP-tN-xPG" firstAttribute="centerX" secondItem="HXz-0Z-EHK" secondAttribute="centerX" id="MWk-7C-cbi"/>
+                            <constraint firstItem="cSs-pD-PJG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="N50-cM-D1O"/>
+                            <constraint firstItem="cSs-pD-PJG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="54" id="dDf-Hk-nv6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HXz-0Z-EHK" secondAttribute="bottom" id="lgE-Ji-Tgl"/>
+                            <constraint firstItem="atP-tN-xPG" firstAttribute="centerY" secondItem="HXz-0Z-EHK" secondAttribute="centerY" id="lvG-A9-rgj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TimerElipse" width="217" height="217"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
