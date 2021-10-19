@@ -63,7 +63,7 @@ class StretchViewController: UIViewController, OnStretchListener {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.viewModel.startSession(with: .posture)
+        self.viewModel.startSession()
         self.startTimer()
 
     }

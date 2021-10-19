@@ -30,8 +30,8 @@ public class StretchesViewModel {
         self.startNextStretch = StartNextStretch(stretchesSessionRepository)
     }
     
-    func startSession(with stretchType: StretchType) {
-        self.startStretchesSession.execute(with: stretchType, result: self)
+    func startSession() {
+        self.startStretchesSession.execute(with: self.category, result: self)
     }
     
     func nextStretch() {
