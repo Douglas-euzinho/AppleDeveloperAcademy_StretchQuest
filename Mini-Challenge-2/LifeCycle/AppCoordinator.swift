@@ -153,13 +153,13 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
 //        self.navigationController.setViewControllers([homeViewController], animated: false)
     }
     
-    func onSelected(category: TagCategory) {
+    func onSelected(category: StretchType) { // Implementa o delegate
         
         print(category)
         
         let coordinator = StretchesCoordinator(
             (tabController.viewControllers!.first!),
-            stretchType: .posture)
+            stretchType: category)
         
         coordinator.start()
         self.finish()
@@ -226,7 +226,7 @@ class StretchesCoordinator: Coordinator {
         let stretchViewController =
             story.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
         
-        let viewModel = StretchesViewModel()
+        let viewModel = StretchesViewModel(category: stretchType) //Inicializa a view model passando a                                                            categoria
         
         stretchViewController.viewModel = viewModel
         

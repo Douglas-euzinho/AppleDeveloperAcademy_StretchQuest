@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-public enum StretchType {
-    case strength
+public enum StretchType: Int {
+    case strength = 0
     case posture
     case flexibility
 }

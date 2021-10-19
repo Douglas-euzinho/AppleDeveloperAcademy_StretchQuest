@@ -7,13 +7,11 @@
 
 import UIKit
 import SwiftUI
+import Core
 
-enum TagCategory: Int {
-    case strenght, posture, flexibility
-}
 
 protocol CategoriesDelegate: AnyObject {
-    func onSelected(category: TagCategory) -> Void
+    func onSelected(category: StretchType) -> Void
 }
 
 class CategoriesViewController: UIViewController {
@@ -34,9 +32,9 @@ class CategoriesViewController: UIViewController {
     }
     
     private func setupGestures() {
-        strengthCategory.tag = TagCategory.strenght.rawValue
-        postureCategory.tag = TagCategory.posture.rawValue
-        flexibilityCategory.tag = TagCategory.flexibility.rawValue
+        strengthCategory.tag    = StretchType.strength.rawValue
+        postureCategory.tag     = StretchType.posture.rawValue
+        flexibilityCategory.tag = StretchType.flexibility.rawValue
         
         strengthCategory.addGestureRecognizer(createTapGesture())
         postureCategory.addGestureRecognizer(createTapGesture())
@@ -47,7 +45,7 @@ class CategoriesViewController: UIViewController {
         guard let sender = sender?.view else { return }
         
         self.delegate.onSelected(
-            category: TagCategory(rawValue: sender.tag) ?? .posture)
+            category: StretchType(rawValue: sender.tag) ?? .posture)
     }
     
     private func createTapGesture() -> UITapGestureRecognizer {

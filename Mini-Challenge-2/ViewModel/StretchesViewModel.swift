@@ -14,6 +14,8 @@ public protocol OnStretchListener: AnyObject {
 
 public class StretchesViewModel {
     
+    let category: StretchType
+    
     let stretchesSessionRepository:
         StretchesSessionRepository = FakeStretchesSessionRepository()
     
@@ -22,7 +24,8 @@ public class StretchesViewModel {
     
     var listener: OnStretchListener?
     
-    init(){
+    init(category: StretchType){
+        self.category = category
         self.startStretchesSession = StartStretchesSession(stretchesSessionRepository)
         self.startNextStretch = StartNextStretch(stretchesSessionRepository)
     }
