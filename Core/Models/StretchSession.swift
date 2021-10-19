@@ -1,45 +1,11 @@
 //
-//  Entities.swift
+//  StretchSession.swift
 //  Core
 //
-//  Created by Iorgers Almeida on 13/10/21.
+//  Created by Iorgers Almeida on 19/10/21.
 //
 
 import Foundation
-import UIKit
-
-public enum StretchType: Int {
-    case strength = 0
-    case posture
-    case flexibility
-}
-
-public struct Stretch {
-    public let title: String
-    public let instructions: String
-    public let animation: [UIImage]
-    public let durationInSeconds: Float
-    public let type: StretchType
-    public let externalLink: URL?
-    public var hasContinuation: Bool
-
-    public static let sideBend = Stretch(
-        title: "Side Bend",
-        instructions: "DO IT",
-        animation: [],
-        durationInSeconds: 30.0,
-        type: .posture,
-        externalLink: nil,
-        hasContinuation: false)
-}
-
-public struct StretchPoints {
-    var strength: Int
-    var posture: Int
-    var flexibility: Int
-
-    public static let empty = StretchPoints(strength: 0, posture: 0, flexibility: 0)
-}
 
 public struct StretchSession {
     let start: Date
