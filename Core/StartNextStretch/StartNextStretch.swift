@@ -12,7 +12,7 @@ public protocol StartNextStretchIteractor {
 }
 
 public protocol StartNextStretchResult {
-    func next(stretch: Stretch) -> Void
+    func next(stretch: Stretch, progress: SessionProgress) -> Void
 }
 
 public class StartNextStretch: StartNextStretchIteractor {
@@ -44,7 +44,18 @@ public class StartNextStretch: StartNextStretchIteractor {
 
         self.repository.updateCurrentSession(to: newSession)
         
-        result.next(stretch: next)
+        let currentStretch = newSession
+            .stretches[0..<currentStretchIndex]
+            .filter({!$0.hasContinuation}).count + 1
+        
+        let progression = SessionProgress(
+            currentStretch,
+            newSession.stretches.reduce(0, { result, stretch in
+                result + (stretch.hasContinuation ? 0 : 1)
+            })
+        )
+        
+        result.next(stretch: next, progress: progression)
     }
 
 }

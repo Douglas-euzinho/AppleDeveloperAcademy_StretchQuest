@@ -40,7 +40,7 @@ class StretchViewController: UIViewController, OnStretchListener {
     var circlePath     = UIBezierPath()
 
     
-    func onStretchChanged(stretch: Stretch) {
+    func onStretchChanged(stretch: Stretch, progress: SessionProgress) {
         descriptionStretch.text = stretch.title
         self.contador = Int(stretch.durationInSeconds)
         self.timerLabel.text = "\(contador)"
@@ -63,9 +63,8 @@ class StretchViewController: UIViewController, OnStretchListener {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.viewModel.startSession(with: .posture)
+        self.viewModel.startSession()
         self.startTimer()
-
     }
     
     @IBAction func presentPauseViewController() {
