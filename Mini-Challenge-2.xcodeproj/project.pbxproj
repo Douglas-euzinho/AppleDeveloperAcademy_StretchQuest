@@ -37,6 +37,8 @@
 		B25402D02717A72500C088C4 /* Stretch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25402CF2717A72500C088C4 /* Stretch.storyboard */; };
 		B259182B271E099D0083176D /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259182A271E099D0083176D /* Transition.storyboard */; };
 		B259182D271E09C20083176D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259182C271E09C20083176D /* TransitionViewController.swift */; };
+		B259182F271E0E830083176D /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259182E271E0E830083176D /* Reward.storyboard */; };
+		B2591831271E0F910083176D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2591830271E0F910083176D /* RewardViewController.swift */; };
 		B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Categories.storyboard */; };
 		CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125B271B933F0006898A /* PauseViewController.swift */; };
 		CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9B763270B736300C20DA3 /* SwiftUIView.swift */; };
@@ -114,6 +116,8 @@
 		B25402CF2717A72500C088C4 /* Stretch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stretch.storyboard; sourceTree = "<group>"; };
 		B259182A271E099D0083176D /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
 		B259182C271E09C20083176D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		B259182E271E0E830083176D /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
+		B2591830271E0F910083176D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		B2B87F84270CCA9A004F0D47 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CBE9125B271B933F0006898A /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		CBE9B763270B736300C20DA3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				B22A71772718B29C002F33C6 /* StretchViewController.swift */,
 				B22A717B2718CC28002F33C6 /* ProfileViewController.swift */,
 				B259182C271E09C20083176D /* TransitionViewController.swift */,
+				B2591830271E0F910083176D /* RewardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,9 +298,10 @@
 				B2185FE02707A0AA00A4ACAE /* Main.storyboard */,
 				B2B87F84270CCA9A004F0D47 /* Categories.storyboard */,
 				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
-				B22A71792718C55C002F33C6 /* Profile.storyboard */,
 				684CFD92271B857D009E2B70 /* Pause.storyboard */,
 				B259182A271E099D0083176D /* Transition.storyboard */,
+				B259182E271E0E830083176D /* Reward.storyboard */,
+				B22A71792718C55C002F33C6 /* Profile.storyboard */,
 				B22A717D2718D884002F33C6 /* Ball.swift */,
 			);
 			path = View;
@@ -455,6 +461,7 @@
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
 				684CFD93271B857D009E2B70 /* Pause.storyboard in Resources */,
 				B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */,
+				B259182F271E0E830083176D /* Reward.storyboard in Resources */,
 				B25402D02717A72500C088C4 /* Stretch.storyboard in Resources */,
 				B2185FE22707A0AA00A4ACAE /* Main.storyboard in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
@@ -499,6 +506,7 @@
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,
 				B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */,
+				B2591831271E0F910083176D /* RewardViewController.swift in Sources */,
 				B259182D271E09C20083176D /* TransitionViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
 				9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */,
