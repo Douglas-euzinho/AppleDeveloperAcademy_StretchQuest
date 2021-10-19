@@ -25,7 +25,7 @@
 		68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */; };
 		68ABEF2F2718C95E001E7B37 /* StartNextStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */; };
 		68ABEF3527191C2A001E7B37 /* EndStretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */; };
-		9C5F6054271E0C500023DDC4 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter.swift */; };
+		9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */; };
 		9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6055271E0D4D0023DDC4 /* testeGC.swift */; };
 		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
 		9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */; };
@@ -121,7 +121,7 @@
 		68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesViewModel.swift; sourceTree = "<group>"; };
 		68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNextStretch.swift; sourceTree = "<group>"; };
 		68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStretchSession.swift; sourceTree = "<group>"; };
-		9C5F6053271E0C500023DDC4 /* GameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
+		9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameCenter+Extension.swift"; sourceTree = "<group>"; };
 		9C5F6055271E0D4D0023DDC4 /* testeGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeGC.swift; sourceTree = "<group>"; };
 		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -196,6 +196,7 @@
 				B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */,
 				B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */,
 				CBE9B767270B923400C20DA3 /* AppCoordinator.swift */,
+				B2185FEB2707A0AC00A4ACAE /* Info.plist */,
 			);
 			path = LifeCycle;
 			sourceTree = "<group>";
@@ -258,14 +259,6 @@
 			path = StartStretchesSession;
 			sourceTree = "<group>";
 		};
-		68ABEF262718AAD8001E7B37 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		68ABEF2D2718C8D3001E7B37 /* StartNextStretch */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +297,6 @@
 		B2185FCE2707A0AA00A4ACAE = {
 			isa = PBXGroup;
 			children = (
-				CBE9125D271E42F00006898A /* Commons */,
 				B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */,
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
@@ -329,39 +321,24 @@
 			isa = PBXGroup;
 			children = (
 				684CFD8F271A057B009E2B70 /* LifeCycle */,
-				B25F864D271D1A7D000EA9EF /* Model */,
-				68ABEF262718AAD8001E7B37 /* ViewModel */,
-				B25402B927177C3000C088C4 /* View */,
-				CBE9B762270B734A00C20DA3 /* OnBoarding */,
-				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
-				B2185FEB2707A0AC00A4ACAE /* Info.plist */,
-				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
-				9C5F6053271E0C500023DDC4 /* GameCenter.swift */,
+				B25402B927177C3000C088C4 /* Views */,
+				B25F864D271D1A7D000EA9EF /* Models */,
+				B259183A271F69210083176D /* Resources */,
+				CBE9125D271E42F00006898A /* Commons */,
+				B259183B271F6AB90083176D /* Services */,
 				9C5F6055271E0D4D0023DDC4 /* testeGC.swift */,
 			);
 			path = "Mini-Challenge-2";
 			sourceTree = "<group>";
 		};
-		B25402B927177C3000C088C4 /* View */ = {
+		B25402B927177C3000C088C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2591832271F67DB0083176D /* Shareds */,
+				B2591833271F67E70083176D /* Screens */,
 				B25402CC27179B5200C088C4 /* View */,
-				B25402CB27179B4A00C088C4 /* Controller */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B25402CB27179B4A00C088C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B25402CD27179B7300C088C4 /* CategoriesViewController.swift */,
-				CBE9125B271B933F0006898A /* PauseViewController.swift */,
-				B22A71772718B29C002F33C6 /* StretchViewController.swift */,
-				B22A717B2718CC28002F33C6 /* ProfileViewController.swift */,
-				B259182C271E09C20083176D /* TransitionViewController.swift */,
-				B2591830271E0F910083176D /* RewardViewController.swift */,
-			);
-			path = Controller;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B25402CC27179B5200C088C4 /* View */ = {
@@ -369,24 +346,111 @@
 			children = (
 				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
 				B2185FE02707A0AA00A4ACAE /* Main.storyboard */,
-				B2B87F84270CCA9A004F0D47 /* Categories.storyboard */,
-				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
-				684CFD92271B857D009E2B70 /* Pause.storyboard */,
-				B259182A271E099D0083176D /* Transition.storyboard */,
-				B259182E271E0E830083176D /* Reward.storyboard */,
-				B22A71792718C55C002F33C6 /* Profile.storyboard */,
-				B22A717D2718D884002F33C6 /* Ball.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		B25F864D271D1A7D000EA9EF /* Model */ = {
+		B2591832271F67DB0083176D /* Shareds */ = {
+			isa = PBXGroup;
+			children = (
+				B22A717D2718D884002F33C6 /* Ball.swift */,
+			);
+			path = Shareds;
+			sourceTree = "<group>";
+		};
+		B2591833271F67E70083176D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CBE9B762270B734A00C20DA3 /* OnBoarding */,
+				B2591834271F67F90083176D /* Categories */,
+				B2591836271F68020083176D /* Stretch */,
+				B2591837271F68070083176D /* Transition */,
+				B2591835271F67FD0083176D /* Pause */,
+				B2591839271F68140083176D /* Reward */,
+				B2591838271F680E0083176D /* Profile */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B2591834271F67F90083176D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B2B87F84270CCA9A004F0D47 /* Categories.storyboard */,
+				B25402CD27179B7300C088C4 /* CategoriesViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B2591835271F67FD0083176D /* Pause */ = {
+			isa = PBXGroup;
+			children = (
+				684CFD92271B857D009E2B70 /* Pause.storyboard */,
+				CBE9125B271B933F0006898A /* PauseViewController.swift */,
+			);
+			path = Pause;
+			sourceTree = "<group>";
+		};
+		B2591836271F68020083176D /* Stretch */ = {
+			isa = PBXGroup;
+			children = (
+				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
+				B22A71772718B29C002F33C6 /* StretchViewController.swift */,
+				68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */,
+			);
+			path = Stretch;
+			sourceTree = "<group>";
+		};
+		B2591837271F68070083176D /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				B259182A271E099D0083176D /* Transition.storyboard */,
+				B259182C271E09C20083176D /* TransitionViewController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		B2591838271F680E0083176D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B22A71792718C55C002F33C6 /* Profile.storyboard */,
+				B22A717B2718CC28002F33C6 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B2591839271F68140083176D /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				B259182E271E0E830083176D /* Reward.storyboard */,
+				B2591830271E0F910083176D /* RewardViewController.swift */,
+			);
+			path = Reward;
+			sourceTree = "<group>";
+		};
+		B259183A271F69210083176D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B259183B271F6AB90083176D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */,
+				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B25F864D271D1A7D000EA9EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9C66DE46271A093300D5F6D2 /* CoreDataClass */,
 				CBE91260271E44C00006898A /* RingAttributes.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CBE9125D271E42F00006898A /* Commons */ = {
@@ -630,7 +694,7 @@
 				B22A717E2718D884002F33C6 /* Ball.swift in Sources */,
 				B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */,
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
-				9C5F6054271E0C500023DDC4 /* GameCenter.swift in Sources */,
+				9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,
 				B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */,
 				B2591831271E0F910083176D /* RewardViewController.swift in Sources */,
@@ -973,13 +1037,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
+				INFOPLIST_FILE = "Mini-Challenge-2/LifeCycle/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1006,13 +1070,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini-Challenge-2/Info.plist";
+				INFOPLIST_FILE = "Mini-Challenge-2/LifeCycle/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow the application to access your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
