@@ -30,25 +30,59 @@ extension testeGC: GKGameCenterControllerDelegate{
                 self.gameCenterEnabled = true
             }
         }
-    }//fim authenticateUser()
+    }
     
     
-    //MARK: - função para salvar o placar
-    func countStretches(number: Int){
+    //MARK: - função para salvar os placares
+    //função para salvar o placar de força
+    func countStrengthSessions(number: Int){
         if GKLocalPlayer.local.isAuthenticated{
-            GKLeaderboard.submitScore(number, context: 0, player: GKLocalPlayer.local, leaderboardIDs: ["bundle.nomeLeader"]){error in
+            GKLeaderboard.submitScore(number, context: 0, player: GKLocalPlayer.local, leaderboardIDs: ["StrengthStretches"]){error in
                 if let error = error{
                     print(error.localizedDescription)
                 }else{}
             }
         }
-    }//fim countStretches()
+    }
+    
+    //função para salvar o placar de flexibilidade
+    func countFlexibilitySessions(number: Int){
+        if GKLocalPlayer.local.isAuthenticated{
+            GKLeaderboard.submitScore(number, context: 0, player: GKLocalPlayer.local, leaderboardIDs: ["FlexibilityStretches"]){error in
+                if let error = error{
+                    print(error.localizedDescription)
+                }else{}
+            }
+        }
+    }
+    
+    //função para salvar o placar de postura
+    func countPostureSessions(number: Int){
+        if GKLocalPlayer.local.isAuthenticated{
+            GKLeaderboard.submitScore(number, context: 0, player: GKLocalPlayer.local, leaderboardIDs: ["PostureStretches"]){error in
+                if let error = error{
+                    print(error.localizedDescription)
+                }else{}
+            }
+        }
+    }
     
     
     //MARK: - função para chamar e enviar o placar pro GC. Deve ser chamado essa função ao final da sessão
-    func callGameCenter(_ sender: Any){
-        countStretches(number: stretchesDid)
-    }//fim callGameCenter()
+    //função para enviar o placar de força
+    func callGameCenterStrength(_ sender: Any){
+        countStrengthSessions(number: sessionStrengthDid)
+    }
+    
+    //função para enviar o placar de flexibilidade
+    func callGameCenterFlexibility(_ sender: Any){
+        countFlexibilitySessions(number: sessionFlexibilityDid)
+    }
+    
+    //função para enviar o placar de postura
+    func callGameCenterPosture(_ sender: Any){
+        countPostureSessions(number: sessionPostureDid)
+    }
     
     
     //MARK: - função para mostrar os leaderboards. Chamado ao clicar em algum botão específico.
@@ -56,7 +90,7 @@ extension testeGC: GKGameCenterControllerDelegate{
         let viewController = GKGameCenterViewController(state: .leaderboards)
         viewController.gameCenterDelegate = self
         present(viewController, animated: true, completion: nil)
-    }//fim transitionToGameCenter()
+    }
     
     
 }

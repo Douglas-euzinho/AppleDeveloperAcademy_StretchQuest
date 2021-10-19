@@ -31,7 +31,9 @@ class CategoriesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupGestures()
+        
     }
+    
     
     private func setupGestures() {
         strengthCategory.tag = TagCategory.strenght.rawValue
