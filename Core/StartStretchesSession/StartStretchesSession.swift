@@ -12,11 +12,10 @@ public protocol StretchesRepository {
 }
 
 public protocol StartStretchesSessionResult {
-    func started(with firstStretch: Stretch) -> Void
+    func started(with firstStretch: Stretch, totalOfStretches: Int) -> Void
 }
 
 public protocol StartStretchesSessionIteractor {
-    //func execute(with: StretchType) -> Void
     func execute(with stretchType: StretchType, result: StartStretchesSessionResult) -> Void
 }
 
@@ -43,7 +42,11 @@ public class StartStretchesSession: StartStretchesSessionIteractor {
 
         self.sessionsRepository.add(session: stretchesSession)
 
-        result.started(with: stretchesSession.stretches.first!)
+        result.started(
+            with: stretchesSession.stretches.first!,
+            totalOfStretches: stretches.reduce(0, { result, stretch in
+                result + (stretch.hasContinuation ? 0 : 1)
+            }))
     }
 }
 

@@ -16,6 +16,10 @@ public struct SessionProgress: CustomStringConvertible {
         "progress: \(current)/\(total)"
     }
     
+    public var isDone: Bool {
+        self.current >= self.total
+    }
+    
     public init(
         _ current: Int,
         _ total: Int
