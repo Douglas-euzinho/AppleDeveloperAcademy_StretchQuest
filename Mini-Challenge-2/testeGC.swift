@@ -4,13 +4,13 @@
 //
 //  Created by Douglas Figueirôa on 18/10/21.
 //
-/*
+
 import Foundation
 import UIKit
 import GameKit
 import GameplayKit
 
-
+/*
  AQUI É UM EXEMPLO DE ONDE SERIA PRA CHAMAR AS FUNÇÕES DE AUTENTICAÇÃO
  */
 
