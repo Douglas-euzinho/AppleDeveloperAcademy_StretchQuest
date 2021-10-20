@@ -13,7 +13,7 @@ public struct SessionProgress: CustomStringConvertible {
     let total: Int
     
     public var description: String {
-        "progress: \(current)/\(total)"
+        "\(current)/\(total)"
     }
     
     public var isDone: Bool {
