@@ -48,6 +48,11 @@
                             <constraint firstItem="atP-tN-xPG" firstAttribute="centerY" secondItem="HXz-0Z-EHK" secondAttribute="centerY" id="lvG-A9-rgj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animation" destination="cSs-pD-PJG" id="5XZ-2H-UsA"/>
+                        <outlet property="timerElipse" destination="HXz-0Z-EHK" id="6BM-gI-9gL"/>
+                        <outlet property="timerLabel" destination="atP-tN-xPG" id="Vib-uQ-Oa9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
