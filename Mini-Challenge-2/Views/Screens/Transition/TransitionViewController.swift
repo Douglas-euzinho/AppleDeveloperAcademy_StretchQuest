@@ -17,6 +17,14 @@ class TransitionViewController: UIViewController {
 
     var onDismiss: OnDismiss?
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.dismiss(animated: true)
+        }
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         onDismiss?()
     }

@@ -31,6 +31,8 @@ public class StartNextStretch: StartNextStretchIteractor {
 
         let currentStretchIndex = currentSession.currentStretch + 1
 
+        print("currentStretchIndex: \(currentStretchIndex)")
+        
         let newSession = StretchSession(
             start: currentSession.start,
             end: currentSession.end,
@@ -46,12 +48,12 @@ public class StartNextStretch: StartNextStretchIteractor {
         
         let currentStretch = newSession
             .stretches[0..<currentStretchIndex]
-            .filter({!$0.hasContinuation}).count + 1
+            .filter({!$0.isContinuation}).count + 1
         
         let progression = SessionProgress(
             currentStretch,
             newSession.stretches.reduce(0, { result, stretch in
-                result + (stretch.hasContinuation ? 0 : 1)
+                result + (stretch.isContinuation ? 0 : 1)
             })
         )
         

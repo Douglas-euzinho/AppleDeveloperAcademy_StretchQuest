@@ -45,7 +45,7 @@ extension StretchesViewModel: StartStretchesSessionResult {
     public func started(with firstStretch: Stretch, totalOfStretches: Int) {
         self.listener?.onStretchChanged(
             stretch: firstStretch,
-            progress: SessionProgress(1, totalOfStretches))
+            progress: SessionProgress(total: totalOfStretches))
     }
 }
 

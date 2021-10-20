@@ -47,28 +47,22 @@ class StretchViewController: UIViewController, OnStretchListener {
         self.timerLabel.text = "\(self.contador)"
         self.startTimerAnimation()
         
+        print("[StretchViewController] progress: \(progress)")
+        print("[StretchViewController] mustSkip: \(stretch.isContinuation)")
+        print("[StretchViewController] isDone: \(progress.isDone)")
         
-        print(progress)
-        print(stretch.hasContinuation)
-        
-        if stretch.hasContinuation == true {
+        if !stretch.isContinuation || progress.isFirst {
             self.showTransitionBetweenStretches(progress: progress)
         } else {
-            self.timer?.invalidate()
             self.beginStretch(isTheLastStretch: progress.isDone)
         }
     }
 
     func beginStretch(isTheLastStretch: Bool) {
         self.shape.isHidden = false
+        self.timer?.invalidate()
         self.startTimer()
         self.ringTimerAnimation()
-
-        if !isTheLastStretch {
-            self.agendamentos += 1
-        } else {
-            self.timer?.invalidate()
-        }
     }
     
     func showTransitionBetweenStretches(progress: SessionProgress) {

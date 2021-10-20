@@ -45,7 +45,7 @@ public class StartStretchesSession: StartStretchesSessionIteractor {
         result.started(
             with: stretchesSession.stretches.first!,
             totalOfStretches: stretches.reduce(0, { result, stretch in
-                result + (stretch.hasContinuation ? 0 : 1)
+                result + (stretch.isContinuation ? 0 : 1)
             }))
     }
 }
@@ -66,6 +66,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch.sideBend)
 
         case .posture:
+            
+            //---
+            
             list.append(Stretch(
                 title: "Arms Up",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
@@ -73,7 +76,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: false))
+            
+            //--
             
             //Shoulder stretch left
             list.append(Stretch(
@@ -83,7 +88,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- SKIP
             //Shoulder stretch right
             list.append(Stretch(
                 title: "Shoulder Stretch",
@@ -92,7 +99,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
             
             //Neck Stretch Left
             list.append(Stretch(
@@ -102,7 +111,10 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- Skip
+            
             //Neck Stretch Right
             list.append(Stretch(
                 title: "Side Neck Stretch",
@@ -111,7 +123,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
             
             //Side Bend Left
             list.append(Stretch(
@@ -121,7 +135,10 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- SKIP
+            
             //Side Bend Right
             list.append(Stretch(
                 title: "Side Bend",
@@ -130,7 +147,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
         
             //Torso Twist Stretch
             list.append(Stretch(
@@ -140,7 +159,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: false))
+            
+            // -- FIM
                         
         case .strength:
             list.append(Stretch.sideBend)

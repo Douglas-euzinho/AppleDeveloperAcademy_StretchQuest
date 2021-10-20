@@ -10,7 +10,7 @@ import UIKit
 
 public struct Stretch: CustomStringConvertible {
     public var description: String {
-        "Stretch: \(self.title) has continuation: \(self.hasContinuation)"
+        "Stretch: \(self.title) has continuation: \(self.isContinuation)"
     }
     
     public let title: String
@@ -19,7 +19,7 @@ public struct Stretch: CustomStringConvertible {
     public let durationInSeconds: Float
     public let type: StretchType
     public let externalLink: URL?
-    public var hasContinuation: Bool
+    public var isContinuation: Bool
 
     public static let sideBend = Stretch(
         title: "Side Bend",
@@ -28,5 +28,5 @@ public struct Stretch: CustomStringConvertible {
         durationInSeconds: 30.0,
         type: .posture,
         externalLink: nil,
-        hasContinuation: false)
+        isContinuation: false)
 }

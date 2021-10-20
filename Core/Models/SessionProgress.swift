@@ -11,6 +11,7 @@ public struct SessionProgress: CustomStringConvertible {
     
     let current: Int
     let total: Int
+    public let isFirst: Bool
     
     public var description: String {
         "\(current)/\(total)"
@@ -26,5 +27,12 @@ public struct SessionProgress: CustomStringConvertible {
     ){
         self.current = current
         self.total = total
+        self.isFirst = false
+    }
+    
+    public init(total: Int){
+        self.current = 1
+        self.total = total
+        self.isFirst = true
     }
 }
