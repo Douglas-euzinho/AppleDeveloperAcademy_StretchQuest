@@ -334,17 +334,8 @@
 			children = (
 				B2591832271F67DB0083176D /* Shareds */,
 				B2591833271F67E70083176D /* Screens */,
-				B25402CC27179B5200C088C4 /* View */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B25402CC27179B5200C088C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B2591832271F67DB0083176D /* Shareds */ = {
@@ -358,6 +349,7 @@
 		B2591833271F67E70083176D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B259183F271F74C90083176D /* Launch */,
 				CBE9B762270B734A00C20DA3 /* OnBoarding */,
 				B2591834271F67F90083176D /* Categories */,
 				B2591836271F68020083176D /* Stretch */,
@@ -439,6 +431,14 @@
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B259183F271F74C90083176D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		B25F864D271D1A7D000EA9EF /* Models */ = {
