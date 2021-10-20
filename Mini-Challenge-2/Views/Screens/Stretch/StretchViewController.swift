@@ -41,20 +41,46 @@ class StretchViewController: UIViewController, OnStretchListener {
 
     
     func onStretchChanged(stretch: Stretch, progress: SessionProgress) {
-        descriptionStretch.text = stretch.title
+        
+        self.descriptionStretch.text = stretch.title
         self.contador = Int(stretch.durationInSeconds)
-        self.timerLabel.text = "\(contador)"
-        
+        self.timerLabel.text = "\(self.contador)"
         self.startTimerAnimation()
-        self.ringTimerAnimation()
         
+        
+        print(progress)
+        print(stretch.hasContinuation)
+        
+        if stretch.hasContinuation == true {
+            self.showTransitionBetweenStretches(progress: progress)
+        } else {
+            self.timer?.invalidate()
+            self.beginStretch(isTheLastStretch: progress.isDone)
+        }
+    }
 
-        if self.agendamentos < 5 {
+    func beginStretch(isTheLastStretch: Bool) {
+        self.shape.isHidden = false
+        self.startTimer()
+        self.ringTimerAnimation()
+
+        if !isTheLastStretch {
             self.agendamentos += 1
         } else {
             self.timer?.invalidate()
         }
+    }
+    
+    func showTransitionBetweenStretches(progress: SessionProgress) {
+
+        let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
+        let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
         
+        self.timer?.invalidate()
+        self.present(transitionViewController, animated: true)
+        self.shape.isHidden = true
+        
+        transitionViewController.onDismiss = { self.beginStretch(isTheLastStretch: progress.isDone) }
     }
         
     override func viewDidLoad() {
@@ -64,7 +90,6 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     override func viewDidAppear(_ animated: Bool) {
         self.viewModel.startSession()
-        self.startTimer()
     }
     
     @IBAction func presentPauseViewController() {

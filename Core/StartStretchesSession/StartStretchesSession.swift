@@ -70,7 +70,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Arms Up",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: false))
@@ -80,7 +80,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Shoulder Stretch",
                 instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: true))
@@ -89,7 +89,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Shoulder Stretch",
                 instructions: "Repeat the stretch on the other side",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: false))
@@ -99,7 +99,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Side Neck Stretch",
                 instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: true))
@@ -108,7 +108,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Side Neck Stretch",
                 instructions: "Repeat the stretch on the other side",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: false))
@@ -118,7 +118,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Side Bend",
                 instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: true))
@@ -127,7 +127,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Side Bend",
                 instructions: "Repeat the stretch on the other side",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: false))
@@ -137,7 +137,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 title: "Torso Twist",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
                 animation: [],
-                durationInSeconds: 20,
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
                 hasContinuation: false))

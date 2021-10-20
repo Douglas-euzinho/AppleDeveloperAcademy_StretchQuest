@@ -7,12 +7,17 @@
 
 import UIKit
 
+//protocol TransitionDelegate: AnyObject {
+//    func viewDidDisappear()
+//}
+
+typealias OnDismiss = () -> ()
+
 class TransitionViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var onDismiss: OnDismiss?
     
+    override func viewDidDisappear(_ animated: Bool) {
+        onDismiss?()
+    }
 }
