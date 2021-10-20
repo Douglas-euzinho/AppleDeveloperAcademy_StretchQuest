@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
-    @IBOutlet weak var cameraButton: Ball!
+    @IBOutlet weak var cameraButton: Circle!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -22,8 +22,8 @@
                                     <constraint firstAttribute="width" secondItem="eL1-8K-IA8" secondAttribute="height" multiplier="1:1" id="hKx-cj-yTd"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="258" y="239" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
+                                <rect key="frame" x="258" y="227" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-Vs-ggp">
                                         <rect key="frame" x="12.666666666666687" y="15.999999999999998" width="24.666666666666671" height="18"/>
@@ -55,8 +55,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="33" y="427" width="51" height="51"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
+                                <rect key="frame" x="33" y="407" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-Lg-RE6">
                                         <rect key="frame" x="8" y="8" width="35" height="35"/>
@@ -159,8 +159,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="33" y="547.66666666666663" width="51" height="51"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
+                                <rect key="frame" x="33" y="533.33333333333337" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Posture" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-6v-Nns">
                                         <rect key="frame" x="11.666666666666664" y="7.6666666666667425" width="28" height="36"/>
@@ -263,8 +263,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="Ball" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="33" y="668.66666666666663" width="51" height="51"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
+                                <rect key="frame" x="33" y="659.66666666666663" width="51" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Flexibility" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-w3-DNw">
                                         <rect key="frame" x="6.6666666666666643" y="9.6666666666667425" width="38" height="32"/>
