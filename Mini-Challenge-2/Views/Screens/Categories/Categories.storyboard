@@ -151,6 +151,7 @@
                             <constraint firstItem="4f5-JP-amU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pWE-ta-h5x"/>
                             <constraint firstItem="5PP-A9-agW" firstAttribute="centerX" secondItem="Fof-cS-xzn" secondAttribute="centerX" id="qaN-Em-W4h"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pam-rD-xaq" secondAttribute="trailing" constant="31.670000000000002" id="ufF-H7-Fkr"/>
+                            <constraint firstItem="4f5-JP-amU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0679305" id="w5I-Vv-R83"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Exercises" id="xF4-rl-irh"/>
