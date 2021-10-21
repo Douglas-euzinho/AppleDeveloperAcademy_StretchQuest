@@ -26,6 +26,8 @@ class TransitionViewController: UIViewController {
     var viewModel: TransitionViewModel! = TransitionViewModel()
     var onDismiss: OnDismiss?
     
+    var ringAlreadySetuped: Bool = false
+    
     lazy var onPublished: () -> () = {
         self.counterLabel.text = "\(self.viewModel.counter)"
         
@@ -46,10 +48,6 @@ class TransitionViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.startTimerAnimation()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,6 +81,12 @@ class TransitionViewController: UIViewController {
     
     func startTimerAnimation() {
         
+        if !self.ringAlreadySetuped {
+            self.ringAlreadySetuped = true
+        } else {
+            return
+        }
+        
         let label = self.view.subviews.first { view in
             return type(of: view) == UILabel.self
         }
@@ -94,7 +98,7 @@ class TransitionViewController: UIViewController {
         pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear)
         view.layer.addSublayer(pulsatingLayer)
         
-        animatePulsatingLayer()
+        //animatePulsatingLayer()
                     
         view.addShadow(layer: trackShape, path: self.circlePath, color: circleAttributed.shadowColor)
         

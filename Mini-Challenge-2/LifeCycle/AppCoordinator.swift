@@ -78,12 +78,12 @@ class Coordinator: ViewCoordinator {
     var parent: CoordinatorManager?
     
     override init() {
-        print("Coordinator foi alocado!")
+        print("[Coordinator] alocado!")
         super.init()
     }
     
     deinit {
-        print("Coordinator foi desalocado!")
+        print("[Coordinator] desalocado!")
     }
 }
 
