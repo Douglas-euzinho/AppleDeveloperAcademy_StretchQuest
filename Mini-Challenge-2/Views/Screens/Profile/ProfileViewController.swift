@@ -13,6 +13,12 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var cameraButton: Circle!
     
+    @IBOutlet weak var strengthProgress: UIStackView!
+    
+    @IBOutlet weak var postureProgress: UIStackView!
+    
+    @IBOutlet weak var flexibilityProgress: UIStackView!
+    
     let maskLayer: CAShapeLayer = {
         let circle = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
         
