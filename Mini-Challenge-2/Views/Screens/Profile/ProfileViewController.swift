@@ -36,7 +36,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
-        print(imageProfile.bounds)
     }
     
     private func configureImageProfile() {
@@ -54,27 +53,28 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        
         let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { handler in
-            picker.sourceType = .camera
-            
-            self.present(picker, animated: true)
+            self.openCamera(source: .camera)
         }
         
         let library = UIAlertAction(title: "Library", style: .default) { handler in
-            picker.sourceType = .photoLibrary
-            
-            self.present(picker, animated: true)
+            self.openCamera(source: .photoLibrary)
         }
         
         alert.addAction(camera)
         alert.addAction(library)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func openCamera(source: UIImagePickerController.SourceType) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = source
+        
+        present(picker, animated: true)
     }
 
 }
