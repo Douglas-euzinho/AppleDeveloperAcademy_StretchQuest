@@ -29,4 +29,14 @@ public struct Stretch: CustomStringConvertible {
         type: .posture,
         externalLink: nil,
         isContinuation: false)
+    
+    public static let empty = Stretch (
+        title: "",
+        instructions: "",
+        animation: [],
+        durationInSeconds: 0.0,
+        type: .posture,
+        externalLink: nil,
+        isContinuation: false
+    )
 }
