@@ -21,9 +21,20 @@ class PauseViewController: UIViewController {
     
     @IBAction func didTappedLeave(_ sender: Any) {
         print("Leave")
-        
+        returnToCategoryScreen()
         dismiss(animated: true, completion: nil)
     }
+    
+    func returnToCategoryScreen(){
+        let story = UIStoryboard(name: "Categories", bundle: nil)
+        let categoriesViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
+        
+//        self.viewModel.pauseCountdownTime()
+//        pauseRingAnimation()
+
+        self.present(categoriesViewController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func didTappedKeep(_ sender: Any) {
         print("Keep")
