@@ -31,5 +31,13 @@ class IntegrationTests: XCTestCase {
         
         XCTAssert(listener.currentProgress?.isDone ?? false)
     }
+    
+    func testTransitionViewModel() {
+        
+        let viewModel = TransitionViewModel()
+        
+        viewModel.start()
+        
+    }
 
 }

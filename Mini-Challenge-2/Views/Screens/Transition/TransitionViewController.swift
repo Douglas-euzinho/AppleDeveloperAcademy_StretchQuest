@@ -15,25 +15,46 @@ typealias OnDismiss = () -> ()
 
 class TransitionViewController: UIViewController {
 
-    lazy var circleAttributed = UIColor.getColorBy(category: .posture)
+    lazy var circleAttributed = UIColor.getColorBy(category: self.viewModel.category)
     
     var pulsatingLayer = CAShapeLayer()
     let shape          = CAShapeLayer()
     let trackShape     = CAShapeLayer()
     var circlePath     = UIBezierPath()
     
-    var viewModel: TransitionViewModel
+    var counterLabel: UILabel!
+    var viewModel: TransitionViewModel! = TransitionViewModel()
     var onDismiss: OnDismiss?
+    
+    lazy var onPublished: () -> () = {
+        self.counterLabel.text = "\(self.viewModel.counter)"
+        
+        if self.viewModel.didFinish {
+            self.dismiss(animated: true)
+        }
+    }
+    
+    override func viewDidLoad() {
+        self.counterLabel = self.view.subviews.first {
+            view in type(of: view) == UILabel.self
+        } as? UILabel
+        self.counterLabel.text = "\(self.viewModel.transitionLenghtInSeconds)"
+        self.viewModel.start()
+        self.viewModel.onPublished = self.onPublished
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.startTimerAnimation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.startTimerAnimation()
         self.ringTimerAnimation()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.2){
-            self.dismiss(animated: true)
-        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -109,7 +130,7 @@ class TransitionViewController: UIViewController {
         let startAnimate      = CABasicAnimation(keyPath: "strokeEnd")
         
         startAnimate.toValue  = 1
-        startAnimate.duration = CFTimeInterval(5)
+        startAnimate.duration = CFTimeInterval(self.viewModel.transitionLenghtInSeconds)
         startAnimate.fillMode = .forwards
         startAnimate.isRemovedOnCompletion = false
      

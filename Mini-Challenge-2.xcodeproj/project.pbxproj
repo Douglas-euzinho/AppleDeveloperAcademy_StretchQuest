@@ -15,6 +15,7 @@
 		684CFDAB271F4515009E2B70 /* StretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDAA271F4515009E2B70 /* StretchSession.swift */; };
 		684CFDB5271F4A59009E2B70 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDB4271F4A59009E2B70 /* IntegrationTests.swift */; };
 		684CFDBB271F4A8A009E2B70 /* FakeOnStretchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDAC271F499E009E2B70 /* FakeOnStretchListener.swift */; };
+		684CFDD827210325009E2B70 /* TransitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDD727210325009E2B70 /* TransitionViewModel.swift */; };
 		68ABEEE3271760B9001E7B37 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ABEEDB271760B8001E7B37 /* Core.framework */; };
 		68ABEEEA271760B9001E7B37 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEEE9271760B9001E7B37 /* CoreTests.swift */; };
 		68ABEEEB271760B9001E7B37 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ABEEDD271760B8001E7B37 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,6 +112,7 @@
 		684CFDAC271F499E009E2B70 /* FakeOnStretchListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeOnStretchListener.swift; sourceTree = "<group>"; };
 		684CFDB2271F4A59009E2B70 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		684CFDB4271F4A59009E2B70 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		684CFDD727210325009E2B70 /* TransitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewModel.swift; sourceTree = "<group>"; };
 		68ABEEDB271760B8001E7B37 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68ABEEDD271760B8001E7B37 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		68ABEEE2271760B9001E7B37 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +396,7 @@
 			children = (
 				B259182A271E099D0083176D /* Transition.storyboard */,
 				B259182C271E09C20083176D /* TransitionViewController.swift */,
+				684CFDD727210325009E2B70 /* TransitionViewModel.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684CFDD827210325009E2B70 /* TransitionViewModel.swift in Sources */,
 				9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */,
 				CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */,
 				CBE9B766270B74AA00C20DA3 /* OnBoardingData.swift in Sources */,
