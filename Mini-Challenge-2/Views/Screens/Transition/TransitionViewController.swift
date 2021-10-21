@@ -18,8 +18,8 @@ class TransitionViewController: UIViewController {
     lazy var circleAttributed = UIColor.getColorBy(category: self.viewModel.category)
     
     var pulsatingLayer = CAShapeLayer()
-    let shape          = CAShapeLayer()
-    let trackShape     = CAShapeLayer()
+    public let shape          = CAShapeLayer()
+    public let trackShape     = CAShapeLayer()
     var circlePath     = UIBezierPath()
     
     var counterLabel: UILabel!
@@ -44,7 +44,7 @@ class TransitionViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+//        super.viewDidLayoutSubviews()
         self.startTimerAnimation()
     }
     
@@ -58,6 +58,7 @@ class TransitionViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+
         onDismiss?()
     }
     
