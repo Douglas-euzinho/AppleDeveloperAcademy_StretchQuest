@@ -14,8 +14,21 @@ protocol PauseDelegate: AnyObject {
 class PauseViewController: UIViewController {
     
     weak var delegate: PauseDelegate?
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         delegate?.viewDidDisappear()
     }
+    
+    @IBAction func didTappedLeave(_ sender: Any) {
+        print("Leave")
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTappedKeep(_ sender: Any) {
+        print("Keep")
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

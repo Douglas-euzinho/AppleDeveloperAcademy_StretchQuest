@@ -8,9 +8,10 @@
 import UIKit
 
 @IBDesignable
-class Ball: UIView {
+class Circle: UIView {
     
-    @IBInspectable var fillColor: UIColor = .black
+    @IBInspectable var fillColor: UIColor = .systemGray
+    @IBInspectable var strokeColor: UIColor = .clear
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -18,8 +19,10 @@ class Ball: UIView {
         let circle = UIBezierPath(ovalIn: rect)
         
         fillColor.setFill()
+        strokeColor.setStroke()
         
         circle.fill()
+        circle.stroke()
     }
     
 }
