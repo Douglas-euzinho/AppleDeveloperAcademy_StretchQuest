@@ -202,7 +202,8 @@ class StretchViewController: UIViewController {
 extension StretchViewController: PauseDelegate {
     
     func viewDidDisappear() {
-        //self.resumeRingAnimation()
+        self.viewModel.resumeCountdownTimer()
+        self.resumeRingAnimation()
     }
 }
 
