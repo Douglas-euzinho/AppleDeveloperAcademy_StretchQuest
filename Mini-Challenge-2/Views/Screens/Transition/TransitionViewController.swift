@@ -17,6 +17,8 @@ class TransitionViewController: UIViewController {
 
     lazy var circleAttributed = UIColor.getColorBy(category: self.viewModel.category)
     
+    lazy var transitionColor = UIColor.getTransitionRingColor()
+    
     var pulsatingLayer = CAShapeLayer()
     public let shape          = CAShapeLayer()
     public let trackShape     = CAShapeLayer()
@@ -72,7 +74,7 @@ class TransitionViewController: UIViewController {
         let circularPath  = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         layer.path        = circularPath.cgPath
-        layer.strokeColor = self.circleAttributed.pulse.cgColor
+        layer.strokeColor = self.transitionColor.pulse.cgColor
         layer.lineWidth   = 16
         layer.fillColor   = fillColor.cgColor
         layer.lineCap     = .round
@@ -101,17 +103,18 @@ class TransitionViewController: UIViewController {
         
         //animatePulsatingLayer()
                     
-        view.addShadow(layer: trackShape, path: self.circlePath, color: circleAttributed.shadowColor)
+        view.addShadow(layer: trackShape, path: self.circlePath, color: transitionColor.shadowColor)
         
         trackShape.path         = circlePath.cgPath
         trackShape.fillColor    = UIColor.clear.cgColor
         trackShape.lineWidth    = 15
-        trackShape.strokeColor  = circleAttributed.trackColor.cgColor
+        trackShape.strokeColor  = transitionColor.trackColor.cgColor
         view.layer.addSublayer(trackShape)
 
         shape.path         = circlePath.cgPath
         shape.lineWidth    = 15
-        shape.strokeColor  = circleAttributed.shapeColor.cgColor
+        shape.strokeColor  = transitionColor.shapeColor.cgColor
+//        shape.strokeColor  = circleAttributed.shapeColor.cgColor
         shape.lineCap      = .round
         shape.fillColor    = UIColor.clear.cgColor
         shape.strokeEnd    = 0

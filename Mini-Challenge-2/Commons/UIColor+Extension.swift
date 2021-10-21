@@ -47,4 +47,12 @@ extension UIColor {
         
     }
     
+    static func getTransitionRingColor() -> RingColorAttributes {
+        return RingColorAttributes.init(
+            shapeColor: UIColor(red: 0/255,   green: 206/255, blue: 209/255, alpha: 1),
+            trackColor: UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1),
+            shadowColor:UIColor(red: 30/255,  green: 144/255, blue: 155/255, alpha: 0.6),
+            pulse:      UIColor(red: 175/255, green: 238/255, blue: 250/255, alpha: 0.6))
+    }
+    
 }
