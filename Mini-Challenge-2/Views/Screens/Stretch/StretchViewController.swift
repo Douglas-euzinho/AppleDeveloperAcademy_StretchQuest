@@ -76,14 +76,24 @@ class StretchViewController: UIViewController {
     }
     
     func counterDidChange(counter: Int) {
-        print("[StretchViewController] \(counter)")
         self.timerLabel.text = "\(counter)"
+    }
+    
+    func showRewardsScreen() {
+        let rewardsStoryboard = UIStoryboard(name: "Reward", bundle: nil)
+        
+        let rewardsViewController =
+            rewardsStoryboard.instantiateViewController(
+                withIdentifier: "RewardViewController")
+        
+        self.show(rewardsViewController, sender: nil)
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel.publishStretch = self.stretchDidChange
         self.viewModel.publishCountdown = self.counterDidChange
+        self.viewModel.publishShowRewardsScreen = self.showRewardsScreen
         self.setupRingAnimation()
         self.setupVideoView()
         self.setupStretchVideo()

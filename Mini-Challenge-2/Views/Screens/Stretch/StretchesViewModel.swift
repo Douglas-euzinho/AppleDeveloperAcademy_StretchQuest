@@ -40,6 +40,8 @@ public class StretchesViewModel {
     
     // MARK: View notifier
     
+    var publishShowRewardsScreen: () -> () = {}
+    
     var publishStretch: () -> () = {}
     
     var publishCountdown: (Int) -> () {
@@ -104,7 +106,7 @@ extension StretchesViewModel: StartStretchesSessionResult {
 
 extension StretchesViewModel: StartNextStretchResult {
     public func sessionDidFinish() {
-        print("[StretchesViewModel] Session did Finish!!!")
+        self.publishShowRewardsScreen()
     }
     
     public func next(stretch: Stretch, progress: SessionProgress) {

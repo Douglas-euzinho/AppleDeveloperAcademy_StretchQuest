@@ -13,7 +13,6 @@ class CountdownTimer {
     var countdown = 0 {
         didSet {
             if self.countdown >= 0 {
-                print("[CountdownTimer] :\(self.countdown)")
                 self.onPublishCountdown(self.countdown)
             }
         }
