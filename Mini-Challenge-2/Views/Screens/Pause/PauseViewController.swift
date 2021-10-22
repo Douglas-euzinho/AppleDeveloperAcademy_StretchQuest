@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PauseDelegate: AnyObject {
-    func viewDidDisappear()
+    func onPauseScreenDismiss()
     func exitToCategoriesScreen()
 }
 
@@ -16,30 +16,25 @@ class PauseViewController: UIViewController {
     
     weak var delegate: PauseDelegate?
     
+    var exitToCategories: Bool = false
+    
     override func viewDidDisappear(_ animated: Bool) {
-        delegate?.viewDidDisappear()
+        if self.exitToCategories {
+            delegate?.exitToCategoriesScreen()
+        }else {
+            delegate?.onPauseScreenDismiss()
+        }
     }
     
-    @IBAction func didTappedLeave(_ sender: Any) {  //Botao de sair
-        print("Leave")
-        delegate?.exitToCategoriesScreen()  //Delegate para voltar para a Tela de categorias!!!
+    // Botão de sair
+    @IBAction func didTappedLeave(_ sender: Any) {
+        // Flag para voltar para a Tela de categorias!!!
+        self.exitToCategories = true
         dismiss(animated: true, completion: nil)
     }
     
-    func returnToCategoryScreen(){
-        let story = UIStoryboard(name: "Categories", bundle: nil)
-        let categoriesViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
-        
-//        self.viewModel.pauseCountdownTime()
-//        pauseRingAnimation()
-
-        self.present(categoriesViewController, animated: true, completion: nil)
-    }
-    
-    
+    // Botão de voltar ao alongagmento
     @IBAction func didTappedKeep(_ sender: Any) {
-        print("Keep")
-        
         dismiss(animated: true, completion: nil)
     }
     
