@@ -26,6 +26,7 @@
 		68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */; };
 		68ABEF2F2718C95E001E7B37 /* StartNextStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */; };
 		68ABEF3527191C2A001E7B37 /* EndStretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */; };
+		68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFC5872723406E0080D6EA /* CountownTimer.swift */; };
 		9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */; };
 		9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6055271E0D4D0023DDC4 /* testeGC.swift */; };
 		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
@@ -126,6 +127,7 @@
 		68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesViewModel.swift; sourceTree = "<group>"; };
 		68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNextStretch.swift; sourceTree = "<group>"; };
 		68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStretchSession.swift; sourceTree = "<group>"; };
+		68CFC5872723406E0080D6EA /* CountownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountownTimer.swift; sourceTree = "<group>"; };
 		9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameCenter+Extension.swift"; sourceTree = "<group>"; };
 		9C5F6055271E0D4D0023DDC4 /* testeGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeGC.swift; sourceTree = "<group>"; };
 		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -404,6 +406,7 @@
 				B25402CF2717A72500C088C4 /* Stretch.storyboard */,
 				B22A71772718B29C002F33C6 /* StretchViewController.swift */,
 				68ABEF272718AAF2001E7B37 /* StretchesViewModel.swift */,
+				68CFC5872723406E0080D6EA /* CountownTimer.swift */,
 			);
 			path = Stretch;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				B2591831271E0F910083176D /* RewardViewController.swift in Sources */,
 				B259182D271E09C20083176D /* TransitionViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
+				68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */,
 				9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */,
 				CBE91261271E44C00006898A /* RingAttributes.swift in Sources */,
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,

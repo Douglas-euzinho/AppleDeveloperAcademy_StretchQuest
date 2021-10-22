@@ -47,7 +47,7 @@ class StretchViewController: UIViewController {
         transitionViewController.onDismiss = {
             self.beginStretch()
             self.stretchVideoController.player?.play()
-            self.viewModel.resumeCountdownTimer()
+            self.viewModel.startCountdownTimer()
         }
     }
     
@@ -75,8 +75,9 @@ class StretchViewController: UIViewController {
         print("current stretch: \(self.viewModel.currentStretch)")
     }
     
-    func counterDidChange() {
-        self.timerLabel.text = "\(self.viewModel.countdown)"
+    func counterDidChange(counter: Int) {
+        print("[StretchViewController] \(counter)")
+        self.timerLabel.text = "\(counter)"
     }
         
     override func viewDidLoad() {
@@ -86,7 +87,6 @@ class StretchViewController: UIViewController {
         self.setupRingAnimation()
         self.setupVideoView()
         self.setupStretchVideo()
-        
     }
     
     override func viewDidLayoutSubviews() {
