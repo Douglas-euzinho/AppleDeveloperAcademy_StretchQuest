@@ -18,20 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-Ya-2OZ" userLabel="Animation">
                                 <rect key="frame" x="54" y="74" width="282" height="361.66666666666669"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-89-OAk" userLabel="ImageView">
-                                        <rect key="frame" x="8" y="8" width="266" height="345.66666666666669"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="leading" secondItem="o3N-Ya-2OZ" secondAttribute="leading" constant="8" id="1UF-g0-fQy"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="centerX" secondItem="o3N-Ya-2OZ" secondAttribute="centerX" id="OW4-7k-Wgy"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="top" secondItem="o3N-Ya-2OZ" secondAttribute="top" constant="8" id="oJi-mt-68X"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="centerY" secondItem="o3N-Ya-2OZ" secondAttribute="centerY" id="oja-xO-OO0"/>
-                                    <constraint firstAttribute="trailing" secondItem="1pv-89-OAk" secondAttribute="trailing" constant="8" id="qYi-xP-fO8"/>
-                                    <constraint firstAttribute="bottom" secondItem="1pv-89-OAk" secondAttribute="bottom" constant="8" id="t6a-mP-h3a"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="64"/>
@@ -104,10 +91,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animation" destination="1pv-89-OAk" id="686-u0-ChR"/>
                         <outlet property="descriptionStretch" destination="opw-M1-Qhq" id="cs2-Ib-5As"/>
                         <outlet property="timerElipse" destination="IOa-YF-e1t" id="77Q-61-UV5"/>
                         <outlet property="timerLabel" destination="LDy-wZ-tvk" id="cYM-8a-F3A"/>
+                        <outlet property="videoView" destination="o3N-Ya-2OZ" id="3gP-zt-eS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

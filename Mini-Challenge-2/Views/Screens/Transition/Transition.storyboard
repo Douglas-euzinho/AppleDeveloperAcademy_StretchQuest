@@ -18,25 +18,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-pD-PJG">
                                 <rect key="frame" x="54" y="74" width="282" height="468"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PhF-ZY-XOZ">
-                                        <rect key="frame" x="8" y="8" width="266" height="452"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PhF-ZY-XOZ" secondAttribute="bottom" constant="8" id="D3L-cd-yql"/>
-                                    <constraint firstItem="PhF-ZY-XOZ" firstAttribute="leading" secondItem="cSs-pD-PJG" secondAttribute="leading" constant="8" id="Lxc-T9-0co"/>
-                                    <constraint firstAttribute="trailing" secondItem="PhF-ZY-XOZ" secondAttribute="trailing" constant="8" id="Nyb-lv-inK"/>
-                                    <constraint firstItem="PhF-ZY-XOZ" firstAttribute="top" secondItem="cSs-pD-PJG" secondAttribute="top" constant="8" id="x1W-wS-geb"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="64"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TimerElipse" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-0Z-EHK">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TimerElipse" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-0Z-EHK">
                                 <rect key="frame" x="79" y="572" width="232" height="218"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="atP-tN-xPG">
@@ -64,11 +53,6 @@
                             <constraint firstItem="HXz-0Z-EHK" firstAttribute="height" secondItem="cSs-pD-PJG" secondAttribute="height" multiplier="0.465665" id="yMD-7n-r0p"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="animation" destination="cSs-pD-PJG" id="5XZ-2H-UsA"/>
-                        <outlet property="timerElipse" destination="HXz-0Z-EHK" id="6BM-gI-9gL"/>
-                        <outlet property="timerLabel" destination="atP-tN-xPG" id="Vib-uQ-Oa9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

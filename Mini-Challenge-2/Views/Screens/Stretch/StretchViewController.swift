@@ -130,11 +130,6 @@ class StretchViewController: UIViewController {
         showPauseViewController()
     }
     
-    func startTimer() {
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
-        self.timer?.tolerance = 0
-    }
-    
     private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor, radius: CGFloat) -> CAShapeLayer {
         
         let label = self.timerLabel
