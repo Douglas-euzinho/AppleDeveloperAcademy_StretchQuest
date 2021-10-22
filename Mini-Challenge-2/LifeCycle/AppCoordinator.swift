@@ -129,7 +129,7 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         self.tabController
     }
     
-    let tabController: UITabBarController
+    public let tabController: UITabBarController
     
     override init() {
         self.tabController = UITabBarController()
@@ -158,7 +158,7 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         print(category)
         
         let coordinator = StretchesCoordinator(
-            (tabController.viewControllers!.first!),
+            (tabController.viewControllers!.first!), tabController,
             stretchType: category)
         
         coordinator.start()
@@ -215,12 +215,14 @@ class StretchesCoordinator: Coordinator {
     
     var navigationController: UIViewController
     var stretchViewController: StretchViewController
+    var rootController: UITabBarController
 
     init(
-        _ navigationController: UIViewController,
+        _ navigationController: UIViewController, _ rootController: UITabBarController,
         stretchType: StretchType
     ) {
         self.navigationController = navigationController
+        self.rootController = rootController
         
         let story = UIStoryboard(name: "Stretch", bundle:nil)
         let stretchViewController =
@@ -229,7 +231,9 @@ class StretchesCoordinator: Coordinator {
         let viewModel = StretchesViewModel(category: stretchType) //Inicializa a view model passando a                                                            categoria
         
         stretchViewController.viewModel = viewModel
-        
+        stretchViewController.exitToCategories = {
+            navigationController.dismiss(animated: true, completion: nil)
+        }
         self.stretchViewController = stretchViewController
     }
     

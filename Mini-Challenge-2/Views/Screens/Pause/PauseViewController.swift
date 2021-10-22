@@ -9,6 +9,7 @@ import UIKit
 
 protocol PauseDelegate: AnyObject {
     func viewDidDisappear()
+    func exitToCategoriesScreen()
 }
 
 class PauseViewController: UIViewController {
@@ -19,9 +20,9 @@ class PauseViewController: UIViewController {
         delegate?.viewDidDisappear()
     }
     
-    @IBAction func didTappedLeave(_ sender: Any) {
+    @IBAction func didTappedLeave(_ sender: Any) {  //Botao de sair
         print("Leave")
-        returnToCategoryScreen()
+        delegate?.exitToCategoriesScreen()
         dismiss(animated: true, completion: nil)
     }
     

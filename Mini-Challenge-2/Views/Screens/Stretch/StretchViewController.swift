@@ -20,6 +20,7 @@ class StretchViewController: UIViewController {
     var viewModel: StretchesViewModel!
     
     lazy var circleAttributed = UIColor.getColorBy(category: viewModel.category) //Retorna o attributed                                                                         de acordo com a categoria
+    var exitToCategories: (() -> Void)?
     
     var timer: Timer?
     
@@ -204,6 +205,10 @@ extension StretchViewController: PauseDelegate {
     func viewDidDisappear() {
         self.viewModel.resumeCountdownTimer()
         self.resumeRingAnimation()
+    }
+    
+    func exitToCategoriesScreen() {
+        self.exitToCategories?()
     }
 }
 
