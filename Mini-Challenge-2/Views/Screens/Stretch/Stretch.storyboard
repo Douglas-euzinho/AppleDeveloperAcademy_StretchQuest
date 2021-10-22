@@ -18,18 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-Ya-2OZ">
                                 <rect key="frame" x="62" y="76" width="266" height="328.33333333333331"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-89-OAk">
-                                        <rect key="frame" x="13" y="22.666666666666686" width="240" height="283"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="width" secondItem="o3N-Ya-2OZ" secondAttribute="width" multiplier="0.902256" id="GvU-c0-p7r"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="centerX" secondItem="o3N-Ya-2OZ" secondAttribute="centerX" id="OW4-7k-Wgy"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="height" secondItem="o3N-Ya-2OZ" secondAttribute="height" multiplier="0.862069" id="Qmo-Te-6On"/>
-                                    <constraint firstItem="1pv-89-OAk" firstAttribute="centerY" secondItem="o3N-Ya-2OZ" secondAttribute="centerY" id="oja-xO-OO0"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="64"/>
@@ -96,10 +85,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animation" destination="1pv-89-OAk" id="686-u0-ChR"/>
                         <outlet property="descriptionStretch" destination="opw-M1-Qhq" id="cs2-Ib-5As"/>
                         <outlet property="timerElipse" destination="IOa-YF-e1t" id="77Q-61-UV5"/>
                         <outlet property="timerLabel" destination="LDy-wZ-tvk" id="cYM-8a-F3A"/>
+                        <outlet property="videoView" destination="o3N-Ya-2OZ" id="xMe-U8-qh4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

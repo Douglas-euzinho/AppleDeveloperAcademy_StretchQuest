@@ -50,6 +50,7 @@
 		B2591831271E0F910083176D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2591830271E0F910083176D /* RewardViewController.swift */; };
 		B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Categories.storyboard */; };
 		CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */; };
+		CB2A6BB92722569E00F144D8 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CB2A6BB82722569E00F144D8 /* test.mp4 */; };
 		CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125B271B933F0006898A /* PauseViewController.swift */; };
 		CBE9125F271E43160006898A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125E271E43160006898A /* UIColor+Extension.swift */; };
 		CBE91261271E44C00006898A /* RingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE91260271E44C00006898A /* RingAttributes.swift */; };
@@ -149,6 +150,7 @@
 		B2591830271E0F910083176D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		B2B87F84270CCA9A004F0D47 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
+		CB2A6BB82722569E00F144D8 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		CBE9125B271B933F0006898A /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		CBE9125E271E43160006898A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CBE91260271E44C00006898A /* RingAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingAttributes.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		B259183A271F69210083176D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A6BB52722555800F144D8 /* StretchVideos */,
 				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -454,6 +457,14 @@
 				CBE91260271E44C00006898A /* RingAttributes.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CB2A6BB52722555800F144D8 /* StretchVideos */ = {
+			isa = PBXGroup;
+			children = (
+				CB2A6BB82722569E00F144D8 /* test.mp4 */,
+			);
+			path = StretchVideos;
 			sourceTree = "<group>";
 		};
 		CBE9125D271E42F00006898A /* Commons */ = {
@@ -642,6 +653,7 @@
 				B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */,
 				B259182F271E0E830083176D /* Reward.storyboard in Resources */,
 				B25402D02717A72500C088C4 /* Stretch.storyboard in Resources */,
+				CB2A6BB92722569E00F144D8 /* test.mp4 in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class PauseViewController: UIViewController {
     
     @IBAction func didTappedLeave(_ sender: Any) {  //Botao de sair
         print("Leave")
-        delegate?.exitToCategoriesScreen()
+        delegate?.exitToCategoriesScreen()  //Delegate para voltar para a Tela de categorias!!!
         dismiss(animated: true, completion: nil)
     }
     

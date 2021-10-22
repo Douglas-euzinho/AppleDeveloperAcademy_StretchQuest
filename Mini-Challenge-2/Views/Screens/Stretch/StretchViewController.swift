@@ -7,16 +7,20 @@
 
 import UIKit
 import Core
+import AVKit
 
 class StretchViewController: UIViewController {
    
     
     // MARK: Properties
-    @IBOutlet weak var animation: UIImageView!
     @IBOutlet weak var descriptionStretch: UILabel!
     @IBOutlet weak var timerElipse: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var videoView: UIView!
+    
+    let stretchVideoController = AVPlayerViewController()
+
     var viewModel: StretchesViewModel!
     
     lazy var circleAttributed = UIColor.getColorBy(category: viewModel.category) //Retorna o attributed                                                                         de acordo com a categoria
@@ -32,6 +36,7 @@ class StretchViewController: UIViewController {
 
 
     func showTransitionBetweenStretches() {
+        
 
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
@@ -41,6 +46,7 @@ class StretchViewController: UIViewController {
         
         transitionViewController.onDismiss = {
             self.beginStretch()
+            self.stretchVideoController.player?.play()
             self.viewModel.resumeCountdownTimer()
         }
     }
@@ -78,10 +84,36 @@ class StretchViewController: UIViewController {
         self.viewModel.publishStretch = self.stretchDidChange
         self.viewModel.publishCountdown = self.counterDidChange
         self.setupRingAnimation()
+        self.setupVideoView()
+        self.setupStretchVideo()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.viewModel.startSession()
+    }
+    
+    func setupVideoView() {
+        
+        videoView.layer.cornerRadius = 20
+        videoView.clipsToBounds = true
+    }
+    func setupStretchVideo(){
+        
+        videoView.addSubview(stretchVideoController.view)
+        stretchVideoController.showsPlaybackControls = false
+        stretchVideoController.view.frame = videoView.bounds
+        stretchVideoController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let videoName = self.viewModel.currentStretch.videoName
+
+        let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4")
+        let videoUrl = URL(fileURLWithPath: videoPath!)
+        stretchVideoController.player = AVPlayer(url: videoUrl)
+        
+//        stretchVideoController.player?.play()
+
+
     }
     
     @IBAction func presentPauseViewController() {

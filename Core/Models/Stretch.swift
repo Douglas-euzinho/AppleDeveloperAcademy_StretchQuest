@@ -15,7 +15,7 @@ public struct Stretch: CustomStringConvertible {
     
     public let title: String
     public let instructions: String
-    public let animation: [UIImage]
+    public let videoName: String
     public let durationInSeconds: Float
     public let type: StretchType
     public let externalLink: URL?
@@ -24,16 +24,16 @@ public struct Stretch: CustomStringConvertible {
     public static let sideBend = Stretch(
         title: "Side Bend",
         instructions: "DO IT",
-        animation: [],
+        videoName: "test",
         durationInSeconds: 30.0,
         type: .posture,
         externalLink: nil,
         isContinuation: false)
-    
+
     public static let empty = Stretch (
         title: "",
         instructions: "",
-        animation: [],
+        videoName: "test",
         durationInSeconds: 0.0,
         type: .posture,
         externalLink: nil,
