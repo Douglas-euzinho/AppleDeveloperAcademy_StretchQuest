@@ -22,7 +22,7 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var flexibilityCategory: UIView!
     
-    weak var delegate: CategoriesDelegate!
+    var delegate: CategoriesDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()

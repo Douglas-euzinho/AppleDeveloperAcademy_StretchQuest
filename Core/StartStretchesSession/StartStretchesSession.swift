@@ -12,7 +12,7 @@ public protocol StretchesRepository {
 }
 
 public protocol StartStretchesSessionResult {
-    func started(with firstStretch: Stretch, totalOfStretches: Int) -> Void
+    func started(with firstStretch: Stretch, progress: SessionProgress) -> Void
 }
 
 public protocol StartStretchesSessionIteractor {
@@ -42,11 +42,16 @@ public class StartStretchesSession: StartStretchesSessionIteractor {
 
         self.sessionsRepository.add(session: stretchesSession)
 
+        let stretchesWithTransition = stretches.reduce(0, { result, stretch in
+            result + (stretch.isContinuation ? 0 : 1)
+        })
+        
         result.started(
-            with: stretchesSession.stretches.first!,
-            totalOfStretches: stretches.reduce(0, { result, stretch in
-                result + (stretch.hasContinuation ? 0 : 1)
-            }))
+            with: stretches.first!,
+            progress: SessionProgress(
+                totalReal: stretches.count,
+                totalAparent: stretchesWithTransition
+            ))
     }
 }
 
@@ -66,81 +71,102 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch.sideBend)
 
         case .posture:
+            
+            //---
+            
             list.append(Stretch(
                 title: "Arms Up",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: false))
+            
+            //--
             
             //Shoulder stretch left
             list.append(Stretch(
                 title: "Shoulder Stretch",
                 instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- SKIP
             //Shoulder stretch right
             list.append(Stretch(
                 title: "Shoulder Stretch",
                 instructions: "Repeat the stretch on the other side",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
             
             //Neck Stretch Left
             list.append(Stretch(
                 title: "Side Neck Stretch",
                 instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- Skip
+            
             //Neck Stretch Right
             list.append(Stretch(
                 title: "Side Neck Stretch",
                 instructions: "Repeat the stretch on the other side",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
             
             //Side Bend Left
             list.append(Stretch(
                 title: "Side Bend",
                 instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: true))
+                isContinuation: false))
+            
+            // -- SKIP
+            
             //Side Bend Right
             list.append(Stretch(
                 title: "Side Bend",
                 instructions: "Repeat the stretch on the other side",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: true))
+            
+            // --
         
             //Torso Twist Stretch
             list.append(Stretch(
                 title: "Torso Twist",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                animation: [],
-                durationInSeconds: 20,
+                videoName: "test",
+                durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,
-                hasContinuation: false))
+                isContinuation: false))
+            
+            // -- FIM
                         
         case .strength:
             list.append(Stretch.sideBend)

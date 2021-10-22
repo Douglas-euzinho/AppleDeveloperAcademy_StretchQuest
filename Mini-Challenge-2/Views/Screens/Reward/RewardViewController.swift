@@ -17,6 +17,8 @@ class RewardViewController: UIViewController {
     
     @IBOutlet weak var leaveButton: UIButton!
     
+    var rewardViewModel: RewardViewModel! = RewardViewModel(category: .posture)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -13,6 +13,7 @@ public protocol StartNextStretchIteractor {
 
 public protocol StartNextStretchResult {
     func next(stretch: Stretch, progress: SessionProgress) -> Void
+    func sessionDidFinish() -> Void
 }
 
 public class StartNextStretch: StartNextStretchIteractor {
@@ -31,6 +32,10 @@ public class StartNextStretch: StartNextStretchIteractor {
 
         let currentStretchIndex = currentSession.currentStretch + 1
 
+        if currentStretchIndex == currentSession.stretches.count {
+            return result.sessionDidFinish()
+        }
+        
         let newSession = StretchSession(
             start: currentSession.start,
             end: currentSession.end,
@@ -39,21 +44,29 @@ public class StartNextStretch: StartNextStretchIteractor {
             type: currentSession.type,
             pointIncrement: currentSession.pointIncrement)
 
-        // TODO: Refactor to handle the index out of range situation
-        let next = currentSession.stretches[currentStretchIndex % newSession.stretches.count]
+        let next = currentSession.stretches[currentStretchIndex]
 
         self.repository.updateCurrentSession(to: newSession)
         
         let currentStretch = newSession
             .stretches[0..<currentStretchIndex]
-            .filter({!$0.hasContinuation}).count + 1
+            .filter({!$0.isContinuation}).count + 1
         
-        let progression = SessionProgress(
+        let realProgress = TaskProgress(
+            currentStretchIndex + 1,
+            newSession.stretches.count
+        )
+        
+        let aparentProgress = TaskProgress(
             currentStretch,
             newSession.stretches.reduce(0, { result, stretch in
-                result + (stretch.hasContinuation ? 0 : 1)
+                result + (stretch.isContinuation ? 0 : 1)
             })
         )
+        
+        let progression = SessionProgress(
+            real: realProgress,
+            aparent: aparentProgress)
         
         result.next(stretch: next, progress: progression)
     }

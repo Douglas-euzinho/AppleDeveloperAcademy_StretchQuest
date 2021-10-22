@@ -7,31 +7,26 @@
 
 import UIKit
 import Core
+import AVKit
 
-class StretchViewController: UIViewController, OnStretchListener {
+class StretchViewController: UIViewController {
    
     
-    // MARK: - Properties
-    @IBOutlet weak var animation: UIImageView!
+    // MARK: Properties
     @IBOutlet weak var descriptionStretch: UILabel!
     @IBOutlet weak var timerElipse: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var videoView: UIView!
+    
+    let stretchVideoController = AVPlayerViewController()
+
     var viewModel: StretchesViewModel!
     
     lazy var circleAttributed = UIColor.getColorBy(category: viewModel.category) //Retorna o attributed                                                                         de acordo com a categoria
+    var exitToCategories: (() -> Void)?
     
     var timer: Timer?
-    
-    var agendamentos = 0
-    
-    var contador = 0 {
-        didSet {
-            self.timerLabel.text = "\(contador)"
-        }
-    }
-    
-    var stretchDuration = 30
     
     //Ring properties
     var pulsatingLayer = CAShapeLayer()
@@ -39,27 +34,59 @@ class StretchViewController: UIViewController, OnStretchListener {
     let trackShape     = CAShapeLayer()
     var circlePath     = UIBezierPath()
 
-    
-    func onStretchChanged(stretch: Stretch, progress: SessionProgress) {
-        descriptionStretch.text = stretch.title
-        self.contador = Int(stretch.durationInSeconds)
-        self.timerLabel.text = "\(contador)"
-        
-        self.startTimerAnimation()
-        self.ringTimerAnimation()
+
+    func showTransitionBetweenStretches() {
         
 
-        if self.agendamentos < 5 {
-            self.agendamentos += 1
-        } else {
-            self.timer?.invalidate()
+        let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
+        let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
+        
+        self.present(transitionViewController, animated: true)
+        self.shape.isHidden = true
+        
+        transitionViewController.onDismiss = {
+            self.beginStretch()
+            self.stretchVideoController.player?.play()
+            self.viewModel.resumeCountdownTimer()
+        }
+    }
+    
+    func beginStretch() {
+        self.shape.isHidden = false
+        self.ringTimerAnimation()
+    }
+    
+    func stretchDidChange() {
+        
+        self.view.layer.removeAnimation(forKey: "transform.scale")
+        self.pulsatingLayer.removeFromSuperlayer()
+        self.trackShape.removeFromSuperlayer()
+        
+        self.setupRingAnimation()
+
+        self.descriptionStretch.text = "\(self.viewModel.currentStretch.title)"
+        
+        if self.viewModel.mustShowTransition {
+            self.showTransitionBetweenStretches()
+        }else{
+            self.beginStretch()
         }
         
+        print("current stretch: \(self.viewModel.currentStretch)")
+    }
+    
+    func counterDidChange() {
+        self.timerLabel.text = "\(self.viewModel.countdown)"
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.listener = self
+        self.viewModel.publishStretch = self.stretchDidChange
+        self.viewModel.publishCountdown = self.counterDidChange
+        self.setupRingAnimation()
+        self.setupVideoView()
+        self.setupStretchVideo()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,7 +101,29 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     override func viewDidAppear(_ animated: Bool) {
         self.viewModel.startSession()
-        self.startTimer()
+    }
+    
+    func setupVideoView() {
+        
+        videoView.layer.cornerRadius = 20
+        videoView.clipsToBounds = true
+    }
+    func setupStretchVideo(){
+        
+        videoView.addSubview(stretchVideoController.view)
+        stretchVideoController.showsPlaybackControls = false
+        stretchVideoController.view.frame = videoView.bounds
+        stretchVideoController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let videoName = self.viewModel.currentStretch.videoName
+
+        let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4")
+        let videoUrl = URL(fileURLWithPath: videoPath!)
+        stretchVideoController.player = AVPlayer(url: videoUrl)
+        
+//        stretchVideoController.player?.play()
+
+
     }
     
     @IBAction func presentPauseViewController() {
@@ -88,9 +137,7 @@ class StretchViewController: UIViewController, OnStretchListener {
     
     private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor, radius: CGFloat) -> CAShapeLayer {
         
-        let label = self.view.subviews.first { view in
-            return type(of: view) == UILabel.self
-        }
+        let label = self.timerLabel
                 
         let layer = CAShapeLayer()
         let circularPath  = UIBezierPath(arcCenter: .zero, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
@@ -104,7 +151,7 @@ class StretchViewController: UIViewController, OnStretchListener {
         return layer
     }
     
-    func startTimerAnimation() {
+    func setupRingAnimation() {
         
         let label = self.view.subviews.first { view in
             return type(of: view) == UILabel.self
@@ -153,7 +200,7 @@ class StretchViewController: UIViewController, OnStretchListener {
         let startAnimate      = CABasicAnimation(keyPath: "strokeEnd")
         
         startAnimate.toValue  = 1
-        startAnimate.duration = CFTimeInterval(self.contador)
+        startAnimate.duration = CFTimeInterval(self.viewModel.currentStretch.durationInSeconds)
         startAnimate.fillMode = .forwards
         startAnimate.isRemovedOnCompletion = false
      
@@ -177,22 +224,22 @@ class StretchViewController: UIViewController, OnStretchListener {
         shape.beginTime    = timeSincePause
     }
     
-    @objc func tick(){
-        contador -= 1
-        
-        if contador == -1 {
-            self.view.layer.removeAnimation(forKey: "transform.scale")
-            self.pulsatingLayer.removeFromSuperlayer()
-            self.trackShape.removeFromSuperlayer()
-            self.viewModel.nextStretch()
-        }
-    }
-    
+//    @objc func tick(){
+//        contador -= 1
+//
+//        if !self.viewModel.session.isDone {
+//            self.view.layer.removeAnimation(forKey: "transform.scale")
+//            self.pulsatingLayer.removeFromSuperlayer()
+//            self.trackShape.removeFromSuperlayer()
+//            self.viewModel.nextStretch()
+//        }
+//    }
+//
     func showPauseViewController() {
         let story = UIStoryboard(name: "Pause", bundle: nil)
         let pauseViewController = story.instantiateViewController(withIdentifier: "PauseViewController") as! PauseViewController
         
-        timer?.invalidate()
+        self.viewModel.pauseCountdownTime()
         pauseRingAnimation()
         pauseViewController.delegate = self
 
@@ -202,9 +249,13 @@ class StretchViewController: UIViewController, OnStretchListener {
 
 extension StretchViewController: PauseDelegate {
     
-    func viewDidDisappear() {
-        self.startTimer()
+    func onPauseScreenDismiss() {
+        self.viewModel.resumeCountdownTimer()
         self.resumeRingAnimation()
+    }
+    
+    func exitToCategoriesScreen() {
+        self.exitToCategories?()
     }
 }
 
