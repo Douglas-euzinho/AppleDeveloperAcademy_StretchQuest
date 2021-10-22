@@ -16,6 +16,7 @@ protocol CategoriesDelegate: AnyObject {
 
 class CategoriesViewController: UIViewController {
     
+    
     @IBOutlet weak var strengthCategory: UIView!
     
     @IBOutlet weak var postureCategory: UIView!
@@ -53,5 +54,5 @@ class CategoriesViewController: UIViewController {
     private func createTapGesture() -> UITapGestureRecognizer {
         return UITapGestureRecognizer(target: self, action: #selector(didTappedCategory))
     }
-
+    
 }
