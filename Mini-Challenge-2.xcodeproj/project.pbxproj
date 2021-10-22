@@ -33,6 +33,8 @@
 		9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */; };
 		9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */; };
 		9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */; };
+		9CE45D3F2720A9C4000C453E /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */; };
+		9CE45D43272336BB000C453E /* NotificationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D42272336BB000C453E /* NotificationClass.swift */; };
 		B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */; };
 		B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */; };
 		B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */; };
@@ -131,6 +133,8 @@
 		9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
+		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2185FDC2707A0AA00A4ACAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +291,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C5F605C27209DAC0023DDC4 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */,
+				9CE45D42272336BB000C453E /* NotificationClass.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		9C66DE46271A093300D5F6D2 /* CoreDataClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +337,7 @@
 		B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */ = {
 			isa = PBXGroup;
 			children = (
+				9C5F605C27209DAC0023DDC4 /* Notification */,
 				684CFD8F271A057B009E2B70 /* LifeCycle */,
 				B25402B927177C3000C088C4 /* Views */,
 				B25F864D271D1A7D000EA9EF /* Models */,
@@ -708,6 +722,8 @@
 				B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */,
 				B22A717E2718D884002F33C6 /* Circle.swift in Sources */,
 				CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */,
+				9CE45D3F2720A9C4000C453E /* NotificationTypes.swift in Sources */,
+				9CE45D43272336BB000C453E /* NotificationClass.swift in Sources */,
 				B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */,
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
 				9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */,
