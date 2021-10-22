@@ -78,7 +78,7 @@ class NotificationClass{
     
     //MARK: - Função para criar noti com algum horário randômico após a saída
     func createNotificationRandom(timeLastUse: Int, secondsChoised: Int){
-        let allNotiTimeRandom = notificationsInfosWithoutTime.count
+        let _ = notificationsInfosWithoutTime.count
         
         let idNotificationWithoutTime = Int.random(in: 0..<notificationsInfosWithoutTime.count)
         let content = UNMutableNotificationContent()

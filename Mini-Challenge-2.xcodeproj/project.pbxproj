@@ -337,7 +337,6 @@
 		B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */ = {
 			isa = PBXGroup;
 			children = (
-				9C5F605C27209DAC0023DDC4 /* Notification */,
 				684CFD8F271A057B009E2B70 /* LifeCycle */,
 				B25402B927177C3000C088C4 /* Views */,
 				B25F864D271D1A7D000EA9EF /* Models */,
@@ -450,6 +449,7 @@
 		B259183B271F6AB90083176D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9C5F605C27209DAC0023DDC4 /* Notification */,
 				9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
 			);
