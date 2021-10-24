@@ -11,33 +11,33 @@ import Core
 
 class IntegrationTests: XCTestCase {
 
-    func testFullStretchSession() {
-        
-        let viewModel = StretchesViewModel(category: .posture)
-        
-        let listener = FakeStretchListener()
-        
-        viewModel.listener = listener
-        
-        viewModel.startSession()
-        
-        //TODO: Refactor to get the real total of stretches instead of using a while loop
-        
-        while(!(listener.currentProgress?.isDone ?? true)){
-            viewModel.nextStretch()
-        }
-        
-        //TODO: Add more assertions
-        
-        XCTAssert(listener.currentProgress?.isDone ?? false)
-    }
-    
-    func testTransitionViewModel() {
-        
-        let viewModel = TransitionViewModel()
-        
-        viewModel.start()
-        
-    }
+//    func testFullStretchSession() {
+//        
+//        let viewModel = StretchesViewModel(category: .posture)
+//        
+//        let listener = FakeStretchListener()
+//        
+//        viewModel.listener = listener
+//        
+//        viewModel.startSession()
+//        
+//        //TODO: Refactor to get the real total of stretches instead of using a while loop
+//        
+//        while(!(listener.currentProgress?.isDone ?? true)){
+//            viewModel.nextStretch()
+//        }
+//        
+//        //TODO: Add more assertions
+//        
+//        XCTAssert(listener.currentProgress?.isDone ?? false)
+//    }
+//    
+//    func testTransitionViewModel() {
+//        
+//        let viewModel = TransitionViewModel()
+//        
+//        viewModel.start()
+//        
+//    }
 
 }

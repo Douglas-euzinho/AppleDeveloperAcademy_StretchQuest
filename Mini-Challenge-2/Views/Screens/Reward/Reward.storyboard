@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="animation" destination="ZjD-nI-nbu" id="QSp-DN-qNo"/>
+                        <outlet property="congratulations" destination="dXV-5R-La8" id="yWc-cD-Cya"/>
                         <outlet property="continueButton" destination="JHZ-8c-pos" id="CJj-Nh-Goy"/>
                         <outlet property="leaveButton" destination="Xyx-jy-98t" id="b74-qT-owN"/>
                         <outlet property="punctuation" destination="XgA-eo-3Xb" id="V8o-uS-iwM"/>

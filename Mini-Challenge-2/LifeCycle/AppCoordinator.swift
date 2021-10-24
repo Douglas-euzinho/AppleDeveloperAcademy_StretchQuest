@@ -213,12 +213,14 @@ class CategoriesCoordinator: Coordinator {
 
 class StretchesCoordinator: Coordinator {
     
+    let sessionsRepository = FakeStretchesSessionRepository()
     var navigationController: UIViewController
     var stretchViewController: StretchViewController
     var rootController: UITabBarController
 
     init(
-        _ navigationController: UIViewController, _ rootController: UITabBarController,
+        _ navigationController: UIViewController,
+        _ rootController: UITabBarController,
         stretchType: StretchType
     ) {
         self.navigationController = navigationController
@@ -228,27 +230,52 @@ class StretchesCoordinator: Coordinator {
         let stretchViewController =
             story.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
         
-        let viewModel = StretchesViewModel(category: stretchType) //Inicializa a view model passando a                                                            categoria
+        // Inicializa a view model passando a categoria
+        let viewModel = StretchesViewModel(
+            stretchType,
+            sessionsRepository
+        )
         
         stretchViewController.viewModel = viewModel
         stretchViewController.exitToCategories = {
             navigationController.dismiss(animated: true, completion: nil)
         }
+
         self.stretchViewController = stretchViewController
     }
     
     override func start() {
         
-        print("Que bagaça. Lll")
+        stretchViewController.exitAndGotoNextSession = {
+            self.gotoNextSession()
+            
+            //self.navigationController.dismiss(animated: true){
+                //self.gotoNextSession()
+            //}
+        }
         
         self.stretchViewController.modalPresentationStyle = .fullScreen
         
         self.navigationController.show(
             self.stretchViewController, sender: self)
+    }
+                                              
+    func gotoNextSession() {
+    
+        let getNextSessionType = GetNextSessionType(sessionsRepository)
         
-//        self.navigationController.pushViewController(
-//            self.stretchViewController, animated: true)
-        //self.navigationController.pushViewController(self.stretchViewController, animated: true)
+        let type = getNextSessionType.execute()
+        
+        let nextStretchViewModel = StretchesViewModel(
+            type,
+            self.sessionsRepository
+        )
+        
+        self.stretchViewController.viewModel = nextStretchViewModel
+        
+        nextStretchViewModel.startSession()
+        
+        self.start()
     }
     
 }

@@ -27,6 +27,7 @@
 		68ABEF2F2718C95E001E7B37 /* StartNextStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */; };
 		68ABEF3527191C2A001E7B37 /* EndStretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */; };
 		68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFC5872723406E0080D6EA /* CountownTimer.swift */; };
+		68CFC58B2723519F0080D6EA /* GetNextSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFC58A2723519F0080D6EA /* GetNextSessionType.swift */; };
 		9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */; };
 		9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6055271E0D4D0023DDC4 /* testeGC.swift */; };
 		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
@@ -128,6 +129,7 @@
 		68ABEF2E2718C95E001E7B37 /* StartNextStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNextStretch.swift; sourceTree = "<group>"; };
 		68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStretchSession.swift; sourceTree = "<group>"; };
 		68CFC5872723406E0080D6EA /* CountownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountownTimer.swift; sourceTree = "<group>"; };
+		68CFC58A2723519F0080D6EA /* GetNextSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNextSessionType.swift; sourceTree = "<group>"; };
 		9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameCenter+Extension.swift"; sourceTree = "<group>"; };
 		9C5F6055271E0D4D0023DDC4 /* testeGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeGC.swift; sourceTree = "<group>"; };
 		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -239,6 +241,7 @@
 				68ABEEFE27178A1B001E7B37 /* StartStretchesSession */,
 				68ABEF2D2718C8D3001E7B37 /* StartNextStretch */,
 				68ABEEF9271781EC001E7B37 /* GetUserAttributes */,
+				68CFC5892723515A0080D6EA /* GetNextSessionType */,
 				68ABEF3327191BE0001E7B37 /* EndStretchSession */,
 				68ABEEDD271760B8001E7B37 /* Core.h */,
 			);
@@ -283,6 +286,14 @@
 				68ABEF3427191C2A001E7B37 /* EndStretchSession.swift */,
 			);
 			path = EndStretchSession;
+			sourceTree = "<group>";
+		};
+		68CFC5892723515A0080D6EA /* GetNextSessionType */ = {
+			isa = PBXGroup;
+			children = (
+				68CFC58A2723519F0080D6EA /* GetNextSessionType.swift */,
+			);
+			path = GetNextSessionType;
 			sourceTree = "<group>";
 		};
 		9C5F6057271E11DB0023DDC4 /* Frameworks */ = {
@@ -695,6 +706,7 @@
 				68ABEF2F2718C95E001E7B37 /* StartNextStretch.swift in Sources */,
 				684CFDA7271F44E5009E2B70 /* StretchType.swift in Sources */,
 				684CFDA9271F4500009E2B70 /* StretchPoints.swift in Sources */,
+				68CFC58B2723519F0080D6EA /* GetNextSessionType.swift in Sources */,
 				684CFDA1271F2E98009E2B70 /* SessionProgress.swift in Sources */,
 				684CFDA5271F4471009E2B70 /* Stretch.swift in Sources */,
 				68ABEF0027178A40001E7B37 /* StartStretchesSession.swift in Sources */,

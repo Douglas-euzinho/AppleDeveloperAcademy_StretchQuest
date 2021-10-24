@@ -11,7 +11,6 @@ import AVKit
 
 class StretchViewController: UIViewController {
    
-    
     // MARK: Properties
     @IBOutlet weak var descriptionStretch: UILabel!
     @IBOutlet weak var timerElipse: UIImageView!
@@ -21,10 +20,26 @@ class StretchViewController: UIViewController {
     
     let stretchVideoController = AVPlayerViewController()
 
-    var viewModel: StretchesViewModel!
+    var viewModel: StretchesViewModel! {
+        didSet {
+            self.viewModel.publishStretch = self.stretchDidChange
+            self.viewModel.publishCountdown = self.counterDidChange
+            self.viewModel.publishShowRewardsScreen = self.showRewardsScreen
+            self.pulsatingLayer.removeFromSuperlayer()
+            self.trackShape.removeFromSuperlayer()
+            self.setupRingAnimation()
+            self.setupVideoView()
+            self.setupStretchVideo()
+        }
+    }
     
-    lazy var circleAttributed = UIColor.getColorBy(category: viewModel.category) //Retorna o attributed                                                                         de acordo com a categoria
+    //Retorna o attributed de acordo com a categoria
+    var circleAttributed: RingColorAttributes {
+        UIColor.getColorBy(category: viewModel.category)
+    }
+    
     var exitToCategories: (() -> Void)?
+    var exitAndGotoNextSession: () -> () = {}
     
     var timer: Timer?
     
@@ -37,7 +52,6 @@ class StretchViewController: UIViewController {
 
     func showTransitionBetweenStretches() {
         
-
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
         
@@ -68,7 +82,7 @@ class StretchViewController: UIViewController {
         
         if self.viewModel.mustShowTransition {
             self.showTransitionBetweenStretches()
-        }else{
+        } else {
             self.beginStretch()
         }
         
@@ -84,19 +98,24 @@ class StretchViewController: UIViewController {
         
         let rewardsViewController =
             rewardsStoryboard.instantiateViewController(
-                withIdentifier: "RewardViewController")
+                withIdentifier: "RewardViewController") as! RewardViewController
         
         self.show(rewardsViewController, sender: nil)
+        
+        switch(self.viewModel.category){
+        case .flexibility:
+            rewardsViewController.punctuation.text = "Flexibility +1"
+        case .posture:
+            rewardsViewController.punctuation.text = "Posture +1"
+        case .strength:
+            rewardsViewController.punctuation.text = "Strength +1"
+        }
+        
+        rewardsViewController.delegate = self
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.publishStretch = self.stretchDidChange
-        self.viewModel.publishCountdown = self.counterDidChange
-        self.viewModel.publishShowRewardsScreen = self.showRewardsScreen
-        self.setupRingAnimation()
-        self.setupVideoView()
-        self.setupStretchVideo()
     }
     
     override func viewDidLayoutSubviews() {
@@ -114,10 +133,10 @@ class StretchViewController: UIViewController {
     }
     
     func setupVideoView() {
-        
         videoView.layer.cornerRadius = 20
         videoView.clipsToBounds = true
     }
+    
     func setupStretchVideo(){
         
         videoView.addSubview(stretchVideoController.view)
@@ -130,10 +149,6 @@ class StretchViewController: UIViewController {
         let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4")
         let videoUrl = URL(fileURLWithPath: videoPath!)
         stretchVideoController.player = AVPlayer(url: videoUrl)
-        
-//        stretchVideoController.player?.play()
-
-
     }
     
     @IBAction func presentPauseViewController() {
@@ -229,17 +244,6 @@ class StretchViewController: UIViewController {
         shape.beginTime    = timeSincePause
     }
     
-//    @objc func tick(){
-//        contador -= 1
-//
-//        if !self.viewModel.session.isDone {
-//            self.view.layer.removeAnimation(forKey: "transform.scale")
-//            self.pulsatingLayer.removeFromSuperlayer()
-//            self.trackShape.removeFromSuperlayer()
-//            self.viewModel.nextStretch()
-//        }
-//    }
-//
     func showPauseViewController() {
         let story = UIStoryboard(name: "Pause", bundle: nil)
         let pauseViewController = story.instantiateViewController(withIdentifier: "PauseViewController") as! PauseViewController
@@ -260,8 +264,17 @@ extension StretchViewController: PauseDelegate {
     }
     
     func exitToCategoriesScreen() {
+        print("[StretchViewController] exitToCategories()")
         self.exitToCategories?()
     }
+}
+
+extension StretchViewController: RewardDelegate {
+    
+    func gotoNextSession() {
+        self.exitAndGotoNextSession()
+    }
+    
 }
 
 extension UIView {

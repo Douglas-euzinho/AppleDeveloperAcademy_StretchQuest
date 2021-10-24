@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum StretchType: Int {
+public enum StretchType: Int, CaseIterable {
     case strength = 0
     case posture
     case flexibility

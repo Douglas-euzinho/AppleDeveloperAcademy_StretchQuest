@@ -12,9 +12,6 @@ public class StretchesViewModel {
     
     // MARK: Dependencies
     
-    let stretchesSessionRepository:
-        StretchesSessionRepository = FakeStretchesSessionRepository()
-    
     let startStretchesSession: StartStretchesSessionIteractor
     let startNextStretch: StartNextStretchIteractor
     
@@ -58,10 +55,13 @@ public class StretchesViewModel {
     
     var counter: CountdownTimer
     
-    public init(category: StretchType){
+    public init(
+        _ category: StretchType,
+        _ sessionsRepository: StretchesSessionRepository
+    ){
         self.category = category
-        self.startStretchesSession = StartStretchesSession(stretchesSessionRepository)
-        self.startNextStretch = StartNextStretch(stretchesSessionRepository)
+        self.startStretchesSession = StartStretchesSession(sessionsRepository)
+        self.startNextStretch = StartNextStretch(sessionsRepository)
         self.counter = CountdownTimer()
         self.counter.onCountdownFinish = self.onCountdownFinish
     }
