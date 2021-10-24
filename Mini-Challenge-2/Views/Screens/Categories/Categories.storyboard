@@ -142,6 +142,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4v-hT-zsa">
+                                <rect key="frame" x="334" y="44" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ButtonInfo" title=""/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -180,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ButtonInfo" width="40" height="40"/>
         <image name="Exercises" width="35" height="35"/>
         <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
         <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>

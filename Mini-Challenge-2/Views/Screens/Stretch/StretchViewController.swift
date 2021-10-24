@@ -127,6 +127,7 @@ class StretchViewController: UIViewController {
     }
     
     @IBAction func presentPauseViewController() {
+        
         showPauseViewController()
     }
     
