@@ -24,26 +24,13 @@ struct OnboardingData: Hashable, Identifiable {
 
 }
 
-
-struct MainHomeViewController: UIViewControllerRepresentable {
-    
-    typealias UIViewControllerType = UIViewController
-
-    func makeUIViewController(context: Context) -> UIViewController {
-        let story = UIStoryboard(name: "Main", bundle: nil)
-        return story.instantiateViewController(withIdentifier: "HomeViewController")
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-    
-    }
-}
-
 struct OnboardingView: View {
     
     @State private var presented = false
     var data: OnboardingData
     var page: Int
+    
+    @ObservedObject var delegate: OnboardingCoordinator
 
     var body: some View {
         VStack(spacing: 20) {
@@ -74,9 +61,9 @@ struct OnboardingView: View {
                         .frame(height: 20)
                     if page == 2 {
                         Button("START") {
-                            self.presented.toggle()
+                            self.delegate.finish()
                         }
-                        .fullScreenCover(isPresented: $presented, content: MainHomeViewController.init)
+//                        .fullScreenCover(isPresented: $presented, content: MainHomeViewController.init)
                     }
 
                 })

@@ -6,15 +6,22 @@
 //
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var showOnBoarding = true
     @State private var currentTab = 0
+    
+    @ObservedObject var delegate: OnboardingCoordinator
     
     var body: some View {
         
         TabView(selection: $currentTab, content:  {
             ForEach(OnboardingData.list) { viewData in
-                OnboardingView(data: viewData, page: currentTab).tag(viewData.id)
+                OnboardingView(
+                    data: viewData,
+                    page: currentTab,
+                    delegate: self.delegate
+                ).tag(viewData.id)
             }
         })
         .tabViewStyle(PageTabViewStyle())
@@ -24,6 +31,6 @@ struct ContentView: View {
 
 struct Subview_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(delegate: OnboardingCoordinator())
     }
 }
