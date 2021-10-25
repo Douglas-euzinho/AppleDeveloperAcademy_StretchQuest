@@ -9,6 +9,11 @@ import Foundation
 
 // MARK: - Protocols de repositórios
 
+public enum StretchSessionFilter {
+    case all
+    case completed
+}
+
 public protocol UserAttributesRepository: AnyObject { // Abstração para o "acesso" aos dados do Core Data
     func getAttributes() -> StretchPoints
     func save(attributes: StretchPoints) -> Void
@@ -107,7 +112,7 @@ public class GetUserAttributesVersion2: GetUserAttributesIteractor {
     
     let repository: StretchesSessionRepository
     
-    init(_ repository: StretchesSessionRepository){
+    public init(_ repository: StretchesSessionRepository){
         self.repository = repository
     }
     
@@ -117,7 +122,9 @@ public class GetUserAttributesVersion2: GetUserAttributesIteractor {
         var strength = 0
         var posture = 0
         
-        let sessions = self.repository.list()
+        let sessions = self.repository.list().filter({
+            $0.end != nil
+        })
         
         sessions.forEach({
             switch($0.type){

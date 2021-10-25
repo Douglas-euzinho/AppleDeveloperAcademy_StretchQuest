@@ -149,9 +149,10 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         
-        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         
-//        let onBoarding = UIHostingController(rootView: ContentView())
+        profileViewController.viewModel = ProfileViewModel(CoreDataStrechesSessionsRepository())
+
         
         self.tabController.setViewControllers([
             categoriesViewController,

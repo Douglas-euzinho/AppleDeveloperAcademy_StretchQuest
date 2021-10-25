@@ -8,9 +8,9 @@
 import Foundation
 
 public struct StretchPoints {
-    var strength: Int
-    var posture: Int
-    var flexibility: Int
+    public var strength: Int
+    public var posture: Int
+    public var flexibility: Int
 
     public static let empty = StretchPoints(strength: 0, posture: 0, flexibility: 0)
 }
