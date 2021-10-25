@@ -56,10 +56,12 @@ class RewardViewController: UIViewController {
     
     @IBAction func didTappedContinue(_ sender: UIButton) {
         self.dismiss(animated: true)
+        Haptics.share.vibrateSuccess()
         self.delegate.gotoNextSession()
     }
     
     @IBAction func didTappedLeave(_ sender: Any) {
+        Haptics.share.vibrateError()
         self.delegate.exitToCategoriesScreen()
     }
     

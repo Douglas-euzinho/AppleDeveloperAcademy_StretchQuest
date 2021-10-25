@@ -25,6 +25,7 @@ class CategoriesViewController: UIViewController {
     
     var delegate: CategoriesDelegate!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +48,8 @@ class CategoriesViewController: UIViewController {
     @objc private func didTappedCategory(_ sender: UITapGestureRecognizer?) {
         guard let sender = sender?.view else { return }
         
+        Haptics.share.vibrateSuccess()
+        
         self.delegate.onSelected(
             category: StretchType(rawValue: sender.tag) ?? .posture)
     }
@@ -54,5 +57,4 @@ class CategoriesViewController: UIViewController {
     private func createTapGesture() -> UITapGestureRecognizer {
         return UITapGestureRecognizer(target: self, action: #selector(didTappedCategory))
     }
-    
 }

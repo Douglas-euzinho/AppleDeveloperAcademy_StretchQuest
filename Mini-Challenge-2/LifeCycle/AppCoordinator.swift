@@ -190,6 +190,8 @@ class OnboardingCoordinator: Coordinator, ObservableObject {
         
         let contentView = ContentView(delegate: self )
         
+//        SetOrientation.lockOrientation(.portrait)
+        
         let onBoarding = UIHostingController(rootView: contentView)
         self.navigationController.setViewControllers([onBoarding], animated: false)
     }

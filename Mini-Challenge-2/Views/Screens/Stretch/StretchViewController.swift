@@ -77,7 +77,7 @@ class StretchViewController: UIViewController {
         self.trackShape.removeFromSuperlayer()
         
         self.setupRingAnimation()
-
+        self.changeStretchVideo()
         self.descriptionStretch.text = "\(self.viewModel.currentStretch.title)"
         
         if self.viewModel.mustShowTransition {
@@ -138,14 +138,16 @@ class StretchViewController: UIViewController {
     }
     
     func setupStretchVideo(){
-        
         videoView.addSubview(stretchVideoController.view)
         stretchVideoController.showsPlaybackControls = false
         stretchVideoController.view.frame = videoView.bounds
         stretchVideoController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+    }
+    
+    func changeStretchVideo() {
         let videoName = self.viewModel.currentStretch.videoName
 
+        print("Video stretch name: \(videoName)")
         let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4")
         let videoUrl = URL(fileURLWithPath: videoPath!)
         stretchVideoController.player = AVPlayer(url: videoUrl)
