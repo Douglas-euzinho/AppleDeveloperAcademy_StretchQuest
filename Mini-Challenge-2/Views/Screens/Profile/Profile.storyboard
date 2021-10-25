@@ -58,7 +58,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="34" y="393.66666666666669" width="51" height="51"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-Lg-RE6">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StrengthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-Lg-RE6">
                                         <rect key="frame" x="8" y="8" width="35" height="35"/>
                                     </imageView>
                                 </subviews>
@@ -158,7 +158,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="34" y="519" width="51" height="51"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Posture" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-6v-Nns">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PostureIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-6v-Nns">
                                         <rect key="frame" x="11.666666666666664" y="7.3333333333333712" width="28" height="36"/>
                                     </imageView>
                                 </subviews>
@@ -258,7 +258,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="34" y="644" width="51" height="51"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Flexibility" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-w3-DNw">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="FlexibilityIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-w3-DNw">
                                         <rect key="frame" x="6.6666666666666643" y="9.6666666666666288" width="38" height="32"/>
                                     </imageView>
                                 </subviews>
@@ -351,7 +351,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9iH-TU-fx1" firstAttribute="leading" secondItem="zlk-nR-DBt" secondAttribute="trailing" priority="750" constant="21" id="3SZ-Dm-1Hv"/>
                             <constraint firstItem="6lM-bB-Bsr" firstAttribute="top" secondItem="h6v-zL-koc" secondAttribute="bottom" constant="8" symbolic="YES" id="52r-GM-JVt"/>
@@ -412,10 +412,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
-        <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>
+        <image name="FlexibilityIcon" width="101.66666412353516" height="92.333335876464844"/>
+        <image name="PostureIcon" width="34.666667938232422" height="116.66666412353516"/>
         <image name="Profile" width="35.333332061767578" height="35"/>
-        <image name="Strength" width="88.333335876464844" height="112"/>
+        <image name="StrengthIcon" width="88.333335876464844" height="112"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

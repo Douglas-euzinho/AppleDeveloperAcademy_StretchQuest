@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +30,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="6No-H8-usz">
-                                        <rect key="frame" x="239.33333333333337" y="9" width="88" height="112"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StrengthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6No-H8-usz">
+                                        <rect key="frame" x="238.99999999999997" y="9" width="88.333333333333343" height="112"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick description" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fep-mX-gA8">
                                         <rect key="frame" x="21" y="57" width="115" height="16"/>
@@ -77,8 +76,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Posture" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-xG-dUg">
-                                        <rect key="frame" x="264.66666666666669" y="13.000000000000007" width="35" height="116.66666666666669"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PostureIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-xG-dUg">
+                                        <rect key="frame" x="265" y="13.000000000000007" width="34.666666666666686" height="116.66666666666669"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,8 +116,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Flexibility" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-R1-y8K">
-                                        <rect key="frame" x="224.66666666666663" y="18.999999999999993" width="102" height="92.333333333333314"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="FlexibilityIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-R1-y8K">
+                                        <rect key="frame" x="225.00000000000003" y="18.999999999999993" width="101.66666666666666" height="92.333333333333314"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +143,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Fof-cS-xzn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31.329999999999998" id="0F3-kP-Juw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5PP-A9-agW" secondAttribute="trailing" constant="31.329999999999998" id="4Kc-Vm-yUs"/>
@@ -181,11 +180,8 @@
     </scenes>
     <resources>
         <image name="Exercises" width="35" height="35"/>
-        <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
-        <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>
-        <image name="Strength" width="88.333335876464844" height="112"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="FlexibilityIcon" width="101.66666412353516" height="92.333335876464844"/>
+        <image name="PostureIcon" width="34.666667938232422" height="116.66666412353516"/>
+        <image name="StrengthIcon" width="88.333335876464844" height="112"/>
     </resources>
 </document>

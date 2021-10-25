@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="09j-La-p93" firstAttribute="centerX" secondItem="dzW-5x-B5t" secondAttribute="centerX" id="4fC-3l-yJc"/>
                                     <constraint firstItem="R4Q-jB-2gr" firstAttribute="centerX" secondItem="P0O-Pj-CMZ" secondAttribute="centerX" id="6eg-Yx-Ag5"/>
@@ -88,9 +88,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
