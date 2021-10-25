@@ -8,12 +8,29 @@
 import Foundation
 
 public struct StretchSession {
-    let start: Date
-    let end: Date?
-    let stretches: [Stretch]
-    let currentStretch: Int
-    let type: StretchType
-    let pointIncrement: Int
+
+    public let start: Date
+    public let end: Date?
+    public let stretches: [Stretch]
+    public let currentStretch: Int
+    public let type: StretchType
+    public let pointIncrement: Int
+
+    public init(
+        start: Date,
+        end: Date?,
+        stretches: [Stretch],
+        currentStretch: Int,
+        type: StretchType,
+        pointIncrement: Int
+    ) {
+        self.start = start
+        self.end = end
+        self.stretches = stretches
+        self.currentStretch = currentStretch
+        self.type = type
+        self.pointIncrement = pointIncrement
+    }
 
     public static let posture =
         StretchSession(

@@ -213,7 +213,7 @@ class CategoriesCoordinator: Coordinator {
 
 class StretchesCoordinator: Coordinator {
     
-    let sessionsRepository = FakeStretchesSessionRepository()
+    let sessionsRepository = CoreDataStrechesSessionsRepository()//FakeStretchesSessionRepository()
     var navigationController: UIViewController
     var stretchViewController: StretchViewController
     var rootController: UITabBarController

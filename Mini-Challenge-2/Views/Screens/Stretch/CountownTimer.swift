@@ -45,7 +45,7 @@ class CountdownTimer {
     }
     
     func resume(){
-        print("[CountdownTimer] resume() \(self.timer?.isValid)")
+        print("[CountdownTimer] resume() \(String(describing: self.timer?.isValid))")
         self.timer = Timer.scheduledTimer(
             timeInterval: 1,
             target: self,
