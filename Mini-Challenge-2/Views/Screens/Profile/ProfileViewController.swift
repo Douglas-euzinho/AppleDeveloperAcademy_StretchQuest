@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
-    @IBOutlet weak var cameraButton: Circle!
+    @IBOutlet weak var cameraButton: UICircle!
     
     @IBOutlet weak var strengthProgress: UIStackView!
     
