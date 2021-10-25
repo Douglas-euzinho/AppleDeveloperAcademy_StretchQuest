@@ -72,3 +72,13 @@ public class StartNextStretch: StartNextStretchIteractor {
     }
 
 }
+
+public class StartNextStretchEndSession: StartNextStretchIteractor {
+    
+    public init() {}
+    
+    public func execute(result: StartNextStretchResult) {
+        result.sessionDidFinish()
+    }
+    
+}

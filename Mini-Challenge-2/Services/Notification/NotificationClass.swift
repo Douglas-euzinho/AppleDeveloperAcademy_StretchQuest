@@ -108,7 +108,7 @@ class NotificationClass{
     //MARK: - Função para escolher um tempo aleatório
     func randomTimeNotification() -> Int{
         let times: [Int] = [86400,82800,79200,75600,72000,68400,64800,61200,57600,54000,50400,46800,43200,39600,36000,32400,28800,25200,21600,18000,14400,10800,7200]
-        //let times: [Int] = [5,10,15,20,25]
+//        let times: [Int] = [5,10,15,20,25]
         return times.randomElement()!
     }
     
