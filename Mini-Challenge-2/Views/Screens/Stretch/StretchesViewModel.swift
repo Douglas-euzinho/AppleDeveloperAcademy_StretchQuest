@@ -12,10 +12,8 @@ public class StretchesViewModel {
     
     // MARK: Dependencies
     
-    let stretchesSessionRepository:
-        StretchesSessionRepository = FakeStretchesSessionRepository()
-    
     let startStretchesSession: StartStretchesSessionIteractor
+    let endStrechesSession: EndStretchSessionIteractor
     let startNextStretch: StartNextStretchIteractor
     
     // MARK: Published properties
@@ -24,12 +22,10 @@ public class StretchesViewModel {
     
     public var currentStretch: Stretch = Stretch.empty {
         didSet {
-            self.countdown = Int(currentStretch.durationInSeconds)
             self.publishStretch()
-            self.publishCountdown()
             
             if !self.mustShowTransition {
-                self.startCountdownTimer()
+                self.counter.start(initial: Int(currentStretch.durationInSeconds))
             }
         }
     }
@@ -42,18 +38,34 @@ public class StretchesViewModel {
     
     // MARK: View notifier
     
+    var publishShowRewardsScreen: () -> () = {}
+    
     var publishStretch: () -> () = {}
-    var publishCountdown: () -> () = {}
+    
+    var publishCountdown: (Int) -> () {
+        get {
+            self.counter.onPublishCountdown
+        }
+        
+        set {
+            self.counter.onPublishCountdown = newValue
+        }
+    }
     
     // MARK: Control properties
     
-    var timer: Timer?
-    var countdown = 0
+    var counter: CountdownTimer
     
-    public init(category: StretchType){
+    public init(
+        _ category: StretchType,
+        _ sessionsRepository: StretchesSessionRepository
+    ){
         self.category = category
-        self.startStretchesSession = StartStretchesSession(stretchesSessionRepository)
-        self.startNextStretch = StartNextStretch(stretchesSessionRepository)
+        self.startStretchesSession = StartStretchesSession(sessionsRepository)
+        self.endStrechesSession = EndStretchSession(sessionsRepository)
+        self.startNextStretch = StartNextStretch(sessionsRepository)
+        self.counter = CountdownTimer()
+        self.counter.onCountdownFinish = self.onCountdownFinish
     }
     
     public func startSession() {
@@ -64,41 +76,24 @@ public class StretchesViewModel {
         self.startNextStretch.execute(result: self)
     }
     
+    public func onCountdownFinish(){
+        self.nextStretch()
+    }
+    
 }
 
 extension StretchesViewModel {
     
-    @objc func timerTick() {
-        
-        self.countdown -= 1
-        
-        if self.countdown == -1 {
-            self.pauseCountdownTime()
-            self.startNextStretch.execute(result: self)
-            return
-        }else{
-            self.publishCountdown()
-        }
-    }
-    
     func startCountdownTimer() {
-        print("[StrechesViewModel] startCountdownTimer()")
-        self.timer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(timerTick),
-            userInfo: nil,
-            repeats: true)
+        self.counter.start(initial: Int(currentStretch.durationInSeconds))
     }
     
     func resumeCountdownTimer(){
-        print("[StrechesViewModel] resumeCountdownTimer()")
-        self.startCountdownTimer()
+        self.counter.resume()
     }
     
     func pauseCountdownTime() {
-        print("[StrechesViewModel] pauseCountdownTimer()")
-        self.timer?.invalidate()
+        self.counter.pause()
     }
     
 }
@@ -113,11 +108,18 @@ extension StretchesViewModel: StartStretchesSessionResult {
 
 extension StretchesViewModel: StartNextStretchResult {
     public func sessionDidFinish() {
-        print("[StretchesViewModel] Session did Finish!!!")
+        self.endStrechesSession.execute(result: self)
+        self.publishShowRewardsScreen()
     }
     
     public func next(stretch: Stretch, progress: SessionProgress) {
         self.session = progress
         self.currentStretch = stretch
+    }
+}
+
+extension StretchesViewModel: EndStretchSessionResult {
+    public func noCurrentSessionError() {
+        //handle error
     }
 }

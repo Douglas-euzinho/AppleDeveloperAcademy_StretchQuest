@@ -57,6 +57,8 @@ public class StartStretchesSession: StartStretchesSessionIteractor {
 
 public class HardcodedStretchesRepository: StretchesRepository {
 
+    public init () {}
+    
     public func list(filterBy type: StretchType) -> [Stretch] {
 
         var list = [Stretch]()

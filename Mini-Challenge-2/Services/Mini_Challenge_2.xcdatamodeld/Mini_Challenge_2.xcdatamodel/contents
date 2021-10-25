@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Atributes" representedClassName="Atributes" syncable="YES">
         <attribute name="flexibility" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="posture" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="atributes" inverseEntity="User"/>
+    </entity>
+    <entity name="StretchesSessions" representedClassName="StretchesSessions" syncable="YES">
+        <attribute name="currentStretch" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="alreadyEntry" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -17,5 +23,6 @@
     <elements>
         <element name="Atributes" positionX="-18" positionY="54" width="128" height="89"/>
         <element name="User" positionX="-45" positionY="0" width="128" height="119"/>
+        <element name="StretchesSessions" positionX="-27" positionY="63" width="128" height="89"/>
     </elements>
 </model>

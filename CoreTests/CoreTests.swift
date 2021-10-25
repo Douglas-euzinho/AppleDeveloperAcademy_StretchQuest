@@ -40,5 +40,17 @@ class CoreTests: XCTestCase {
         service.execute(result)
         
     }
+    
+    func testGetNextSessionType() {
+        
+        let repository = FakeStretchesSessionRepository()
+
+        repository.add(session: StretchSession.flexibility)
+        repository.add(session: StretchSession.posture)
+        
+        let service = GetNextSessionType(repository)
+        
+        XCTAssertEqual(service.execute(), .strength)
+    }
 
 }
