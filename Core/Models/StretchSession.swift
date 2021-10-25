@@ -7,8 +7,18 @@
 
 import Foundation
 
-public struct StretchSession {
-
+public struct StretchSession: CustomStringConvertible {
+    
+    public var description: String {
+        """
+        StretchSession
+            type: \(self.type)
+            start: \(self.start)
+            end: \(String(describing: self.end))
+            currentStretch: \(self.stretches[self.currentStretch].title)
+        """
+    }
+    
     public let start: Date
     public let end: Date?
     public let stretches: [Stretch]

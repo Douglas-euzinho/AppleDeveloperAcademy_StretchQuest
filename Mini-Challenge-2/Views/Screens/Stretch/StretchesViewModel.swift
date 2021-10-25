@@ -13,6 +13,7 @@ public class StretchesViewModel {
     // MARK: Dependencies
     
     let startStretchesSession: StartStretchesSessionIteractor
+    let endStrechesSession: EndStretchSessionIteractor
     let startNextStretch: StartNextStretchIteractor
     
     // MARK: Published properties
@@ -61,6 +62,7 @@ public class StretchesViewModel {
     ){
         self.category = category
         self.startStretchesSession = StartStretchesSession(sessionsRepository)
+        self.endStrechesSession = EndStretchSession(sessionsRepository)
         self.startNextStretch = StartNextStretch(sessionsRepository)
         self.counter = CountdownTimer()
         self.counter.onCountdownFinish = self.onCountdownFinish
@@ -106,11 +108,18 @@ extension StretchesViewModel: StartStretchesSessionResult {
 
 extension StretchesViewModel: StartNextStretchResult {
     public func sessionDidFinish() {
+        self.endStrechesSession.execute(result: self)
         self.publishShowRewardsScreen()
     }
     
     public func next(stretch: Stretch, progress: SessionProgress) {
         self.session = progress
         self.currentStretch = stretch
+    }
+}
+
+extension StretchesViewModel: EndStretchSessionResult {
+    public func noCurrentSessionError() {
+        //handle error
     }
 }
