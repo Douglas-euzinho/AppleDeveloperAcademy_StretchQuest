@@ -396,7 +396,7 @@
     <resources>
         <image name="FlexibilityIcon" width="51.333332061767578" height="51.333332061767578"/>
         <image name="PostureIcon" width="51.333332061767578" height="54.333332061767578"/>
-        <image name="Profile" width="35.333332061767578" height="35"/>
+        <image name="Profile" width="27.666666030883789" height="28"/>
         <image name="StrengthIcon" width="51.333332061767578" height="51.666667938232422"/>
         <image name="camera" catalog="system" width="128" height="94"/>
     </resources>

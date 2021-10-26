@@ -120,6 +120,8 @@ class AppCoordinator: Coordinator {
             
             coordinator.start()
             self.window.rootViewController = coordinator.rootViewController
+            
+            UserDefaults.standard.set(true, forKey: "alreadyEntry")
         }
     
         self.window.makeKeyAndVisible()
@@ -159,6 +161,7 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         self.tabController.tabBar.layer.shadowColor = UIColor(red: 0/255, green: 128/255, blue: 115/255, alpha: 1).cgColor
         self.tabController.tabBar.layer.shadowOpacity = 0.1
         self.tabController.tabBar.backgroundColor = .white
+        self.tabController.tabBar.tintColor = UIColor(red: 71/255, green: 204/255, blue: 193/255, alpha: 1)
         
         self.tabController.setViewControllers([
             categoriesViewController,

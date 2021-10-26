@@ -53,7 +53,7 @@ class CategoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupGestures()
         
-        self.authenticateUser()//Coisa do gameCenter
+//        self.authenticateUser()//Coisa do gameCenter
         
     }
     
