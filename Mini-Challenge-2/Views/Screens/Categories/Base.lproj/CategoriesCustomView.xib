@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="283" height="131"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BUH-Yc-TST" userLabel="Title">
-                    <rect key="frame" x="16" y="36" width="150.33333333333334" height="59"/>
+                    <rect key="frame" x="16" y="43.666666666666657" width="150.33333333333334" height="44"/>
                     <fontDescription key="fontDescription" name="Baloo2-ExtraBold" family="Baloo 2" pointSize="36"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

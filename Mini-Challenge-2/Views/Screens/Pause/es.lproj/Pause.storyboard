@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pause-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PauseViewController" title="Pause" id="Y6W-OH-hqX" customClass="PauseViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-5x-B5t">
+                                <rect key="frame" x="30" y="247.66666666666666" width="330" height="348.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="09j-La-p93">
+                                        <rect key="frame" x="5.6666666666666572" y="25.000000000000032" width="319" height="55.333333333333343"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="¿Quieres salir?">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="48" name="BebasNeue-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0O-Pj-CMZ">
+                                        <rect key="frame" x="100.66666666666667" y="161.00000000000003" width="128.66666666666663" height="52.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SÍ">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.27843137254901962" green="0.80000000000000004" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTappedLeave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hKq-Ng-rk0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-jB-2gr">
+                                        <rect key="frame" x="100.66666666666667" y="238.33333333333334" width="128.66666666666663" height="52.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="NO">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.63137254901960782" green="0.89803921568627454" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTappedKeep:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="X7l-Yy-8Np"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="09j-La-p93" firstAttribute="centerX" secondItem="dzW-5x-B5t" secondAttribute="centerX" id="4fC-3l-yJc"/>
+                                    <constraint firstItem="R4Q-jB-2gr" firstAttribute="centerX" secondItem="P0O-Pj-CMZ" secondAttribute="centerX" id="6eg-Yx-Ag5"/>
+                                    <constraint firstItem="R4Q-jB-2gr" firstAttribute="top" secondItem="P0O-Pj-CMZ" secondAttribute="bottom" constant="25" id="7wH-Of-Uhx"/>
+                                    <constraint firstItem="P0O-Pj-CMZ" firstAttribute="height" secondItem="dzW-5x-B5t" secondAttribute="height" multiplier="0.15" id="IWO-hI-0hx"/>
+                                    <constraint firstItem="P0O-Pj-CMZ" firstAttribute="centerX" secondItem="09j-La-p93" secondAttribute="centerX" id="IZt-0X-KzA"/>
+                                    <constraint firstItem="P0O-Pj-CMZ" firstAttribute="top" secondItem="09j-La-p93" secondAttribute="bottom" multiplier="2" id="JVO-bD-6FX"/>
+                                    <constraint firstItem="R4Q-jB-2gr" firstAttribute="height" secondItem="P0O-Pj-CMZ" secondAttribute="height" id="Nla-sf-81z"/>
+                                    <constraint firstItem="R4Q-jB-2gr" firstAttribute="width" secondItem="P0O-Pj-CMZ" secondAttribute="width" id="Y0W-H0-UjS"/>
+                                    <constraint firstItem="09j-La-p93" firstAttribute="top" secondItem="dzW-5x-B5t" secondAttribute="top" constant="25" id="hHf-3e-aHG"/>
+                                    <constraint firstAttribute="bottom" secondItem="R4Q-jB-2gr" secondAttribute="bottom" multiplier="1.2" id="ja2-BI-mWJ"/>
+                                    <constraint firstItem="P0O-Pj-CMZ" firstAttribute="width" secondItem="dzW-5x-B5t" secondAttribute="width" multiplier="0.389899" id="kCD-Wq-jGj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.413112" id="Kqf-iC-3iH"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="e6c-NC-VxV"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hiV-ws-OqF"/>
+                            <constraint firstItem="dzW-5x-B5t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="j7M-rn-lg7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzW-5x-B5t" secondAttribute="trailing" constant="30" id="t9t-c0-ONr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="76.066350710900466"/>
+        </scene>
+    </scenes>
+</document>

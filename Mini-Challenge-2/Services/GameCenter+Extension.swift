@@ -10,7 +10,7 @@ import UIKit
 import GameKit
 import GameplayKit
 
-extension testeGC: GKGameCenterControllerDelegate{
+extension CategoriesViewController: GKGameCenterControllerDelegate{
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         
         gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -86,10 +86,32 @@ extension testeGC: GKGameCenterControllerDelegate{
     
     
     //MARK: - função para mostrar os leaderboards. Chamado ao clicar em algum botão específico.
-    func transitionToGameCenter(){
+    func transitionToLeadersGameCenter(){
         let viewController = GKGameCenterViewController(state: .leaderboards)
         viewController.gameCenterDelegate = self
         present(viewController, animated: true, completion: nil)
+    }
+    
+    //MARK: - função para mostrar os achievements. Chamado ao clicar em algum botão específico.
+    func transitionToAchievementsGameCenter(){
+        let viewController = GKGameCenterViewController()
+        viewController.gameCenterDelegate = self
+        viewController.viewState = .achievements
+        present(viewController, animated: true, completion: nil)
+    }
+    
+    //MARK: - Função geral para desbloquear conquista especificada no parâmetro. Chamado em qualquer canto
+    func unlockAchievementSpecified(nameAchievement: String){
+        let achievement = GKAchievement(identifier: nameAchievement)
+        achievement.percentComplete = 100
+        achievement.showsCompletionBanner = true
+        GKAchievement.report([achievement]) { error in
+            guard error == nil else{
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            print("Desbloqueado: \(nameAchievement)")
+        }
     }
     
     

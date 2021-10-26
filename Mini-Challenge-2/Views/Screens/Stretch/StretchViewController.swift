@@ -10,6 +10,7 @@ import Core
 import AVKit
 
 class StretchViewController: UIViewController {
+
    
     // MARK: Properties
     @IBOutlet weak var descriptionStretch: UILabel!
@@ -105,10 +106,31 @@ class StretchViewController: UIViewController {
         switch(self.viewModel.category){
         case .flexibility:
             rewardsViewController.punctuation.text = "Flexibility +1"
+            CategoriesViewController.sharedGC.sessionFlexibilityDid += 1
+            
+            if CategoriesViewController.sharedGC.sessionFlexibilityDid == 1{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Get1PointInFlexibility")
+            }else if CategoriesViewController.sharedGC.sessionFlexibilityDid == 5{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Get5PointsInFlexibility")
+            }
         case .posture:
             rewardsViewController.punctuation.text = "Posture +1"
+            CategoriesViewController.sharedGC.sessionPostureDid += 1
+            
+            if CategoriesViewController.sharedGC.sessionPostureDid == 1{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Have1PointInPosture")
+            }else if CategoriesViewController.sharedGC.sessionPostureDid == 5{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Have5PointsInPosture")
+            }
         case .strength:
             rewardsViewController.punctuation.text = "Strength +1"
+            CategoriesViewController.sharedGC.sessionStrengthDid += 1
+            
+            if CategoriesViewController.sharedGC.sessionStrengthDid == 1{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Have1PointInStrength")
+            }else if CategoriesViewController.sharedGC.sessionStrengthDid == 5{
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "Have5PointsInStrength")
+            }
         }
         
         rewardsViewController.delegate = self
@@ -116,6 +138,38 @@ class StretchViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Validado e rodando - ✅
+        //print("********TESTE \(self.viewModel.category ) FIM TESTE********")
+        switch (self.viewModel.category) {
+        case .strength:
+            if CategoriesViewController.sharedGC.firstStrengthStretch == false{
+                //print("força entrou")
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "FirstStrengthStretch")
+                CategoriesViewController.sharedGC.firstStrengthStretch = true
+            }else{
+                //print("força n entrou")
+            }
+        case .posture:
+            if CategoriesViewController.sharedGC.firstPostureStretch == false{
+                //print("postura entrou")
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "FirstPostureStretch")
+                CategoriesViewController.sharedGC.firstPostureStretch = true
+            }else{
+                //print("postura n entrou")
+            }
+        case .flexibility:
+            if CategoriesViewController.sharedGC.firstFlexibilityStretch == false{
+                //print("flexibilidade entrou")
+                CategoriesViewController.sharedGC.unlockAchievementSpecified(nameAchievement: "FirstFlexibilityStretch")
+                CategoriesViewController.sharedGC.firstFlexibilityStretch = true
+            }else{
+                //print("flexibilidade n entrou")
+            }
+        default:
+            print("se entrou ak deu caquinha")
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -154,6 +208,7 @@ class StretchViewController: UIViewController {
     }
     
     @IBAction func presentPauseViewController() {
+        
         showPauseViewController()
     }
     

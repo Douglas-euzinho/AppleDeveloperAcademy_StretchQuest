@@ -18,15 +18,22 @@ class testeGC: UIViewController{
     //checar se foi autenticado ou não
     var gameCenterEnabled: Bool = false
     
-    
+
     //placar aleatorio q eu criei só pra exemplificar
     var sessionStrengthDid: Int = 0
     var sessionFlexibilityDid: Int = 0
     var sessionPostureDid: Int = 0
     
     override func viewDidLoad() {
-        self.authenticateUser()
+        //self.authenticateUser()
     }
+    
+    /*
+    @IBAction func leader(_ sender: Any) {
+        print("karai")
+        self.transitionToLeadersGameCenter()
+    }*/
+
     
     
 }
