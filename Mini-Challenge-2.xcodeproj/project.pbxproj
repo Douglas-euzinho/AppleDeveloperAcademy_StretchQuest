@@ -45,6 +45,7 @@
 		B2185FE52707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */; };
 		B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2185FE62707A0AC00A4ACAE /* Assets.xcassets */; };
 		B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2185FE82707A0AC00A4ACAE /* LaunchScreen.storyboard */; };
+		B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B226E43127279D8700AF14C6 /* Baloo2-ExtraBold.ttf */; };
 		B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A71772718B29C002F33C6 /* StretchViewController.swift */; };
 		B22A717A2718C55C002F33C6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22A71792718C55C002F33C6 /* Profile.storyboard */; };
 		B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717B2718CC28002F33C6 /* ProfileViewController.swift */; };
@@ -57,6 +58,7 @@
 		B2591831271E0F910083176D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2591830271E0F910083176D /* RewardViewController.swift */; };
 		B27504312727293400768BC8 /* CategoriesCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27504302727293400768BC8 /* CategoriesCustomView.xib */; };
 		B275043327272D4200768BC8 /* CategoriesCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275043227272D4200768BC8 /* CategoriesCustomView.swift */; };
+		B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */; };
 		B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B87F84270CCA9A004F0D47 /* Categories.storyboard */; };
 		CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */; };
 		CB2A6BB92722569E00F144D8 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CB2A6BB82722569E00F144D8 /* test.mp4 */; };
@@ -154,6 +156,7 @@
 		B2185FE62707A0AC00A4ACAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2185FE92707A0AC00A4ACAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2185FEB2707A0AC00A4ACAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B226E43127279D8700AF14C6 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B22A71772718B29C002F33C6 /* StretchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
 		B22A71792718C55C002F33C6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B22A717B2718CC28002F33C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		B2591830271E0F910083176D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		B27504302727293400768BC8 /* CategoriesCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCustomView.xib; sourceTree = "<group>"; };
 		B275043227272D4200768BC8 /* CategoriesCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCustomView.swift; sourceTree = "<group>"; };
+		B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		B2B87F84270CCA9A004F0D47 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
 		CB2A6BB82722569E00F144D8 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
@@ -344,6 +348,15 @@
 			path = CoreDataClass;
 			sourceTree = "<group>";
 		};
+		B20C414C272766790013D93B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B226E43127279D8700AF14C6 /* Baloo2-ExtraBold.ttf */,
+				B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		B2185FCE2707A0AA00A4ACAE = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +489,7 @@
 		B259183A271F69210083176D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B20C414C272766790013D93B /* Fonts */,
 				CB2A6BB52722555800F144D8 /* StretchVideos */,
 				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
 			);
@@ -701,12 +715,14 @@
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
 				684CFD93271B857D009E2B70 /* Pause.storyboard in Resources */,
+				B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */,
 				B2B87F85270CCA9A004F0D47 /* Categories.storyboard in Resources */,
 				B259182F271E0E830083176D /* Reward.storyboard in Resources */,
 				B27504312727293400768BC8 /* CategoriesCustomView.xib in Resources */,
 				B25402D02717A72500C088C4 /* Stretch.storyboard in Resources */,
 				CB2A6BB92722569E00F144D8 /* test.mp4 in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
+				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
