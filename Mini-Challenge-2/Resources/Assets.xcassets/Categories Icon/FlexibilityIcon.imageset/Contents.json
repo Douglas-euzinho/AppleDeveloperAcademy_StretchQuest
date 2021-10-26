@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Flexibility.png",
+      "filename" : "FlexibilityIcon@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Flexibility@2x.png",
+      "filename" : "FlexibilityIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Flexibility@3x.png",
+      "filename" : "FlexibilityIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

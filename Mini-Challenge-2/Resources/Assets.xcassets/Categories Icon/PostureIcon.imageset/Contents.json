@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Strength.png",
+      "filename" : "PostureIcon@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Strength@2x.png",
+      "filename" : "PostureIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Strength@3x.png",
+      "filename" : "PostureIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
