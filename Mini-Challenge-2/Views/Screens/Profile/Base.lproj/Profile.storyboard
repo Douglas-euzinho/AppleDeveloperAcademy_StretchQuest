@@ -43,7 +43,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EVR-kH-eHy">
-                                <rect key="frame" x="153.66666666666666" y="280.66666666666669" width="83" height="63.333333333333314"/>
+                                <rect key="frame" x="153.66666666666666" y="280.66666666666669" width="83" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Name">
                                         <attributes>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-Af-jkT">
-                                <rect key="frame" x="106" y="374.66666666666669" width="42.666666666666657" height="21.666666666666686"/>
+                                <rect key="frame" x="106" y="374.33333333333331" width="42.666666666666657" height="21.666666666666686"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Level 0">
                                         <attributes>
@@ -68,13 +68,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="StrengthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-YE-bdh" userLabel="Strength Icon">
-                                <rect key="frame" x="34" y="404.33333333333331" width="51" height="51"/>
+                                <rect key="frame" x="34" y="404" width="51" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PYV-YE-bdh" secondAttribute="height" multiplier="1:1" id="H0C-FG-EH2"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-K4-TfD" userLabel="Strength Progress">
-                                <rect key="frame" x="106" y="404.33333333333331" width="250" height="51"/>
+                                <rect key="frame" x="106" y="404" width="250" height="51"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCc-h1-ahs">
                                         <rect key="frame" x="8" y="6" width="235" height="39"/>
@@ -147,7 +147,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6v-zL-koc">
-                                <rect key="frame" x="106" y="501" width="42.666666666666657" height="21.666666666666629"/>
+                                <rect key="frame" x="106" y="500.66666666666669" width="42.666666666666657" height="21.666666666666686"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Level 0">
                                         <attributes>
@@ -159,13 +159,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PostureIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-ZD-LVl" userLabel="Posture Icon">
-                                <rect key="frame" x="34" y="530.66666666666663" width="51" height="51"/>
+                                <rect key="frame" x="34" y="530.33333333333337" width="51" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9ho-ZD-LVl" secondAttribute="height" multiplier="1:1" id="6X6-Xg-yjB"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lM-bB-Bsr" userLabel="Posture Progress">
-                                <rect key="frame" x="106" y="530.66666666666663" width="250" height="51"/>
+                                <rect key="frame" x="106" y="530.33333333333337" width="250" height="51"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-t1-POY">
                                         <rect key="frame" x="8" y="6" width="235" height="39"/>
@@ -238,7 +238,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl9-EM-lxD">
-                                <rect key="frame" x="106" y="626.66666666666663" width="42.666666666666657" height="21.666666666666629"/>
+                                <rect key="frame" x="106" y="626.33333333333337" width="42.666666666666657" height="21.666666666666629"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Level 0">
                                         <attributes>
@@ -250,13 +250,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="FlexibilityIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TJl-jP-SiF" userLabel="Flexibility Icon">
-                                <rect key="frame" x="34" y="656" width="51" height="51"/>
+                                <rect key="frame" x="34" y="655.66666666666663" width="51" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TJl-jP-SiF" secondAttribute="height" multiplier="1:1" id="NJQ-dc-FP3"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iH-TU-fx1" userLabel="Flexibility Progress">
-                                <rect key="frame" x="106" y="656" width="250" height="51"/>
+                                <rect key="frame" x="106" y="655.66666666666663" width="250" height="51"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pXS-NL-Xuv">
                                         <rect key="frame" x="8" y="6" width="235" height="39"/>
@@ -343,11 +343,11 @@
                             <constraint firstItem="PYV-YE-bdh" firstAttribute="centerY" secondItem="UE4-K4-TfD" secondAttribute="centerY" id="BTY-Jn-kT9"/>
                             <constraint firstItem="9iH-TU-fx1" firstAttribute="height" secondItem="6lM-bB-Bsr" secondAttribute="height" id="FDa-XD-Bwm"/>
                             <constraint firstItem="UE4-K4-TfD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0604265" id="GLi-l6-O3O"/>
-                            <constraint firstItem="EVR-kH-eHy" firstAttribute="height" secondItem="eL1-8K-IA8" secondAttribute="height" multiplier="0.351515" id="GxA-tM-ZN7"/>
                             <constraint firstItem="Fy9-tb-SOh" firstAttribute="leading" secondItem="eL1-8K-IA8" secondAttribute="trailing" constant="-27" id="NqV-dA-pr3"/>
                             <constraint firstItem="EVR-kH-eHy" firstAttribute="centerX" secondItem="eL1-8K-IA8" secondAttribute="centerX" id="Pdc-Mm-SRd"/>
                             <constraint firstItem="6lM-bB-Bsr" firstAttribute="height" secondItem="UE4-K4-TfD" secondAttribute="height" id="RpT-Sb-mvZ"/>
-                            <constraint firstItem="uTU-Af-jkT" firstAttribute="top" secondItem="EVR-kH-eHy" secondAttribute="bottom" multiplier="1.09" id="TTs-Lz-fHh"/>
+                            <constraint firstItem="EVR-kH-eHy" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0783514" id="T9O-Fp-g8J"/>
+                            <constraint firstItem="uTU-Af-jkT" firstAttribute="top" secondItem="EVR-kH-eHy" secondAttribute="bottom" multiplier="1.08" id="TTs-Lz-fHh"/>
                             <constraint firstItem="9iH-TU-fx1" firstAttribute="width" secondItem="6lM-bB-Bsr" secondAttribute="width" id="UaM-Zw-OHg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h6v-zL-koc" secondAttribute="trailing" symbolic="YES" id="WdC-zg-MUx"/>
                             <constraint firstItem="UE4-K4-TfD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.641026" id="YXZ-a2-eK0"/>
