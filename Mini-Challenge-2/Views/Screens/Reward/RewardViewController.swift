@@ -36,23 +36,13 @@ class RewardViewController: UIViewController {
         
         adjustsFontSizeButton(continueButton)
         adjustsFontSizeButton(leaveButton)
-        adjustsFontSize(label: congratulations)
     }
     
     private func adjustsFontSizeButton(_ button: UIButton) {
         let font = button.titleLabel!.font!
         
-        button.titleLabel!.font = font.withSize(button.frame.height / 2.5)
+        button.titleLabel!.font = font.withSize(button.frame.height / 1.87)
     }
-    
-    private func adjustsFontSize(label: UILabel) {
-        
-        guard let font = label.font else { return }
-        
-        // TODO: @Johnny Camacho ajusta isso pelo amor de DEUS
-        label.font = font.withSize(label.frame.height / 1.8)
-    }
-    
     
     @IBAction func didTappedContinue(_ sender: UIButton) {
         self.dismiss(animated: true)

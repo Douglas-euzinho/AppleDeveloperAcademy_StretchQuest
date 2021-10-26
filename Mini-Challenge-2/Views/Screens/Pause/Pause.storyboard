@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,17 +18,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-5x-B5t">
                                 <rect key="frame" x="30" y="247.66666666666666" width="330" height="348.66666666666674"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to leave?" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="09j-La-p93">
-                                        <rect key="frame" x="36.666666666666686" y="15.000000000000028" width="257" height="65.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="09j-La-p93">
+                                        <rect key="frame" x="45" y="25.000000000000032" width="240" height="55.333333333333343"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Want to leave?">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="48" name="BebasNeue-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0O-Pj-CMZ">
                                         <rect key="frame" x="100.66666666666667" y="161.00000000000003" width="128.66666666666663" height="52.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="YES" cornerStyle="medium">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="YES">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.27843137254901962" green="0.80000000000000004" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -39,8 +52,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-jB-2gr">
                                         <rect key="frame" x="100.66666666666667" y="238.33333333333334" width="128.66666666666663" height="52.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="NO" cornerStyle="medium">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="NO">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.63137254901960782" green="0.89803921568627454" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -48,7 +68,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="09j-La-p93" firstAttribute="centerX" secondItem="dzW-5x-B5t" secondAttribute="centerX" id="4fC-3l-yJc"/>
                                     <constraint firstItem="R4Q-jB-2gr" firstAttribute="centerX" secondItem="P0O-Pj-CMZ" secondAttribute="centerX" id="6eg-Yx-Ag5"/>
@@ -58,7 +78,7 @@
                                     <constraint firstItem="P0O-Pj-CMZ" firstAttribute="top" secondItem="09j-La-p93" secondAttribute="bottom" multiplier="2" id="JVO-bD-6FX"/>
                                     <constraint firstItem="R4Q-jB-2gr" firstAttribute="height" secondItem="P0O-Pj-CMZ" secondAttribute="height" id="Nla-sf-81z"/>
                                     <constraint firstItem="R4Q-jB-2gr" firstAttribute="width" secondItem="P0O-Pj-CMZ" secondAttribute="width" id="Y0W-H0-UjS"/>
-                                    <constraint firstItem="09j-La-p93" firstAttribute="top" secondItem="dzW-5x-B5t" secondAttribute="top" constant="15" id="hHf-3e-aHG"/>
+                                    <constraint firstItem="09j-La-p93" firstAttribute="top" secondItem="dzW-5x-B5t" secondAttribute="top" constant="25" id="hHf-3e-aHG"/>
                                     <constraint firstAttribute="bottom" secondItem="R4Q-jB-2gr" secondAttribute="bottom" multiplier="1.2" id="ja2-BI-mWJ"/>
                                     <constraint firstItem="P0O-Pj-CMZ" firstAttribute="width" secondItem="dzW-5x-B5t" secondAttribute="width" multiplier="0.389899" id="kCD-Wq-jGj"/>
                                 </constraints>
@@ -85,12 +105,4 @@
             <point key="canvasLocation" x="40" y="76.066350710900466"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

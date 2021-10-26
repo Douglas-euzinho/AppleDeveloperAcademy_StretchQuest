@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-ExtraBold.ttf">
+            <string>Baloo2-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reward-->
         <scene sceneID="s0d-6b-0kx">
@@ -22,24 +27,23 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-nI-nbu">
                                         <rect key="frame" x="8" y="8" width="266" height="357.33333333333331"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dXV-5R-La8">
-                                        <rect key="frame" x="88.666666666666657" y="395.33333333333331" width="105" height="31.666666666666686"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session completed!" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dXV-5R-La8">
+                                        <rect key="frame" x="34.666666666666686" y="395.33333333333331" width="213" height="31.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-ExtraBold" family="Baloo 2" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontuação" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-eo-3Xb">
-                                        <rect key="frame" x="81" y="435" width="120" height="31.666666666666686"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punctuation" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-eo-3Xb">
+                                        <rect key="frame" x="34.666666666666686" y="435" width="213" height="31.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-ExtraBold" family="Baloo 2" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="dXV-5R-La8" firstAttribute="width" secondItem="ZjD-nI-nbu" secondAttribute="width" multiplier="0.394737" id="1f4-VV-Cc2"/>
                                     <constraint firstItem="dXV-5R-La8" firstAttribute="top" secondItem="ZjD-nI-nbu" secondAttribute="bottom" constant="30" id="BSS-NF-fqo"/>
-                                    <constraint firstItem="XgA-eo-3Xb" firstAttribute="width" secondItem="dXV-5R-La8" secondAttribute="width" multiplier="1.14286" id="CNU-Hb-L74"/>
+                                    <constraint firstItem="XgA-eo-3Xb" firstAttribute="width" secondItem="dXV-5R-La8" secondAttribute="width" id="FAB-VG-Pw4"/>
                                     <constraint firstItem="dXV-5R-La8" firstAttribute="height" secondItem="ZjD-nI-nbu" secondAttribute="height" multiplier="0.088685" id="Nvj-gR-bip"/>
                                     <constraint firstAttribute="trailing" secondItem="ZjD-nI-nbu" secondAttribute="trailing" constant="8" id="ONX-UN-yHa"/>
                                     <constraint firstItem="XgA-eo-3Xb" firstAttribute="height" secondItem="dXV-5R-La8" secondAttribute="height" id="Ou4-kC-tbN"/>
@@ -60,9 +64,15 @@
                                 <rect key="frame" x="54" y="620" width="282" height="67.333333333333371"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="CONTINUE" cornerStyle="medium">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CONTINUE">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name="BebasNeue-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.27843137254901962" green="0.80000000000000004" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -73,9 +83,15 @@
                                 <rect key="frame" x="54" y="719.33333333333337" width="282" height="67.666666666666629"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LEAVE" cornerStyle="medium">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="medium">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="LEAVE">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name="BebasNeue-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.63137254901960782" green="0.89803921568627454" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -84,7 +100,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JHZ-8c-pos" firstAttribute="centerX" secondItem="GZ1-Lj-faQ" secondAttribute="centerX" id="1C1-ty-U4I"/>
                             <constraint firstItem="GZ1-Lj-faQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="AGL-5R-WQc"/>
@@ -112,16 +128,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="60.591133004926114"/>
+            <point key="canvasLocation" x="130.76923076923077" y="60.426540284360186"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Flexibility.png",
+      "filename" : "Posture@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Flexibility@2x.png",
+      "filename" : "Posture@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Flexibility@3x.png",
+      "filename" : "Posture@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
