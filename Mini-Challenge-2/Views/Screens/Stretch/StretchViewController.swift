@@ -173,11 +173,11 @@ class StretchViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        self.circlePath = UIBezierPath.init(arcCenter: timerLabel.center, radius: timerLabel.frame.width, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
+        self.circlePath     = UIBezierPath.init(arcCenter: timerLabel.center, radius: timerLabel.frame.width, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
         
         pulsatingLayer.path = UIBezierPath(arcCenter: .zero, radius: timerLabel.frame.width, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).cgPath
-        trackShape.path         = circlePath.cgPath
-        shape.path         = circlePath.cgPath
+        trackShape.path     = circlePath.cgPath
+        shape.path          = circlePath.cgPath
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -214,9 +214,6 @@ class StretchViewController: UIViewController {
     }
     
     private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor, radius: CGFloat) -> CAShapeLayer {
-        
-        let label = self.timerLabel
-                
         let layer = CAShapeLayer()
         let circularPath  = UIBezierPath(arcCenter: .zero, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
@@ -225,7 +222,7 @@ class StretchViewController: UIViewController {
         layer.lineWidth   = 16
         layer.fillColor   = fillColor.cgColor
         layer.lineCap     = .round
-        layer.position    = label!.center
+        layer.position    = timerLabel.center
         return layer
     }
     
@@ -235,11 +232,11 @@ class StretchViewController: UIViewController {
             return type(of: view) == UILabel.self
         }
         
-        guard label != nil else { return }
-         
-        self.circlePath = UIBezierPath.init(arcCenter: label!.center, radius: label!.intrinsicContentSize.width, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
+        guard let label = label else { return }
         
-        pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear, radius: label!.intrinsicContentSize.width)
+        self.circlePath = UIBezierPath.init(arcCenter: label.center, radius: label.frame.width, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear, radius: label.frame.width)
         view.layer.addSublayer(pulsatingLayer)
         
         animatePulsatingLayer()

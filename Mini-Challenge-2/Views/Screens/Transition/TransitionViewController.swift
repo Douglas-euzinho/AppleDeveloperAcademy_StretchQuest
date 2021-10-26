@@ -14,7 +14,12 @@ import UIKit
 typealias OnDismiss = () -> ()
 
 class TransitionViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var videoTransitionView: UIView!
+    @IBOutlet weak var descriptionTransition: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
     lazy var circleAttributed = UIColor.getColorBy(category: self.viewModel.category)
     
     lazy var transitionColor = UIColor.getTransitionRingColor()
@@ -48,8 +53,13 @@ class TransitionViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
         self.startTimerAnimation()
+        
+        self.circlePath     = UIBezierPath.init(arcCenter: timerLabel.center, radius: timerLabel.frame.width, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        pulsatingLayer.path = UIBezierPath(arcCenter: .zero, radius: timerLabel.frame.width, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).cgPath
+        trackShape.path     = circlePath.cgPath
+        shape.path          = circlePath.cgPath
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,21 +74,17 @@ class TransitionViewController: UIViewController {
     
     // MARK: - Ring Animation
     
-    private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
+    private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor, radius: CGFloat) -> CAShapeLayer {
         
-        let label = self.view.subviews.first { view in
-            return type(of: view) == UILabel.self
-        }
-                
         let layer = CAShapeLayer()
-        let circularPath  = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath  = UIBezierPath(arcCenter: .zero, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         layer.path        = circularPath.cgPath
         layer.strokeColor = self.transitionColor.pulse.cgColor
         layer.lineWidth   = 16
         layer.fillColor   = fillColor.cgColor
         layer.lineCap     = .round
-        layer.position    = label!.center
+        layer.position    = timerLabel.center
         return layer
     }
     
@@ -94,11 +100,11 @@ class TransitionViewController: UIViewController {
             return type(of: view) == UILabel.self
         }
         
-        guard label != nil else { return }
+        guard let label = label else { return }
          
-        self.circlePath = UIBezierPath.init(arcCenter: label!.center, radius: 75, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
+        self.circlePath = UIBezierPath.init(arcCenter: label.center, radius: label.frame.width, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
-        pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear)
+        pulsatingLayer = createCircleShapeLayer(strokeColor: .green, fillColor: UIColor.clear, radius: label.frame.width)
         view.layer.addSublayer(pulsatingLayer)
         
         //animatePulsatingLayer()
