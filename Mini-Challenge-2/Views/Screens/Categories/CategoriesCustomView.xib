@@ -6,11 +6,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-ExtraBold.ttf">
+            <string>Baloo2-ExtraBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesCustomView" customModule="Mini_Challenge_2" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="a9L-tD-XRg" id="PO8-so-hz4"/>
-                <outlet property="descriptionLabel" destination="Fgm-r5-MP0" id="XKg-jj-aog"/>
                 <outlet property="titleLabel" destination="BUH-Yc-TST" id="gF9-ri-dq3"/>
             </connections>
         </placeholder>
@@ -22,42 +26,28 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-tD-XRg" userLabel="Background">
                     <rect key="frame" x="0.0" y="0.0" width="283" height="131"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="QkC-35-TGA">
-                    <rect key="frame" x="21.999999999999993" y="35" width="99.333333333333314" height="45.666666666666657"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BUH-Yc-TST" userLabel="Title">
-                            <rect key="frame" x="0.0" y="0.0" width="72" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick description" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-r5-MP0">
-                            <rect key="frame" x="0.0" y="31.333333333333325" width="99.333333333333329" height="14.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="Fgm-r5-MP0" firstAttribute="height" secondItem="BUH-Yc-TST" secondAttribute="height" multiplier="0.704918" id="MNT-DI-hRg"/>
-                        <constraint firstItem="Fgm-r5-MP0" firstAttribute="width" secondItem="BUH-Yc-TST" secondAttribute="width" multiplier="1.37963" id="fVd-m2-mPN"/>
-                    </constraints>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BUH-Yc-TST" userLabel="Title">
+                    <rect key="frame" x="16" y="36" width="150.33333333333334" height="59"/>
+                    <fontDescription key="fontDescription" name="Baloo2-ExtraBold" family="Baloo 2" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="2" height="2"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="B3Y-K6-8nn"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="a9L-tD-XRg" firstAttribute="leading" secondItem="B3Y-K6-8nn" secondAttribute="leading" id="3kf-wy-jQ5"/>
-                <constraint firstItem="QkC-35-TGA" firstAttribute="top" secondItem="a9L-tD-XRg" secondAttribute="top" constant="35" id="8tD-3n-xRY"/>
-                <constraint firstItem="QkC-35-TGA" firstAttribute="leading" secondItem="a9L-tD-XRg" secondAttribute="leading" constant="22" id="Bx2-AA-q5w"/>
                 <constraint firstItem="a9L-tD-XRg" firstAttribute="top" secondItem="B3Y-K6-8nn" secondAttribute="top" id="Fg1-vx-Nfu"/>
                 <constraint firstItem="a9L-tD-XRg" firstAttribute="bottom" secondItem="B3Y-K6-8nn" secondAttribute="bottom" id="Y6w-3O-VUm"/>
-                <constraint firstItem="BUH-Yc-TST" firstAttribute="width" secondItem="a9L-tD-XRg" secondAttribute="width" multiplier="0.254417" id="Z4E-PE-tah"/>
+                <constraint firstItem="BUH-Yc-TST" firstAttribute="leading" secondItem="a9L-tD-XRg" secondAttribute="leading" constant="16" id="ebR-Bk-B3J"/>
+                <constraint firstItem="BUH-Yc-TST" firstAttribute="width" secondItem="a9L-tD-XRg" secondAttribute="width" multiplier="0.531213" id="fqc-LK-BGw"/>
                 <constraint firstItem="a9L-tD-XRg" firstAttribute="trailing" secondItem="B3Y-K6-8nn" secondAttribute="trailing" id="jiw-tU-FaN"/>
-                <constraint firstItem="BUH-Yc-TST" firstAttribute="height" secondItem="a9L-tD-XRg" secondAttribute="height" multiplier="0.155216" id="w9u-vA-bNN"/>
+                <constraint firstItem="BUH-Yc-TST" firstAttribute="centerY" secondItem="adq-Y0-Re6" secondAttribute="centerY" id="rPf-oo-xwR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-116" y="5"/>
+            <point key="canvasLocation" x="-116.66666666666667" y="4.4836956521739131"/>
         </view>
     </objects>
     <resources>

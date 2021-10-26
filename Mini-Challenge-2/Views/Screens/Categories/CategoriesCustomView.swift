@@ -16,9 +16,9 @@ class CategoriesCustomView: UIView {
         }
     }
     
-    @IBInspectable var quickDescription: String = "Quick Description" {
+    @IBInspectable var titleShadow: UIColor = UIColor.clear {
         didSet {
-            descriptionLabel.text = quickDescription
+            titleLabel.shadowColor = titleShadow
         }
     }
     
@@ -29,7 +29,6 @@ class CategoriesCustomView: UIView {
     }
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     let nibName = "CategoriesCustomView"

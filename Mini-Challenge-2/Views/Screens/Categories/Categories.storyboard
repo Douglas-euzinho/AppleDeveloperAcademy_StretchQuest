@@ -15,10 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-JP-amU">
-                                <rect key="frame" x="73" y="74" width="244" height="57.333333333333343"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-JP-amU">
+                                <rect key="frame" x="109.00000000000001" y="74" width="172.33333333333337" height="57.333333333333343"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Categories">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="BebasNeue-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-T7-52k" userLabel="Strength" customClass="CategoriesCustomView" customModule="Mini_Challenge_2" customModuleProvider="target">
@@ -30,6 +37,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Strength"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Strength"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
+                                        <color key="value" red="0.72549019607843135" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r27-mR-ZKK" userLabel="Posture" customClass="CategoriesCustomView" customModule="Mini_Challenge_2" customModuleProvider="target">
@@ -38,6 +48,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Posture"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Posture"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
+                                        <color key="value" red="0.098039215686274508" green="0.72549019607843135" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gg-Vgl" userLabel="Flexibility" customClass="CategoriesCustomView" customModule="Mini_Challenge_2" customModuleProvider="target">
@@ -46,6 +59,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Flexibility"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Flexibility"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
+                                        <color key="value" red="0.090196078431372548" green="0.25098039215686274" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -78,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="-41.379310344827587"/>
+            <point key="canvasLocation" x="100.93457943925233" y="-41.46868250539957"/>
         </scene>
     </scenes>
     <resources>
