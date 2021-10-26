@@ -118,24 +118,19 @@ public class GetUserAttributesVersion2: GetUserAttributesIteractor {
     
     public func execute(_ result: GetUserAttributesResult) {
         
-        var flexibility = 0
-        var strength = 0
-        var posture = 0
-        
-        let sessions = self.repository.list().filter({
+        let allSessions = self.repository.list().filter({
             $0.end != nil
+        }).sorted(by: {
+            $0.start > $1.start
         })
         
-        sessions.forEach({
-            switch($0.type){
-            case .flexibility:
-                flexibility += 1
-            case .posture:
-                posture += 1
-            case .strength:
-                strength += 1
-            }
-        })
+        let flexibilitySessions = allSessions.filter({$0.type == .flexibility})
+        let postureSessions = allSessions.filter({$0.type == .posture})
+        let strengthSessions = allSessions.filter({$0.type == .strength})
+        
+        let flexibility = filterByTimeDifferenceOf24Hours(sessions: flexibilitySessions).count
+        let posture = filterByTimeDifferenceOf24Hours(sessions: postureSessions).count
+        let strength = filterByTimeDifferenceOf24Hours(sessions: strengthSessions).count
         
         let userAttributes = StretchPoints(
             strength: strength,
@@ -143,6 +138,33 @@ public class GetUserAttributesVersion2: GetUserAttributesIteractor {
             flexibility: flexibility)
         
         result.userAttributes = userAttributes
+        
+    }
+    
+    private func filterByTimeDifferenceOf24Hours(sessions: [StretchSession]) -> [StretchSession]{
+        
+        guard
+            let mostRecent = sessions.first
+        else {
+            return []
+        }
+        
+        return sessions.suffix(from: 1).reduce([mostRecent], { sessions, currentSession in
+            
+            let lastSessionStart = sessions.last!.start
+            let currentSessionStart = currentSession.start
+            
+            let timeDiference = sessions.last!.start.distance(to: currentSession.start)
+
+            print("\(lastSessionStart) - \(currentSessionStart) = \(timeDiference)")
+            
+            if timeDiference > 24 * 60 * 60 {
+                let result = sessions + [currentSession]
+                return result
+            }
+            
+            return sessions
+        })
         
     }
     
