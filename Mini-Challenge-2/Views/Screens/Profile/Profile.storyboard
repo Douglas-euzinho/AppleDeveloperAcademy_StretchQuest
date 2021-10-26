@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,20 +13,20 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Mini_Challenge_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eL1-8K-IA8">
-                                <rect key="frame" x="105" y="20" width="390" height="390"/>
+                                <rect key="frame" x="105" y="64" width="204" height="204"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eL1-8K-IA8" secondAttribute="height" multiplier="1:1" id="s39-vD-wEd"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="UICircle" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="468" y="383" width="108.5" height="108.5"/>
+                                <rect key="frame" x="282" y="241" width="56.5" height="56.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-Vs-ggp">
-                                        <rect key="frame" x="22" y="25.5" width="64.5" height="56"/>
+                                        <rect key="frame" x="13.5" y="16.5" width="29.5" height="22.5"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -43,22 +44,22 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVR-kH-eHy">
-                                <rect key="frame" x="259" y="471.5" width="82" height="78"/>
+                                <rect key="frame" x="166" y="308" width="82" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-Af-jkT">
-                                <rect key="frame" x="181.5" y="632" width="61" height="21.5"/>
+                                <rect key="frame" x="114.5" y="401.5" width="61" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-dF-t7k" userLabel="Icon Strength" customClass="UICircle" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="34" y="661.5" width="36.5" height="36"/>
+                                <rect key="frame" x="34" y="431" width="54" height="54"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-Lg-RE6">
-                                        <rect key="frame" x="5.5" y="5.5" width="25" height="25"/>
+                                        <rect key="frame" x="8.5" y="8.5" width="37" height="37"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,13 +77,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-K4-TfD" userLabel="Strength Progress">
-                                <rect key="frame" x="181.5" y="661.5" width="384.5" height="36"/>
+                                <rect key="frame" x="114.5" y="431" width="265.5" height="54"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCc-h1-ahs">
-                                        <rect key="frame" x="8" y="6" width="369.5" height="24"/>
+                                        <rect key="frame" x="8" y="6" width="250.5" height="42"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="okC-Fk-XDk" userLabel="Level 1">
-                                                <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -91,7 +92,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="2" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5fI-F9-RUF" userLabel="Level 2">
-                                                <rect key="frame" x="76" y="0.0" width="65.5" height="24"/>
+                                                <rect key="frame" x="52" y="0.0" width="42.5" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -100,7 +101,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="3" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="l1w-ks-fIE" userLabel="Level 3">
-                                                <rect key="frame" x="151.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="104.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -109,7 +110,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="4" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="WIv-yv-1YD" userLabel="Level 4">
-                                                <rect key="frame" x="227.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="156.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -118,7 +119,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6YB-9X-1eN" userLabel="Level 5">
-                                                <rect key="frame" x="303.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="208.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -149,16 +150,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6v-zL-koc">
-                                <rect key="frame" x="181.5" y="767.5" width="61" height="21.5"/>
+                                <rect key="frame" x="114.5" y="533.5" width="61" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-g5-blL" userLabel="Icon Posture" customClass="UICircle" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="34" y="797" width="36.5" height="36"/>
+                                <rect key="frame" x="34" y="563" width="54" height="54"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Posture" translatesAutoresizingMaskIntoConstraints="NO" id="MoK-6v-Nns">
-                                        <rect key="frame" x="8" y="5.5" width="20" height="25.5"/>
+                                        <rect key="frame" x="12" y="8" width="30" height="38"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,13 +177,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lM-bB-Bsr" userLabel="Posture Progress">
-                                <rect key="frame" x="181.5" y="797" width="384.5" height="36"/>
+                                <rect key="frame" x="114.5" y="563" width="265.5" height="54"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-t1-POY">
-                                        <rect key="frame" x="8" y="6" width="369.5" height="24"/>
+                                        <rect key="frame" x="8" y="6" width="250.5" height="42"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="s39-lF-pPl" userLabel="Level 1">
-                                                <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -191,7 +192,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="2" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-Su-0Y6" userLabel="Level 2">
-                                                <rect key="frame" x="76" y="0.0" width="65.5" height="24"/>
+                                                <rect key="frame" x="52" y="0.0" width="42.5" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -200,7 +201,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="3" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8zX-Tu-TMD" userLabel="Level 3">
-                                                <rect key="frame" x="151.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="104.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -209,7 +210,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="4" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="7DK-rJ-Vpb" userLabel="Level 4">
-                                                <rect key="frame" x="227.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="156.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -218,7 +219,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="pRv-qa-Rv6" userLabel="Level 5">
-                                                <rect key="frame" x="303.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="208.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -249,16 +250,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl9-EM-lxD">
-                                <rect key="frame" x="181.5" y="898" width="61" height="21.5"/>
+                                <rect key="frame" x="114.5" y="665" width="61" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-nR-DBt" userLabel="Icon Flexibility" customClass="UICircle" customModule="Mini_Challenge_2" customModuleProvider="target">
-                                <rect key="frame" x="34" y="928" width="36.5" height="36"/>
+                                <rect key="frame" x="34" y="695" width="54" height="54"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Flexibility" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-w3-DNw">
-                                        <rect key="frame" x="4.5" y="6.5" width="27" height="23"/>
+                                        <rect key="frame" x="7" y="10" width="40" height="34"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,13 +277,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iH-TU-fx1" userLabel="Flexibility Progress">
-                                <rect key="frame" x="181.5" y="928" width="384.5" height="36"/>
+                                <rect key="frame" x="114.5" y="695" width="265.5" height="54"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pXS-NL-Xuv">
-                                        <rect key="frame" x="8" y="6" width="369.5" height="24"/>
+                                        <rect key="frame" x="8" y="6" width="250.5" height="42"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-nJ-WaM" userLabel="Level 1">
-                                                <rect key="frame" x="0.0" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -291,7 +292,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="2" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TzV-y8-iov" userLabel="Level 2">
-                                                <rect key="frame" x="76" y="0.0" width="65.5" height="24"/>
+                                                <rect key="frame" x="52" y="0.0" width="42.5" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -300,7 +301,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="3" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-bG-kg9" userLabel="Level 3">
-                                                <rect key="frame" x="151.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="104.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -309,7 +310,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="4" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-cc-amo" userLabel="Level 4">
-                                                <rect key="frame" x="227.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="156.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -318,7 +319,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view tag="5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0iS-D2-wEb" userLabel="Level 5">
-                                                <rect key="frame" x="303.5" y="0.0" width="66" height="24"/>
+                                                <rect key="frame" x="208.5" y="0.0" width="42" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -399,9 +400,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="Fy9-tb-SOh" id="J9m-cx-YMQ"/>
+                        <outlet property="flexibilityLabel" destination="kl9-EM-lxD" id="JIh-Lv-Pgz"/>
                         <outlet property="flexibilityProgress" destination="pXS-NL-Xuv" id="rSS-Xm-d2W"/>
                         <outlet property="imageProfile" destination="eL1-8K-IA8" id="YeU-N5-hIb"/>
+                        <outlet property="postureLabel" destination="h6v-zL-koc" id="fPW-Er-yhj"/>
                         <outlet property="postureProgress" destination="fJa-t1-POY" id="AKB-fm-DJ0"/>
+                        <outlet property="strengthLabel" destination="uTU-Af-jkT" id="nNA-Hn-UVy"/>
                         <outlet property="strengthProgress" destination="ZCc-h1-ahs" id="pN9-fb-0Wa"/>
                     </connections>
                 </viewController>
@@ -411,10 +415,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Flexibility" width="101.66666412353516" height="92.333335876464844"/>
-        <image name="Posture" width="34.666667938232422" height="116.66666412353516"/>
-        <image name="Profile" width="35.333332061767578" height="35"/>
-        <image name="Strength" width="88.333335876464844" height="112"/>
+        <image name="Flexibility" width="102" height="92.5"/>
+        <image name="Posture" width="35" height="117"/>
+        <image name="Profile" width="35" height="35"/>
+        <image name="Strength" width="88.5" height="112"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
