@@ -91,7 +91,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Shoulder Stretch",
                 instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
-                videoName: "test",
+                videoName: "test2",
                 durationInSeconds: 3,
                 type: .posture,
                 externalLink: nil,

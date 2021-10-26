@@ -19,10 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let coordinator = AppCoordinator()
-        
-        window.rootViewController = coordinator.rootViewController
-        window.makeKeyAndVisible()
+        let coordinator = AppCoordinator(window: window)
         
         coordinator.start()
         

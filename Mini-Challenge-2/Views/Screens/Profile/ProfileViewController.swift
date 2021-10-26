@@ -6,18 +6,27 @@
 //
 
 import UIKit
+import Core
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
-    @IBOutlet weak var cameraButton: Circle!
+    @IBOutlet weak var cameraButton: UICircle!
     
     @IBOutlet weak var strengthProgress: UIStackView!
     
+    @IBOutlet weak var strengthLabel: UILabel!
+    
     @IBOutlet weak var postureProgress: UIStackView!
     
+    @IBOutlet weak var postureLabel: UILabel!
+    
     @IBOutlet weak var flexibilityProgress: UIStackView!
+    
+    @IBOutlet weak var flexibilityLabel: UILabel!
+
+    var viewModel: ProfileViewModel!
     
     let maskLayer: CAShapeLayer = {
         let circle = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
@@ -29,13 +38,51 @@ class ProfileViewController: UIViewController {
         return overlay
     }()
     
+    func onViewModelDidPublish() {
+                
+        self.set(
+            progress: self.viewModel.userAttributes.flexibility,
+            to: self.flexibilityProgress)
+        
+        self.set(
+            progress: self.viewModel.userAttributes.posture,
+            to: self.postureProgress)
+        
+        self.set(
+            progress: self.viewModel.userAttributes.strength,
+            to: self.strengthProgress)
+        
+        self.flexibilityLabel.text = "Level \(self.viewModel.userAttributes.flexibility)"
+        self.postureLabel.text = "Level \(self.viewModel.userAttributes.posture)"
+        self.strengthLabel.text = "Level \(self.viewModel.userAttributes.strength)"
+        
+        
+    }
+    
+    func set(progress: Int, to stackViewProgressIndicator: UIStackView){
+        
+        let progressBlocks = stackViewProgressIndicator
+            .arrangedSubviews.prefix(progress)
+        
+        progressBlocks.forEach({ view in
+            view.backgroundColor = .red
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.viewModel.didPublish = self.onViewModelDidPublish
+       
+        
         // Do any additional setup after loading the view.
         setupGestures()
         
         configureImageProfile()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.requestCurrentUserAttributes()
     }
     
     override func viewDidLayoutSubviews() {

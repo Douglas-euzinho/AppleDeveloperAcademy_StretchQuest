@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class Circle: UIView {
+class UICircle: UIView {
     
     @IBInspectable var fillColor: UIColor = .systemGray
     @IBInspectable var strokeColor: UIColor = .clear

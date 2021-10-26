@@ -91,34 +91,39 @@ class Coordinator: ViewCoordinator {
 
 class AppCoordinator: Coordinator {
 
-    var rootViewController: UIViewController
-//    {
-//        (self.children.first! as! MainCoordinator).rootViewController
-//    }
+    var window: UIWindow
     
     var didShowUserOnboard = UserDefaults.standard.bool(forKey: "alreadyEntry")
     
-    override init() {
-        let coordinator = MainCoordinator()
-        
-        coordinator.start()
-        
-        self.rootViewController = coordinator.rootViewController
-        
-        super.init()
-        self.addChild(coordinator)
-        
+    init(
+        window: UIWindow
+    ) {
+        self.window = window
     }
 
     override func start() {
+        let mainCoordinator = MainCoordinator()
+        mainCoordinator.start()
+
+        
         if didShowUserOnboard {
-            self.children.first!.start()
-       } else {
-           let coordinator = OnboardingCoordinator()
-           addChild(coordinator)
-           coordinator.start()
+//            mainCoordinator.start()
+            self.window.rootViewController = mainCoordinator.rootViewController
+        } else {
+            let coordinator = OnboardingCoordinator()
+            addChild(coordinator)
+            
+            coordinator.finishHandler = {
+                self.removeChild(coordinator)
+                self.window.rootViewController = mainCoordinator.rootViewController
+            }
+            
+            coordinator.start()
+            self.window.rootViewController = coordinator.rootViewController
         }
-        //self.navigationController.setNavigationBarHidden(true, animated: true)
+    
+        self.window.makeKeyAndVisible()
+        
     }
 
 }
@@ -138,11 +143,16 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
     override func start() {
         
         let story = UIStoryboard(name: "Categories", bundle: nil)
+        
         let categoriesViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
         categoriesViewController.delegate = self
         
         let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        
+        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        
+        profileViewController.viewModel = ProfileViewModel(CoreDataStrechesSessionsRepository())
+
         
         self.tabController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.tabController.tabBar.layer.shadowRadius = 10
@@ -154,9 +164,6 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
             categoriesViewController,
             profileViewController
         ], animated: false)
-        
-        
-//        self.navigationController.setViewControllers([homeViewController], animated: false)
     }
     
     func onSelected(category: StretchType) { // Implementa o delegate
@@ -172,122 +179,14 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
     }
 }
 
-class CategoriesCoordinator: Coordinator {
+class OnboardingCoordinator: Coordinator, ObservableObject {
+
+    var finishHandler: () -> () = {}
     
     var rootViewController: UIViewController {
-        self.tabController
+        self.navigationController
     }
     
-    let tabController: UITabBarController
-    
-    override init() {
-        self.tabController = UITabBarController()
-    }
-
-    override func start() {
-        
-        let story = UIStoryboard(name: "Categories", bundle: nil)
-        let homeViewController = story.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
-        //homeViewController.delegate = self
-        
-        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
-        
-        self.tabController.setViewControllers([
-            homeViewController,
-            profileViewController
-        ], animated: false)
-        
-        
-//        self.navigationController.setViewControllers([homeViewController], animated: false)
-    }
-    
-//    func onSelected(category: TagCategory) {
-//
-//        print(category)
-//
-//        let coordinator = StretchesCoordinator(
-//            self.tabController.viewControllers!.first! as! UINavigationController,
-//            stretchType: .posture)
-//
-//        self.addChild(coordinator)
-//
-//        coordinator.start()
-//        //self.finish()
-//    }
-}
-
-class StretchesCoordinator: Coordinator {
-    
-    let sessionsRepository = CoreDataStrechesSessionsRepository()//FakeStretchesSessionRepository()
-    var navigationController: UIViewController
-    var stretchViewController: StretchViewController
-    var rootController: UITabBarController
-
-    init(
-        _ navigationController: UIViewController,
-        _ rootController: UITabBarController,
-        stretchType: StretchType
-    ) {
-        self.navigationController = navigationController
-        self.rootController = rootController
-        
-        let story = UIStoryboard(name: "Stretch", bundle:nil)
-        let stretchViewController =
-            story.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
-        
-        // Inicializa a view model passando a categoria
-        let viewModel = StretchesViewModel(
-            stretchType,
-            sessionsRepository
-        )
-        
-        stretchViewController.viewModel = viewModel
-        stretchViewController.exitToCategories = {
-            navigationController.dismiss(animated: true, completion: nil)
-        }
-
-        self.stretchViewController = stretchViewController
-    }
-    
-    override func start() {
-        
-        stretchViewController.exitAndGotoNextSession = {
-            self.gotoNextSession()
-            
-            //self.navigationController.dismiss(animated: true){
-                //self.gotoNextSession()
-            //}
-        }
-        
-        self.stretchViewController.modalPresentationStyle = .fullScreen
-        
-        self.navigationController.show(
-            self.stretchViewController, sender: self)
-    }
-                                              
-    func gotoNextSession() {
-    
-        let getNextSessionType = GetNextSessionType(sessionsRepository)
-        
-        let type = getNextSessionType.execute()
-        
-        let nextStretchViewModel = StretchesViewModel(
-            type,
-            self.sessionsRepository
-        )
-        
-        self.stretchViewController.viewModel = nextStretchViewModel
-        
-        nextStretchViewModel.startSession()
-        
-        self.start()
-    }
-    
-}
-
-class OnboardingCoordinator: Coordinator {
-
     var navigationController: UINavigationController
 
     override init() {
@@ -295,7 +194,17 @@ class OnboardingCoordinator: Coordinator {
     }
 
     override func start() {
-        let onBoarding = UIHostingController(rootView: ContentView())
+        
+        let contentView = ContentView(delegate: self )
+        
+//        SetOrientation.lockOrientation(.portrait)
+        
+        let onBoarding = UIHostingController(rootView: contentView)
         self.navigationController.setViewControllers([onBoarding], animated: false)
     }
+    
+    func finish(){
+        self.finishHandler()
+    }
+    
 }
