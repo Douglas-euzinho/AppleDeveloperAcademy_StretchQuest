@@ -166,8 +166,6 @@ class StretchViewController: UIViewController {
             }else{
                 //print("flexibilidade n entrou")
             }
-        default:
-            print("se entrou ak deu caquinha")
         }
 
     }

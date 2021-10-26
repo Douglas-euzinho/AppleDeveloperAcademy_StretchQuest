@@ -94,9 +94,8 @@ extension CategoriesViewController: GKGameCenterControllerDelegate{
     
     //MARK: - função para mostrar os achievements. Chamado ao clicar em algum botão específico.
     func transitionToAchievementsGameCenter(){
-        let viewController = GKGameCenterViewController()
+        let viewController = GKGameCenterViewController(state: .achievements)
         viewController.gameCenterDelegate = self
-        viewController.viewState = .achievements
         present(viewController, animated: true, completion: nil)
     }
     
