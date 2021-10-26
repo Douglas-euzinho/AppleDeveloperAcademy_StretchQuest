@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="width" secondItem="eL1-8K-IA8" secondAttribute="height" multiplier="1:1" id="s39-vD-wEd"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="Circle" customModule="Mini_Challenge_2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-tb-SOh" userLabel="Camera Button" customClass="UICircle" customModule="Mini_Challenge_2" customModuleProvider="target">
                                 <rect key="frame" x="258" y="217" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-Vs-ggp">
@@ -376,9 +376,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="Fy9-tb-SOh" id="J9m-cx-YMQ"/>
+                        <outlet property="flexibilityLabel" destination="kl9-EM-lxD" id="Hhw-Vd-eOl"/>
                         <outlet property="flexibilityProgress" destination="pXS-NL-Xuv" id="rSS-Xm-d2W"/>
                         <outlet property="imageProfile" destination="eL1-8K-IA8" id="YeU-N5-hIb"/>
+                        <outlet property="postureLabel" destination="h6v-zL-koc" id="7GZ-zg-dIg"/>
                         <outlet property="postureProgress" destination="fJa-t1-POY" id="AKB-fm-DJ0"/>
+                        <outlet property="strengthLabel" destination="uTU-Af-jkT" id="KxR-tZ-j5c"/>
                         <outlet property="strengthProgress" destination="ZCc-h1-ahs" id="pN9-fb-0Wa"/>
                     </connections>
                 </viewController>
