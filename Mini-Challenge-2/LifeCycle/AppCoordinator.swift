@@ -145,9 +145,9 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
         
         self.tabController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.tabController.tabBar.layer.shadowRadius = 2
-        self.tabController.tabBar.layer.shadowColor = UIColor.black.cgColor
-        self.tabController.tabBar.layer.shadowOpacity = 0.3
+        self.tabController.tabBar.layer.shadowRadius = 10
+        self.tabController.tabBar.layer.shadowColor = UIColor(red: 0/255, green: 128/255, blue: 115/255, alpha: 1).cgColor
+        self.tabController.tabBar.layer.shadowOpacity = 0.1
         self.tabController.tabBar.backgroundColor = .white
         
         self.tabController.setViewControllers([
