@@ -187,11 +187,14 @@ class StretchViewController: UIViewController {
     func setupVideoView() {
         videoView.layer.cornerRadius = 20
         videoView.clipsToBounds = true
+        videoView.backgroundColor = .clear
     }
     
     func setupStretchVideo(){
         videoView.addSubview(stretchVideoController.view)
         stretchVideoController.showsPlaybackControls = false
+        stretchVideoController.view.backgroundColor = .clear
+        stretchVideoController.videoGravity = .resizeAspectFill
         stretchVideoController.view.frame = videoView.bounds
         stretchVideoController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }

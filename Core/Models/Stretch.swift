@@ -24,7 +24,7 @@ public struct Stretch: CustomStringConvertible {
     public static let sideBend = Stretch(
         title: "Side Bend",
         instructions: "DO IT",
-        videoName: "test",
+        videoName: "sidebend2hands_right",
         durationInSeconds: 30.0,
         type: .posture,
         externalLink: nil,
