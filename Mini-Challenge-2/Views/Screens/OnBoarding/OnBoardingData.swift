@@ -48,7 +48,7 @@ struct OnboardingView: View {
                         .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 40, damping: 6))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
 
                     Text(data.secondaryText)
@@ -57,7 +57,7 @@ struct OnboardingView: View {
                         .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 40, damping: 6))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
                     Spacer()
                         .frame(height: 60)

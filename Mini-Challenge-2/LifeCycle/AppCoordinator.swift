@@ -106,7 +106,7 @@ class AppCoordinator: Coordinator {
         mainCoordinator.start()
 
         
-        if didShowUserOnboard {
+        if !didShowUserOnboard {
 //            mainCoordinator.start()
             self.window.rootViewController = mainCoordinator.rootViewController
         } else {
