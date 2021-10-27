@@ -57,6 +57,23 @@ class CategoriesViewController: UIViewController {
         
     }
     
+    func showOnBoarding() {
+        
+        let adapter = OnboardDismissDelegate()
+    
+        let contentView = ContentView(delegate: adapter)
+        
+        let viewController = UIHostingController(rootView: contentView)
+        
+        adapter.onDismiss = {
+            viewController.dismiss(animated: true)
+        }
+        
+        viewController.modalPresentationStyle = .fullScreen
+        
+        self.present(viewController, animated: true)
+    }
+    
     //Coisa do gameCenter
     @IBAction func leader(_ sender: Any) {
         self.transitionToLeadersGameCenter()

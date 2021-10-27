@@ -7,13 +7,24 @@
 
 import SwiftUI
 
+class OnboardDismissDelegate: ObservableObject {
+    
+    var onDismiss: () -> () = {}
+    
+    func finish() {
+        self.onDismiss()
+    }
+    
+}
+
+
 struct ContentView: View {
     
     @State private var showOnBoarding = true
     @State private var currentPage = 0
     @State private var presented = false
     
-    @ObservedObject var delegate: OnboardingCoordinator
+    @ObservedObject var delegate: OnboardDismissDelegate
 
     var screenWidth = UIScreen.main.bounds.width
     var lastPage = OnboardingData.list.count - 1
@@ -156,7 +167,7 @@ struct ContentView: View {
 
 struct Subview_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(delegate: OnboardingCoordinator())
+        ContentView(delegate: OnboardDismissDelegate())
     }
 }
 

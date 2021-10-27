@@ -182,7 +182,7 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
     }
 }
 
-class OnboardingCoordinator: Coordinator, ObservableObject {
+class OnboardingCoordinator: Coordinator {
 
     var finishHandler: () -> () = {}
     
@@ -198,9 +198,13 @@ class OnboardingCoordinator: Coordinator, ObservableObject {
 
     override func start() {
         
-        let contentView = ContentView(delegate: self )
+        let adapter = OnboardDismissDelegate()
         
-//        SetOrientation.lockOrientation(.portrait)
+        adapter.onDismiss = {
+            self.finish()
+        }
+        
+        let contentView = ContentView(delegate: adapter)
         
         let onBoarding = UIHostingController(rootView: contentView)
         self.navigationController.setViewControllers([onBoarding], animated: false)
