@@ -7,13 +7,15 @@
 
 import UIKit
 import Core
+import SwiftUI
 
 class ProfileViewController: UIViewController {
-    
 
-    @IBOutlet weak var imageProfil: UIImageView!
+    @IBOutlet weak var imageProfile: UIImageView!
     
     @IBOutlet weak var cameraButton: UICircle!
+    
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var strengthProgress: UIStackView!
     
@@ -39,8 +41,33 @@ class ProfileViewController: UIViewController {
         return overlay
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.viewModel.didPublish = self.onViewModelDidPublish
+       
+        // Do any additional setup after loading the view.
+        nameLabel.isUserInteractionEnabled = true
+        
+        setupGesturesCameraButton()
+        setupGesturesName()
+        
+        fetchUser()
+        
+        configureImageProfile()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.requestCurrentUserAttributes()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
+    }
+    
     func onViewModelDidPublish() {
-                
         self.set(
             progress: self.viewModel.userAttributes.flexibility,
             to: self.flexibilityProgress)
@@ -56,58 +83,38 @@ class ProfileViewController: UIViewController {
         self.flexibilityLabel.text = "Level \(self.viewModel.userAttributes.flexibility)"
         self.postureLabel.text = "Level \(self.viewModel.userAttributes.posture)"
         self.strengthLabel.text = "Level \(self.viewModel.userAttributes.strength)"
-        
-        
     }
     
     func set(progress: Int, to stackViewProgressIndicator: UIStackView){
         
-        let progressBlocks = stackViewProgressIndicator
-            .arrangedSubviews.prefix(progress)
+        let progressBlocks = stackViewProgressIndicator.arrangedSubviews.prefix(progress)
         
-        progressBlocks.forEach({ view in
+        progressBlocks.forEach { view in
             view.backgroundColor = .red
-        })
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.viewModel.didPublish = self.onViewModelDidPublish
-       
-        
-        // Do any additional setup after loading the view.
-        setupGestures()
-        self.showPhoto()
-        configureImageProfile()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.viewModel.requestCurrentUserAttributes()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        maskLayer.path = UIBezierPath(ovalIn: imageProfil.bounds).cgPath
-    }
-    
-    private func configureImageProfile() {
-        if imageProfil.image == nil {
-            imageProfil.layer.addSublayer(maskLayer)
-        } else {
-            imageProfil.layer.mask = maskLayer
         }
     }
     
-    private func setupGestures() {
+    private func configureImageProfile() {
+        if imageProfile.image == nil {
+            imageProfile.layer.addSublayer(maskLayer)
+        } else {
+            imageProfile.layer.mask = maskLayer
+        }
+    }
+    
+    private func setupGesturesCameraButton() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraButton))
         
         cameraButton.addGestureRecognizer(tap)
     }
     
+    private func setupGesturesName() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapName))
+        
+        nameLabel.addGestureRecognizer(tap)
+    }
+    
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
-        //ak
         let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { handler in
@@ -118,37 +125,58 @@ class ProfileViewController: UIViewController {
             self.openCamera(source: .photoLibrary)
         }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { handler in
+            self.dismiss(animated: true)
+        }
+        
         alert.addAction(camera)
         alert.addAction(library)
+        alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func didTapName(_ sender: UITapGestureRecognizer) {
+        let alertController = UIAlertController(title: "Write your name", message: nil, preferredStyle: .alert)
         
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter your name"
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert in
+            let nameTextField = alertController.textFields![0] as UITextField
+            
+            DatabaseUser.instance.saveNameInCore(nameTextField.text!)
+            
+            self.nameLabel.text = nameTextField.text!
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
-    func savePhoto(){
-        print("entrou savePhoto?")
-                let jpg = self.imageProfil.image?.jpegData(compressionQuality: 0.75)
-                if let png = self.imageProfil.image?.pngData(){
-                    ImageDataBaseHelp.instancePhoto.saveImageInCore(at: png)
-                }
-    }
-    
-    func showPhoto(){
-        var arr = ImageDataBaseHelp.instancePhoto.getAllImages()
-        var qnt = arr.count
-        if arr.count>0{
-            print("entrou if?")
-            self.imageProfil.image = UIImage(data: arr[qnt-1].imageProfile!)
-            //self.imageProfil = test
+    func savePhoto() {
+        guard let image = imageProfile.image else { return }
+        
+        if let jpg = image.jpegData(compressionQuality: 0.5) {
+            DatabaseUser.instance.saveImageInCore(jpg)
         }
     }
     
-    private func openCamera(source: UIImagePickerController.SourceType) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = source
+    func fetchUser() {
+        let user = DatabaseUser.instance.user
         
-        present(picker, animated: true)
+        if let imageProfile = user?.imageProfile {
+            self.imageProfile.image = UIImage(data: imageProfile)
+        }
+        
+        if let name = user?.name {
+            self.nameLabel.text = name
+        }
     }
 
 }
@@ -156,20 +184,6 @@ class ProfileViewController: UIViewController {
 //EXTENSÃO DA CLASSE QUE VAI TER A CAMERA(A DE PERFIL)
 //PROVAVELMENTE VAI TER Q HERDAR O UINavigationControllerDelegate
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    /*
-     1-
-     TER UMA VARIÁVEL DO TIPO UIImageView
-     
-     2-
-     COLOCAR DENTRO DA FUNÇÃO DO BOTÃO DA CAMERA:
-     "
-     let picker = UIImagePickerController()
-     picker.sourceType = .camera
-     picker.delegate = self
-     present(picker, animated: true)
-     "
-     */
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -180,19 +194,21 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         
-        if imageProfil.layer.mask == nil {
-            imageProfil.layer.mask = maskLayer
+        if imageProfile.layer.mask == nil {
+            imageProfile.layer.mask = maskLayer
         }
         
+        imageProfile.image = image
         
-        
-        imageProfil.image = image
-        
-        self.savePhoto()
-        
+        savePhoto()
     }
     
-    
- 
+    func openCamera(source: UIImagePickerController.SourceType) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = source
+        
+        present(picker, animated: true)
+    }
     
 }
