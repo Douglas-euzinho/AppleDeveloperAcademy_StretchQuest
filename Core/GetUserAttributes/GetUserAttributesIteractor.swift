@@ -154,15 +154,15 @@ public class GetUserAttributesVersion2: GetUserAttributesIteractor {
             let lastSessionStart = sessions.last!.start
             let currentSessionStart = currentSession.start
             
-            let timeDiference = sessions.last!.start.distance(to: currentSession.start)
+            let timeDiference = sessions.last!.start.distance(to: currentSession.start) * -1
 
             print("\(lastSessionStart) - \(currentSessionStart) = \(timeDiference)")
             
-            if timeDiference > 24 * 60 * 60 {
+            if (timeDiference) > 19.2 * 60 * 60 {
                 let result = sessions + [currentSession]
                 return result
             }
-            
+        
             return sessions
         })
         
