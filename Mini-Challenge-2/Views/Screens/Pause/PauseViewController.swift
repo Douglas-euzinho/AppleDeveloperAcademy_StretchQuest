@@ -15,9 +15,7 @@ protocol PauseDelegate: AnyObject {
 class PauseViewController: UIViewController {
     
     weak var delegate: PauseDelegate?
-            
-    var pauseVideo: StretchViewController?
-    
+
     var onResumeHandler: (() -> ())?
     
     var exitToCategories: Bool = false

@@ -21,8 +21,6 @@ class StretchViewController: UIViewController {
     
     public let stretchVideoController = AVPlayerViewController()
 
-    static let shared = StretchViewController()
-
     var viewModel: StretchesViewModel! {
         didSet {
             self.viewModel.publishStretch = self.stretchDidChange
