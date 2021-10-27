@@ -55,8 +55,11 @@ class StretchViewController: UIViewController {
         
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
-
+        
+        transitionViewController.currentStretch = self.viewModel.currentStretch
+        
         self.present(transitionViewController, animated: true)
+        
         self.shape.isHidden = true
         
         transitionViewController.onDismiss = {

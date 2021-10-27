@@ -6,10 +6,9 @@
 //
 
 import UIKit
+import AVKit
+import Core
 
-//protocol TransitionDelegate: AnyObject {
-//    func viewDidDisappear()
-//}
 
 typealias OnDismiss = () -> ()
 
@@ -29,6 +28,10 @@ class TransitionViewController: UIViewController {
     public let trackShape     = CAShapeLayer()
     var circlePath     = UIBezierPath()
     
+    public let stretchVideoController = AVPlayerViewController()
+    
+    var currentStretch: Stretch!
+    
     var counterLabel: UILabel!
     var viewModel: TransitionViewModel! = TransitionViewModel()
     var onDismiss: OnDismiss?
@@ -43,6 +46,38 @@ class TransitionViewController: UIViewController {
         }
     }
     
+    func setFieldsForCurrentStretch() {
+        self.descriptionTransition?.text = self.currentStretch.title
+        self.setupTransitionVideoPlayer()
+    }
+    
+    func setupTransitionVideoPlayer() {
+        self.setupVideoController()
+        self.startTransionVideo()
+    }
+    
+    func setupVideoController(){
+        guard self.videoTransitionView != nil else { return }
+        self.videoTransitionView.addSubview(stretchVideoController.view)
+        stretchVideoController.showsPlaybackControls = false
+        stretchVideoController.view.backgroundColor = .clear
+        stretchVideoController.videoGravity = .resizeAspectFill
+        stretchVideoController.view.frame = self.videoTransitionView.bounds
+        stretchVideoController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    func startTransionVideo() {
+        let videoName = self.currentStretch.videoName
+
+        print("[TransitionViewController] CurrentStretch: \(self.currentStretch.title)")
+        print("Transition video: \(videoName)")
+        let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4")
+        let videoUrl = URL(fileURLWithPath: videoPath!)
+        stretchVideoController.player = AVPlayer(url: videoUrl)
+        
+        stretchVideoController.player?.playImmediately(atRate: 2.5)
+    }
+    
     override func viewDidLoad() {
         self.counterLabel = self.view.subviews.first {
             view in type(of: view) == UILabel.self
@@ -50,6 +85,12 @@ class TransitionViewController: UIViewController {
         self.counterLabel.text = "\(self.viewModel.transitionLenghtInSeconds)"
         self.viewModel.start()
         self.viewModel.onPublished = self.onPublished
+//        self.setFieldsForCurrentStretch()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setFieldsForCurrentStretch()
     }
     
     override func viewDidLayoutSubviews() {
