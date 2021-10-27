@@ -70,7 +70,7 @@ struct ContentView: View {
                                 .scaledToFit()
                         }
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(.clear)
                     VStack(spacing: -10){
                         HStack(spacing: 6) {
                             ForEach(0 ..< OnboardingData.list.count) { i in
@@ -84,10 +84,13 @@ struct ContentView: View {
                                         .frame(width: 6, height: 6)
                                 }
                             }
+                            
                         }
                     .foregroundColor(.white)
                     }
                 }
+                .offset(y: -50)
+
                 
                     ZStack () {
                         if currentPage != lastPage {
@@ -139,6 +142,7 @@ struct ContentView: View {
 
                         }
                     }
+                    .offset(y: -20)
                     .padding(.horizontal)
             }
         }
