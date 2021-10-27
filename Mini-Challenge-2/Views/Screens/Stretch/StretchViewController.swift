@@ -69,6 +69,7 @@ class StretchViewController: UIViewController {
     func beginStretch() {
         self.shape.isHidden = false
         self.ringTimerAnimation()
+        self.stretchVideoController.player?.play()
     }
     
     func stretchDidChange() {
