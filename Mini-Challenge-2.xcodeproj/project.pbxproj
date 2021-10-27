@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683DC5C52728E889008C5451 /* HardcodedStretchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DC5C42728E889008C5451 /* HardcodedStretchesRepository.swift */; };
 		684CFDA1271F2E98009E2B70 /* SessionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDA0271F2E98009E2B70 /* SessionProgress.swift */; };
 		684CFDA5271F4471009E2B70 /* Stretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDA4271F4471009E2B70 /* Stretch.swift */; };
 		684CFDA7271F44E5009E2B70 /* StretchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CFDA6271F44E5009E2B70 /* StretchType.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		683DC5C42728E889008C5451 /* HardcodedStretchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcodedStretchesRepository.swift; sourceTree = "<group>"; };
 		684CFDA0271F2E98009E2B70 /* SessionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgress.swift; sourceTree = "<group>"; };
 		684CFDA4271F4471009E2B70 /* Stretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stretch.swift; sourceTree = "<group>"; };
 		684CFDA6271F44E5009E2B70 /* StretchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchType.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				686ABC9A27262136001FF2CD /* CoreDataStretchesSessionsRepository.swift */,
+				683DC5C42728E889008C5451 /* HardcodedStretchesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
 				686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */,
 				68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */,
+				683DC5C52728E889008C5451 /* HardcodedStretchesRepository.swift in Sources */,
 				9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */,
 				CBE91261271E44C00006898A /* RingAttributes.swift in Sources */,
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,

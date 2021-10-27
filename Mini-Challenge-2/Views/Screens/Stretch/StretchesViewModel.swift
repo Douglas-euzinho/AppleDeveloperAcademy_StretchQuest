@@ -61,7 +61,10 @@ public class StretchesViewModel {
         _ sessionsRepository: StretchesSessionRepository
     ){
         self.category = category
-        self.startStretchesSession = StartStretchesSession(sessionsRepository)
+        self.startStretchesSession = StartStretchesSession(
+            sessionsRepository,
+            HardcodedStretchesRepository()
+        )
         self.endStrechesSession = EndStretchSession(sessionsRepository)
         self.startNextStretch = StartNextStretch(sessionsRepository)
         self.counter = CountdownTimer()
