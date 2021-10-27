@@ -42,22 +42,22 @@ struct OnboardingView: View {
                         .scaledToFit()
 
                     Text(data.primaryText)
-//                        .bold().font(.largeTitle)
+                        .bold().font(.largeTitle)
                         .font(.system(size: 30, weight: .bold))
 
                         .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
 
                     Text(data.secondaryText)
-//                        .bold()
+                        .bold()
                         .font(.system(size: 25, weight: .regular))
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
                     Spacer()
                         .frame(height: 60)
