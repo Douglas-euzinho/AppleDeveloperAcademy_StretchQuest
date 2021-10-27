@@ -10,7 +10,7 @@ import Core
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var imageProfil: UIImageView!
     
     @IBOutlet weak var cameraButton: UICircle!
     
@@ -88,14 +88,14 @@ class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
+        maskLayer.path = UIBezierPath(ovalIn: imageProfil.bounds).cgPath
     }
     
     private func configureImageProfile() {
-        if imageProfile.image == nil {
-            imageProfile.layer.addSublayer(maskLayer)
+        if imageProfil.image == nil {
+            imageProfil.layer.addSublayer(maskLayer)
         } else {
-            imageProfile.layer.mask = maskLayer
+            imageProfil.layer.mask = maskLayer
         }
     }
     
@@ -106,6 +106,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
+        //ak
         let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { handler in
@@ -159,11 +160,17 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         
-        if imageProfile.layer.mask == nil {
-            imageProfile.layer.mask = maskLayer
+        if imageProfil.layer.mask == nil {
+            imageProfil.layer.mask = maskLayer
         }
         
-        imageProfile.image = image
+        imageProfil.image = image
+        
+        
+        
     }
+    
+    
+ 
     
 }

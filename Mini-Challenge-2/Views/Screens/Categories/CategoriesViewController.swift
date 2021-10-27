@@ -34,6 +34,11 @@ class CategoriesViewController: UIViewController {
     var firstPostureStretch: Bool = false //Coisa do gameCenter
     var firstFlexibilityStretch: Bool = false //Coisa do gameCenter
     
+    //COISA DA NOTIFICAÇÃO
+    let date = Date()
+    let calendar = Calendar.current
+    var day: Int = 0
+    
     //compartilhamento de variáveis e funções em outras classes. Singleton
     static let sharedGC = CategoriesViewController() //Coisa do gameCenter
     
@@ -54,6 +59,7 @@ class CategoriesViewController: UIViewController {
         setupGestures()
         
 //        self.authenticateUser()//Coisa do gameCenter
+        self.day = calendar.component(.day, from: date) //NOTIFICAÇÃO
         
     }
     

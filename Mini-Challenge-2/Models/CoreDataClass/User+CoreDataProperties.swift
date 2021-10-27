@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 extension User {
@@ -20,6 +21,7 @@ extension User {
     @NSManaged public var lastEntry: Date?
     @NSManaged public var daysOn: Int64
     @NSManaged public var atributes: Atributes?
+    @NSManaged public var imageProfile: Data?
 
 }
 
