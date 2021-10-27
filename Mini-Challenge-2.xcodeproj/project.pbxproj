@@ -21,6 +21,8 @@
 		686ABCA3272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA1272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift */; };
 		686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA627272522001FF2CD /* StretchesCoordinator.swift */; };
 		686ABCA927273D40001FF2CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA827273D40001FF2CD /* ProfileViewModel.swift */; };
+		686DA91F2729D511008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
+		686DA9202729D51C008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
 		68ABEEE3271760B9001E7B37 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ABEEDB271760B8001E7B37 /* Core.framework */; };
 		68ABEEEA271760B9001E7B37 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEEE9271760B9001E7B37 /* CoreTests.swift */; };
 		68ABEEEB271760B9001E7B37 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ABEEDD271760B8001E7B37 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,6 +138,7 @@
 		686ABCA1272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StretchesSessions+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		686ABCA627272522001FF2CD /* StretchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesCoordinator.swift; sourceTree = "<group>"; };
 		686ABCA827273D40001FF2CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		686DA91C2729D3F5008670CA /* Date+Midnight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Midnight.swift"; sourceTree = "<group>"; };
 		68ABEEDB271760B8001E7B37 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68ABEEDD271760B8001E7B37 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		68ABEEE2271760B9001E7B37 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -551,6 +554,7 @@
 				CBE9125E271E43160006898A /* UIColor+Extension.swift */,
 				CBFDF2612727481000505FFF /* Haptics.swift */,
 				CB72BA462727512600683982 /* SetOrientation.swift */,
+				686DA91C2729D3F5008670CA /* Date+Midnight.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -767,6 +771,7 @@
 				68CFC58B2723519F0080D6EA /* GetNextSessionType.swift in Sources */,
 				684CFDA1271F2E98009E2B70 /* SessionProgress.swift in Sources */,
 				684CFDA5271F4471009E2B70 /* Stretch.swift in Sources */,
+				686DA9202729D51C008670CA /* Date+Midnight.swift in Sources */,
 				68ABEF0027178A40001E7B37 /* StartStretchesSession.swift in Sources */,
 				68ABEEFB2717821C001E7B37 /* GetUserAttributesIteractor.swift in Sources */,
 				684CFDAB271F4515009E2B70 /* StretchSession.swift in Sources */,
@@ -811,6 +816,7 @@
 				CBFDF2622727481000505FFF /* Haptics.swift in Sources */,
 				B259182D271E09C20083176D /* TransitionViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
+				686DA91F2729D511008670CA /* Date+Midnight.swift in Sources */,
 				686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */,
 				68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */,
 				683DC5C52728E889008C5451 /* HardcodedStretchesRepository.swift in Sources */,
