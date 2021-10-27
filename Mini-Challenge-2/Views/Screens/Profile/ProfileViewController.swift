@@ -9,6 +9,7 @@ import UIKit
 import Core
 
 class ProfileViewController: UIViewController {
+    
 
     @IBOutlet weak var imageProfil: UIImageView!
     
@@ -77,7 +78,7 @@ class ProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupGestures()
-        
+        self.showPhoto()
         configureImageProfile()
     }
     
@@ -121,6 +122,25 @@ class ProfileViewController: UIViewController {
         alert.addAction(library)
         
         present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func savePhoto(){
+        print("entrou savePhoto?")
+                let jpg = self.imageProfil.image?.jpegData(compressionQuality: 0.75)
+                if let png = self.imageProfil.image?.pngData(){
+                    ImageDataBaseHelp.instancePhoto.saveImageInCore(at: png)
+                }
+    }
+    
+    func showPhoto(){
+        var arr = ImageDataBaseHelp.instancePhoto.getAllImages()
+        var qnt = arr.count
+        if arr.count>0{
+            print("entrou if?")
+            self.imageProfil.image = UIImage(data: arr[qnt-1].imageProfile!)
+            //self.imageProfil = test
+        }
     }
     
     private func openCamera(source: UIImagePickerController.SourceType) {
@@ -164,9 +184,11 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
             imageProfil.layer.mask = maskLayer
         }
         
+        
+        
         imageProfil.image = image
         
-        
+        self.savePhoto()
         
     }
     
