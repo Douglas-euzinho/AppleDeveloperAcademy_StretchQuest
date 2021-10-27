@@ -14,14 +14,17 @@ struct OnboardingData: Hashable, Identifiable {
     let primaryText: String
     let secondaryText: String
     
-    static let defaultBackground = [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]
+    static let defaultBackground  = [Color(#colorLiteral(red: 0.4520270228, green: 0.6316480041, blue: 0.8997491002, alpha: 1)), Color(#colorLiteral(red: 0.4462057352, green: 0.6318677664, blue: 0.8956100345, alpha: 1))]
+    static let defaultBackground2 = [Color(#colorLiteral(red: 0.3294117647, green: 0.6784313725, blue: 0.5764705882, alpha: 1)), Color(#colorLiteral(red: 0.330360204, green: 0.6797993183, blue: 0.5749633312, alpha: 1))]
+    static let defaultBackground3 = [Color(#colorLiteral(red: 0.8947000504, green: 0.451097548, blue: 0.4500651956, alpha: 1)), Color(#colorLiteral(red: 0.8947000504, green: 0.451097548, blue: 0.4500651956, alpha: 1))]
+
+
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 1, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Attributes", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 2, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Status", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle")
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 1, background: defaultBackground2, imagePath: "", primaryText: "Attributes", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 2, background: defaultBackground3, imagePath: "", primaryText: "Status", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle")
     ]
-
 }
 
 struct OnboardingView: View {
@@ -42,22 +45,22 @@ struct OnboardingView: View {
                         .scaledToFit()
 
                     Text(data.primaryText)
-//                        .bold().font(.largeTitle)
+                        .bold().font(.largeTitle)
                         .font(.system(size: 30, weight: .bold))
 
-                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                        .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
 
                     Text(data.secondaryText)
-//                        .bold()
+                        .bold()
                         .font(.system(size: 25, weight: .regular))
-                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                        .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
                     Spacer()
                         .frame(height: 60)

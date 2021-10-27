@@ -21,6 +21,8 @@
 		686ABCA3272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA1272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift */; };
 		686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA627272522001FF2CD /* StretchesCoordinator.swift */; };
 		686ABCA927273D40001FF2CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA827273D40001FF2CD /* ProfileViewModel.swift */; };
+		686DA91F2729D511008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
+		686DA9202729D51C008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
 		68ABEEE3271760B9001E7B37 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ABEEDB271760B8001E7B37 /* Core.framework */; };
 		68ABEEEA271760B9001E7B37 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEEE9271760B9001E7B37 /* CoreTests.swift */; };
 		68ABEEEB271760B9001E7B37 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ABEEDD271760B8001E7B37 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +69,14 @@
 		B2D781A02728B66100B4FE14 /* sidebend2hands_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */; };
 		CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */; };
 		CB72BA472727512600683982 /* SetOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72BA462727512600683982 /* SetOrientation.swift */; };
+		CBB154122729DE22001E8E15 /* pescoco_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */; };
+		CBB154132729DE22001E8E15 /* sidebend_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154102729DE22001E8E15 /* sidebend_right.mp4 */; };
+		CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154112729DE22001E8E15 /* ombros_right.mp4 */; };
+		CBB154162729DE88001E8E15 /* torso_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154152729DE88001E8E15 /* torso_right.mp4 */; };
+		CBB1541A2729E0C7001E8E15 /* toetouch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154172729E0C7001E8E15 /* toetouch.mp4 */; };
+		CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */; };
+		CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154192729E0C7001E8E15 /* lateral_left.mp4 */; };
+		CBB1541E2729E186001E8E15 /* panturrilha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB1541D2729E186001E8E15 /* panturrilha.mp4 */; };
 		CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125B271B933F0006898A /* PauseViewController.swift */; };
 		CBE9125F271E43160006898A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125E271E43160006898A /* UIColor+Extension.swift */; };
 		CBE91261271E44C00006898A /* RingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE91260271E44C00006898A /* RingAttributes.swift */; };
@@ -137,6 +147,7 @@
 		686ABCA1272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StretchesSessions+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		686ABCA627272522001FF2CD /* StretchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesCoordinator.swift; sourceTree = "<group>"; };
 		686ABCA827273D40001FF2CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		686DA91C2729D3F5008670CA /* Date+Midnight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Midnight.swift"; sourceTree = "<group>"; };
 		68ABEEDB271760B8001E7B37 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68ABEEDD271760B8001E7B37 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		68ABEEE2271760B9001E7B37 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +195,14 @@
 		B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend2hands_right.mp4; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
 		CB72BA462727512600683982 /* SetOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOrientation.swift; sourceTree = "<group>"; };
+		CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_right.mp4; sourceTree = "<group>"; };
+		CBB154102729DE22001E8E15 /* sidebend_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend_right.mp4; sourceTree = "<group>"; };
+		CBB154112729DE22001E8E15 /* ombros_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ombros_right.mp4; sourceTree = "<group>"; };
+		CBB154152729DE88001E8E15 /* torso_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = torso_right.mp4; sourceTree = "<group>"; };
+		CBB154172729E0C7001E8E15 /* toetouch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toetouch.mp4; sourceTree = "<group>"; };
+		CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = esticarbracos.mp4; sourceTree = "<group>"; };
+		CBB154192729E0C7001E8E15 /* lateral_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lateral_left.mp4; sourceTree = "<group>"; };
+		CBB1541D2729E186001E8E15 /* panturrilha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = panturrilha.mp4; sourceTree = "<group>"; };
 		CBE9125B271B933F0006898A /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		CBE9125E271E43160006898A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CBE91260271E44C00006898A /* RingAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingAttributes.swift; sourceTree = "<group>"; };
@@ -543,9 +562,41 @@
 		CB2A6BB52722555800F144D8 /* StretchVideos */ = {
 			isa = PBXGroup;
 			children = (
-				B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */,
+				CBB1540E2729DCFD001E8E15 /* Posture */,
+				CBB1540D2729DCED001E8E15 /* Strenght */,
+				CBB1540C2729DCDA001E8E15 /* Flexibility */,
 			);
 			path = StretchVideos;
+			sourceTree = "<group>";
+		};
+		CBB1540C2729DCDA001E8E15 /* Flexibility */ = {
+			isa = PBXGroup;
+			children = (
+				CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */,
+				CBB154192729E0C7001E8E15 /* lateral_left.mp4 */,
+				CBB154172729E0C7001E8E15 /* toetouch.mp4 */,
+			);
+			path = Flexibility;
+			sourceTree = "<group>";
+		};
+		CBB1540D2729DCED001E8E15 /* Strenght */ = {
+			isa = PBXGroup;
+			children = (
+				CBB1541D2729E186001E8E15 /* panturrilha.mp4 */,
+			);
+			path = Strenght;
+			sourceTree = "<group>";
+		};
+		CBB1540E2729DCFD001E8E15 /* Posture */ = {
+			isa = PBXGroup;
+			children = (
+				CBB154112729DE22001E8E15 /* ombros_right.mp4 */,
+				CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */,
+				CBB154102729DE22001E8E15 /* sidebend_right.mp4 */,
+				B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */,
+				CBB154152729DE88001E8E15 /* torso_right.mp4 */,
+			);
+			path = Posture;
 			sourceTree = "<group>";
 		};
 		CBE9125D271E42F00006898A /* Commons */ = {
@@ -554,6 +605,7 @@
 				CBE9125E271E43160006898A /* UIColor+Extension.swift */,
 				CBFDF2612727481000505FFF /* Haptics.swift */,
 				CB72BA462727512600683982 /* SetOrientation.swift */,
+				686DA91C2729D3F5008670CA /* Date+Midnight.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -732,18 +784,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB1541E2729E186001E8E15 /* panturrilha.mp4 in Resources */,
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
 				B2D781A02728B66100B4FE14 /* sidebend2hands_right.mp4 in Resources */,
+				CBB154162729DE88001E8E15 /* torso_right.mp4 in Resources */,
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
 				9CB0C897272879CC006FE760 /* Pause.storyboard in Resources */,
+				CBB154132729DE22001E8E15 /* sidebend_right.mp4 in Resources */,
 				B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */,
+				CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */,
+				CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */,
+				CBB1541A2729E0C7001E8E15 /* toetouch.mp4 in Resources */,
 				B2D7819E272899B500B4FE14 /* Profile.storyboard in Resources */,
 				9CB0C87B27286F4F006FE760 /* Categories.storyboard in Resources */,
 				9CB0C8A027287A75006FE760 /* Reward.storyboard in Resources */,
 				9CB0C87627286F2E006FE760 /* CategoriesCustomView.xib in Resources */,
+				CBB154122729DE22001E8E15 /* pescoco_right.mp4 in Resources */,
 				9CB0C88B272876B5006FE760 /* Stretch.storyboard in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
+				CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +830,7 @@
 				68CFC58B2723519F0080D6EA /* GetNextSessionType.swift in Sources */,
 				684CFDA1271F2E98009E2B70 /* SessionProgress.swift in Sources */,
 				684CFDA5271F4471009E2B70 /* Stretch.swift in Sources */,
+				686DA9202729D51C008670CA /* Date+Midnight.swift in Sources */,
 				68ABEF0027178A40001E7B37 /* StartStretchesSession.swift in Sources */,
 				68ABEEFB2717821C001E7B37 /* GetUserAttributesIteractor.swift in Sources */,
 				684CFDAB271F4515009E2B70 /* StretchSession.swift in Sources */,
@@ -814,6 +875,7 @@
 				CBFDF2622727481000505FFF /* Haptics.swift in Sources */,
 				B259182D271E09C20083176D /* TransitionViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
+				686DA91F2729D511008670CA /* Date+Midnight.swift in Sources */,
 				686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */,
 				9CB0C8FD2729D8AE006FE760 /* User+CoreDataProperties.swift in Sources */,
 				68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */,

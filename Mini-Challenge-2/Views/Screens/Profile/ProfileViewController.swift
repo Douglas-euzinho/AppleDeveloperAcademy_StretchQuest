@@ -92,6 +92,16 @@ class ProfileViewController: UIViewController {
         progressBlocks.forEach { view in
             view.backgroundColor = .red
         }
+        
+        let imagem = UIImage(named: "ok2")
+        
+        progressBlocks.forEach({ view in
+            
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+            imageView.image = imagem
+                        
+            view.addSubview(imageView)
+        })
     }
     
     private func configureImageProfile() {

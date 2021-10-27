@@ -70,7 +70,7 @@ struct ContentView: View {
                                 .scaledToFit()
                         }
                     }
-                    .foregroundColor(.gray)
+                    .foregroundColor(.clear)
                     VStack(spacing: -10){
                         HStack(spacing: 6) {
                             ForEach(0 ..< OnboardingData.list.count) { i in
@@ -84,10 +84,13 @@ struct ContentView: View {
                                         .frame(width: 6, height: 6)
                                 }
                             }
+                            
                         }
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     }
                 }
+                .offset(y: -50)
+
                 
                     ZStack () {
                         if currentPage != lastPage {
@@ -128,18 +131,19 @@ struct ContentView: View {
                                 self.delegate.finish()
                                 
                             }, label: {
-                                    Text("GET STARTED!")
-                                        .foregroundColor(.white)
-                                        .fontWeight(.bold)
-                                        .frame(width: 160, height: 60)
-                                        .background((Color.green))
-                                        .cornerRadius(20)
+                                    Text("CONTINUE")
+                                    .foregroundColor(.black)
+                                    .fontWeight(.semibold)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 60)
+                                    .background(Capsule().fill(Color.white))
                                 
                             })
 
                         }
                     }
-                    .padding(.bottom)
+                    .offset(y: -20)
+                    .padding(.horizontal)
             }
         }
 
