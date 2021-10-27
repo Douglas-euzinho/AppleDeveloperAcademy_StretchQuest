@@ -14,12 +14,12 @@ struct OnboardingData: Hashable, Identifiable {
     let primaryText: String
     let secondaryText: String
     
-    static let defaultBackground = [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]
+    static let defaultBackground = [Color(#colorLiteral(red: 0.3294117647, green: 0.6784313725, blue: 0.5764705882, alpha: 1)), Color(#colorLiteral(red: 0.1259427965, green: 0.6884986758, blue: 0.5710187554, alpha: 1))]
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 1, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Attributes", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 2, background: defaultBackground, imagePath: "Flexibility3x", primaryText: "Status", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle")
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 1, background: defaultBackground, imagePath: "", primaryText: "Attributes", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 2, background: defaultBackground, imagePath: "", primaryText: "Status", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle")
     ]
 
 }
@@ -45,19 +45,19 @@ struct OnboardingView: View {
 //                        .bold().font(.largeTitle)
                         .font(.system(size: 30, weight: .bold))
 
-                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                        .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 40, damping: 6))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
 
                     Text(data.secondaryText)
 //                        .bold()
                         .font(.system(size: 25, weight: .regular))
-                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                        .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 40, damping: 6))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
                     Spacer()
                         .frame(height: 60)

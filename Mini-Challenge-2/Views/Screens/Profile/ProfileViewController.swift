@@ -64,8 +64,14 @@ class ProfileViewController: UIViewController {
         let progressBlocks = stackViewProgressIndicator
             .arrangedSubviews.prefix(progress)
         
+        let imagem = UIImage(named: "ok2")
+        
         progressBlocks.forEach({ view in
-            view.backgroundColor = .red
+            
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+            imageView.image = imagem
+                        
+            view.addSubview(imageView)
         })
     }
     
