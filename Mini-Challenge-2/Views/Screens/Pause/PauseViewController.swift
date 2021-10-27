@@ -16,6 +16,10 @@ class PauseViewController: UIViewController {
     
     weak var delegate: PauseDelegate?
             
+    var pauseVideo: StretchViewController?
+    
+    var onResumeHandler: (() -> ())?
+    
     var exitToCategories: Bool = false
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -37,6 +41,8 @@ class PauseViewController: UIViewController {
     // Botão de voltar ao alongagmento
     @IBAction func didTappedKeep(_ sender: Any) {
         Haptics.share.vibrateSuccess()
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            self.onResumeHandler?()
+        })
     }
 }

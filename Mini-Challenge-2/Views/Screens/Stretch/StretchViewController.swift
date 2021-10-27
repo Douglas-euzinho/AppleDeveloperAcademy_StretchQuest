@@ -19,7 +19,9 @@ class StretchViewController: UIViewController {
     
     @IBOutlet weak var videoView: UIView!
     
-    let stretchVideoController = AVPlayerViewController()
+    public let stretchVideoController = AVPlayerViewController()
+
+    static let shared = StretchViewController()
 
     var viewModel: StretchesViewModel! {
         didSet {
@@ -55,7 +57,7 @@ class StretchViewController: UIViewController {
         
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
-        
+
         self.present(transitionViewController, animated: true)
         self.shape.isHidden = true
         
@@ -208,8 +210,12 @@ class StretchViewController: UIViewController {
         stretchVideoController.player = AVPlayer(url: videoUrl)
     }
     
+    func pauseStretchVideo() {
+        stretchVideoController.player?.pause()
+    }
+    
     @IBAction func presentPauseViewController() {
-        
+        pauseStretchVideo()
         showPauseViewController()
     }
     
@@ -302,6 +308,10 @@ class StretchViewController: UIViewController {
     func showPauseViewController() {
         let story = UIStoryboard(name: "Pause", bundle: nil)
         let pauseViewController = story.instantiateViewController(withIdentifier: "PauseViewController") as! PauseViewController
+        
+        pauseViewController.onResumeHandler = {
+            self.stretchVideoController.player?.play()
+        }
         
         self.viewModel.pauseCountdownTime()
         pauseRingAnimation()
