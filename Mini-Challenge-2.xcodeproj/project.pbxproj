@@ -38,13 +38,14 @@
 		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
 		9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */; };
 		9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */; };
-		9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */; };
-		9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */; };
 		9CB0C87627286F2E006FE760 /* CategoriesCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C87827286F2E006FE760 /* CategoriesCustomView.xib */; };
 		9CB0C87B27286F4F006FE760 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C87D27286F4F006FE760 /* Categories.storyboard */; };
 		9CB0C88B272876B5006FE760 /* Stretch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C88D272876B5006FE760 /* Stretch.storyboard */; };
 		9CB0C897272879CC006FE760 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C899272879CC006FE760 /* Pause.storyboard */; };
 		9CB0C8A027287A75006FE760 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C8A227287A75006FE760 /* Reward.storyboard */; };
+		9CB0C8FC2729D8AE006FE760 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FA2729D8AE006FE760 /* User+CoreDataClass.swift */; };
+		9CB0C8FD2729D8AE006FE760 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FB2729D8AE006FE760 /* User+CoreDataProperties.swift */; };
+		9CB0C8FF2729DAE0006FE760 /* ImageDataBaseHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FE2729DAE0006FE760 /* ImageDataBaseHelp.swift */; };
 		9CE45D3F2720A9C4000C453E /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */; };
 		9CE45D43272336BB000C453E /* NotificationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D42272336BB000C453E /* NotificationClass.swift */; };
 		B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */; };
@@ -152,14 +153,15 @@
 		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9CB0C87727286F2E006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CategoriesCustomView.xib; sourceTree = "<group>"; };
 		9CB0C88027286F5C006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		9CB0C88C272876B5006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stretch.storyboard; sourceTree = "<group>"; };
 		9CB0C898272879CC006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pause.storyboard; sourceTree = "<group>"; };
 		9CB0C8A127287A75006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reward.storyboard; sourceTree = "<group>"; };
 		9CB0C8AA27287B56006FE760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		9CB0C8FA2729D8AE006FE760 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9CB0C8FB2729D8AE006FE760 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9CB0C8FE2729DAE0006FE760 /* ImageDataBaseHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataBaseHelp.swift; sourceTree = "<group>"; };
 		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,8 +355,8 @@
 				686ABCA1272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift */,
 				9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */,
 				9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */,
-				9C66DE40271A078F00D5F6D2 /* User+CoreDataClass.swift */,
-				9C66DE41271A078F00D5F6D2 /* User+CoreDataProperties.swift */,
+				9CB0C8FA2729D8AE006FE760 /* User+CoreDataClass.swift */,
+				9CB0C8FB2729D8AE006FE760 /* User+CoreDataProperties.swift */,
 			);
 			path = CoreDataClass;
 			sourceTree = "<group>";
@@ -485,6 +487,7 @@
 				9CB0C8AB27287B56006FE760 /* Profile.storyboard */,
 				B22A717B2718CC28002F33C6 /* ProfileViewController.swift */,
 				686ABCA827273D40001FF2CD /* ProfileViewModel.swift */,
+				9CB0C8FE2729DAE0006FE760 /* ImageDataBaseHelp.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -790,7 +793,6 @@
 				686ABCA3272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift in Sources */,
 				CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */,
 				CBE9B766270B74AA00C20DA3 /* OnBoardingData.swift in Sources */,
-				9C66DE45271A078F00D5F6D2 /* User+CoreDataProperties.swift in Sources */,
 				CBE9125F271E43160006898A /* UIColor+Extension.swift in Sources */,
 				68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */,
 				B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */,
@@ -805,6 +807,7 @@
 				B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */,
 				9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */,
 				B2185FDD2707A0AA00A4ACAE /* SceneDelegate.swift in Sources */,
+				9CB0C8FF2729DAE0006FE760 /* ImageDataBaseHelp.swift in Sources */,
 				B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */,
 				B275043327272D4200768BC8 /* CategoriesCustomView.swift in Sources */,
 				B2591831271E0F910083176D /* RewardViewController.swift in Sources */,
@@ -812,6 +815,7 @@
 				B259182D271E09C20083176D /* TransitionViewController.swift in Sources */,
 				CBE9B764270B736300C20DA3 /* SwiftUIView.swift in Sources */,
 				686ABCA727272522001FF2CD /* StretchesCoordinator.swift in Sources */,
+				9CB0C8FD2729D8AE006FE760 /* User+CoreDataProperties.swift in Sources */,
 				68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */,
 				683DC5C52728E889008C5451 /* HardcodedStretchesRepository.swift in Sources */,
 				9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */,
@@ -819,8 +823,8 @@
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
 				686ABC9B27262136001FF2CD /* CoreDataStretchesSessionsRepository.swift in Sources */,
-				9C66DE44271A078F00D5F6D2 /* User+CoreDataClass.swift in Sources */,
 				9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */,
+				9CB0C8FC2729D8AE006FE760 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,9 @@ import UIKit
 import Core
 
 class ProfileViewController: UIViewController {
+    
 
-    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var imageProfil: UIImageView!
     
     @IBOutlet weak var cameraButton: UICircle!
     
@@ -77,7 +78,7 @@ class ProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupGestures()
-        
+        self.showPhoto()
         configureImageProfile()
     }
     
@@ -88,14 +89,14 @@ class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
+        maskLayer.path = UIBezierPath(ovalIn: imageProfil.bounds).cgPath
     }
     
     private func configureImageProfile() {
-        if imageProfile.image == nil {
-            imageProfile.layer.addSublayer(maskLayer)
+        if imageProfil.image == nil {
+            imageProfil.layer.addSublayer(maskLayer)
         } else {
-            imageProfile.layer.mask = maskLayer
+            imageProfil.layer.mask = maskLayer
         }
     }
     
@@ -106,6 +107,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
+        //ak
         let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { handler in
@@ -120,6 +122,25 @@ class ProfileViewController: UIViewController {
         alert.addAction(library)
         
         present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func savePhoto(){
+        print("entrou savePhoto?")
+                let jpg = self.imageProfil.image?.jpegData(compressionQuality: 0.75)
+                if let png = self.imageProfil.image?.pngData(){
+                    ImageDataBaseHelp.instancePhoto.saveImageInCore(at: png)
+                }
+    }
+    
+    func showPhoto(){
+        var arr = ImageDataBaseHelp.instancePhoto.getAllImages()
+        var qnt = arr.count
+        if arr.count>0{
+            print("entrou if?")
+            self.imageProfil.image = UIImage(data: arr[qnt-1].imageProfile!)
+            //self.imageProfil = test
+        }
     }
     
     private func openCamera(source: UIImagePickerController.SourceType) {
@@ -159,11 +180,19 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         
-        if imageProfile.layer.mask == nil {
-            imageProfile.layer.mask = maskLayer
+        if imageProfil.layer.mask == nil {
+            imageProfil.layer.mask = maskLayer
         }
         
-        imageProfile.image = image
+        
+        
+        imageProfil.image = image
+        
+        self.savePhoto()
+        
     }
+    
+    
+ 
     
 }

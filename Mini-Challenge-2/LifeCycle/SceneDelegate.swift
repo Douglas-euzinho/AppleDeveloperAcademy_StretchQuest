@@ -31,7 +31,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-        NotificationClass().notificationAppear()
+        if NotificationClass.sharedNC.firstNotification == true{
+            print("primeira entrada 1")
+            NotificationClass().notificationAppear()
+        }else if NotificationClass.sharedNC.day2 < CategoriesViewController.sharedGC.day{
+                print("entrou no else if 1")
+                NotificationClass().notificationAppear()
+        }
     }
     
     
@@ -60,8 +66,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        
-        NotificationClass().notificationAppear()
     }
 
 }

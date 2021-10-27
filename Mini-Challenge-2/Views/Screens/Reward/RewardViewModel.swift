@@ -18,13 +18,12 @@ class RewardViewModel {
     
     func continueToNextSession() {
         
-        
     }
     
     func returnToCategoriesScreen() {
         
-        
     }
+    
 }
 
 
