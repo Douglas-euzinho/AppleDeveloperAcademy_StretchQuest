@@ -37,6 +37,7 @@ class TransitionViewController: UIViewController {
     var onDismiss: OnDismiss?
     
     var ringAlreadySetuped: Bool = false
+    var fieldsAlreadySet: Bool = false
     
     lazy var onPublished: () -> () = {
         self.counterLabel.text = "\(self.viewModel.counter)"
@@ -47,8 +48,11 @@ class TransitionViewController: UIViewController {
     }
     
     func setFieldsForCurrentStretch() {
+        guard self.fieldsAlreadySet == false else { return }
+        self.fieldsAlreadySet = true
         self.descriptionTransition?.text = self.currentStretch.title
         self.setupTransitionVideoPlayer()
+        self.ringTimerAnimation()
     }
     
     func setupTransitionVideoPlayer() {
@@ -85,7 +89,6 @@ class TransitionViewController: UIViewController {
         self.counterLabel.text = "\(self.viewModel.transitionLenghtInSeconds)"
         self.viewModel.start()
         self.viewModel.onPublished = self.onPublished
-//        self.setFieldsForCurrentStretch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,13 +106,7 @@ class TransitionViewController: UIViewController {
         shape.path          = circlePath.cgPath
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.ringTimerAnimation()
-    }
-    
     override func viewDidDisappear(_ animated: Bool) {
-
         onDismiss?()
     }
     
