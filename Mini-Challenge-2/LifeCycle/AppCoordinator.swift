@@ -106,7 +106,7 @@ class AppCoordinator: Coordinator {
         mainCoordinator.start()
 
         
-        if didShowUserOnboard {
+        if !didShowUserOnboard {
 //            mainCoordinator.start()
             self.window.rootViewController = mainCoordinator.rootViewController
         } else {
@@ -116,6 +116,7 @@ class AppCoordinator: Coordinator {
             coordinator.finishHandler = {
                 self.removeChild(coordinator)
                 self.window.rootViewController = mainCoordinator.rootViewController
+                mainCoordinator.onSelecteOnBoarding(category: .posture)
             }
             
             coordinator.start()
@@ -156,12 +157,12 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         profileViewController.viewModel = ProfileViewModel(CoreDataStrechesSessionsRepository())
 
         
-        self.tabController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.tabController.tabBar.layer.shadowRadius = 10
-        self.tabController.tabBar.layer.shadowColor = UIColor(red: 0/255, green: 128/255, blue: 115/255, alpha: 1).cgColor
+        self.tabController.tabBar.layer.shadowOffset  = CGSize(width: 0, height: 0)
+        self.tabController.tabBar.layer.shadowRadius  = 10
+        self.tabController.tabBar.layer.shadowColor   = UIColor(red: 0/255, green: 128/255, blue: 115/255, alpha: 1).cgColor
         self.tabController.tabBar.layer.shadowOpacity = 0.1
-        self.tabController.tabBar.backgroundColor = .white
-        self.tabController.tabBar.tintColor = UIColor(red: 71/255, green: 204/255, blue: 193/255, alpha: 1)
+        self.tabController.tabBar.backgroundColor     = .white
+        self.tabController.tabBar.tintColor           = UIColor(red: 71/255, green: 204/255, blue: 193/255, alpha: 1)
         
         self.tabController.setViewControllers([
             categoriesViewController,
@@ -178,6 +179,16 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
             stretchType: category)
         
         coordinator.start()
+        self.finish()
+    }
+    
+    func onSelecteOnBoarding(category: StretchType) {
+        
+        let coordinator = StretchesCoordinator(
+            (tabController.viewControllers!.first!), tabController,
+            stretchType: category)
+        
+        coordinator.startStretchSessionFromOnBoarding()
         self.finish()
     }
 }

@@ -53,8 +53,23 @@ class StretchesCoordinator: Coordinator {
         
         self.stretchViewController.modalPresentationStyle = .fullScreen
         
-        self.navigationController.show(
-            self.stretchViewController, sender: self)
+        self.navigationController.present(self.stretchViewController, animated: true)
+        
+    }
+    
+    func startStretchSessionFromOnBoarding() {
+        
+        stretchViewController.exitAndGotoNextSession = {
+            self.gotoNextSession()
+            
+            //self.navigationController.dismiss(animated: true){
+                //self.gotoNextSession()
+            //}
+        }
+        
+        self.stretchViewController.modalPresentationStyle = .fullScreen
+        
+        self.navigationController.present(self.stretchViewController, animated: false)
     }
                                               
     func gotoNextSession() {
