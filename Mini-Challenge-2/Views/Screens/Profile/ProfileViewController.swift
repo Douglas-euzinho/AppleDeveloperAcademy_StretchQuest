@@ -89,10 +89,6 @@ class ProfileViewController: UIViewController {
         
         let progressBlocks = stackViewProgressIndicator.arrangedSubviews.prefix(progress)
         
-        progressBlocks.forEach { view in
-            view.backgroundColor = .red
-        }
-        
         let imagem = UIImage(named: "ok2")
         
         progressBlocks.forEach({ view in
@@ -156,9 +152,13 @@ class ProfileViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert in
             let nameTextField = alertController.textFields![0] as UITextField
             
-            DatabaseUser.instance.saveNameInCore(nameTextField.text!)
-            
-            self.nameLabel.text = nameTextField.text!
+            if let text = nameTextField.text {
+                guard !text.isEmpty else { return }
+                
+                DatabaseUser.instance.saveNameInCore(text)
+                
+                self.nameLabel.text = text
+            }
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

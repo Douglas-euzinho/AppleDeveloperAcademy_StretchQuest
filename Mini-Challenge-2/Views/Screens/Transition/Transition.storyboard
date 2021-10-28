@@ -27,13 +27,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-gj-9Ga" userLabel="Description">
                                 <rect key="frame" x="67.666666666666671" y="465.66666666666669" width="254.66666666666663" height="73.000000000000057"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3GR-Dp-nIc">
-                                        <rect key="frame" x="25" y="22.666666666666629" width="204.66666666666666" height="27.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3GR-Dp-nIc">
+                                        <rect key="frame" x="25" y="15.000000000000004" width="204.66666666666666" height="43.333333333333343"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Description">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                    <font key="NSFont" size="36" name="BebasNeue-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -41,12 +41,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="3GR-Dp-nIc" firstAttribute="centerY" secondItem="XZW-gj-9Ga" secondAttribute="centerY" id="6mx-qM-ms9"/>
+                                    <constraint firstItem="3GR-Dp-nIc" firstAttribute="height" secondItem="XZW-gj-9Ga" secondAttribute="height" multiplier="0.593607" id="Llo-oG-EVL"/>
                                     <constraint firstAttribute="trailing" secondItem="3GR-Dp-nIc" secondAttribute="trailing" constant="25" id="Yod-pC-f2N"/>
                                     <constraint firstItem="3GR-Dp-nIc" firstAttribute="centerX" secondItem="XZW-gj-9Ga" secondAttribute="centerX" id="bYX-8u-n6d"/>
-                                    <constraint firstItem="3GR-Dp-nIc" firstAttribute="height" secondItem="XZW-gj-9Ga" secondAttribute="height" multiplier="0.382222" id="t9s-CB-5K4"/>
                                     <constraint firstItem="3GR-Dp-nIc" firstAttribute="leading" secondItem="XZW-gj-9Ga" secondAttribute="leading" constant="25" id="wcF-wI-Kqh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

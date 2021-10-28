@@ -42,6 +42,7 @@ class CategoriesViewController: UIViewController {
     //compartilhamento de variáveis e funções em outras classes. Singleton
     static let sharedGC = CategoriesViewController() //Coisa do gameCenter
     
+    @IBOutlet weak var onboardingButton: UIButton!
     
     @IBOutlet weak var strengthCategory: UIView!
     
@@ -63,7 +64,7 @@ class CategoriesViewController: UIViewController {
         
     }
     
-    func showOnBoarding() {
+    @IBAction func showOnBoarding() {
         
         let adapter = OnboardDismissDelegate()
     

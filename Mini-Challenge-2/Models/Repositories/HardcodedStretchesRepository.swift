@@ -37,26 +37,26 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 externalLink: nil,
                 isContinuation: false))
             
-            list.append(Stretch(
-                title: "Quadriceps Left Leg",
-                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .flexibility,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Quadriceps Left Leg",
+//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .flexibility,
+//                externalLink: nil,
+//                isContinuation: false))
+            
+//            list.append(Stretch(
+//                title: "Quadriceps Right Leg",
+//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .flexibility,
+//                externalLink: nil,
+//                isContinuation: true))
             
             list.append(Stretch(
-                title: "Quadriceps Right Leg",
-                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .flexibility,
-                externalLink: nil,
-                isContinuation: true))
-            
-            list.append(Stretch(
-                title: "Lateral Stretch Left",
+                title: "Lateral Stretch",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
                 videoName: "lateral_left",
                 durationInSeconds: 20,
@@ -64,14 +64,14 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 externalLink: nil,
                 isContinuation: false))
             
-            list.append(Stretch(
-                title: "Lateral Stretch Right",
-                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .flexibility,
-                externalLink: nil,
-                isContinuation: true))
+//            list.append(Stretch(
+//                title: "Lateral Stretch Right",
+//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .flexibility,
+//                externalLink: nil,
+//                isContinuation: true))
             
             //Falta um alongamento!
             
@@ -89,73 +89,73 @@ public class HardcodedStretchesRepository: StretchesRepository {
             //--
             
             //Shoulder stretch left
-            list.append(Stretch(
-                title: "Shoulder Stretch",
-                instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .posture,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Shoulder Stretch",
+//                instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .posture,
+//                externalLink: nil,
+//                isContinuation: false))
             
             // -- SKIP
             //Shoulder stretch right
             list.append(Stretch(
-                title: "Shoulder Stretch Right",
+                title: "Shoulder Stretch",
                 instructions: "Repeat the stretch on the other side",
                 videoName: "ombros_right",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
             
             //Neck Stretch Left
-            list.append(Stretch(
-                title: "Side Neck Stretch Left",
-                instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .posture,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Side Neck Stretch Left",
+//                instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .posture,
+//                externalLink: nil,
+//                isContinuation: false))
             
             // -- Skip
             
             //Neck Stretch Right
             list.append(Stretch(
-                title: "Side Neck Stretch Right",
+                title: "Side Neck Stretch",
                 instructions: "Repeat the stretch on the other side",
                 videoName: "pescoco_right",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
             
             //Side Bend Left
-            list.append(Stretch(
-                title: "Side Bend Left",
-                instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
-                videoName: "",
-                durationInSeconds: 20,
-                type: .posture,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Side Bend Left",
+//                instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
+//                videoName: "",
+//                durationInSeconds: 20,
+//                type: .posture,
+//                externalLink: nil,
+//                isContinuation: false))
             
             // -- SKIP
             
             //Side Bend Right
             list.append(Stretch(
-                title: "Side Bend Right",
+                title: "Side Bend",
                 instructions: "Repeat the stretch on the other side",
                 videoName: "sidebend_right",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
         
@@ -174,49 +174,49 @@ public class HardcodedStretchesRepository: StretchesRepository {
         case .strength:
             
             list.append(Stretch(
-                title: "Leg-out Adductor Left",
+                title: "Leg-out Adductor",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "squat_left",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
                 isContinuation: false))
             
-            list.append(Stretch(
-                title: "Leg-out Adductor Right",
-                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 20,
-                type: .strength,
-                externalLink: nil,
-                isContinuation: true))
+//            list.append(Stretch(
+//                title: "Leg-out Adductor Right",
+//                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+//                videoName: "sidebend2hands_right",
+//                durationInSeconds: 20,
+//                type: .strength,
+//                externalLink: nil,
+//                isContinuation: true))
             
-            list.append(Stretch(
-                title: "Back Chest Stretch",
-                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 20,
-                type: .strength,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Back Chest Stretch",
+//                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+//                videoName: "sidebend2hands_right",
+//                durationInSeconds: 20,
+//                type: .strength,
+//                externalLink: nil,
+//                isContinuation: false))
             
-            list.append(Stretch(
-                title: "Wrist Extension Left",
-                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 20,
-                type: .strength,
-                externalLink: nil,
-                isContinuation: false))
+//            list.append(Stretch(
+//                title: "Wrist Extension Left",
+//                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+//                videoName: "sidebend2hands_right",
+//                durationInSeconds: 20,
+//                type: .strength,
+//                externalLink: nil,
+//                isContinuation: false))
             
-            list.append(Stretch(
-                title: "Wrist Extension Right",
-                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 20,
-                type: .strength,
-                externalLink: nil,
-                isContinuation: true))
+//            list.append(Stretch(
+//                title: "Wrist Extension Right",
+//                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+//                videoName: "sidebend2hands_right",
+//                durationInSeconds: 20,
+//                type: .strength,
+//                externalLink: nil,
+//                isContinuation: true))
             
             list.append(Stretch(
                 title: "Plantar Flexion",
@@ -228,22 +228,22 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 isContinuation: false))
             
             list.append(Stretch(
-                title: "Overhead Triceps Left",
+                title: "Overhead Triceps",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "overhead_left",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
                 isContinuation: false))
             
-            list.append(Stretch(
-                title: "Overhead Triceps Right",
-                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 20,
-                type: .strength,
-                externalLink: nil,
-                isContinuation: true))
+//            list.append(Stretch(
+//                title: "Overhead Triceps Right",
+//                instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
+//                videoName: "sidebend2hands_right",
+//                durationInSeconds: 20,
+//                type: .strength,
+//                externalLink: nil,
+//                isContinuation: true))
         }
 
         return list

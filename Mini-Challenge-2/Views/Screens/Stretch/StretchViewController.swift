@@ -105,6 +105,8 @@ class StretchViewController: UIViewController {
             rewardsStoryboard.instantiateViewController(
                 withIdentifier: "RewardViewController") as! RewardViewController
         
+        rewardsViewController.modalPresentationStyle = .fullScreen
+        
         self.show(rewardsViewController, sender: nil)
         
         switch(self.viewModel.category){
