@@ -20,6 +20,8 @@ class StretchViewController: UIViewController {
     @IBOutlet weak var videoView: UIView!
     
     public let stretchVideoController = AVPlayerViewController()
+    
+    var firstStretch: Bool = true
 
     var viewModel: StretchesViewModel! {
         didSet {
@@ -52,7 +54,11 @@ class StretchViewController: UIViewController {
 
 
     func showTransitionBetweenStretches() {
-        
+        if self.firstStretch == true{
+            
+        }else{
+            Sounds.sharedS.playSoundStretchDid()
+        }
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
         
@@ -63,6 +69,7 @@ class StretchViewController: UIViewController {
         self.shape.isHidden = true
         
         transitionViewController.onDismiss = {
+            self.firstStretch = false
             self.beginStretch()
             self.stretchVideoController.player?.play()
             self.viewModel.startCountdownTimer()
@@ -76,7 +83,6 @@ class StretchViewController: UIViewController {
     }
     
     func stretchDidChange() {
-        
         self.view.layer.removeAnimation(forKey: "transform.scale")
         self.pulsatingLayer.removeFromSuperlayer()
         self.trackShape.removeFromSuperlayer()
@@ -99,6 +105,7 @@ class StretchViewController: UIViewController {
     }
     
     func showRewardsScreen() {
+        self.firstStretch = true
         let rewardsStoryboard = UIStoryboard(name: "Reward", bundle: nil)
         
         let rewardsViewController =
@@ -109,6 +116,7 @@ class StretchViewController: UIViewController {
         
         self.show(rewardsViewController, sender: nil)
         
+        Sounds.sharedS.playSoundSessionStretchDid()
         switch(self.viewModel.category){
         case .flexibility:
             rewardsViewController.punctuation.text = "Flexibility +1"
