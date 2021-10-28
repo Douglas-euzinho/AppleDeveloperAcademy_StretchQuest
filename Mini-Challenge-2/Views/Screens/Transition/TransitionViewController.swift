@@ -43,7 +43,7 @@ class TransitionViewController: UIViewController {
         self.counterLabel.text = "\(self.viewModel.counter)"
         
         if self.viewModel.didFinish {
-            self.dismiss(animated: true)
+            self.dismiss(animated: false)
         }
     }
     

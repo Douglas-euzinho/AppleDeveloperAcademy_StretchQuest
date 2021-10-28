@@ -57,9 +57,11 @@ class StretchViewController: UIViewController {
         
         transitionViewController.currentStretch = self.viewModel.currentStretch
     
+//        transitionViewController.modalTransitionStyle = .crossDissolve
+        
         self.applyBlur()
         
-        self.present(transitionViewController, animated: true)
+        self.present(transitionViewController, animated: false)
         
         self.shape.isHidden = true
         

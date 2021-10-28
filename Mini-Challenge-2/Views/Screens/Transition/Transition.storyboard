@@ -15,6 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eA6-yD-05t">
+                                <rect key="frame" x="36" y="44" width="321" height="746"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9727206826" green="1" blue="0.99607962370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ae9-bk-3Ig" userLabel="Animation">
                                 <rect key="frame" x="54" y="74" width="282" height="361.66666666666669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +84,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mZX-kW-jNI"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ae9-bk-3Ig" firstAttribute="leading" secondItem="mZX-kW-jNI" secondAttribute="leading" constant="54" id="2NB-yo-EtW"/>
                             <constraint firstItem="XZW-gj-9Ga" firstAttribute="width" secondItem="ae9-bk-3Ig" secondAttribute="width" multiplier="0.902256" id="4Af-PN-5EY"/>
