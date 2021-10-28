@@ -23,6 +23,7 @@
 		686ABCA927273D40001FF2CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686ABCA827273D40001FF2CD /* ProfileViewModel.swift */; };
 		686DA91F2729D511008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
 		686DA9202729D51C008670CA /* Date+Midnight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA91C2729D3F5008670CA /* Date+Midnight.swift */; };
+		686DA922272B2426008670CA /* UIViewController+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA921272B2426008670CA /* UIViewController+BlurEffect.swift */; };
 		68ABEEE3271760B9001E7B37 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68ABEEDB271760B8001E7B37 /* Core.framework */; };
 		68ABEEEA271760B9001E7B37 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ABEEE9271760B9001E7B37 /* CoreTests.swift */; };
 		68ABEEEB271760B9001E7B37 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ABEEDD271760B8001E7B37 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -150,6 +151,7 @@
 		686ABCA627272522001FF2CD /* StretchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchesCoordinator.swift; sourceTree = "<group>"; };
 		686ABCA827273D40001FF2CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		686DA91C2729D3F5008670CA /* Date+Midnight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Midnight.swift"; sourceTree = "<group>"; };
+		686DA921272B2426008670CA /* UIViewController+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BlurEffect.swift"; sourceTree = "<group>"; };
 		68ABEEDB271760B8001E7B37 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68ABEEDD271760B8001E7B37 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		68ABEEE2271760B9001E7B37 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -612,6 +614,7 @@
 				CBFDF2612727481000505FFF /* Haptics.swift */,
 				CB72BA462727512600683982 /* SetOrientation.swift */,
 				686DA91C2729D3F5008670CA /* Date+Midnight.swift */,
+				686DA921272B2426008670CA /* UIViewController+BlurEffect.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 			files = (
 				684CFDD827210325009E2B70 /* TransitionViewModel.swift in Sources */,
 				9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */,
+				686DA922272B2426008670CA /* UIViewController+BlurEffect.swift in Sources */,
 				686ABCA3272627A2001FF2CD /* StretchesSessions+CoreDataProperties.swift in Sources */,
 				CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */,
 				CBE9B766270B74AA00C20DA3 /* OnBoardingData.swift in Sources */,

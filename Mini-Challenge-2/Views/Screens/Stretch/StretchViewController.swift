@@ -49,20 +49,22 @@ class StretchViewController: UIViewController {
     let shape          = CAShapeLayer()
     let trackShape     = CAShapeLayer()
     var circlePath     = UIBezierPath()
-
-
+    
     func showTransitionBetweenStretches() {
         
         let transitionStoryboard = UIStoryboard(name: "Transition", bundle: nil)
         let transitionViewController = transitionStoryboard.instantiateViewController(withIdentifier: "TransitionViewController") as! TransitionViewController
         
         transitionViewController.currentStretch = self.viewModel.currentStretch
+    
+        self.applyBlur()
         
         self.present(transitionViewController, animated: true)
         
         self.shape.isHidden = true
         
         transitionViewController.onDismiss = {
+            self.removeBlur()
             self.beginStretch()
             self.stretchVideoController.player?.play()
             self.viewModel.startCountdownTimer()
@@ -321,6 +323,8 @@ class StretchViewController: UIViewController {
         pauseRingAnimation()
         pauseViewController.delegate = self
 
+        self.applyBlur()
+        
         self.present(pauseViewController, animated: true, completion: nil)
     }
 }
@@ -328,6 +332,7 @@ class StretchViewController: UIViewController {
 extension StretchViewController: PauseDelegate {
     
     func onPauseScreenDismiss() {
+        self.removeBlur()
         self.viewModel.resumeCountdownTimer()
         self.resumeRingAnimation()
     }
