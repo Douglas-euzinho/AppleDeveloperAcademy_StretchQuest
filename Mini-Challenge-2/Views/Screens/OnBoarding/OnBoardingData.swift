@@ -30,10 +30,12 @@ struct OnboardingData: Hashable, Identifiable {
 struct OnboardingView: View {
     
     var data: OnboardingData
-
+    @ObservedObject var delegate: OnboardDismissDelegate
+    var index: Int
     var body: some View {
         
         VStack(spacing: 20) {
+            
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [data.background[0], data.background[1]]),startPoint: .top, endPoint: .bottom)
                             .ignoresSafeArea()
@@ -51,7 +53,7 @@ struct OnboardingView: View {
                         .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
 
                     Text(data.secondaryText)
@@ -60,10 +62,26 @@ struct OnboardingView: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-//                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
 
                     Spacer()
                         .frame(height: 60)
+                    
+                    if index == OnboardingData.list.count-1 {
+                        Button(action: {
+                       // self.presented.toggle()
+                               self.delegate.finish()
+                           }, label: {
+                                   Text("CONTINUE")
+                                   .foregroundColor(.black)
+                                   .fontWeight(.bold)
+                                   .frame(width: 200, height: 200, alignment: .center)
+                                   .frame(height: 60)
+                                   .background(Capsule().fill(Color.white))
+
+                           })
+                            .offset(y: 100)
+                    }
 
                 })
                     .ignoresSafeArea()
