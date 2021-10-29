@@ -37,7 +37,6 @@
 		68CFC5882723406E0080D6EA /* CountownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFC5872723406E0080D6EA /* CountownTimer.swift */; };
 		68CFC58B2723519F0080D6EA /* GetNextSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFC58A2723519F0080D6EA /* GetNextSessionType.swift */; };
 		9C5F6054271E0C500023DDC4 /* GameCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */; };
-		9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F6055271E0D4D0023DDC4 /* testeGC.swift */; };
 		9C5F6059271E11DB0023DDC4 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F6058271E11DB0023DDC4 /* GameKit.framework */; };
 		9C66DE42271A078F00D5F6D2 /* Atributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */; };
 		9C66DE43271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */; };
@@ -167,7 +166,6 @@
 		68CFC5872723406E0080D6EA /* CountownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountownTimer.swift; sourceTree = "<group>"; };
 		68CFC58A2723519F0080D6EA /* GetNextSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNextSessionType.swift; sourceTree = "<group>"; };
 		9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameCenter+Extension.swift"; sourceTree = "<group>"; };
-		9C5F6055271E0D4D0023DDC4 /* testeGC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeGC.swift; sourceTree = "<group>"; };
 		9C5F6058271E11DB0023DDC4 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9C66DE3E271A078F00D5F6D2 /* Atributes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66DE3F271A078F00D5F6D2 /* Atributes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -454,7 +452,6 @@
 				B259183A271F69210083176D /* Resources */,
 				CBE9125D271E42F00006898A /* Commons */,
 				B259183B271F6AB90083176D /* Services */,
-				9C5F6055271E0D4D0023DDC4 /* testeGC.swift */,
 			);
 			path = "Mini-Challenge-2";
 			sourceTree = "<group>";
@@ -926,7 +923,6 @@
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
 				9CB0C901272B46A7006FE760 /* Sounds.swift in Sources */,
 				686ABC9B27262136001FF2CD /* CoreDataStretchesSessionsRepository.swift in Sources */,
-				9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */,
 				9CB0C8FC2729D8AE006FE760 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1326,7 +1322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joh-camacho.Mini-Challenge-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1359,7 +1355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joh-camacho.Mini-Challenge-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
