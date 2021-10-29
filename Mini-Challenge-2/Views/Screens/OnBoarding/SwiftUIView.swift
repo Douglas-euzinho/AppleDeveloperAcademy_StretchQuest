@@ -37,8 +37,7 @@ struct ContentView: View {
 
     var body: some View {
         
-        VStack {
-            
+        ScrollView{
             TabView(selection: $currentTab, content:  {
                 ForEach(OnboardingData.list) { viewData in
                     OnboardingView(data: viewData, delegate: delegate, index: viewData.id).tag(viewData.id)
@@ -46,12 +45,18 @@ struct ContentView: View {
             })
             .frame(width: screenWidth, height: UIScreen.main.bounds.height)
             .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .ignoresSafeArea(.all)
+            .onAppear() {
+                setupAppearance()
+            }
         }
-
+        .edgesIgnoringSafeArea(.all)
     }
     
+    func setupAppearance() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = .white
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+        
+      }
     
 //    var body: some View {
 //

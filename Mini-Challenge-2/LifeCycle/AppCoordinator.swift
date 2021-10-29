@@ -216,7 +216,6 @@ class OnboardingCoordinator: Coordinator {
         }
         
         let contentView = ContentView(delegate: adapter)
-        
         let onBoarding = UIHostingController(rootView: contentView)
         self.navigationController.setViewControllers([onBoarding], animated: false)
     }

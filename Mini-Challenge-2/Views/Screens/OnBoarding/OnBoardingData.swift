@@ -53,7 +53,7 @@ struct OnboardingView: View {
                         .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
 
                     Text(data.secondaryText)
@@ -62,7 +62,7 @@ struct OnboardingView: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 100, damping: 10))
+                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
                     Spacer()
                         .frame(height: 60)
@@ -71,7 +71,8 @@ struct OnboardingView: View {
                         Button(action: {
                        // self.presented.toggle()
                                self.delegate.finish()
-                           }, label: {
+                           }
+                                , label: {
                                    Text("CONTINUE")
                                    .foregroundColor(.black)
                                    .fontWeight(.bold)
@@ -80,6 +81,8 @@ struct OnboardingView: View {
                                    .background(Capsule().fill(Color.white))
 
                            })
+                            .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
+                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
                             .offset(y: 100)
                     }
 
