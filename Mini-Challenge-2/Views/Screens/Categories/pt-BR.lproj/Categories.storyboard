@@ -18,7 +18,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-JP-amU">
                                 <rect key="frame" x="78.666666666666686" y="74" width="233" height="57.333333333333343"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Categories">
+                                    <fragment content="Categorias">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="48" name="BebasNeue-Regular"/>
@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" secondItem="nDy-T7-52k" secondAttribute="height" multiplier="283:131" id="yBg-43-cIl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Strength"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Força"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Strength"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
                                         <color key="value" red="0.72549019607843135" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +46,7 @@
                                 <rect key="frame" x="48" y="353" width="294" height="136.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Posture"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Postura"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Posture"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
                                         <color key="value" red="0.098039215686274508" green="0.72549019607843135" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="48" y="535.66666666666663" width="294" height="136.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Flexibility"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Flexibilidade"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="background" value="Flexibility"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleShadow">
                                         <color key="value" red="0.090196078431372548" green="0.25098039215686274" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,7 +115,7 @@
                             <constraint firstItem="4f5-JP-amU" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0679305" id="w5I-Vv-R83"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="xF4-rl-irh"/>
+                    <tabBarItem key="tabBarItem" title="Início" image="Home" id="xF4-rl-irh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="flexibilityCategory" destination="T9d-Gg-Vgl" id="A2f-ZI-CBP"/>

@@ -183,6 +183,16 @@
 		9CB0C900272B46A7006FE760 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchSessionDid.mp3; sourceTree = "<group>"; };
 		9CB0C907272B47CC006FE760 /* StretchDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchDid.mp3; sourceTree = "<group>"; };
+		9CB0C90D272C7AE0006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Categories.storyboard"; sourceTree = "<group>"; };
+		9CB0C913272C7C28006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Stretch.storyboard"; sourceTree = "<group>"; };
+		9CB0C91A272C7CD8006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Pause.storyboard"; sourceTree = "<group>"; };
+		9CB0C91F272C7DC9006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Reward.storyboard"; sourceTree = "<group>"; };
+		9CB0C923272C7E7A006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Profile.storyboard"; sourceTree = "<group>"; };
+		9CB0C93F272C8CBB006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Categories.storyboard; sourceTree = "<group>"; };
+		9CB0C940272C8CCA006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Stretch.storyboard; sourceTree = "<group>"; };
+		9CB0C941272C8CD8006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Pause.storyboard; sourceTree = "<group>"; };
+		9CB0C942272C8CDF006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Reward.storyboard; sourceTree = "<group>"; };
+		9CB0C943272C8CEC006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -767,7 +777,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"zh-Hant",
 				"pt-BR",
 				es,
 			);
@@ -960,6 +969,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C88027286F5C006FE760 /* Base */,
+				9CB0C90D272C7AE0006FE760 /* pt-BR */,
+				9CB0C93F272C8CBB006FE760 /* es */,
 			);
 			name = Categories.storyboard;
 			sourceTree = "<group>";
@@ -968,6 +979,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C88C272876B5006FE760 /* Base */,
+				9CB0C913272C7C28006FE760 /* pt-BR */,
+				9CB0C940272C8CCA006FE760 /* es */,
 			);
 			name = Stretch.storyboard;
 			sourceTree = "<group>";
@@ -976,6 +989,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C898272879CC006FE760 /* Base */,
+				9CB0C91A272C7CD8006FE760 /* pt-BR */,
+				9CB0C941272C8CD8006FE760 /* es */,
 			);
 			name = Pause.storyboard;
 			sourceTree = "<group>";
@@ -984,6 +999,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C8A127287A75006FE760 /* Base */,
+				9CB0C91F272C7DC9006FE760 /* pt-BR */,
+				9CB0C942272C8CDF006FE760 /* es */,
 			);
 			name = Reward.storyboard;
 			sourceTree = "<group>";
@@ -992,6 +1009,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C8AA27287B56006FE760 /* Base */,
+				9CB0C923272C7E7A006FE760 /* pt-BR */,
+				9CB0C943272C8CEC006FE760 /* es */,
 			);
 			name = Profile.storyboard;
 			sourceTree = "<group>";
@@ -1036,7 +1055,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = MGFPJ5C76T;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1307,7 +1326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1340,7 +1359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
