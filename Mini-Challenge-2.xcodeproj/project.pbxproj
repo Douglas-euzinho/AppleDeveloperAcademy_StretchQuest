@@ -67,6 +67,10 @@
 		B234AB35272A2909006F5BBF /* squat_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB32272A2909006F5BBF /* squat_left.mp4 */; };
 		B234AB36272A2909006F5BBF /* overhead_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB33272A2909006F5BBF /* overhead_left.mp4 */; };
 		B234AB38272A2957006F5BBF /* toetouch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB37272A2957006F5BBF /* toetouch.mp4 */; };
+		B253C8DB272CB817009D4AF9 /* ombros_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DA272CB817009D4AF9 /* ombros_left.mp4 */; };
+		B253C8DD272CB81E009D4AF9 /* pescoco_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DC272CB81E009D4AF9 /* pescoco_left.mp4 */; };
+		B253C8DF272CB828009D4AF9 /* sidebend_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DE272CB827009D4AF9 /* sidebend_left.mp4 */; };
+		B253C8E1272CB891009D4AF9 /* torsotwist.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8E0272CB891009D4AF9 /* torsotwist.mp4 */; };
 		B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25402CD27179B7300C088C4 /* CategoriesViewController.swift */; };
 		B259182B271E099D0083176D /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259182A271E099D0083176D /* Transition.storyboard */; };
 		B259182D271E09C20083176D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259182C271E09C20083176D /* TransitionViewController.swift */; };
@@ -80,7 +84,6 @@
 		CBB154122729DE22001E8E15 /* pescoco_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */; };
 		CBB154132729DE22001E8E15 /* sidebend_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154102729DE22001E8E15 /* sidebend_right.mp4 */; };
 		CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154112729DE22001E8E15 /* ombros_right.mp4 */; };
-		CBB154162729DE88001E8E15 /* torso_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154152729DE88001E8E15 /* torso_right.mp4 */; };
 		CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */; };
 		CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154192729E0C7001E8E15 /* lateral_left.mp4 */; };
 		CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125B271B933F0006898A /* PauseViewController.swift */; };
@@ -210,6 +213,10 @@
 		B234AB32272A2909006F5BBF /* squat_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat_left.mp4; sourceTree = "<group>"; };
 		B234AB33272A2909006F5BBF /* overhead_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = overhead_left.mp4; sourceTree = "<group>"; };
 		B234AB37272A2957006F5BBF /* toetouch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toetouch.mp4; sourceTree = "<group>"; };
+		B253C8DA272CB817009D4AF9 /* ombros_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ombros_left.mp4; sourceTree = "<group>"; };
+		B253C8DC272CB81E009D4AF9 /* pescoco_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_left.mp4; sourceTree = "<group>"; };
+		B253C8DE272CB827009D4AF9 /* sidebend_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend_left.mp4; sourceTree = "<group>"; };
+		B253C8E0272CB891009D4AF9 /* torsotwist.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = torsotwist.mp4; sourceTree = "<group>"; };
 		B25402CD27179B7300C088C4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		B259182A271E099D0083176D /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
 		B259182C271E09C20083176D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -222,7 +229,6 @@
 		CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_right.mp4; sourceTree = "<group>"; };
 		CBB154102729DE22001E8E15 /* sidebend_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend_right.mp4; sourceTree = "<group>"; };
 		CBB154112729DE22001E8E15 /* ombros_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ombros_right.mp4; sourceTree = "<group>"; };
-		CBB154152729DE88001E8E15 /* torso_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = torso_right.mp4; sourceTree = "<group>"; };
 		CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = esticarbracos.mp4; sourceTree = "<group>"; };
 		CBB154192729E0C7001E8E15 /* lateral_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lateral_left.mp4; sourceTree = "<group>"; };
 		CBE9125B271B933F0006898A /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
@@ -625,11 +631,14 @@
 		CBB1540E2729DCFD001E8E15 /* Posture */ = {
 			isa = PBXGroup;
 			children = (
+				B253C8DA272CB817009D4AF9 /* ombros_left.mp4 */,
 				CBB154112729DE22001E8E15 /* ombros_right.mp4 */,
+				B253C8DC272CB81E009D4AF9 /* pescoco_left.mp4 */,
 				CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */,
+				B253C8DE272CB827009D4AF9 /* sidebend_left.mp4 */,
 				CBB154102729DE22001E8E15 /* sidebend_right.mp4 */,
 				B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */,
-				CBB154152729DE88001E8E15 /* torso_right.mp4 */,
+				B253C8E0272CB891009D4AF9 /* torsotwist.mp4 */,
 			);
 			path = Posture;
 			sourceTree = "<group>";
@@ -824,13 +833,15 @@
 				B234AB34272A2909006F5BBF /* panturrilha.mp4 in Resources */,
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
 				B2D781A02728B66100B4FE14 /* sidebend2hands_right.mp4 in Resources */,
-				CBB154162729DE88001E8E15 /* torso_right.mp4 in Resources */,
+				B253C8DB272CB817009D4AF9 /* ombros_left.mp4 in Resources */,
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
 				9CB0C897272879CC006FE760 /* Pause.storyboard in Resources */,
 				B234AB36272A2909006F5BBF /* overhead_left.mp4 in Resources */,
 				CBB154132729DE22001E8E15 /* sidebend_right.mp4 in Resources */,
+				B253C8E1272CB891009D4AF9 /* torsotwist.mp4 in Resources */,
 				B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */,
 				CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */,
+				B253C8DD272CB81E009D4AF9 /* pescoco_left.mp4 in Resources */,
 				CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */,
 				B2D7819E272899B500B4FE14 /* Profile.storyboard in Resources */,
 				9CB0C87B27286F4F006FE760 /* Categories.storyboard in Resources */,
@@ -843,6 +854,7 @@
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
 				9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */,
 				CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */,
+				B253C8DF272CB828009D4AF9 /* sidebend_left.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
