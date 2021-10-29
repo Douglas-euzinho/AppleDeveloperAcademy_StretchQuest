@@ -49,6 +49,9 @@
 		9CB0C8FC2729D8AE006FE760 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FA2729D8AE006FE760 /* User+CoreDataClass.swift */; };
 		9CB0C8FD2729D8AE006FE760 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FB2729D8AE006FE760 /* User+CoreDataProperties.swift */; };
 		9CB0C8FF2729DAE0006FE760 /* DatabaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C8FE2729DAE0006FE760 /* DatabaseUser.swift */; };
+		9CB0C901272B46A7006FE760 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0C900272B46A7006FE760 /* Sounds.swift */; };
+		9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */; };
+		9CB0C908272B47CC006FE760 /* StretchDid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C907272B47CC006FE760 /* StretchDid.mp3 */; };
 		9CE45D3F2720A9C4000C453E /* NotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */; };
 		9CE45D43272336BB000C453E /* NotificationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45D42272336BB000C453E /* NotificationClass.swift */; };
 		B2185FDB2707A0AA00A4ACAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2185FDA2707A0AA00A4ACAE /* AppDelegate.swift */; };
@@ -177,6 +180,9 @@
 		9CB0C8FA2729D8AE006FE760 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9CB0C8FB2729D8AE006FE760 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9CB0C8FE2729DAE0006FE760 /* DatabaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUser.swift; sourceTree = "<group>"; };
+		9CB0C900272B46A7006FE760 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchSessionDid.mp3; sourceTree = "<group>"; };
+		9CB0C907272B47CC006FE760 /* StretchDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchDid.mp3; sourceTree = "<group>"; };
 		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +392,16 @@
 			path = CoreDataClass;
 			sourceTree = "<group>";
 		};
+		9CB0C902272B4747006FE760 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9CB0C907272B47CC006FE760 /* StretchDid.mp3 */,
+				9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */,
+				9CB0C900272B46A7006FE760 /* Sounds.swift */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		B20C414C272766790013D93B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */,
+				9CB0C902272B4747006FE760 /* Sounds */,
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
 				684CFDB3271F4A59009E2B70 /* IntegrationTests */,
@@ -793,6 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB0C908272B47CC006FE760 /* StretchDid.mp3 in Resources */,
 				B234AB38272A2957006F5BBF /* toetouch.mp4 in Resources */,
 				B234AB34272A2909006F5BBF /* panturrilha.mp4 in Resources */,
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
@@ -814,6 +832,7 @@
 				9CB0C88B272876B5006FE760 /* Stretch.storyboard in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
+				9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */,
 				CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,6 +915,7 @@
 				CBE91261271E44C00006898A /* RingAttributes.swift in Sources */,
 				B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */,
 				CBE9B768270B923400C20DA3 /* AppCoordinator.swift in Sources */,
+				9CB0C901272B46A7006FE760 /* Sounds.swift in Sources */,
 				686ABC9B27262136001FF2CD /* CoreDataStretchesSessionsRepository.swift in Sources */,
 				9C5F6056271E0D4D0023DDC4 /* testeGC.swift in Sources */,
 				9CB0C8FC2729D8AE006FE760 /* User+CoreDataClass.swift in Sources */,
@@ -993,7 +1013,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1016,7 +1036,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+                DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1040,7 +1060,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1072,7 +1092,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1103,7 +1123,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1127,7 +1147,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1269,8 +1289,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/LifeCycle/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stretch Quest";
@@ -1302,8 +1322,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HU3U243R3R;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-Challenge-2/LifeCycle/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stretch Quest";
