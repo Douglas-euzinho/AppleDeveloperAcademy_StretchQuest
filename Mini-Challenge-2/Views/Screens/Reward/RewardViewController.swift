@@ -57,7 +57,7 @@ class RewardViewController: UIViewController {
     }
     
     @IBAction func didTappedLeave(_ sender: Any) {
-        Haptics.share.vibrateError()
+        Haptics.share.vibrateSuccess()
         self.delegate.exitToCategoriesScreen()
         if self.notiPermission == false{
             permissionNotification()
