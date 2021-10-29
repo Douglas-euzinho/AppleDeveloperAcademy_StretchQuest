@@ -21,9 +21,9 @@ struct OnboardingData: Hashable, Identifiable {
 
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "Strength", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
         OnboardingData(id: 1, background: defaultBackground2, imagePath: "", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
-        OnboardingData(id: 2, background: defaultBackground3, imagePath: "", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges.")
+        OnboardingData(id: 2, background: defaultBackground3, imagePath: "Strength", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges.")
     ]
 }
 
@@ -48,8 +48,8 @@ struct OnboardingView: View {
 
                     Text(data.primaryText)
                         .bold().font(.largeTitle)
-                        .font(.system(size: 30, weight: .bold))
-
+                        .offset(y: 125)
+                        .font(.system(size: 35, weight: .bold))
                         .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
@@ -58,6 +58,7 @@ struct OnboardingView: View {
 
                     Text(data.secondaryText)
                         .bold()
+                        .offset(y: 125)
                         .font(.system(size: 25, weight: .regular))
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
@@ -76,7 +77,7 @@ struct OnboardingView: View {
                                    Text("CONTINUE")
                                    .foregroundColor(.black)
                                    .fontWeight(.bold)
-                                   .frame(width: 200, height: 200, alignment: .center)
+                                   .frame(width: 220, height: 200, alignment: .center)
                                    .frame(height: 60)
                                    .background(Capsule().fill(Color.white))
 
