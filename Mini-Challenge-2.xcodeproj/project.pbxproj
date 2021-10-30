@@ -61,7 +61,6 @@
 		B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B226E43127279D8700AF14C6 /* Baloo2-ExtraBold.ttf */; };
 		B22A71782718B29C002F33C6 /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A71772718B29C002F33C6 /* StretchViewController.swift */; };
 		B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717B2718CC28002F33C6 /* ProfileViewController.swift */; };
-		B22A717E2718D884002F33C6 /* UICircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A717D2718D884002F33C6 /* UICircle.swift */; };
 		B234AB34272A2909006F5BBF /* panturrilha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB31272A2909006F5BBF /* panturrilha.mp4 */; };
 		B234AB35272A2909006F5BBF /* squat_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB32272A2909006F5BBF /* squat_left.mp4 */; };
 		B234AB36272A2909006F5BBF /* overhead_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB33272A2909006F5BBF /* overhead_left.mp4 */; };
@@ -196,12 +195,10 @@
 		9CB0C913272C7C28006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Stretch.storyboard"; sourceTree = "<group>"; };
 		9CB0C91A272C7CD8006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Pause.storyboard"; sourceTree = "<group>"; };
 		9CB0C91F272C7DC9006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Reward.storyboard"; sourceTree = "<group>"; };
-		9CB0C923272C7E7A006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Profile.storyboard"; sourceTree = "<group>"; };
 		9CB0C93F272C8CBB006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		9CB0C940272C8CCA006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Stretch.storyboard; sourceTree = "<group>"; };
 		9CB0C941272C8CD8006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Pause.storyboard; sourceTree = "<group>"; };
 		9CB0C942272C8CDF006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Reward.storyboard; sourceTree = "<group>"; };
-		9CB0C943272C8CEC006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +211,6 @@
 		B226E43127279D8700AF14C6 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		B22A71772718B29C002F33C6 /* StretchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
 		B22A717B2718CC28002F33C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B22A717D2718D884002F33C6 /* UICircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircle.swift; sourceTree = "<group>"; };
 		B234AB31272A2909006F5BBF /* panturrilha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = panturrilha.mp4; sourceTree = "<group>"; };
 		B234AB32272A2909006F5BBF /* squat_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat_left.mp4; sourceTree = "<group>"; };
 		B234AB33272A2909006F5BBF /* overhead_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = overhead_left.mp4; sourceTree = "<group>"; };
@@ -238,6 +234,8 @@
 		B275043227272D4200768BC8 /* CategoriesCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCustomView.swift; sourceTree = "<group>"; };
 		B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		B2D7819F2728B66000B4FE14 /* sidebend2hands_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend2hands_right.mp4; sourceTree = "<group>"; };
+		B2FA9B24272CFB17003C9A95 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Profile.storyboard"; sourceTree = "<group>"; };
+		B2FA9B27272CFBAF003C9A95 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
 		CB72BA462727512600683982 /* SetOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOrientation.swift; sourceTree = "<group>"; };
 		CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_right.mp4; sourceTree = "<group>"; };
@@ -490,7 +488,6 @@
 		B2591832271F67DB0083176D /* Shareds */ = {
 			isa = PBXGroup;
 			children = (
-				B22A717D2718D884002F33C6 /* UICircle.swift */,
 			);
 			path = Shareds;
 			sourceTree = "<group>";
@@ -939,7 +936,6 @@
 				68ABEF282718AAF2001E7B37 /* StretchesViewModel.swift in Sources */,
 				B22A717C2718CC28002F33C6 /* ProfileViewController.swift in Sources */,
 				686ABC9727261E55001FF2CD /* StretchesSessions+CoreDataClass.swift in Sources */,
-				B22A717E2718D884002F33C6 /* UICircle.swift in Sources */,
 				CB72BA472727512600683982 /* SetOrientation.swift in Sources */,
 				CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */,
 				9CE45D3F2720A9C4000C453E /* NotificationTypes.swift in Sources */,
@@ -1049,8 +1045,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C8AA27287B56006FE760 /* Base */,
-				9CB0C923272C7E7A006FE760 /* pt-BR */,
-				9CB0C943272C8CEC006FE760 /* es */,
+				B2FA9B24272CFB17003C9A95 /* pt-BR */,
+				B2FA9B27272CFBAF003C9A95 /* es */,
 			);
 			name = Profile.storyboard;
 			sourceTree = "<group>";

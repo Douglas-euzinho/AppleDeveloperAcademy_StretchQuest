@@ -13,9 +13,11 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
-    @IBOutlet weak var cameraButton: UICircle!
+    @IBOutlet weak var cameraButton: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var gameCenterButton: UIImageView!
     
     @IBOutlet weak var strengthProgress: UIStackView!
     
@@ -50,30 +52,17 @@ class ProfileViewController: UIViewController {
     
     static let sharedPVC = ProfileViewController()
     
-    let maskLayer: CAShapeLayer = {
-        let circle = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
-        
-        let overlay = CAShapeLayer()
-        overlay.path = circle.cgPath
-        overlay.fillColor = UIColor.gray.cgColor
-        
-        return overlay
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.viewModel.didPublish = self.onViewModelDidPublish
        
         // Do any additional setup after loading the view.
-        nameLabel.isUserInteractionEnabled = true
-        
         setupGesturesCameraButton()
         setupGesturesName()
+        setupGesturesGameCenter()
         
         fetchUser()
-        
-        configureImageProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,18 +72,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
-    }
-    
-    //MARK: - Botão do gameCenter
-    @IBAction func didTapGameCenterButton(_ sender: Any) {
-        print("entrou func?")
-        if self.gameCenterEnabled == false{
-        print("entrou if?")
-            self.authenticateUser()
-        }else{
-            self.transitionToGameCenterPage()
-        }
+        imageProfile.layer.cornerRadius = imageProfile.frame.width / 2
     }
     
     func onViewModelDidPublish() {
@@ -130,26 +108,28 @@ class ProfileViewController: UIViewController {
         })
     }
     
-    private func configureImageProfile() {
-        if imageProfile.image == nil {
-            imageProfile.layer.addSublayer(maskLayer)
-        } else {
-            imageProfile.layer.mask = maskLayer
-        }
-    }
-    
     private func setupGesturesCameraButton() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraButton))
         
         cameraButton.addGestureRecognizer(tap)
+        cameraButton.isUserInteractionEnabled = true
     }
     
     private func setupGesturesName() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapName))
         
         nameLabel.addGestureRecognizer(tap)
+        nameLabel.isUserInteractionEnabled = true
     }
     
+    private func setupGesturesGameCenter() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapGameCenterButton))
+        
+        gameCenterButton.addGestureRecognizer(tap)
+        gameCenterButton.isUserInteractionEnabled = true
+    }
+    
+    // MARK: - Botão da camera
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
         
@@ -172,6 +152,7 @@ class ProfileViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    // MARK: - Botão do nome
     @objc private func didTapName(_ sender: UITapGestureRecognizer) {
         let alertController = UIAlertController(title: "Write your name", message: nil, preferredStyle: .alert)
         
@@ -197,6 +178,15 @@ class ProfileViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Botão do gameCenter
+    @objc private func didTapGameCenterButton(_ sender: UITapGestureRecognizer) {
+        if self.gameCenterEnabled == false {
+            self.authenticateUser()
+        } else{
+            self.transitionToGameCenterPage()
+        }
     }
     
     func savePhoto() {
@@ -233,10 +223,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         picker.dismiss(animated: true, completion: nil)
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        
-        if imageProfile.layer.mask == nil {
-            imageProfile.layer.mask = maskLayer
-        }
         
         imageProfile.image = image
         
