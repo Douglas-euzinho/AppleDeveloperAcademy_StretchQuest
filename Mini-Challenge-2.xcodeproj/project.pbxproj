@@ -66,7 +66,6 @@
 		B234AB34272A2909006F5BBF /* panturrilha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB31272A2909006F5BBF /* panturrilha.mp4 */; };
 		B234AB35272A2909006F5BBF /* squat_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB32272A2909006F5BBF /* squat_left.mp4 */; };
 		B234AB36272A2909006F5BBF /* overhead_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB33272A2909006F5BBF /* overhead_left.mp4 */; };
-		B234AB38272A2957006F5BBF /* toetouch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B234AB37272A2957006F5BBF /* toetouch.mp4 */; };
 		B253C8DB272CB817009D4AF9 /* ombros_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DA272CB817009D4AF9 /* ombros_left.mp4 */; };
 		B253C8DD272CB81E009D4AF9 /* pescoco_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DC272CB81E009D4AF9 /* pescoco_left.mp4 */; };
 		B253C8DF272CB828009D4AF9 /* sidebend_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8DE272CB827009D4AF9 /* sidebend_left.mp4 */; };
@@ -76,6 +75,10 @@
 		B253C8E7272CBDFA009D4AF9 /* reachbackchest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8E6272CBDFA009D4AF9 /* reachbackchest.mp4 */; };
 		B253C8EA272CBFA3009D4AF9 /* punhos_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8E8272CBFA3009D4AF9 /* punhos_right.mp4 */; };
 		B253C8EB272CBFA3009D4AF9 /* punhos_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8E9272CBFA3009D4AF9 /* punhos_left.mp4 */; };
+		B253C8F0272CC33E009D4AF9 /* quadriceps_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8EC272CC33D009D4AF9 /* quadriceps_right.mp4 */; };
+		B253C8F1272CC33E009D4AF9 /* lateral_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8ED272CC33D009D4AF9 /* lateral_right.mp4 */; };
+		B253C8F2272CC33E009D4AF9 /* quadriceps_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */; };
+		B253C8F3272CC33E009D4AF9 /* toetouch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */; };
 		B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25402CD27179B7300C088C4 /* CategoriesViewController.swift */; };
 		B259182B271E099D0083176D /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259182A271E099D0083176D /* Transition.storyboard */; };
 		B259182D271E09C20083176D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259182C271E09C20083176D /* TransitionViewController.swift */; };
@@ -217,7 +220,6 @@
 		B234AB31272A2909006F5BBF /* panturrilha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = panturrilha.mp4; sourceTree = "<group>"; };
 		B234AB32272A2909006F5BBF /* squat_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat_left.mp4; sourceTree = "<group>"; };
 		B234AB33272A2909006F5BBF /* overhead_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = overhead_left.mp4; sourceTree = "<group>"; };
-		B234AB37272A2957006F5BBF /* toetouch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toetouch.mp4; sourceTree = "<group>"; };
 		B253C8DA272CB817009D4AF9 /* ombros_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ombros_left.mp4; sourceTree = "<group>"; };
 		B253C8DC272CB81E009D4AF9 /* pescoco_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_left.mp4; sourceTree = "<group>"; };
 		B253C8DE272CB827009D4AF9 /* sidebend_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend_left.mp4; sourceTree = "<group>"; };
@@ -227,6 +229,10 @@
 		B253C8E6272CBDFA009D4AF9 /* reachbackchest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = reachbackchest.mp4; sourceTree = "<group>"; };
 		B253C8E8272CBFA3009D4AF9 /* punhos_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = punhos_right.mp4; sourceTree = "<group>"; };
 		B253C8E9272CBFA3009D4AF9 /* punhos_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = punhos_left.mp4; sourceTree = "<group>"; };
+		B253C8EC272CC33D009D4AF9 /* quadriceps_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = quadriceps_right.mp4; sourceTree = "<group>"; };
+		B253C8ED272CC33D009D4AF9 /* lateral_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lateral_right.mp4; sourceTree = "<group>"; };
+		B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = quadriceps_left.mp4; sourceTree = "<group>"; };
+		B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toetouch.mp4; sourceTree = "<group>"; };
 		B25402CD27179B7300C088C4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		B259182A271E099D0083176D /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
 		B259182C271E09C20083176D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -621,9 +627,12 @@
 		CBB1540C2729DCDA001E8E15 /* Flexibility */ = {
 			isa = PBXGroup;
 			children = (
-				CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */,
+				B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */,
+				B253C8EC272CC33D009D4AF9 /* quadriceps_right.mp4 */,
 				CBB154192729E0C7001E8E15 /* lateral_left.mp4 */,
-				B234AB37272A2957006F5BBF /* toetouch.mp4 */,
+				B253C8ED272CC33D009D4AF9 /* lateral_right.mp4 */,
+				CBB154182729E0C7001E8E15 /* esticarbracos.mp4 */,
+				B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */,
 			);
 			path = Flexibility;
 			sourceTree = "<group>";
@@ -844,9 +853,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB0C908272B47CC006FE760 /* StretchDid.mp3 in Resources */,
-				B234AB38272A2957006F5BBF /* toetouch.mp4 in Resources */,
 				B234AB34272A2909006F5BBF /* panturrilha.mp4 in Resources */,
 				B2185FEA2707A0AC00A4ACAE /* LaunchScreen.storyboard in Resources */,
+				B253C8F1272CC33E009D4AF9 /* lateral_right.mp4 in Resources */,
 				B2D781A02728B66100B4FE14 /* sidebend2hands_right.mp4 in Resources */,
 				B253C8DB272CB817009D4AF9 /* ombros_left.mp4 in Resources */,
 				B2185FE72707A0AC00A4ACAE /* Assets.xcassets in Resources */,
@@ -864,13 +873,16 @@
 				9CB0C87B27286F4F006FE760 /* Categories.storyboard in Resources */,
 				9CB0C8A027287A75006FE760 /* Reward.storyboard in Resources */,
 				9CB0C87627286F2E006FE760 /* CategoriesCustomView.xib in Resources */,
+				B253C8F3272CC33E009D4AF9 /* toetouch.mp4 in Resources */,
 				B253C8EB272CBFA3009D4AF9 /* punhos_left.mp4 in Resources */,
 				B234AB35272A2909006F5BBF /* squat_left.mp4 in Resources */,
 				CBB154122729DE22001E8E15 /* pescoco_right.mp4 in Resources */,
 				B253C8EA272CBFA3009D4AF9 /* punhos_right.mp4 in Resources */,
 				B253C8E5272CBDF0009D4AF9 /* squat_right.mp4 in Resources */,
 				9CB0C88B272876B5006FE760 /* Stretch.storyboard in Resources */,
+				B253C8F0272CC33E009D4AF9 /* quadriceps_right.mp4 in Resources */,
 				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
+				B253C8F2272CC33E009D4AF9 /* quadriceps_left.mp4 in Resources */,
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
 				9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */,
 				CBB1541B2729E0C7001E8E15 /* esticarbracos.mp4 in Resources */,

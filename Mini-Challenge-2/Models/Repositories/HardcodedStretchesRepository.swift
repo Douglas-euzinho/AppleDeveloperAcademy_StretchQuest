@@ -37,26 +37,26 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 externalLink: nil,
                 isContinuation: false))
             
-//            list.append(Stretch(
-//                title: "Quadriceps Left Leg",
-//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-//                videoName: "",
-//                durationInSeconds: 20,
-//                type: .flexibility,
-//                externalLink: nil,
-//                isContinuation: false))
-            
-//            list.append(Stretch(
-//                title: "Quadriceps Right Leg",
-//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-//                videoName: "",
-//                durationInSeconds: 20,
-//                type: .flexibility,
-//                externalLink: nil,
-//                isContinuation: true))
+            list.append(Stretch(
+                title: "Quadriceps Left Leg",
+                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+                videoName: "quadriceps_left",
+                durationInSeconds: 20,
+                type: .flexibility,
+                externalLink: nil,
+                isContinuation: false))
             
             list.append(Stretch(
-                title: "Lateral Stretch",
+                title: "Quadriceps Right Leg",
+                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+                videoName: "quadriceps_right",
+                durationInSeconds: 20,
+                type: .flexibility,
+                externalLink: nil,
+                isContinuation: true))
+            
+            list.append(Stretch(
+                title: "Lateral Stretch Left",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
                 videoName: "lateral_left",
                 durationInSeconds: 20,
@@ -64,14 +64,14 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 externalLink: nil,
                 isContinuation: false))
             
-//            list.append(Stretch(
-//                title: "Lateral Stretch Right",
-//                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-//                videoName: "",
-//                durationInSeconds: 20,
-//                type: .flexibility,
-//                externalLink: nil,
-//                isContinuation: true))
+            list.append(Stretch(
+                title: "Lateral Stretch Right",
+                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+                videoName: "lateral_right",
+                durationInSeconds: 20,
+                type: .flexibility,
+                externalLink: nil,
+                isContinuation: true))
             
             //Falta um alongamento!
             
