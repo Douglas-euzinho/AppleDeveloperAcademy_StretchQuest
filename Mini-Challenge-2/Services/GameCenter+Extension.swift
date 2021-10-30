@@ -52,7 +52,7 @@ extension ProfileViewController: GKGameCenterControllerDelegate{
                     leader = PostureStretches
                     leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
                         if let score = local?.score{
-                            var opa = score
+                            let opa = score
                             self.countStrengthSessions(number: opa+1)
                             print("força: \(opa), força: \(score)")
                         }
@@ -81,7 +81,7 @@ extension ProfileViewController: GKGameCenterControllerDelegate{
                     leader = PostureStretches
                     leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
                         if let score = local?.score{
-                            var opa = score
+                            let opa = score
                             self.countFlexibilitySessions(number: opa+1)
                             print("flexibilidade: \(opa), flexibilidade: \(score)")
                         }
@@ -110,7 +110,7 @@ extension ProfileViewController: GKGameCenterControllerDelegate{
                     leader = PostureStretches
                     leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
                         if let score = local?.score{
-                            var opa = score
+                            let opa = score
                             self.countPostureSessions(number: opa+1)
                             print("posture: \(opa), posture: \(score)")
                         }
