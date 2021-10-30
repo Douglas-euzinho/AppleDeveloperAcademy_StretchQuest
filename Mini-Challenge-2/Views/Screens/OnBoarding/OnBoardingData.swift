@@ -21,9 +21,9 @@ struct OnboardingData: Hashable, Identifiable {
 
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disadvantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
         OnboardingData(id: 1, background: defaultBackground2, imagePath: "", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
-        OnboardingData(id: 2, background: defaultBackground3, imagePath: "", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges.")
+        OnboardingData(id: 2, background: defaultBackground3, imagePath: "", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges. Ready to Stretch?")
     ]
 }
 
@@ -43,49 +43,49 @@ struct OnboardingView: View {
                 VStack(alignment: .center, spacing: 10, content: {
 
                     Image(data.imagePath)
-                    //    .resizable()
+//                        .resizable()
                         .scaledToFit()
 
                     Text(data.primaryText)
                         .bold().font(.largeTitle)
-                        .offset(y: 125)
+//                        .offset(y: 50)
                         .font(.system(size: 35, weight: .bold))
                         .foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
 
                     Text(data.secondaryText)
                         .bold()
-                        .offset(y: 125)
+//                        .offset(y: 50)
                         .font(.system(size: 25, weight: .regular))
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
+//                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
                     Spacer()
                         .frame(height: 60)
                     
-                    if index == OnboardingData.list.count-1 {
-                        Button(action: {
-                       // self.presented.toggle()
-                               self.delegate.finish()
-                           }
-                                , label: {
-                                   Text("CONTINUE")
-                                   .foregroundColor(.black)
-                                   .fontWeight(.bold)
-                                   .frame(width: 220, height: 200, alignment: .center)
-                                   .frame(height: 60)
-                                   .background(Capsule().fill(Color.white))
-
-                           })
-                            .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
-                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
-                            .offset(y: 100)
-                    }
+//                    if index == OnboardingData.list.count-1 {
+//                        Button(action: {
+//                       // self.presented.toggle()
+//                               self.delegate.finish()
+//                           }
+//                                , label: {
+//                                   Text("CONTINUE")
+//                                   .foregroundColor(.black)
+//                                   .fontWeight(.bold)
+//                                   .frame(width: 220, height: 200, alignment: .center)
+//                                   .frame(height: 60)
+//                                   .background(Capsule().fill(Color.white))
+//
+//                           })
+//                            .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
+////                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
+////                            .offset(y: 10)
+//                    }
 
                 })
                     .ignoresSafeArea()
