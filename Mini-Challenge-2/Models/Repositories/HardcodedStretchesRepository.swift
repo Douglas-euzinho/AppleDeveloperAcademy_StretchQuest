@@ -22,7 +22,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Arms Up",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "esticarbracos",
+                videoName: "armsup",
                 durationInSeconds: 20,
                 type: .flexibility,
                 externalLink: nil,
@@ -76,16 +76,6 @@ public class HardcodedStretchesRepository: StretchesRepository {
             //Falta um alongamento!
             
         case .posture:
-            //---
-            list.append(Stretch(
-                title: "Dynamic side Bend",
-                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "sidebend2hands_right",
-                durationInSeconds: 10,
-                type: .posture,
-                externalLink: nil,
-                isContinuation: false))
-            
             //--
             
             //Shoulder stretch left
@@ -165,6 +155,16 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
                 videoName: "torsotwist",
                 durationInSeconds: 20,
+                type: .posture,
+                externalLink: nil,
+                isContinuation: false))
+            
+            //---
+            list.append(Stretch(
+                title: "Dynamic side Bend",
+                instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
+                videoName: "sidebend2hands",
+                durationInSeconds: 10,
                 type: .posture,
                 externalLink: nil,
                 isContinuation: false))
