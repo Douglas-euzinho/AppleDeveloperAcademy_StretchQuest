@@ -10,7 +10,7 @@ import UIKit
 import GameKit
 import GameplayKit
 
-extension CategoriesViewController: GKGameCenterControllerDelegate{
+extension ProfileViewController: GKGameCenterControllerDelegate{
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         
         gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -44,6 +44,23 @@ extension CategoriesViewController: GKGameCenterControllerDelegate{
             }
         }
     }
+    func getStrengthScore(){
+        if GKLocalPlayer.local.isAuthenticated{
+            var leader = GKLeaderboard()
+            GKLeaderboard.loadLeaderboards(IDs: ["StrengthStretches"]) { [] (boards, error) in
+                if let PostureStretches = boards?.first{
+                    leader = PostureStretches
+                    leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
+                        if let score = local?.score{
+                            var opa = score
+                            self.countStrengthSessions(number: opa+1)
+                            print("força: \(opa), força: \(score)")
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     //função para salvar o placar de flexibilidade
     func countFlexibilitySessions(number: Int){
@@ -52,6 +69,24 @@ extension CategoriesViewController: GKGameCenterControllerDelegate{
                 if let error = error{
                     print(error.localizedDescription)
                 }else{}
+            }
+        }
+    }
+    func getFlexibilityScore(){
+        if GKLocalPlayer.local.isAuthenticated{
+            var leader = GKLeaderboard()
+            
+            GKLeaderboard.loadLeaderboards(IDs: ["FlexibilityStretches"]) { [] (boards, error) in
+                if let PostureStretches = boards?.first{
+                    leader = PostureStretches
+                    leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
+                        if let score = local?.score{
+                            var opa = score
+                            self.countFlexibilitySessions(number: opa+1)
+                            print("flexibilidade: \(opa), flexibilidade: \(score)")
+                        }
+                    }
+                }
             }
         }
     }
@@ -66,22 +101,41 @@ extension CategoriesViewController: GKGameCenterControllerDelegate{
             }
         }
     }
+    func getPostureScore(){
+        if GKLocalPlayer.local.isAuthenticated{
+            var leader = GKLeaderboard()
+            
+            GKLeaderboard.loadLeaderboards(IDs: ["PostureStretches"]) { [] (boards, error) in
+                if let PostureStretches = boards?.first{
+                    leader = PostureStretches
+                    leader.loadEntries(for: [GKLocalPlayer.local], timeScope: .allTime) { [] (local, entries, error) in
+                        if let score = local?.score{
+                            var opa = score
+                            self.countPostureSessions(number: opa+1)
+                            print("posture: \(opa), posture: \(score)")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
     
     //MARK: - função para chamar e enviar o placar pro GC. Deve ser chamado essa função ao final da sessão
     //função para enviar o placar de força
     func callGameCenterStrength(_ sender: Any){
-        countStrengthSessions(number: sessionStrengthDid)
+        getStrengthScore()
     }
     
     //função para enviar o placar de flexibilidade
     func callGameCenterFlexibility(_ sender: Any){
-        countFlexibilitySessions(number: sessionFlexibilityDid)
+        getFlexibilityScore()
     }
     
     //função para enviar o placar de postura
     func callGameCenterPosture(_ sender: Any){
-        countPostureSessions(number: sessionPostureDid)
+        getPostureScore()
     }
     
     
@@ -97,6 +151,14 @@ extension CategoriesViewController: GKGameCenterControllerDelegate{
         let viewController = GKGameCenterViewController(state: .achievements)
         viewController.gameCenterDelegate = self
         present(viewController, animated: true, completion: nil)
+    }
+    
+    //MARK: - função para mostrar a tela principal. Chamado ao clicar em algum botão específico.
+    func transitionToGameCenterPage(){
+        let viewController = GKGameCenterViewController(state: .default)
+        viewController.gameCenterDelegate = self
+        present(viewController, animated: true, completion: nil)
+        self.getPostureScore()
     }
     
     //MARK: - Função geral para desbloquear conquista especificada no parâmetro. Chamado em qualquer canto

@@ -31,6 +31,25 @@ class ProfileViewController: UIViewController {
 
     var viewModel: ProfileViewModel!
     
+    var gameCenterEnabled: Bool = false
+    
+    //variáveis para checar a quantidade de sessões feitas para cada tipo
+    var sessionStrengthDid: Int = 0 //Coisa do gameCenter
+    var sessionFlexibilityDid: Int = 0 //Coisa do gameCenter
+    var sessionPostureDid: Int = 0 //Coisa do gameCenter
+    
+    //variáveis para checar se é a primeira vez ou não iniciando uma sessão do tipo do alongamento específico
+    var firstStrengthSession: Bool = false //Coisa do gameCenter
+    var firstPostureSession: Bool = false //Coisa do gameCenter
+    var firstFlexibilitySession: Bool = false //Coisa do gameCenter
+    
+    //variáveis para checar se é a primeira vez ou não iniciando o primeiro alongamento do tipo de alongamento específico
+    var firstStrengthStretch: Bool = false //Coisa do gameCenter
+    var firstPostureStretch: Bool = false //Coisa do gameCenter
+    var firstFlexibilityStretch: Bool = false //Coisa do gameCenter
+    
+    static let sharedPVC = ProfileViewController()
+    
     let maskLayer: CAShapeLayer = {
         let circle = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
         
@@ -65,6 +84,17 @@ class ProfileViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
+    }
+    
+    //MARK: - Botão do gameCenter
+    @IBAction func didTapGameCenterButton(_ sender: Any) {
+        print("entrou func?")
+        if self.gameCenterEnabled == false{
+        print("entrou if?")
+            self.authenticateUser()
+        }else{
+            self.transitionToGameCenterPage()
+        }
     }
     
     func onViewModelDidPublish() {
