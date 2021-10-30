@@ -31,10 +31,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
-        NotificationClass().notificationAppear()
+        if NotificationClass.sharedNC.firstNotification == true {
+            NotificationClass().notificationAppear()
+        } else if NotificationClass.sharedNC.day2 < CategoriesViewController.sharedGC.day {
+            NotificationClass().notificationAppear()
+        }
+        
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-    
-    
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
@@ -49,8 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        
-        
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -60,8 +62,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        
-        NotificationClass().notificationAppear()
     }
 
 }

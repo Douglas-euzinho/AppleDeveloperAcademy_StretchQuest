@@ -12,10 +12,18 @@ import UIKit
 //Aqui fica tudo relacionado a notificação
 class NotificationClass{
     
+    static let sharedNC = NotificationClass()
+    
+    //NOTIFICAÇÃO
+    var day2: Int = 0
+    var firstNotification: Bool = true
+    
     func notificationAppear() {
         //print("entrou?")
         let timeHour = getLastTimeUser()
         let seconds = randomTimeNotification()
+        self.day2 = getLastDayUser()
+        self.firstNotification = false
         //print("testezin tlg: \(seconds)")
         let number = Int.random(in: 0..<2)
     //  print("number: \(number)")
@@ -45,7 +53,7 @@ class NotificationClass{
                 if idNotificationWithTimeFixed == noti.id{
                     //print("id tempo fixado: \(idNotificationWithTimeFixed)")
                     content.title = noti.title
-                    content.subtitle = noti.subtitle
+                    content.body = noti.subtitle
                     
                     x = calculateTimeFixed(lastTimeUser: timeLastUse, timeNotification: noti.timeFixed)
                     
@@ -56,7 +64,7 @@ class NotificationClass{
                 if idNotificationWithTimeFree == noti.id{
                     //print("id tempo livre: \(idNotificationWithTimeFree)")
                     content.title = noti.title
-                    content.subtitle = noti.subtitle
+                    content.body = noti.subtitle
                     
                     x = calculateTimeFree(lastTimeUser: timeLastUse, timeNotification: noti.time)
                 }
@@ -87,7 +95,7 @@ class NotificationClass{
             if idNotificationWithoutTime == noti.id{
                 //print("id tempo aleatorio: \(idNotificationWithoutTime)")
                 content.title = noti.title
-                content.subtitle = noti.subtitle
+                content.body = noti.subtitle
                 
             }
         }
@@ -108,7 +116,7 @@ class NotificationClass{
     //MARK: - Função para escolher um tempo aleatório
     func randomTimeNotification() -> Int{
         let times: [Int] = [86400,82800,79200,75600,72000,68400,64800,61200,57600,54000,50400,46800,43200,39600,36000,32400,28800,25200,21600,18000,14400,10800,7200]
-//        let times: [Int] = [5,10,15,20,25]
+        //let times: [Int] = [5,10,15,20,25]
         return times.randomElement()!
     }
     

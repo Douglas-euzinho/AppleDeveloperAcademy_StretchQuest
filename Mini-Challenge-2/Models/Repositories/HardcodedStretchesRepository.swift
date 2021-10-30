@@ -40,7 +40,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Quadriceps Left Leg",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
+                videoName: "quadriceps_left",
                 durationInSeconds: 20,
                 type: .flexibility,
                 externalLink: nil,
@@ -49,7 +49,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Quadriceps Right Leg",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
+                videoName: "quadriceps_right",
                 durationInSeconds: 20,
                 type: .flexibility,
                 externalLink: nil,
@@ -67,7 +67,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Lateral Stretch Right",
                 instructions: "Bend your knees, lift your arms, interlace your fingers and move your arms from side to side",
-                videoName: "",
+                videoName: "lateral_right",
                 durationInSeconds: 20,
                 type: .flexibility,
                 externalLink: nil,
@@ -90,9 +90,9 @@ public class HardcodedStretchesRepository: StretchesRepository {
             
             //Shoulder stretch left
             list.append(Stretch(
-                title: "Shoulder Stretch",
+                title: "Shoulder Stretch Left",
                 instructions: "Stand tall with your shoulders relaxed and hold your arm above your elbow.",
-                videoName: "",
+                videoName: "ombros_left",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
@@ -107,7 +107,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
             
@@ -115,7 +115,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Side Neck Stretch Left",
                 instructions: "Place the arm on the affected side behind your back and use your other hand to draw your head towards the opposite side.",
-                videoName: "",
+                videoName: "pescoco_left",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
@@ -131,7 +131,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
             
@@ -139,7 +139,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Side Bend Left",
                 instructions: "Stand up straight with one arm straight overhead. Lean over to the side, taking the hand over the head",
-                videoName: "",
+                videoName: "sidebend_left",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
@@ -155,7 +155,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: true))
+                isContinuation: false))
             
             // --
         
@@ -163,7 +163,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Torso Twist",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "torso_right",
+                videoName: "torsotwist",
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
@@ -176,7 +176,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Leg-out Adductor Left",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "squat_left",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -185,7 +185,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Leg-out Adductor Right",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "squat_right",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -194,7 +194,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Back Chest Stretch",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "reachbackchest",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -203,7 +203,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Wrist Extension Left",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "punhos_left",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -212,7 +212,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Wrist Extension Right",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "punhos_right",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -230,7 +230,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Overhead Triceps Left",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "overhead_left",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,
@@ -239,7 +239,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
             list.append(Stretch(
                 title: "Overhead Triceps Right",
                 instructions: "Stand with your feet shoulder width apart. Put your hands in front of you with your elbows bent. Twist your upper body left and right.",
-                videoName: "sidebend2hands_right",
+                videoName: "overhead_right",
                 durationInSeconds: 20,
                 type: .strength,
                 externalLink: nil,

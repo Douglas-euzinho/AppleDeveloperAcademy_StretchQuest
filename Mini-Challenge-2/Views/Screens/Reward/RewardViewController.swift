@@ -13,6 +13,7 @@ protocol RewardDelegate: AnyObject {
 }
 
 class RewardViewController: UIViewController {
+    private var notiPermission: Bool = false
     
     @IBOutlet weak var animation: UIImageView!
     
@@ -48,11 +49,31 @@ class RewardViewController: UIViewController {
         self.dismiss(animated: true)
         Haptics.share.vibrateSuccess()
         self.delegate.gotoNextSession()
+        if self.notiPermission == false{
+            permissionNotification()
+        }else{
+            self.notiPermission = true
+        }
     }
     
     @IBAction func didTappedLeave(_ sender: Any) {
-        Haptics.share.vibrateError()
+        Haptics.share.vibrateSuccess()
         self.delegate.exitToCategoriesScreen()
+        if self.notiPermission == false{
+            permissionNotification()
+        }else{
+            self.notiPermission = true
+        }
+    }
+    
+    private func permissionNotification(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { sucess, error in
+            if sucess {
+                print("notificação permitida")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }

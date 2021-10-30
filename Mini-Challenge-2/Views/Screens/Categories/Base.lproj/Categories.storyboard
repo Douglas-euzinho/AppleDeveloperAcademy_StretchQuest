@@ -16,12 +16,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-JP-amU">
-                                <rect key="frame" x="84.000000000000014" y="74" width="222.33333333333337" height="57.333333333333343"/>
+                                <rect key="frame" x="78.666666666666686" y="74" width="233" height="57.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Categories">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="48"/>
+                                            <font key="NSFont" size="48" name="BebasNeue-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -64,28 +64,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4v-hT-zsa">
-                                <rect key="frame" x="334" y="44" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4v-hT-zsa">
+                                <rect key="frame" x="316" y="70.666666666666671" width="64" height="64.000000000000014"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="P4v-hT-zsa" secondAttribute="height" multiplier="1:1" id="Rq5-hf-daf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ButtonInfo" title=""/>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9R-Q2-S0c">
-                                <rect key="frame" x="11" y="123" width="65" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="leader"/>
                                 <connections>
-                                    <action selector="leader:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Nn7-rc-xNt"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-PE-OyH">
-                                <rect key="frame" x="96" y="130" width="114" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="achievements"/>
-                                <connections>
-                                    <action selector="achievements:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iVG-nq-pez"/>
+                                    <action selector="showOnBoarding" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kWK-Vf-Z8S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,7 +88,9 @@
                             <constraint firstItem="4f5-JP-amU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="gwC-6H-muQ"/>
                             <constraint firstItem="T9d-Gg-Vgl" firstAttribute="top" secondItem="r27-mR-ZKK" secondAttribute="bottom" multiplier="1.095" id="iF7-sI-e0k"/>
                             <constraint firstItem="nDy-T7-52k" firstAttribute="centerX" secondItem="4f5-JP-amU" secondAttribute="centerX" id="l65-LD-QPj"/>
+                            <constraint firstItem="P4v-hT-zsa" firstAttribute="centerY" secondItem="4f5-JP-amU" secondAttribute="centerY" id="mkD-oL-aLC"/>
                             <constraint firstItem="4f5-JP-amU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pWE-ta-h5x"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P4v-hT-zsa" secondAttribute="trailing" constant="10" id="pb0-XU-xsL"/>
                             <constraint firstItem="nDy-T7-52k" firstAttribute="top" secondItem="4f5-JP-amU" secondAttribute="bottom" multiplier="1.3" id="r0h-wP-Lo1"/>
                             <constraint firstItem="r27-mR-ZKK" firstAttribute="width" secondItem="nDy-T7-52k" secondAttribute="width" id="rhr-Ks-nko"/>
                             <constraint firstItem="T9d-Gg-Vgl" firstAttribute="centerX" secondItem="nDy-T7-52k" secondAttribute="centerX" id="trF-bx-52V"/>
@@ -112,13 +101,14 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="flexibilityCategory" destination="T9d-Gg-Vgl" id="A2f-ZI-CBP"/>
+                        <outlet property="onboardingButton" destination="P4v-hT-zsa" id="U98-4V-gr4"/>
                         <outlet property="postureCategory" destination="r27-mR-ZKK" id="NiK-JE-jCR"/>
                         <outlet property="strengthCategory" destination="nDy-T7-52k" id="gSE-Lb-xH7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.93457943925233" y="-41.46868250539957"/>
+            <point key="canvasLocation" x="100" y="-41.943127962085306"/>
         </scene>
     </scenes>
     <resources>

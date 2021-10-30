@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +40,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="dXV-5R-La8" firstAttribute="top" secondItem="ZjD-nI-nbu" secondAttribute="bottom" constant="30" id="BSS-NF-fqo"/>
                                     <constraint firstItem="XgA-eo-3Xb" firstAttribute="width" secondItem="dXV-5R-La8" secondAttribute="width" id="FAB-VG-Pw4"/>
@@ -69,6 +69,7 @@
                                         <fragment content="CONTINUE">
                                             <attributes>
                                                 <font key="NSFont" size="36" name="BebasNeue-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -88,6 +89,7 @@
                                         <fragment content="LEAVE">
                                             <attributes>
                                                 <font key="NSFont" size="36" name="BebasNeue-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -111,8 +113,8 @@
                             <constraint firstItem="Xyx-jy-98t" firstAttribute="top" secondItem="JHZ-8c-pos" secondAttribute="bottom" constant="32" id="Wlh-Xz-6W9"/>
                             <constraint firstItem="Xyx-jy-98t" firstAttribute="centerX" secondItem="JHZ-8c-pos" secondAttribute="centerX" id="Zg4-3E-hen"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JHZ-8c-pos" secondAttribute="trailing" constant="54" id="lMA-DJ-TqS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xyx-jy-98t" secondAttribute="trailing" constant="54" id="nsi-v5-Oxm"/>
                             <constraint firstItem="Xyx-jy-98t" firstAttribute="height" secondItem="JHZ-8c-pos" secondAttribute="height" id="pWN-EZ-tKt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xyx-jy-98t" secondAttribute="trailing" constant="54" id="uSt-rT-yiJ"/>
                             <constraint firstItem="JHZ-8c-pos" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0800493" id="vhB-jl-pXG"/>
                             <constraint firstItem="GZ1-Lj-faQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="54" id="xxh-MS-Mof"/>
                             <constraint firstItem="JHZ-8c-pos" firstAttribute="top" secondItem="GZ1-Lj-faQ" secondAttribute="bottom" multiplier="1.1" id="zGq-JW-lXR"/>

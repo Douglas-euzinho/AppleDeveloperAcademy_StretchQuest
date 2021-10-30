@@ -7,12 +7,15 @@
 
 import UIKit
 import Core
+import SwiftUI
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
     @IBOutlet weak var cameraButton: UICircle!
+    
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var strengthProgress: UIStackView!
     
@@ -28,6 +31,25 @@ class ProfileViewController: UIViewController {
 
     var viewModel: ProfileViewModel!
     
+    var gameCenterEnabled: Bool = false
+    
+    //variáveis para checar a quantidade de sessões feitas para cada tipo
+    var sessionStrengthDid: Int = 0 //Coisa do gameCenter
+    var sessionFlexibilityDid: Int = 0 //Coisa do gameCenter
+    var sessionPostureDid: Int = 0 //Coisa do gameCenter
+    
+    //variáveis para checar se é a primeira vez ou não iniciando uma sessão do tipo do alongamento específico
+    var firstStrengthSession: Bool = false //Coisa do gameCenter
+    var firstPostureSession: Bool = false //Coisa do gameCenter
+    var firstFlexibilitySession: Bool = false //Coisa do gameCenter
+    
+    //variáveis para checar se é a primeira vez ou não iniciando o primeiro alongamento do tipo de alongamento específico
+    var firstStrengthStretch: Bool = false //Coisa do gameCenter
+    var firstPostureStretch: Bool = false //Coisa do gameCenter
+    var firstFlexibilityStretch: Bool = false //Coisa do gameCenter
+    
+    static let sharedPVC = ProfileViewController()
+    
     let maskLayer: CAShapeLayer = {
         let circle = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
         
@@ -38,8 +60,44 @@ class ProfileViewController: UIViewController {
         return overlay
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.viewModel.didPublish = self.onViewModelDidPublish
+       
+        // Do any additional setup after loading the view.
+        nameLabel.isUserInteractionEnabled = true
+        
+        setupGesturesCameraButton()
+        setupGesturesName()
+        
+        fetchUser()
+        
+        configureImageProfile()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.requestCurrentUserAttributes()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
+    }
+    
+    //MARK: - Botão do gameCenter
+    @IBAction func didTapGameCenterButton(_ sender: Any) {
+        print("entrou func?")
+        if self.gameCenterEnabled == false{
+        print("entrou if?")
+            self.authenticateUser()
+        }else{
+            self.transitionToGameCenterPage()
+        }
+    }
+    
     func onViewModelDidPublish() {
-                
         self.set(
             progress: self.viewModel.userAttributes.flexibility,
             to: self.flexibilityProgress)
@@ -55,14 +113,11 @@ class ProfileViewController: UIViewController {
         self.flexibilityLabel.text = "Level \(self.viewModel.userAttributes.flexibility)"
         self.postureLabel.text = "Level \(self.viewModel.userAttributes.posture)"
         self.strengthLabel.text = "Level \(self.viewModel.userAttributes.strength)"
-        
-        
     }
     
     func set(progress: Int, to stackViewProgressIndicator: UIStackView){
         
-        let progressBlocks = stackViewProgressIndicator
-            .arrangedSubviews.prefix(progress)
+        let progressBlocks = stackViewProgressIndicator.arrangedSubviews.prefix(progress)
         
         let imagem = UIImage(named: "ok2")
         
@@ -75,28 +130,6 @@ class ProfileViewController: UIViewController {
         })
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.viewModel.didPublish = self.onViewModelDidPublish
-       
-        
-        // Do any additional setup after loading the view.
-        setupGestures()
-        
-        configureImageProfile()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.viewModel.requestCurrentUserAttributes()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        maskLayer.path = UIBezierPath(ovalIn: imageProfile.bounds).cgPath
-    }
-    
     private func configureImageProfile() {
         if imageProfile.image == nil {
             imageProfile.layer.addSublayer(maskLayer)
@@ -105,10 +138,16 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    private func setupGestures() {
+    private func setupGesturesCameraButton() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraButton))
         
         cameraButton.addGestureRecognizer(tap)
+    }
+    
+    private func setupGesturesName() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapName))
+        
+        nameLabel.addGestureRecognizer(tap)
     }
     
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
@@ -122,18 +161,62 @@ class ProfileViewController: UIViewController {
             self.openCamera(source: .photoLibrary)
         }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { handler in
+            self.dismiss(animated: true)
+        }
+        
         alert.addAction(camera)
         alert.addAction(library)
+        alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
     }
     
-    private func openCamera(source: UIImagePickerController.SourceType) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = source
+    @objc private func didTapName(_ sender: UITapGestureRecognizer) {
+        let alertController = UIAlertController(title: "Write your name", message: nil, preferredStyle: .alert)
         
-        present(picker, animated: true)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter your name"
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert in
+            let nameTextField = alertController.textFields![0] as UITextField
+            
+            if let text = nameTextField.text {
+                guard !text.isEmpty else { return }
+                
+                DatabaseUser.instance.saveNameInCore(text)
+                
+                self.nameLabel.text = text
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func savePhoto() {
+        guard let image = imageProfile.image else { return }
+        
+        if let jpg = image.jpegData(compressionQuality: 0.5) {
+            DatabaseUser.instance.saveImageInCore(jpg)
+        }
+    }
+    
+    func fetchUser() {
+        let user = DatabaseUser.instance.user
+        
+        if let imageProfile = user?.imageProfile {
+            self.imageProfile.image = UIImage(data: imageProfile)
+        }
+        
+        if let name = user?.name {
+            self.nameLabel.text = name
+        }
     }
 
 }
@@ -141,20 +224,6 @@ class ProfileViewController: UIViewController {
 //EXTENSÃO DA CLASSE QUE VAI TER A CAMERA(A DE PERFIL)
 //PROVAVELMENTE VAI TER Q HERDAR O UINavigationControllerDelegate
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    /*
-     1-
-     TER UMA VARIÁVEL DO TIPO UIImageView
-     
-     2-
-     COLOCAR DENTRO DA FUNÇÃO DO BOTÃO DA CAMERA:
-     "
-     let picker = UIImagePickerController()
-     picker.sourceType = .camera
-     picker.delegate = self
-     present(picker, animated: true)
-     "
-     */
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -170,6 +239,16 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
         
         imageProfile.image = image
+        
+        savePhoto()
+    }
+    
+    func openCamera(source: UIImagePickerController.SourceType) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = source
+        
+        present(picker, animated: true)
     }
     
 }

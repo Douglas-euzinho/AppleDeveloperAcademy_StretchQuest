@@ -16,27 +16,14 @@ protocol CategoriesDelegate: AnyObject {
 
 class CategoriesViewController: UIViewController {
     
-    //checar se foi autenticado ou não no game center
-    var gameCenterEnabled: Bool = false //Coisa do gameCenter
+    //COISA DA NOTIFICAÇÃO
+    let date = Date()
+    let calendar = Calendar.current
+    var day: Int = 0
     
-    //variáveis para checar a quantidade de sessões feitas para cada tipo
-    var sessionStrengthDid: Int = 0 //Coisa do gameCenter
-    var sessionFlexibilityDid: Int = 0 //Coisa do gameCenter
-    var sessionPostureDid: Int = 0 //Coisa do gameCenter
+    static let sharedGC = CategoriesViewController()
     
-    //variáveis para checar se é a primeira vez ou não iniciando uma sessão do tipo do alongamento específico
-    var firstStrengthSession: Bool = false //Coisa do gameCenter
-    var firstPostureSession: Bool = false //Coisa do gameCenter
-    var firstFlexibilitySession: Bool = false //Coisa do gameCenter
-    
-    //variáveis para checar se é a primeira vez ou não iniciando o primeiro alongamento do tipo de alongamento específico
-    var firstStrengthStretch: Bool = false //Coisa do gameCenter
-    var firstPostureStretch: Bool = false //Coisa do gameCenter
-    var firstFlexibilityStretch: Bool = false //Coisa do gameCenter
-    
-    //compartilhamento de variáveis e funções em outras classes. Singleton
-    static let sharedGC = CategoriesViewController() //Coisa do gameCenter
-    
+    @IBOutlet weak var onboardingButton: UIButton!
     
     @IBOutlet weak var strengthCategory: UIView!
     
@@ -54,10 +41,11 @@ class CategoriesViewController: UIViewController {
         setupGestures()
         
 //        self.authenticateUser()//Coisa do gameCenter
+        self.day = calendar.component(.day, from: date) //NOTIFICAÇÃO
         
     }
     
-    func showOnBoarding() {
+    @IBAction func showOnBoarding() {
         
         let adapter = OnboardDismissDelegate()
     
@@ -72,15 +60,6 @@ class CategoriesViewController: UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         
         self.present(viewController, animated: true)
-    }
-    
-    //Coisa do gameCenter
-    @IBAction func leader(_ sender: Any) {
-        self.transitionToLeadersGameCenter()
-    }
-    //Coisa do gameCenter
-    @IBAction func achievements(_ sender: Any) {
-        self.transitionToAchievementsGameCenter()
     }
     
     private func setupGestures() {
@@ -106,26 +85,26 @@ class CategoriesViewController: UIViewController {
         //print("sender: \(sender.tag)")
         switch sender.tag {
         case strengthCategory.tag:
-            if self.firstStrengthSession == false{
+            if ProfileViewController.sharedPVC.firstStrengthSession == false{
                 //print("força entrou")
-                self.unlockAchievementSpecified(nameAchievement: "FirstStrengthSessionStarted")
-                self.firstStrengthSession = true
+                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstStrengthSessionStarted")
+                ProfileViewController.sharedPVC.firstStrengthSession = true
             }else{
                 //print("força n entrou")
             }
         case postureCategory.tag:
-            if self.firstPostureSession == false{
+            if ProfileViewController.sharedPVC.firstPostureSession == false{
                 //print("postura entrou")
-                self.unlockAchievementSpecified(nameAchievement: "FirstPostureSessionStarted")
-                self.firstPostureSession = true
+                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstPostureSessionStarted")
+                ProfileViewController.sharedPVC.firstPostureSession = true
             }else{
                 //print("postura n entrou")
             }
         case flexibilityCategory.tag:
-            if self.firstFlexibilitySession == false{
+            if ProfileViewController.sharedPVC.firstFlexibilitySession == false{
                 //print("flexibilidade entrou")
-                self.unlockAchievementSpecified(nameAchievement: "FirstFlexibilitySessionStarted")
-                self.firstFlexibilitySession = true
+                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstFlexibilitySessionStarted")
+                ProfileViewController.sharedPVC.firstFlexibilitySession = true
             }else{
                 //print("flexibilidade n entrou")
             }

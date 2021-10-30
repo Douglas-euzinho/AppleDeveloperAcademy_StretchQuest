@@ -10,7 +10,7 @@ import Core
 
 class TransitionViewModel {
     
-    public var transitionLenghtInSeconds: Int = 3
+    public var transitionLenghtInSeconds: Int = 5
     public var onPublished: (() -> ())? = {}
     public var counter: Int = 0
     public var didFinish: Bool = false
