@@ -22,7 +22,7 @@ struct OnboardingData: Hashable, Identifiable {
     
     static let list: [OnboardingData] = [
         OnboardingData(id: 0, background: defaultBackground, imagePath: "Strength", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 1, background: defaultBackground2, imagePath: "", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
+        OnboardingData(id: 1, background: defaultBackground2, imagePath: "Strength", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
         OnboardingData(id: 2, background: defaultBackground3, imagePath: "Strength", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges.")
     ]
 }
@@ -43,12 +43,12 @@ struct OnboardingView: View {
                 VStack(alignment: .center, spacing: 10, content: {
 
                     Image(data.imagePath)
-                    //    .resizable()
+//                        .resizable()
                         .scaledToFit()
 
                     Text(data.primaryText)
                         .bold().font(.largeTitle)
-                        .offset(y: 125)
+//                        .offset(y: 50)
                         .font(.system(size: 35, weight: .bold))
                         .foregroundColor(.white)
                         .padding()
@@ -58,7 +58,7 @@ struct OnboardingView: View {
 
                     Text(data.secondaryText)
                         .bold()
-                        .offset(y: 125)
+//                        .offset(y: 50)
                         .font(.system(size: 25, weight: .regular))
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
@@ -83,8 +83,8 @@ struct OnboardingView: View {
 
                            })
                             .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
-                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
-                            .offset(y: 100)
+//                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
+//                            .offset(y: 10)
                     }
 
                 })
