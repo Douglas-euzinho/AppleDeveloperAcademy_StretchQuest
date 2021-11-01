@@ -301,7 +301,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="HelgaProfile" translatesAutoresizingMaskIntoConstraints="NO" id="og1-vm-ims">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="HelgaProfile" translatesAutoresizingMaskIntoConstraints="NO" id="og1-vm-ims">
                                 <rect key="frame" x="105" y="74" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="NVF-TG-ViO"/>
