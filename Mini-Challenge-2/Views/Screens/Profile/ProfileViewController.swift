@@ -30,6 +30,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var flexibilityProgress: UIStackView!
     
     @IBOutlet weak var flexibilityLabel: UILabel!
+    
+    private var notiPermission: Bool = false
 
     var viewModel: ProfileViewModel!
     
@@ -63,6 +65,12 @@ class ProfileViewController: UIViewController {
         setupGesturesGameCenter()
         
         fetchUser()
+        
+        if self.notiPermission == false{
+            permissionNotification()
+        }else{
+            self.notiPermission = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,6 +81,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         imageProfile.layer.cornerRadius = imageProfile.frame.width / 2
+    }
+    
+    private func permissionNotification(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { sucess, error in
+            if sucess {
+                print("notificação permitida")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func onViewModelDidPublish() {
