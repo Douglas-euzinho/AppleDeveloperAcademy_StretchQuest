@@ -61,11 +61,7 @@ struct ContentView: View {
                                     }
                                 }
                                 return Color.clear
-                            }
-                                .frame(width: 0, height: 0)
-                            , alignment: .leading
-                        )
-                        
+                            }.frame(width: 0, height: 0), alignment: .leading)
                         
                     } else {
                         
@@ -79,16 +75,10 @@ struct ContentView: View {
                 }
             })
             .frame(width: screenWidth, height: UIScreen.main.bounds.height)
-            //.tabViewStyle(PageTabViewStyle())
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .onAppear() {
                 setupAppearance()
             }
-            //Animated Indicators
-            
-           
-            
-
         }
         .edgesIgnoringSafeArea(.all)
     }
@@ -104,141 +94,7 @@ struct ContentView: View {
     func setupAppearance() {
         UIPageControl.appearance().currentPageIndicatorTintColor = .white
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
-        
-      }
-    
-//    var body: some View {
-//
-//        ZStack {
-//            GeometryReader { reader in
-//                HStack(spacing: 0) {
-//                    ForEach(OnboardingData.list) { item in
-//                        OnboardingView(
-//                            data: item
-//                        )
-//                            .frame(width: screenWidth)
-//                    }
-//                }
-//                .offset(x: xOffset)
-//                .gesture(
-//                    DragGesture()
-//                        .onChanged({ value in
-//                            onChanged(value: value)
-//                        })
-//                        .onEnded({ value in
-//                            onEnded(value: value)
-//                        })
-//                )
-//            }
-//
-//            VStack() {
-//                Spacer()
-//
-//                ZStack() {
-//                    HStack(spacing: 6) {
-//                        ForEach(0 ..< OnboardingData.list.count + 1) { i in
-//                            Circle()
-//                                .frame(width: 6, height: 6)
-//                                .scaledToFit()
-//                        }
-//                    }
-//                    .foregroundColor(.clear)
-//                    VStack(spacing: -10) {
-//                        HStack(spacing: 6) {
-//                            ForEach(0 ..< OnboardingData.list.count) { i in
-//                                if i == currentPage {
-//                                    Capsule()
-//                                        .matchedGeometryEffect(id: "page", in: namespace)
-//                                        .frame(width: 18, height: 6)
-////                                        .animation(.default)
-//                                } else {
-//                                    Circle()
-//                                        .frame(width: 6, height: 6)
-//                                }
-//                            }
-//
-//                        }
-//                    .foregroundColor(.white)
-//                    }
-//                }
-//                .offset(y: -50)
-//
-//
-//                    ZStack () {
-//                        if currentPage != lastPage {
-//                            HStack {
-//                                Button(action: {
-//                                    currentPage = lastPage
-//                                    withAnimation {
-//                                        xOffset = -screenWidth * CGFloat(currentPage)
-//                                    }
-//                                }, label: {
-//                                    Text("Skip")
-//                                        .frame(maxHeight: .infinity)
-//                                })
-//
-//                                Spacer()
-//
-//                                Button(action: {
-//                                    currentPage += 1
-//                                    withAnimation {
-//                                        xOffset = -screenWidth * CGFloat(currentPage)
-//                                    }
-//                                }, label: {
-//                                    HStack {
-//                                        Text("Next")
-//
-//                                        Image(systemName: "arrow.right")
-//                                    }
-//                                    .font(.system(size: 17, weight: .bold))
-//                                    .frame(maxHeight: .infinity)
-//                                })
-//                            }
-//                            .frame(height: 60)
-//                            .foregroundColor(.white)
-//
-//                        } else {
-//                            Button(action: {
-////                                self.presented.toggle()
-//                                self.delegate.finish()
-//
-//                            }, label: {
-//                                    Text("CONTINUE")
-//                                    .foregroundColor(.black)
-//                                    .fontWeight(.semibold)
-//                                    .frame(maxWidth: .infinity)
-//                                    .frame(height: 60)
-//                                    .background(Capsule().fill(Color.white))
-//
-//                            })
-//
-//                        }
-//                    }
-//                    .offset(y: -20)
-//                    .padding(.horizontal)
-//            }
-//        }
-//
-//        .background(Color(.white))
-//    }
-//
-//    func onChanged(value: DragGesture.Value) {
-//        xOffset = value.translation.width - (screenWidth * CGFloat(currentPage))
-//    }
-//
-//    func onEnded(value: DragGesture.Value) {
-//        if -value.translation.width >= screenWidth / 2  && currentPage < lastPage {
-//            currentPage += 1
-//        } else {
-//            if value.translation.width >= screenWidth / 2 && currentPage > firstPage {
-//                currentPage -= 1
-//            }
-//        }
-//
-//        withAnimation {
-//            xOffset = -screenWidth * CGFloat(currentPage)
-//        }
-//    }
+    }
 }
 
 
@@ -253,30 +109,25 @@ struct CustomPageIndicatorWithContinueButton: View {
     
     var body: some View {
         VStack {
-  
-            if currentTab == 2 {
             
-                    Button(action: {
-                           self.delegate.finish()
-                       }
-                            , label: {
-                               Text("LET'S DO IT")
-                               .foregroundColor(.black)
-                               .fontWeight(.bold)
-                               .frame(width: 220, height: 60, alignment: .center)
-                               .background(Capsule().fill(Color.white))
-
-                       })
-                        .padding()
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
-                        .transition(.slide)
-                
-                
+            if currentTab == 2 {
+                Button(action: {
+                    self.delegate.finish()
+                }, label: {
+                    Text("LET'S DO IT")
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                        .frame(width: 220, height: 60, alignment: .center)
+                        .background(Capsule().fill(Color.white))
+                })
+                    .padding()
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
+                    .transition(.slide)
             }
             
             HStack(spacing: 15) {
-  
+                
                 ForEach(0...2, id: \.self) { index in
                     Capsule()
                         .fill(Color.white)

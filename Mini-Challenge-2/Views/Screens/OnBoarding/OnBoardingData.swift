@@ -42,34 +42,26 @@ struct OnboardingView: View {
                 
                 Image(data.imagePath)
                     .resizable()
+                    .scaledToFit()
                     .frame(maxHeight: UIScreen.main.bounds.height / 2)
-//                        .padding(.top, 50)
-                    .padding(.horizontal, data.id == 2 ? 0 : 15)
-                    .padding(.leading, data.id == 2 ? 15 : 0)
-//                        .scaledToFit()
                 
                 Spacer()
                 
                 Text(data.primaryText)
                     .bold().font(.largeTitle)
-//                        .offset(y: 50)
                     .font(.system(size: 35, weight: .bold))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
-//                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
                 Text(data.secondaryText)
                     .bold()
-//                        .offset(y: 50)
                     .font(.system(size: 25, weight: .regular))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.5)
                     .lineLimit(3)
                     .padding(.horizontal, 15)
-//                        .padding(.top, 5)
-//                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
                 
                 Spacer()
                 
@@ -78,28 +70,6 @@ struct OnboardingView: View {
                     index: index,
                     delegate: delegate)
                     .padding(.bottom)
-                
-//                    Spacer()
-//                        .frame(height: 60)
-                
-//                    if index == OnboardingData.list.count-1 {
-//                        Button(action: {
-//                       // self.presented.toggle()
-//                               self.delegate.finish()
-//                           }
-//                                , label: {
-//                                   Text("CONTINUE")
-//                                   .foregroundColor(.black)
-//                                   .fontWeight(.bold)
-//                                   .frame(width: 220, height: 200, alignment: .center)
-//                                   .frame(height: 60)
-//                                   .background(Capsule().fill(Color.white))
-//
-//                           })
-//                            .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
-////                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
-////                            .offset(y: 10)
-//                    }
             })
         }
     }
