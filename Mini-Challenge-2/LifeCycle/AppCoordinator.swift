@@ -104,9 +104,8 @@ class AppCoordinator: Coordinator {
     override func start() {
         let mainCoordinator = MainCoordinator()
         mainCoordinator.start()
-
         
-        if !didShowUserOnboard {
+        if didShowUserOnboard {
 //            mainCoordinator.start()
             self.window.rootViewController = mainCoordinator.rootViewController
         } else {

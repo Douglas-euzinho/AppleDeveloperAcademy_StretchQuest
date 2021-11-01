@@ -39,7 +39,7 @@ struct ContentView: View {
 
     var body: some View {
         
-        ScrollView{
+        ScrollView(.horizontal) {
             TabView(selection: $currentTab, content:  {
                 ForEach(OnboardingData.list) { viewData in
                     
@@ -54,8 +54,6 @@ struct ContentView: View {
                         
                             GeometryReader { proxy -> Color in
                                 let minX = proxy.frame(in: .local).minX
-                                
-                                print(minX)
                                 
                                 DispatchQueue.main.async {
                                     withAnimation(.default){
@@ -87,13 +85,7 @@ struct ContentView: View {
                 setupAppearance()
             }
             //Animated Indicators
-            .overlay(
-                CustomPageIndicatorWithContinueButton(
-                    currentTab: currentTab,
-                    index: index,
-                    delegate: delegate)
-                ,alignment: .bottom
-            )
+            
            
             
 
@@ -271,12 +263,11 @@ struct CustomPageIndicatorWithContinueButton: View {
                                Text("LET'S DO IT")
                                .foregroundColor(.black)
                                .fontWeight(.bold)
-                               .frame(width: 220, height: 200, alignment: .center)
-                               .frame(height: 60)
+                               .frame(width: 220, height: 60, alignment: .center)
                                .background(Capsule().fill(Color.white))
 
                        })
-                        .padding(.bottom, 25)
+                        .padding()
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.3), radius: 3, x: -1, y: 5)
                         .transition(.slide)
@@ -293,17 +284,9 @@ struct CustomPageIndicatorWithContinueButton: View {
                             width: currentTab == index ? 20 : 7,
                             height: 7)
                 }
-            }
-            .padding(
-                .bottom,
-                UIApplication.shared.windows.first?.safeAreaInsets.bottom)
-                .padding(.bottom, 20)
+            }.padding()
         }
-            
-            
-        
     }
-    
 }
 
 struct Subview_Previews: PreviewProvider {

@@ -34,40 +34,54 @@ struct OnboardingView: View {
     var index: Int
     var body: some View {
         
-        VStack(spacing: 20) {
-            
-            ZStack {
-                LinearGradient(gradient: Gradient(colors: [data.background[0], data.background[1]]),startPoint: .top, endPoint: .bottom)
-                            .ignoresSafeArea()
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [data.background[0], data.background[1]]), startPoint: .top, endPoint: .bottom)
 
-                VStack(alignment: .center, spacing: 10, content: {
-
-                    Image(data.imagePath)
-//                        .resizable()
-                        .scaledToFit()
-
-                    Text(data.primaryText)
-                        .bold().font(.largeTitle)
+            VStack(alignment: .center, content: {
+                Spacer(minLength: 40)
+                
+                Image(data.imagePath)
+                    .resizable()
+                    .frame(maxHeight: UIScreen.main.bounds.height / 2)
+//                        .padding(.top, 50)
+                    .padding(.horizontal, data.id == 2 ? 0 : 15)
+                    .padding(.leading, data.id == 2 ? 15 : 0)
+//                        .scaledToFit()
+                
+                Spacer()
+                
+                Text(data.primaryText)
+                    .bold().font(.largeTitle)
 //                        .offset(y: 50)
-                        .font(.system(size: 35, weight: .bold))
-                        .foregroundColor(.white)
-                        .padding()
-                        .multilineTextAlignment(.center)
+                    .font(.system(size: 35, weight: .bold))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
 //                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
 
-
-                    Text(data.secondaryText)
-                        .bold()
+                Text(data.secondaryText)
+                    .bold()
 //                        .offset(y: 50)
-                        .font(.system(size: 25, weight: .regular))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .multilineTextAlignment(.center)
+                    .font(.system(size: 25, weight: .regular))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(3)
+                    .padding(.horizontal, 15)
+//                        .padding(.top, 5)
 //                        .animation(Animation.interpolatingSpring(stiffness: 60, damping: 10))
-
-                    Spacer()
-                        .frame(height: 60)
-                    
+                
+                Spacer()
+                
+                CustomPageIndicatorWithContinueButton(
+                    currentTab: data.id,
+                    index: index,
+                    delegate: delegate)
+                    .padding(.bottom)
+                
+//                    Spacer()
+//                        .frame(height: 60)
+                
 //                    if index == OnboardingData.list.count-1 {
 //                        Button(action: {
 //                       // self.presented.toggle()
@@ -86,13 +100,8 @@ struct OnboardingView: View {
 ////                            .shadow(color: Color.black.opacity(0.2), radius: -3, x: -1, y: -5)
 ////                            .offset(y: 10)
 //                    }
-
-                })
-                    .ignoresSafeArea()
-            }
-
+            })
         }
-
     }
 }
 
