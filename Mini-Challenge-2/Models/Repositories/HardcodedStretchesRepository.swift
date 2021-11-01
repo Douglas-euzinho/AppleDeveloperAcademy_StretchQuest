@@ -97,7 +97,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: false))
+                isContinuation: true))
             
             // --
             
@@ -121,7 +121,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: false))
+                isContinuation: true))
             
             // --
             
@@ -145,7 +145,7 @@ public class HardcodedStretchesRepository: StretchesRepository {
                 durationInSeconds: 20,
                 type: .posture,
                 externalLink: nil,
-                isContinuation: false))
+                isContinuation: true))
             
             // --
         

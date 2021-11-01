@@ -61,6 +61,7 @@ class RewardViewController: UIViewController {
         self.delegate.exitToCategoriesScreen()
         if self.notiPermission == false{
             permissionNotification()
+            permissionNotification()
         }else{
             self.notiPermission = true
         }
