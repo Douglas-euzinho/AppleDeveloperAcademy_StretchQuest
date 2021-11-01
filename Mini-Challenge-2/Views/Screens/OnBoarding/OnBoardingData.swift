@@ -21,9 +21,9 @@ struct OnboardingData: Hashable, Identifiable {
 
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 1, background: defaultBackground2, imagePath: "", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
-        OnboardingData(id: 2, background: defaultBackground3, imagePath: "", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges. Ready to Stretch?")
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "onboard1", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
+        OnboardingData(id: 1, background: defaultBackground2, imagePath: "onboard2", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
+        OnboardingData(id: 2, background: defaultBackground3, imagePath: "onboard3", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges. Ready to Stretch?")
     ]
 }
 
