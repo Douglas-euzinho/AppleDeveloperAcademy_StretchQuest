@@ -127,38 +127,50 @@ class StretchViewController: UIViewController {
         switch(self.viewModel.category){
         case .flexibility:
             rewardsViewController.punctuation.text = "Flexibility +1"
-            ProfileViewController.sharedPVC.sessionFlexibilityDid += 1
             
-            ProfileViewController.sharedPVC.callGameCenterFlexibility(ProfileViewController.sharedPVC.sessionFlexibilityDid)
-            
-            if ProfileViewController.sharedPVC.sessionFlexibilityDid == 1{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get1PointInFlexibility")
-            }else if ProfileViewController.sharedPVC.sessionFlexibilityDid == 5{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get5PointsInFlexibility")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                ProfileViewController.sharedPVC.sessionFlexibilityDid += 1
+                ProfileViewController.sharedPVC.callGameCenterFlexibility(ProfileViewController.sharedPVC.sessionFlexibilityDid)
+                
+                if ProfileViewController.sharedPVC.sessionFlexibilityDid == 1{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get1PointInFlexibility")
+                }else if ProfileViewController.sharedPVC.sessionFlexibilityDid >= 5{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get1PointInFlexibility")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get5PointsInFlexibility")
+                }
             }
+            
         case .posture:
             rewardsViewController.punctuation.text = "Posture +1"
-            ProfileViewController.sharedPVC.sessionPostureDid += 1
             
-            ProfileViewController.sharedPVC.callGameCenterPosture(ProfileViewController.sharedPVC.sessionPostureDid)
-            
-            if ProfileViewController.sharedPVC.sessionPostureDid == 1{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInPosture")
-            }else if ProfileViewController.sharedPVC.sessionPostureDid == 5{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have5PointsInPosture")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                ProfileViewController.sharedPVC.sessionPostureDid += 1
+                ProfileViewController.sharedPVC.callGameCenterPosture(ProfileViewController.sharedPVC.sessionPostureDid)
+                
+                if ProfileViewController.sharedPVC.sessionPostureDid == 1{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInPosture")
+                }else if ProfileViewController.sharedPVC.sessionPostureDid >= 5{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInPosture")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have5PointsInPosture")
+                }
             }
         case .strength:
             rewardsViewController.punctuation.text = "Strength +1"
-            ProfileViewController.sharedPVC.sessionStrengthDid += 1
             
-            ProfileViewController.sharedPVC.callGameCenterStrength(ProfileViewController.sharedPVC.sessionStrengthDid)
-            
-            if ProfileViewController.sharedPVC.sessionStrengthDid == 1{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInStrength")
-            }else if ProfileViewController.sharedPVC.sessionStrengthDid == 5{
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have5PointsInStrength")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                ProfileViewController.sharedPVC.sessionStrengthDid += 1
+                ProfileViewController.sharedPVC.callGameCenterStrength(ProfileViewController.sharedPVC.sessionStrengthDid)
+                if ProfileViewController.sharedPVC.sessionStrengthDid == 1{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInStrength")
+                }else if ProfileViewController.sharedPVC.sessionStrengthDid >= 5{
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have1PointInStrength")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have5PointsInStrength")
+                }
             }
-        }
+            }
         
         rewardsViewController.delegate = self
     }
@@ -170,28 +182,37 @@ class StretchViewController: UIViewController {
         //print("********TESTE \(self.viewModel.category ) FIM TESTE********")
         switch (self.viewModel.category) {
         case .strength:
-            if ProfileViewController.sharedPVC.firstStrengthStretch == false{
-                //print("força entrou")
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstStrengthStretch")
-                ProfileViewController.sharedPVC.firstStrengthStretch = true
-            }else{
-                //print("força n entrou")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                if ProfileViewController.sharedPVC.firstStrengthStretch == false{
+                    //print("força entrou")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstStrengthStretch")
+                    ProfileViewController.sharedPVC.firstStrengthStretch = true
+                }else{
+                    //print("força n entrou")
+                }
             }
         case .posture:
-            if ProfileViewController.sharedPVC.firstPostureStretch == false{
-                //print("postura entrou")
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstPostureStretch")
-                ProfileViewController.sharedPVC.firstPostureStretch = true
-            }else{
-                //print("postura n entrou")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                if ProfileViewController.sharedPVC.firstPostureStretch == false{
+                    //print("postura entrou")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstPostureStretch")
+                    ProfileViewController.sharedPVC.firstPostureStretch = true
+                }else{
+                    //print("postura n entrou")
+                }
             }
         case .flexibility:
-            if ProfileViewController.sharedPVC.firstFlexibilityStretch == false{
-                //print("flexibilidade entrou")
-                ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstFlexibilityStretch")
-                ProfileViewController.sharedPVC.firstFlexibilityStretch = true
-            }else{
-                //print("flexibilidade n entrou")
+            var x = ProfileViewController.sharedPVC.checkingIfUserIsAuthenticated()
+            if x == true{
+                if ProfileViewController.sharedPVC.firstFlexibilityStretch == false{
+                    //print("flexibilidade entrou")
+                    ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "FirstFlexibilityStretch")
+                    ProfileViewController.sharedPVC.firstFlexibilityStretch = true
+                }else{
+                    //print("flexibilidade n entrou")
+                }
             }
         }
 

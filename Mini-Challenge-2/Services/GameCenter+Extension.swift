@@ -27,9 +27,15 @@ extension ProfileViewController: GKGameCenterControllerDelegate{
                 self.present(view!, animated: true, completion: nil)
             }else{
                 print(GKLocalPlayer.local.isAuthenticated)
-                self.gameCenterEnabled = true
             }
         }
+    }
+    
+    func checkingIfUserIsAuthenticated() -> Bool{
+        if GKLocalPlayer.local.isAuthenticated{
+            return true
+        }
+        return false
     }
     
     

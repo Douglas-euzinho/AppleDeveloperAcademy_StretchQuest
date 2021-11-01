@@ -202,6 +202,7 @@ class ProfileViewController: UIViewController {
     @objc private func didTapGameCenterButton(_ sender: UITapGestureRecognizer) {
         if self.gameCenterEnabled == false {
             self.authenticateUser()
+            self.gameCenterEnabled = true
         } else{
             self.transitionToGameCenterPage()
         }
