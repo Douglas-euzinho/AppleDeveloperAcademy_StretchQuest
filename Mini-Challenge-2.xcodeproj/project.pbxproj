@@ -85,12 +85,12 @@
 		B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */; };
 		B29E4AA2272D089400207CB3 /* sidebend2hands.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B29E4AA1272D089400207CB3 /* sidebend2hands.mp4 */; };
 		B2D7819E272899B500B4FE14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C8AB27287B56006FE760 /* Profile.storyboard */; };
+		B2FA2BD72730652D00CA8DB0 /* armsup.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B2FA2BD62730652D00CA8DB0 /* armsup.mp4 */; };
 		CB2A6BB42721F11000F144D8 /* RewardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */; };
 		CB72BA472727512600683982 /* SetOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72BA462727512600683982 /* SetOrientation.swift */; };
 		CBB154122729DE22001E8E15 /* pescoco_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */; };
 		CBB154132729DE22001E8E15 /* sidebend_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154102729DE22001E8E15 /* sidebend_right.mp4 */; };
 		CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154112729DE22001E8E15 /* ombros_right.mp4 */; };
-		CBB1541B2729E0C7001E8E15 /* armsup.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154182729E0C7001E8E15 /* armsup.mp4 */; };
 		CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CBB154192729E0C7001E8E15 /* lateral_left.mp4 */; };
 		CBE9125C271B933F0006898A /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125B271B933F0006898A /* PauseViewController.swift */; };
 		CBE9125F271E43160006898A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9125E271E43160006898A /* UIColor+Extension.swift */; };
@@ -234,6 +234,7 @@
 		B275043227272D4200768BC8 /* CategoriesCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCustomView.swift; sourceTree = "<group>"; };
 		B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		B29E4AA1272D089400207CB3 /* sidebend2hands.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend2hands.mp4; sourceTree = "<group>"; };
+		B2FA2BD62730652D00CA8DB0 /* armsup.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = armsup.mp4; sourceTree = "<group>"; };
 		B2FA9B24272CFB17003C9A95 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Profile.storyboard"; sourceTree = "<group>"; };
 		B2FA9B27272CFBAF003C9A95 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
@@ -241,7 +242,6 @@
 		CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_right.mp4; sourceTree = "<group>"; };
 		CBB154102729DE22001E8E15 /* sidebend_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend_right.mp4; sourceTree = "<group>"; };
 		CBB154112729DE22001E8E15 /* ombros_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ombros_right.mp4; sourceTree = "<group>"; };
-		CBB154182729E0C7001E8E15 /* armsup.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = armsup.mp4; sourceTree = "<group>"; };
 		CBB154192729E0C7001E8E15 /* lateral_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lateral_left.mp4; sourceTree = "<group>"; };
 		CBE9125B271B933F0006898A /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		CBE9125E271E43160006898A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -621,7 +621,7 @@
 		CBB1540C2729DCDA001E8E15 /* Flexibility */ = {
 			isa = PBXGroup;
 			children = (
-				CBB154182729E0C7001E8E15 /* armsup.mp4 */,
+				B2FA2BD62730652D00CA8DB0 /* armsup.mp4 */,
 				B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */,
 				B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */,
 				B253C8EC272CC33D009D4AF9 /* quadriceps_right.mp4 */,
@@ -863,6 +863,7 @@
 				B29E4AA2272D089400207CB3 /* sidebend2hands.mp4 in Resources */,
 				CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */,
 				B2D7819E272899B500B4FE14 /* Profile.storyboard in Resources */,
+				B2FA2BD72730652D00CA8DB0 /* armsup.mp4 in Resources */,
 				B253C8E3272CBDE3009D4AF9 /* overhead_right.mp4 in Resources */,
 				9CB0C87B27286F4F006FE760 /* Categories.storyboard in Resources */,
 				9CB0C8A027287A75006FE760 /* Reward.storyboard in Resources */,
@@ -879,7 +880,6 @@
 				B253C8F2272CC33E009D4AF9 /* quadriceps_left.mp4 in Resources */,
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
 				9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */,
-				CBB1541B2729E0C7001E8E15 /* armsup.mp4 in Resources */,
 				B253C8DF272CB828009D4AF9 /* sidebend_left.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
