@@ -35,6 +35,7 @@ class StretchesCoordinator: Coordinator {
         
         stretchViewController.viewModel = viewModel
         stretchViewController.exitToCategories = {
+            MainCoordinator.stretchCoordinator = nil
             navigationController.dismiss(animated: true, completion: nil)
         }
 

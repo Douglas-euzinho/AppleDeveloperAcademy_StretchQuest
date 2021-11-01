@@ -133,6 +133,8 @@ class AppCoordinator: Coordinator {
 
 class MainCoordinator: Coordinator, CategoriesDelegate {
     
+    public static var stretchCoordinator: StretchesCoordinator?
+    
     var rootViewController: UIViewController {
         self.tabController
     }
@@ -155,7 +157,6 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         let profileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         
         profileViewController.viewModel = ProfileViewModel(CoreDataStrechesSessionsRepository())
-
         
         self.tabController.tabBar.layer.shadowOffset  = CGSize(width: 0, height: 0)
         self.tabController.tabBar.layer.shadowRadius  = 10
@@ -178,6 +179,8 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
             (tabController.viewControllers!.first!), tabController,
             stretchType: category)
         
+        Self.stretchCoordinator = coordinator
+        
         coordinator.start()
         self.finish()
     }
@@ -187,6 +190,8 @@ class MainCoordinator: Coordinator, CategoriesDelegate {
         let coordinator = StretchesCoordinator(
             (tabController.viewControllers!.first!), tabController,
             stretchType: category)
+        
+        Self.stretchCoordinator = coordinator
         
         coordinator.startStretchSessionFromOnBoarding()
         self.finish()

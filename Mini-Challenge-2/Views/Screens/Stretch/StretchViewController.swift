@@ -22,6 +22,7 @@ class StretchViewController: UIViewController {
     public let stretchVideoController = AVPlayerViewController()
     
     var firstStretch: Bool = true
+    var pausedStretch: Bool = false
 
     var viewModel: StretchesViewModel! {
         didSet {
@@ -343,6 +344,8 @@ class StretchViewController: UIViewController {
 
         self.applyBlur()
         
+        self.pausedStretch = true
+        
         self.present(pauseViewController, animated: true, completion: nil)
     }
 }
@@ -353,6 +356,7 @@ extension StretchViewController: PauseDelegate {
         self.removeBlur()
         self.viewModel.resumeCountdownTimer()
         self.resumeRingAnimation()
+        self.pausedStretch = false
     }
     
     func exitToCategoriesScreen() {
