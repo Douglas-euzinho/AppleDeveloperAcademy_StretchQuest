@@ -85,10 +85,6 @@ class StretchesCoordinator: Coordinator {
         )
         
         self.stretchViewController.viewModel = nextStretchViewModel
-        
-        nextStretchViewModel.startSession()
-        
-        self.start()
     }
     
 }
