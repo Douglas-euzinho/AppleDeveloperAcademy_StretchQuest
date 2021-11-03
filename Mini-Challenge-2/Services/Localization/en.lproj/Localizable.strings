@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Mini-Challenge-2
+
+  Created by Johnny Camacho on 02/11/21.
+  
+*/
+
+// Onboard screen
+"Welcome" = "Welcome";
+"Welcome Text" = "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle";
+
+"Attributes" = "Attributes";
+"Attributes Text" = "Increase your strength, flexibility or posture attributes with each stretching you perform";
+
+"Profile" = "Profile";
+"Profile Text" = "As the stretchings are completed, you will get healthier and willing to confront your daily challenges. Ready to Stretch?";
+
+"Ready" = "LET'S DO IT";
+
+// Categories screen
+"Strength" = "Strength";
+"Posture" = "Posture";
+"Flexibility" = "Flexibility";
+
+// Stretch screen
+"Flexibility +1" = "Flexibility +1";
+"Posture +1" = "Posture +1";
+"Strength +1" = "Strength +1";
+
+// Profile screen
+"Choose source" = "Choose source";
+"Camera" = "Camera";
+"Library" = "Library";
+
+"Write your name" = "Write your name";
+"Enter your name" = "Enter your name";
+"Save" = "Save";
+
+"Cancel" = "Cancel";

@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Mini-Challenge-2
+
+  Created by Johnny Camacho on 02/11/21.
+  
+*/
+
+// Onboard screen
+"Welcome" = "Bem-Vindo";
+"Welcome Text" = "Mesmo os mais corajosos aventureiros podem sentir as desvantagens de não alongar seus músculos antes de uma batalha";
+
+"Attributes" = "Atributos";
+"Attributes Text" = "Aumente seus atributos de força, flexibilidade ou postura a cada alongamento que você realizar";
+
+"Profile" = "Perfil";
+"Profile Text" = "À medida que os alongamentos forem concluídos, você ficará mais saudável e com disposição para enfrentar os desafios diários. Pronto para alongar?";
+
+"Ready" = "VAMOS FAZÊ-LO";
+
+// Categories screen
+"Strength" = "Força";
+"Posture" = "Postura";
+"Flexibility" = "Flexibilidade";
+
+// Stretch screen
+"Flexibility +1" = "Flexibilidade +1";
+"Posture +1" = "Postura +1";
+"Strength +1" = "Força +1";
+
+// Profile screen
+"Choose source" = "Escolha a fonte";
+"Camera" = "Câmera";
+"Library" = "Biblioteca";
+
+"Write your name" = "Escreva seu nome";
+"Enter your name" = "Digite seu nome";
+"Save" = "Salvar";
+
+"Cancel" = "Cancelar";

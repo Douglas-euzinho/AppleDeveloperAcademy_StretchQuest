@@ -1,0 +1,15 @@
+
+/* Class = "UIViewController"; title = "Reward"; ObjectID = "Y6W-OH-hqX"; */
+"Y6W-OH-hqX.title" = "Recompensa";
+
+/* Class = "UILabel"; text = "Sessão completa!"; ObjectID = "dXV-5R-La8"; */
+"dXV-5R-La8.text" = "Sessão completa!";
+
+/* Class = "UILabel"; text = "Pontuação"; ObjectID = "XgA-eo-3Xb"; */
+"XgA-eo-3Xb.text" = "Pontuação";
+
+/* Class = "UIButton"; configuration.title = "CONTINUAR"; ObjectID = "JHZ-8c-pos"; */
+"JHZ-8c-pos.configuration.title" = "CONTINUAR";
+
+/* Class = "UIButton"; configuration.title = "SAIR"; ObjectID = "Xyx-jy-98t"; */
+"Xyx-jy-98t.configuration.title" = "SAIR";

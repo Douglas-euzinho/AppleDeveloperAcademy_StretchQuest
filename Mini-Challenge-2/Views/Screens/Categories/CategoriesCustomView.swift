@@ -12,7 +12,7 @@ class CategoriesCustomView: UIView {
     
     @IBInspectable var title: String = "Strength" {
         didSet {
-            titleLabel.text = title
+            titleLabel.text = NSLocalizedString(title, comment: "Titulo da categoria")
         }
     }
     
@@ -46,7 +46,7 @@ class CategoriesCustomView: UIView {
         commonInit()
     }
     
-    func commonInit() {
+    private func commonInit() {
         guard let view = loadViewFromNib() else { return }
         
         view.frame = self.bounds
@@ -57,7 +57,7 @@ class CategoriesCustomView: UIView {
         contentView = view
     }
     
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         

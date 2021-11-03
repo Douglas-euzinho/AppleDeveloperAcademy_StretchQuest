@@ -1,0 +1,40 @@
+/*
+  Localizable.strings
+  Mini-Challenge-2
+
+  Created by Johnny Camacho on 02/11/21.
+  
+*/
+
+// Onboard screen
+"Welcome" = "Bienvenido";
+"Welcome Text" = "Incluso los aventureros más valientes pueden sentir las desventajas de no estirar los músculos antes de una batalla";
+
+"Attributes" = "Atributos";
+"Attributes Text" = "Aumente sus atributos de fuerza, flexibilidad o postura con cada estiramiento que realice";
+
+"Profile" = "Perfil";
+"Profile Text" = "A medida que se completen los estiramientos, se volverá más saludable y estará más dispuesto a enfrentar sus desafíos diarios. ¿Listo para estirar?";
+
+"Ready" = "VAMOS A HACERLO";
+
+// Categories screen
+"Strength" = "Fuerza";
+"Posture" = "Postura";
+"Flexibility" = "Flexibilidad";
+
+// Stretch screen
+"Flexibility +1" = "Flexibilidad +1";
+"Posture +1" = "Postura +1";
+"Strength +1" = "Fuerza +1";
+
+// Profile screen
+"Choose source" = "Elige la fuente";
+"Camera" = "Cámara";
+"Library" = "Biblioteca";
+
+"Write your name" = "Escribe tu nombre";
+"Enter your name" = "Introduzca su nombre";
+"Save" = "Ahorrar";
+
+"Cancel" = "Cancelar";

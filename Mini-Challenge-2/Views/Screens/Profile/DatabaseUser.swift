@@ -29,12 +29,14 @@ class DatabaseUser{
         }
     }
     
-    func saveImageInCore(_ img: Data) {
-        if user == nil {
-            createNewUser()
+    func saveImageInCore(_ image: UIImage) {
+        if let jpg = image.jpegData(compressionQuality: 0.5) {
+            if user == nil {
+                createNewUser()
+            }
+            
+            user!.imageProfile = jpg
         }
-        
-        user!.imageProfile = img
     }
     
     func saveNameInCore(_ name: String) {

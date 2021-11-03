@@ -17,8 +17,6 @@ class RewardViewController: UIViewController {
     
     @IBOutlet weak var animation: UIImageView!
     
-    @IBOutlet weak var congratulations: UILabel!
-    
     @IBOutlet weak var punctuation: UILabel!
     
     @IBOutlet weak var continueButton: UIButton!
@@ -29,7 +27,6 @@ class RewardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.congratulations.text = "Session completed!"
     }
     
     override func viewDidLayoutSubviews() {

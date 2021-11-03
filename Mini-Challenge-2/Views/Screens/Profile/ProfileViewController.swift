@@ -131,17 +131,17 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Botão da camera
     @objc private func didTapCameraButton(_ sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "Choose source type", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Choose source", comment: ""), message: nil, preferredStyle: .alert)
         
-        let camera = UIAlertAction(title: "Camera", style: .default) { handler in
+        let camera = UIAlertAction(title: NSLocalizedString("Camera", comment: ""), style: .default) { handler in
             self.openCamera(source: .camera)
         }
         
-        let library = UIAlertAction(title: "Library", style: .default) { handler in
+        let library = UIAlertAction(title: NSLocalizedString("Library", comment: ""), style: .default) { handler in
             self.openCamera(source: .photoLibrary)
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { handler in
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { handler in
             self.dismiss(animated: true)
         }
         
@@ -154,13 +154,13 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Botão do nome
     @objc private func didTapName(_ sender: UITapGestureRecognizer) {
-        let alertController = UIAlertController(title: "Write your name", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Write your name", comment: ""), message: nil, preferredStyle: .alert)
         
         alertController.addTextField { textField in
-            textField.placeholder = "Enter your name"
+            textField.placeholder = NSLocalizedString("Enter your name", comment: "")
         }
         
-        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert in
+        let saveAction = UIAlertAction(title: NSLocalizedString("Save", comment: ""), style: .default, handler: { alert in
             let nameTextField = alertController.textFields![0] as UITextField
             
             if let text = nameTextField.text {
@@ -172,7 +172,7 @@ class ProfileViewController: UIViewController {
             }
         })
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
@@ -186,14 +186,6 @@ class ProfileViewController: UIViewController {
             self.authenticateUser()
         } else{
             self.transitionToGameCenterPage()
-        }
-    }
-    
-    func savePhoto() {
-        guard let image = imageProfile.image else { return }
-        
-        if let jpg = image.jpegData(compressionQuality: 0.5) {
-            DatabaseUser.instance.saveImageInCore(jpg)
         }
     }
     
@@ -226,7 +218,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         imageProfile.image = image
         
-        savePhoto()
+        DatabaseUser.instance.saveImageInCore(image)
     }
     
     func openCamera(source: UIImagePickerController.SourceType) {

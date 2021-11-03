@@ -126,7 +126,7 @@ class StretchViewController: UIViewController {
         Sounds.sharedS.playSoundSessionStretchDid()
         switch(self.viewModel.category){
         case .flexibility:
-            rewardsViewController.punctuation.text = "Flexibility +1"
+            rewardsViewController.punctuation.text = NSLocalizedString("Flexibility +1", comment: "")
             ProfileViewController.sharedPVC.sessionFlexibilityDid += 1
             
             ProfileViewController.sharedPVC.callGameCenterFlexibility(ProfileViewController.sharedPVC.sessionFlexibilityDid)
@@ -137,7 +137,7 @@ class StretchViewController: UIViewController {
                 ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Get5PointsInFlexibility")
             }
         case .posture:
-            rewardsViewController.punctuation.text = "Posture +1"
+            rewardsViewController.punctuation.text = NSLocalizedString("Posture +1", comment: "")
             ProfileViewController.sharedPVC.sessionPostureDid += 1
             
             ProfileViewController.sharedPVC.callGameCenterPosture(ProfileViewController.sharedPVC.sessionPostureDid)
@@ -148,7 +148,7 @@ class StretchViewController: UIViewController {
                 ProfileViewController.sharedPVC.unlockAchievementSpecified(nameAchievement: "Have5PointsInPosture")
             }
         case .strength:
-            rewardsViewController.punctuation.text = "Strength +1"
+            rewardsViewController.punctuation.text = NSLocalizedString("Strength +1", comment: "")
             ProfileViewController.sharedPVC.sessionStrengthDid += 1
             
             ProfileViewController.sharedPVC.callGameCenterStrength(ProfileViewController.sharedPVC.sessionStrengthDid)

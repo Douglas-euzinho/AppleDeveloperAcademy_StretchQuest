@@ -21,9 +21,9 @@ struct OnboardingData: Hashable, Identifiable {
 
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, background: defaultBackground, imagePath: "onboard1", primaryText: "Welcome", secondaryText: "Even the bravest adventurers can feel the disavantages of not stretching their muscles before a battle"),
-        OnboardingData(id: 1, background: defaultBackground2, imagePath: "onboard2", primaryText: "Attributes", secondaryText: "Increase your strength, flexibility or posture attributes with each stretching you perform"),
-        OnboardingData(id: 2, background: defaultBackground3, imagePath: "onboard3", primaryText: "Profile", secondaryText: "As the stretchings are completed, you will get healthier and willing to confront your daily challenges. Ready to Stretch?")
+        OnboardingData(id: 0, background: defaultBackground, imagePath: "onboard1", primaryText: "Welcome", secondaryText: "Welcome Text"),
+        OnboardingData(id: 1, background: defaultBackground2, imagePath: "onboard2", primaryText: "Attributes", secondaryText: "Attributes Text"),
+        OnboardingData(id: 2, background: defaultBackground3, imagePath: "onboard3", primaryText: "Profile", secondaryText: "Profile Text")
     ]
 }
 
@@ -47,14 +47,14 @@ struct OnboardingView: View {
                 
                 Spacer()
                 
-                Text(data.primaryText)
+                Text(LocalizedStringKey(data.primaryText))
                     .bold().font(.largeTitle)
                     .font(.system(size: 35, weight: .bold))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
 
-                Text(data.secondaryText)
+                Text(LocalizedStringKey(data.secondaryText))
                     .bold()
                     .font(.system(size: 25, weight: .regular))
                     .foregroundColor(.white)

@@ -1,0 +1,18 @@
+
+/* Class = "UIViewController"; title = "Profile"; ObjectID = "Y6W-OH-hqX"; */
+"Y6W-OH-hqX.title" = "Perfil";
+
+/* Class = "UITabBarItem"; title = "Perfil"; ObjectID = "9vk-Y6-OWa"; */
+"9vk-Y6-OWa.title" = "Perfil";
+
+/* Class = "UILabel"; text = "NOME"; ObjectID = "EVR-kH-eHy"; */
+"EVR-kH-eHy.text" = "NOME";
+
+/* Class = "UILabel"; text = "Level 0"; ObjectID = "h6v-zL-koc"; */
+"h6v-zL-koc.text" = "Level 0";
+
+/* Class = "UILabel"; text = "Level 0"; ObjectID = "kl9-EM-lxD"; */
+"kl9-EM-lxD.text" = "Level 0";
+
+/* Class = "UILabel"; text = "Level 0"; ObjectID = "uTU-Af-jkT"; */
+"uTU-Af-jkT.text" = "Level 0";

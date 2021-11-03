@@ -78,11 +78,12 @@
 		B253C8F2272CC33E009D4AF9 /* quadriceps_left.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */; };
 		B253C8F3272CC33E009D4AF9 /* toetouch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */; };
 		B25402CE27179B7300C088C4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25402CD27179B7300C088C4 /* CategoriesViewController.swift */; };
-		B259182B271E099D0083176D /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259182A271E099D0083176D /* Transition.storyboard */; };
 		B259182D271E09C20083176D /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259182C271E09C20083176D /* TransitionViewController.swift */; };
 		B2591831271E0F910083176D /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2591830271E0F910083176D /* RewardViewController.swift */; };
 		B275043327272D4200768BC8 /* CategoriesCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275043227272D4200768BC8 /* CategoriesCustomView.swift */; };
 		B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */; };
+		B296785E2732129100F2F618 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B296783227320A0F00F2F618 /* Localizable.strings */; };
+		B296786927321DDB00F2F618 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B296786B27321DDB00F2F618 /* Transition.storyboard */; };
 		B29E4AA2272D089400207CB3 /* sidebend2hands.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B29E4AA1272D089400207CB3 /* sidebend2hands.mp4 */; };
 		B2D7819E272899B500B4FE14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB0C8AB27287B56006FE760 /* Profile.storyboard */; };
 		B2FA2BD72730652D00CA8DB0 /* armsup.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B2FA2BD62730652D00CA8DB0 /* armsup.mp4 */; };
@@ -191,14 +192,6 @@
 		9CB0C900272B46A7006FE760 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchSessionDid.mp3; sourceTree = "<group>"; };
 		9CB0C907272B47CC006FE760 /* StretchDid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StretchDid.mp3; sourceTree = "<group>"; };
-		9CB0C90D272C7AE0006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Categories.storyboard"; sourceTree = "<group>"; };
-		9CB0C913272C7C28006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Stretch.storyboard"; sourceTree = "<group>"; };
-		9CB0C91A272C7CD8006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Pause.storyboard"; sourceTree = "<group>"; };
-		9CB0C91F272C7DC9006FE760 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Reward.storyboard"; sourceTree = "<group>"; };
-		9CB0C93F272C8CBB006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Categories.storyboard; sourceTree = "<group>"; };
-		9CB0C940272C8CCA006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Stretch.storyboard; sourceTree = "<group>"; };
-		9CB0C941272C8CD8006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Pause.storyboard; sourceTree = "<group>"; };
-		9CB0C942272C8CDF006FE760 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Reward.storyboard; sourceTree = "<group>"; };
 		9CE45D3E2720A9C4000C453E /* NotificationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypes.swift; sourceTree = "<group>"; };
 		9CE45D42272336BB000C453E /* NotificationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClass.swift; sourceTree = "<group>"; };
 		B2185FD72707A0AA00A4ACAE /* Mini-Challenge-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Challenge-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,15 +221,28 @@
 		B253C8EE272CC33D009D4AF9 /* quadriceps_left.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = quadriceps_left.mp4; sourceTree = "<group>"; };
 		B253C8EF272CC33D009D4AF9 /* toetouch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toetouch.mp4; sourceTree = "<group>"; };
 		B25402CD27179B7300C088C4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		B259182A271E099D0083176D /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
 		B259182C271E09C20083176D /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		B2591830271E0F910083176D /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		B275043227272D4200768BC8 /* CategoriesCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCustomView.swift; sourceTree = "<group>"; };
 		B2760EAD272784FD008E62C6 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		B296785D2732127900F2F618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B2967862273213BD00F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Categories.strings"; sourceTree = "<group>"; };
+		B29678642732159900F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Categories.strings; sourceTree = "<group>"; };
+		B2967865273216A000F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B2967866273216A100F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B296786727321BE200F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Stretch.strings; sourceTree = "<group>"; };
+		B296786827321BEB00F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Stretch.strings"; sourceTree = "<group>"; };
+		B296786A27321DDB00F2F618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Transition.storyboard; sourceTree = "<group>"; };
+		B296786D27321DE600F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Transition.strings"; sourceTree = "<group>"; };
+		B296786F27321DE700F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Transition.strings; sourceTree = "<group>"; };
+		B296787027321EED00F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Pause.strings"; sourceTree = "<group>"; };
+		B296787127321F6F00F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Pause.strings; sourceTree = "<group>"; };
+		B2967872273220FD00F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Reward.strings"; sourceTree = "<group>"; };
+		B29678732732213F00F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Reward.strings; sourceTree = "<group>"; };
+		B29678742732224C00F2F618 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Profile.strings"; sourceTree = "<group>"; };
+		B29678752732227400F2F618 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Profile.strings; sourceTree = "<group>"; };
 		B29E4AA1272D089400207CB3 /* sidebend2hands.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sidebend2hands.mp4; sourceTree = "<group>"; };
 		B2FA2BD62730652D00CA8DB0 /* armsup.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = armsup.mp4; sourceTree = "<group>"; };
-		B2FA9B24272CFB17003C9A95 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Profile.storyboard"; sourceTree = "<group>"; };
-		B2FA9B27272CFBAF003C9A95 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		CB2A6BB32721F11000F144D8 /* RewardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewModel.swift; sourceTree = "<group>"; };
 		CB72BA462727512600683982 /* SetOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOrientation.swift; sourceTree = "<group>"; };
 		CBB1540F2729DE22001E8E15 /* pescoco_right.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pescoco_right.mp4; sourceTree = "<group>"; };
@@ -542,7 +548,7 @@
 		B2591837271F68070083176D /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				B259182A271E099D0083176D /* Transition.storyboard */,
+				B296786B27321DDB00F2F618 /* Transition.storyboard */,
 				B259182C271E09C20083176D /* TransitionViewController.swift */,
 				684CFDD727210325009E2B70 /* TransitionViewModel.swift */,
 			);
@@ -583,6 +589,7 @@
 		B259183B271F6AB90083176D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B296782D273209D000F2F618 /* Localization */,
 				9C5F605C27209DAC0023DDC4 /* Notification */,
 				9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
@@ -606,6 +613,14 @@
 				CBE91260271E44C00006898A /* RingAttributes.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B296782D273209D000F2F618 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B296783227320A0F00F2F618 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		CB2A6BB52722555800F144D8 /* StretchVideos */ = {
@@ -859,6 +874,7 @@
 				B253C8E1272CB891009D4AF9 /* torsotwist.mp4 in Resources */,
 				B2760EAE272784FD008E62C6 /* BebasNeue-Regular.ttf in Resources */,
 				CBB154142729DE22001E8E15 /* ombros_right.mp4 in Resources */,
+				B296785E2732129100F2F618 /* Localizable.strings in Resources */,
 				B253C8DD272CB81E009D4AF9 /* pescoco_left.mp4 in Resources */,
 				B29E4AA2272D089400207CB3 /* sidebend2hands.mp4 in Resources */,
 				CBB1541C2729E0C7001E8E15 /* lateral_left.mp4 in Resources */,
@@ -876,7 +892,7 @@
 				B253C8E5272CBDF0009D4AF9 /* squat_right.mp4 in Resources */,
 				9CB0C88B272876B5006FE760 /* Stretch.storyboard in Resources */,
 				B253C8F0272CC33E009D4AF9 /* quadriceps_right.mp4 in Resources */,
-				B259182B271E099D0083176D /* Transition.storyboard in Resources */,
+				B296786927321DDB00F2F618 /* Transition.storyboard in Resources */,
 				B253C8F2272CC33E009D4AF9 /* quadriceps_left.mp4 in Resources */,
 				B226E43627279D8800AF14C6 /* Baloo2-ExtraBold.ttf in Resources */,
 				9CB0C904272B478A006FE760 /* StretchSessionDid.mp3 in Resources */,
@@ -1005,8 +1021,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C88027286F5C006FE760 /* Base */,
-				9CB0C90D272C7AE0006FE760 /* pt-BR */,
-				9CB0C93F272C8CBB006FE760 /* es */,
+				B2967862273213BD00F2F618 /* pt-BR */,
+				B29678642732159900F2F618 /* es */,
 			);
 			name = Categories.storyboard;
 			sourceTree = "<group>";
@@ -1015,8 +1031,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C88C272876B5006FE760 /* Base */,
-				9CB0C913272C7C28006FE760 /* pt-BR */,
-				9CB0C940272C8CCA006FE760 /* es */,
+				B296786727321BE200F2F618 /* es */,
+				B296786827321BEB00F2F618 /* pt-BR */,
 			);
 			name = Stretch.storyboard;
 			sourceTree = "<group>";
@@ -1025,8 +1041,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C898272879CC006FE760 /* Base */,
-				9CB0C91A272C7CD8006FE760 /* pt-BR */,
-				9CB0C941272C8CD8006FE760 /* es */,
+				B296787027321EED00F2F618 /* pt-BR */,
+				B296787127321F6F00F2F618 /* es */,
 			);
 			name = Pause.storyboard;
 			sourceTree = "<group>";
@@ -1035,8 +1051,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C8A127287A75006FE760 /* Base */,
-				9CB0C91F272C7DC9006FE760 /* pt-BR */,
-				9CB0C942272C8CDF006FE760 /* es */,
+				B2967872273220FD00F2F618 /* pt-BR */,
+				B29678732732213F00F2F618 /* es */,
 			);
 			name = Reward.storyboard;
 			sourceTree = "<group>";
@@ -1045,8 +1061,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9CB0C8AA27287B56006FE760 /* Base */,
-				B2FA9B24272CFB17003C9A95 /* pt-BR */,
-				B2FA9B27272CFBAF003C9A95 /* es */,
+				B29678742732224C00F2F618 /* pt-BR */,
+				B29678752732227400F2F618 /* es */,
 			);
 			name = Profile.storyboard;
 			sourceTree = "<group>";
@@ -1057,6 +1073,26 @@
 				B2185FE92707A0AC00A4ACAE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B296783227320A0F00F2F618 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B296785D2732127900F2F618 /* en */,
+				B2967865273216A000F2F618 /* pt-BR */,
+				B2967866273216A100F2F618 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B296786B27321DDB00F2F618 /* Transition.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B296786A27321DDB00F2F618 /* Base */,
+				B296786D27321DE600F2F618 /* pt-BR */,
+				B296786F27321DE700F2F618 /* es */,
+			);
+			name = Transition.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1362,7 +1398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joh-camacho.Mini-Challenge-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1395,7 +1431,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel.Mini-Challenge-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joh-camacho.Mini-Challenge-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

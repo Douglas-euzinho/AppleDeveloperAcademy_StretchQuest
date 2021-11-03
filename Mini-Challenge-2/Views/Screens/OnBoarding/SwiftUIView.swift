@@ -114,7 +114,7 @@ struct CustomPageIndicatorWithContinueButton: View {
                 Button(action: {
                     self.delegate.finish()
                 }, label: {
-                    Text("LET'S DO IT")
+                    Text(LocalizedStringKey("Ready"))
                         .foregroundColor(.black)
                         .fontWeight(.bold)
                         .frame(width: 220, height: 60, alignment: .center)

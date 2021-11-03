@@ -1,0 +1,12 @@
+
+/* Class = "UIViewController"; title = "Pause"; ObjectID = "Y6W-OH-hqX"; */
+"Y6W-OH-hqX.title" = "Pausa";
+
+/* Class = "UILabel"; text = "Dejar la sessión?"; ObjectID = "09j-La-p93"; */
+"09j-La-p93.text" = "Dejar la sessión?";
+
+/* Class = "UIButton"; configuration.title = "SÍ"; ObjectID = "P0O-Pj-CMZ"; */
+"P0O-Pj-CMZ.configuration.title" = "SÍ";
+
+/* Class = "UIButton"; configuration.title = "NO"; ObjectID = "R4Q-jB-2gr"; */
+"R4Q-jB-2gr.configuration.title" = "NO";
