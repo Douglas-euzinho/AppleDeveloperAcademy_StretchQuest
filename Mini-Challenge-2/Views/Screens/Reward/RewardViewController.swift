@@ -24,6 +24,8 @@ class RewardViewController: UIViewController {
     
     weak var delegate: RewardDelegate!
     
+    private var notiPermission: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

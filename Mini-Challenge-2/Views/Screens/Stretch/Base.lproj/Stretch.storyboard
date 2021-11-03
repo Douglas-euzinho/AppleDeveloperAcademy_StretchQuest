@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-wM-YI4" userLabel="Description">
                                 <rect key="frame" x="67.666666666666671" y="465.66666666666669" width="254.66666666666663" height="73.000000000000057"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="clip" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="opw-M1-Qhq">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="clip" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="opw-M1-Qhq">
                                         <rect key="frame" x="25" y="15.000000000000004" width="204.66666666666666" height="43.333333333333343"/>
                                         <fontDescription key="fontDescription" name="BebasNeue-Regular" family="Bebas Neue" pointSize="36"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
