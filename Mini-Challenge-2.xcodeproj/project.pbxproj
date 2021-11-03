@@ -431,9 +431,9 @@
 			children = (
 				9CB0C907272B47CC006FE760 /* StretchDid.mp3 */,
 				9CB0C903272B478A006FE760 /* StretchSessionDid.mp3 */,
-				9CB0C900272B46A7006FE760 /* Sounds.swift */,
 			);
-			path = Sounds;
+			name = Sounds;
+			path = ../../Sounds;
 			sourceTree = "<group>";
 		};
 		B20C414C272766790013D93B /* Fonts */ = {
@@ -449,7 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				B2185FD92707A0AA00A4ACAE /* Mini-Challenge-2 */,
-				9CB0C902272B4747006FE760 /* Sounds */,
 				68ABEEDC271760B8001E7B37 /* Core */,
 				68ABEEE8271760B9001E7B37 /* CoreTests */,
 				684CFDB3271F4A59009E2B70 /* IntegrationTests */,
@@ -579,6 +578,7 @@
 		B259183A271F69210083176D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CB0C902272B4747006FE760 /* Sounds */,
 				B20C414C272766790013D93B /* Fonts */,
 				CB2A6BB52722555800F144D8 /* StretchVideos */,
 				B2185FE62707A0AC00A4ACAE /* Assets.xcassets */,
@@ -589,9 +589,9 @@
 		B259183B271F6AB90083176D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B296782D273209D000F2F618 /* Localization */,
 				9C5F605C27209DAC0023DDC4 /* Notification */,
 				9C5F6053271E0C500023DDC4 /* GameCenter+Extension.swift */,
+				B296783227320A0F00F2F618 /* Localizable.strings */,
 				B2185FE32707A0AA00A4ACAE /* Mini_Challenge_2.xcdatamodeld */,
 			);
 			path = Services;
@@ -613,14 +613,6 @@
 				CBE91260271E44C00006898A /* RingAttributes.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		B296782D273209D000F2F618 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				B296783227320A0F00F2F618 /* Localizable.strings */,
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		CB2A6BB52722555800F144D8 /* StretchVideos */ = {
@@ -681,6 +673,7 @@
 			children = (
 				CBE9125E271E43160006898A /* UIColor+Extension.swift */,
 				CBFDF2612727481000505FFF /* Haptics.swift */,
+				9CB0C900272B46A7006FE760 /* Sounds.swift */,
 				CB72BA462727512600683982 /* SetOrientation.swift */,
 				686DA91C2729D3F5008670CA /* Date+Midnight.swift */,
 				686DA921272B2426008670CA /* UIViewController+BlurEffect.swift */,
